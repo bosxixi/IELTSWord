@@ -98,7 +98,7 @@ namespace IELTSWord
                 GetNext();
             }
         }
-        private void Load_Click(object sender, RoutedEventArgs e)
+        async void Load_Click(object sender, RoutedEventArgs e)
         {
             try
             {
@@ -106,6 +106,7 @@ namespace IELTSWord
 
                 var index = Dics.Select(c => c.Key).ToList().IndexOf(item.Key);
                 this.Words = GetWords(item.Value, index * 1000);
+                await Task.Delay(2000);
                 GetNext();
             }
             catch (Exception)
@@ -126,6 +127,9 @@ namespace IELTSWord
                     if (word.IsValid())
                     {
                         this.CurrentWord = word;
+                        ElaborateText.Text = string.Empty;
+                        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(CurrentWord)));
+                       
                     }
                     else
                     {
@@ -154,7 +158,7 @@ namespace IELTSWord
                 var tab = item.Split('\t');
                 if (tab.Length == 2)
                 {
-                    if (Word.Load(tab.First().GetStableHashCode()) is Word w)
+                    if (Word.Load(tab.First()) is Word w)
                     {
                         words.Add(w);
                     }
@@ -163,7 +167,7 @@ namespace IELTSWord
                         Word word = new Word()
                         {
                             Elaborate = tab.Last(),
-                            Id = tab.First().GetStableHashCode(),
+                            Id = tab.First(),
                             Level = 0,
                             Order = order,
                             Name = tab.First(),
@@ -185,7 +189,7 @@ namespace IELTSWord
         public Word CurrentWord
         {
             get { return _word; }
-            set { _word = value; ElaborateText.Text = string.Empty; GenericRaisePropertyChanged(nameof(CurrentWord)); }
+            set { _word = value; }
         }
 
         Dictionary<string, string> Dics = new Dictionary<string, string>()
@@ -40685,18 +40689,28 @@ centralization	n. 集中化；中央集权管理
 
         public event PropertyChangedEventHandler PropertyChanged;
     }
-    public class Word
+    public class Word : INotifyPropertyChanged
     {
-        public int Id { get; set; }
+        public string Id { get; set; }
         public string Name { get; set; }
         public string Elaborate { get; set; }
         public int Level { get; set; }
         public int Order { get; set; }
         public DateTimeOffset HitDate { get; set; }
-
-        public static Word Load(int id)
+        public void Raise()
         {
-            var val = SettingService.Get<string>(id.ToString(), null, nameof(Word));
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(Word.Name)));
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(Word.Level)));
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(Word.Order)));
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(Word.HitDate)));
+        }
+        public static List<Word> GetAll()
+        {
+            return SettingService.GetAll<string>(null, nameof(Word)).Select(c => Newtonsoft.Json.JsonConvert.DeserializeObject<Word>(c)).ToList();
+        }
+        public static Word Load(string id)
+        {
+            var val = SettingService.Get<string>(id, null, nameof(Word));
             if (val != null)
             {
                 var word = Newtonsoft.Json.JsonConvert.DeserializeObject<Word>(val);
@@ -40758,7 +40772,7 @@ centralization	n. 集中化；中央集权管理
         }
         Dictionary<int, TimeSpan> Duration = new Dictionary<int, TimeSpan>()
         {
-            [0] = TimeSpan.FromSeconds(3),
+            [0] = TimeSpan.FromSeconds(1),
             [1] = TimeSpan.FromSeconds(5),
             [2] = TimeSpan.FromSeconds(25),
             [3] = TimeSpan.FromMinutes(2),
@@ -40771,6 +40785,8 @@ centralization	n. 集中化；中央集权管理
             [10] = TimeSpan.FromDays(120),
             [11] = TimeSpan.FromDays(730),
         };
+
+        public event PropertyChangedEventHandler PropertyChanged;
     }
     public static class AppGlobalSettings
     {
@@ -40888,7 +40904,24 @@ centralization	n. 集中化；中央集权管理
 
             return defaultValue;
         }
+        public static List<T> GetAll<T>(List<T> defaultValue, string containerName = "settings", bool useRoaming = false)
+        {
+            try
+            {
+                ApplicationDataContainer localSettings = useRoaming ? ApplicationData.Current.RoamingSettings : ApplicationData.Current.LocalSettings;
+                if (!localSettings.Containers.ContainsKey(containerName))
+                {
+                    ApplicationDataContainer container = localSettings.CreateContainer(containerName, ApplicationDataCreateDisposition.Always);
+                }
+                return localSettings.Containers[containerName].Values.Select(c => (T)c.Value).ToList();
+            }
+            catch (Exception ex)
+            {
+                //logger.Event("Get_Fail.", $"{ex.Message}_{containerName}_{key}_{useRoaming}");
+            }
 
+            return defaultValue;
+        }
         public static IEnumerable<(string, T)> GetAll<T>(string containerName = "settings", bool useRoaming = false)
         {
             if (String.IsNullOrEmpty(containerName))

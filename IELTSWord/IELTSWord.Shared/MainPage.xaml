@@ -17,22 +17,21 @@
 
             <StackPanel HorizontalAlignment="Right" Margin="10" Orientation="Horizontal">
                 <ComboBox x:Name="DicsCombo"></ComboBox>
-                <Button Margin="10 0 0 0" Content="Load" Click="Load_Click"></Button>
+                <Button Margin="10 0 0 0" Content="LOAD" Click="Load_Click"></Button>
             </StackPanel>
 
             <StackPanel Grid.Row="1" HorizontalAlignment="Center">
-                <TextBlock Text="{x:Bind CurrentWord.Name,Mode=OneWay}" FontSize="48" ></TextBlock>
-                <TextBlock x:Name="ElaborateText" TextWrapping="Wrap" FontSize="36"></TextBlock>
-                <TextBlock Text="{x:Bind CurrentWord.Level,Mode=OneWay}"></TextBlock>
-                <TextBlock Text="{x:Bind CurrentWord.Order,Mode=OneWay}"></TextBlock>
-                <TextBlock Text="{x:Bind CurrentWord.HitDate,Mode=OneWay}"></TextBlock>
+                <TextBlock HorizontalAlignment="Center" Text="{x:Bind CurrentWord.Name,Mode=OneWay}" FontSize="48" ></TextBlock>
+                <TextBlock HorizontalAlignment="Center" x:Name="ElaborateText" TextWrapping="Wrap" FontSize="36"></TextBlock>
+                <TextBlock HorizontalAlignment="Center" Text="{x:Bind CurrentWord.Level,Mode=OneWay}"></TextBlock>
+                <TextBlock HorizontalAlignment="Center" Text="{x:Bind CurrentWord.Order,Mode=OneWay}"></TextBlock>
             </StackPanel>
 
             <StackPanel HorizontalAlignment="Center" Margin="10" Orientation="Vertical" Grid.Row="2">
-                <Button HorizontalAlignment="Stretch" Margin="10" Content="Yes"  x:Name="Yes"  Click="Yes_Click"></Button>
-                <Button HorizontalAlignment="Stretch" Margin="10" Content="Blur" x:Name="Blur" Click="Blur_Click"></Button>
-                <Button HorizontalAlignment="Stretch" Margin="10" Content="Nope" x:Name="Nope" Click="No_Click"></Button>
-                <Button HorizontalAlignment="Stretch" Margin="0 0 0 0" Content="Don't show it again" Click="Complete_Click"></Button>
+                <Button HorizontalAlignment="Stretch" Margin="10" Width="300" Content="NAIL IT" Click="Complete_Click"></Button>
+                <Button HorizontalAlignment="Stretch" Margin="10" Width="300" Content="GOOD"  x:Name="Yes"  Click="Yes_Click"></Button>
+                <Button HorizontalAlignment="Stretch" Margin="10" Width="300" Content="NOT SURE" x:Name="Blur" Click="Blur_Click"></Button>
+                <Button HorizontalAlignment="Stretch" Margin="10" Width="300" Content="NOPE" x:Name="Nope" Click="No_Click"></Button>
             </StackPanel>
         </Grid>
         <!--<StackPanel>
