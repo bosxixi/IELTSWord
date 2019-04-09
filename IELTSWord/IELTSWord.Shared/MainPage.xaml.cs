@@ -90,6 +90,21 @@ namespace IELTSWord
                 }
             }
         }
+        private void Pivot_Changed(object sender, RoutedEventArgs e)
+        {
+            var all = Word.GetAll();
+            if (all!=null)
+            {
+                all = all.OrderByDescending(c => c.HitDate).ToList();
+                TotalWords.Text = all.Count.ToString();
+                WordsListView.DisplayMemberPath = nameof(Word.Name);
+                WordsListView.ItemsSource = all;
+            }
+            else
+            {
+                WordsListView.ItemsSource = null;
+            }
+        }
         private void Complete_Click(object sender, RoutedEventArgs e)
         {
             if (this.Words != null && this.CurrentWord != null)
@@ -105,6 +120,9 @@ namespace IELTSWord
                 var item = (KeyValuePair<string, string>)DicsCombo.SelectedItem;
 
                 var index = Dics.Select(c => c.Key).ToList().IndexOf(item.Key);
+
+                AppGlobalSettings.LastIndex = index;
+
                 this.Words = GetWords(item.Value, index * 1000);
                 await Task.Delay(2000);
                 GetNext();
@@ -129,7 +147,7 @@ namespace IELTSWord
                         this.CurrentWord = word;
                         ElaborateText.Text = string.Empty;
                         PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(CurrentWord)));
-                       
+
                     }
                     else
                     {
@@ -141,11 +159,13 @@ namespace IELTSWord
         }
         private void MainPage_Loaded(object sender, RoutedEventArgs e)
         {
-
-
             //dicsbob
             DicsCombo.DisplayMemberPath = "Key";
             DicsCombo.ItemsSource = Dics;
+
+            DicsCombo.SelectedIndex = AppGlobalSettings.LastIndex;
+
+            Load_Click(null, null);
         }
 
         List<Word> GetWords(string source, int order = 0)
@@ -40723,6 +40743,8 @@ centralization	n. 集中化；中央集权管理
         {
             var word = Newtonsoft.Json.JsonConvert.SerializeObject(this);
             SettingService.Set<string>(this.Id.ToString(), word, nameof(Word));
+
+            this.Raise();
         }
         public void Yes()
         {
@@ -40800,6 +40822,11 @@ centralization	n. 集中化；中央集权管理
         {
             get => SettingService.Get(nameof(Test), 3);
             set => SettingService.Set(nameof(Test), value);
+        }
+        public static int LastIndex
+        {
+            get => SettingService.Get(nameof(LastIndex), 0);
+            set => SettingService.Set(nameof(LastIndex), value);
         }
     }
     public class SettingService
