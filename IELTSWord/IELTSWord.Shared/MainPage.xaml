@@ -5,9 +5,10 @@
     xmlns:local="using:IELTSWord"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Background="Gray" 
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid Background="Gray" Margin="0 50 0 30">
         <Pivot SelectionChanged="Pivot_Changed">
             <PivotItem Header="Learning">
                 <Grid>
@@ -30,7 +31,7 @@
                             <TextBlock HorizontalAlignment="Center" Text="{x:Bind CurrentWord.Name,Mode=OneWay}" FontSize="48" ></TextBlock>
 
                         </StackPanel>
-                        <TextBlock HorizontalAlignment="Center" x:Name="ElaborateText" TextWrapping="Wrap" FontSize="36"></TextBlock>
+                        <TextBlock HorizontalAlignment="Center" x:Name="ElaborateText" MaxWidth="300" TextWrapping="Wrap" FontSize="26"></TextBlock>
                         <TextBlock HorizontalAlignment="Center" Text="{x:Bind CurrentWord.Order,Mode=OneWay}"></TextBlock>
                     </StackPanel>
 

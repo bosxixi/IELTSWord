@@ -93,7 +93,7 @@ namespace IELTSWord
         private void Pivot_Changed(object sender, RoutedEventArgs e)
         {
             var all = Word.GetAll();
-            if (all!=null)
+            if (all != null)
             {
                 all = all.OrderByDescending(c => c.HitDate).ToList();
                 TotalWords.Text = all.Count.ToString();
@@ -40726,11 +40726,16 @@ centralization	n. 集中化；中央集权管理
         }
         public static List<Word> GetAll()
         {
-            return SettingService.GetAll<string>(null, nameof(Word)).Select(c => Newtonsoft.Json.JsonConvert.DeserializeObject<Word>(c)).ToList();
+            //get => Plugin.Settings.CrossSettings.Current.GetValueOrDefault(nameof(Test), 3);
+            //set { Plugin.Settings.CrossSettings.Current.AddOrUpdateValue(nameof(Test), value); }
+            //Plugin.Settings.CrossSettings.Current.GetValueOrDefault()
+            return null;
+            //return SettingService.GetAll<string>(null, nameof(Word)).Select(c => Newtonsoft.Json.JsonConvert.DeserializeObject<Word>(c)).ToList();
         }
         public static Word Load(string id)
         {
-            var val = SettingService.Get<string>(id, null, nameof(Word));
+            var val = Plugin.Settings.CrossSettings.Current.GetValueOrDefault(id, null, nameof(Word));
+            //var val = SettingService.Get<string>(id, null, nameof(Word));
             if (val != null)
             {
                 var word = Newtonsoft.Json.JsonConvert.DeserializeObject<Word>(val);
@@ -40742,8 +40747,8 @@ centralization	n. 集中化；中央集权管理
         public void Save()
         {
             var word = Newtonsoft.Json.JsonConvert.SerializeObject(this);
-            SettingService.Set<string>(this.Id.ToString(), word, nameof(Word));
-
+            //SettingService.Set<string>(this.Id.ToString(), word, nameof(Word));
+            Plugin.Settings.CrossSettings.Current.AddOrUpdateValue(this.Id.ToString(), word, nameof(Word));
             this.Raise();
         }
         public void Yes()
@@ -40820,14 +40825,22 @@ centralization	n. 集中化；中央集权管理
 
         public static int Test
         {
-            get => SettingService.Get(nameof(Test), 3);
-            set => SettingService.Set(nameof(Test), value);
+            //get => SettingService.Get(nameof(Test), 3);
+            //set => SettingService.Set(nameof(Test), value);
+
+            get => Plugin.Settings.CrossSettings.Current.GetValueOrDefault(nameof(Test), 3);
+            set { Plugin.Settings.CrossSettings.Current.AddOrUpdateValue(nameof(Test), value); }
         }
         public static int LastIndex
         {
-            get => SettingService.Get(nameof(LastIndex), 0);
-            set => SettingService.Set(nameof(LastIndex), value);
+            //get => CrossSettings.Current.GetValueOrDefault(nameof(LocalPort), 0);
+            //set { CrossSettings.Current.AddOrUpdateValue(nameof(LocalPort), value); }
+
+            get => Plugin.Settings.CrossSettings.Current.GetValueOrDefault(nameof(LastIndex), 0);
+            set { Plugin.Settings.CrossSettings.Current.AddOrUpdateValue(nameof(LastIndex), value); }
         }
+
+
     }
     public class SettingService
     {
