@@ -25,17 +25,52 @@ using System.Net.Http;
 using System.Text;
 using Windows.UI.Popups;
 using Newtonsoft.Json;
+using System.Xml.Linq;
+using System.Diagnostics;
+using Windows.Media.Playback;
+using Windows.Media.Core;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
 namespace IELTSWord
 {
+    public class Authentication
+    {
+        private string subscriptionKey;
+        private string tokenFetchUri;
 
+        public Authentication(string tokenFetchUri, string subscriptionKey)
+        {
+            if (string.IsNullOrWhiteSpace(tokenFetchUri))
+            {
+                throw new ArgumentNullException(nameof(tokenFetchUri));
+            }
+            if (string.IsNullOrWhiteSpace(subscriptionKey))
+            {
+                throw new ArgumentNullException(nameof(subscriptionKey));
+            }
+            this.tokenFetchUri = tokenFetchUri;
+            this.subscriptionKey = subscriptionKey;
+        }
+
+        public async Task<string> FetchTokenAsync()
+        {
+            using (HttpClient client = new HttpClient())
+            {
+                client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", this.subscriptionKey);
+                UriBuilder uriBuilder = new UriBuilder(this.tokenFetchUri);
+
+                HttpResponseMessage result = await client.PostAsync(uriBuilder.Uri.AbsoluteUri, null).ConfigureAwait(false);
+                return await result.Content.ReadAsStringAsync().ConfigureAwait(false);
+            }
+        }
+    }
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
     public sealed partial class MainPage : Page, INotifyPropertyChanged
     {
+        const string SPEECH_KEY = "520d0d28080b463aa5a399152eba3212";
         public MainPage()
         {
             this.InitializeComponent();
@@ -49,6 +84,43 @@ namespace IELTSWord
                 AppGlobalSettings.Email = value;
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(Email)));
             }
+        }
+        public int Level
+        {
+            get => AppGlobalSettings.Level;
+            set
+            {
+                AppGlobalSettings.Level = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(Level)));
+            }
+        }
+        MediaPlayer _media;
+        byte[] _audio;
+        async void Speaker_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                if (this.CurrentWord?.Name != null)
+                {
+                    if (_audio == null)
+                    {
+                        _audio = await GetAudioAsync(this.CurrentWord.Name);
+                    }
+                    if (_media == null)
+                    {
+                        _media = new MediaPlayer();
+                    }
+                    _media.Source = MediaSource.CreateFromStream(_audio.ToMemoryStream().AsRandomAccessStream(), "audio/wav");
+                    _media.AutoPlay = true;
+                }
+            }
+            catch (Exception ex)
+            {
+                _accessToken = null;
+                MessageDialog messageDialog = new MessageDialog(ex.Message, "Error");
+                await messageDialog.ShowAsync();
+            }
+
         }
         void Yes_Click(object sender, RoutedEventArgs e)
         {
@@ -98,9 +170,12 @@ namespace IELTSWord
             {
                 HttpClient client = new HttpClient();
                 var post = await client.PostAsync("https://searchscorpio.azurewebsites.net/api/google/AddUpdateKeyValue",
-                    new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(new { Id = _id,
+                    new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(new
+                    {
+                        Id = _id,
                         Value = Newtonsoft.Json.JsonConvert.SerializeObject(new
-                        { id = AppGlobalSettings.IDs, items = Word.GetAll() }) }), Encoding.UTF8, "application/json"));
+                        { id = AppGlobalSettings.IDs, items = Word.GetAll() })
+                    }), Encoding.UTF8, "application/json"));
                 if (post.IsSuccessStatusCode)
                 {
                     MessageDialog messageDialog = new MessageDialog("UPLOADED", "SUCCESS");
@@ -223,8 +298,12 @@ namespace IELTSWord
                 var index = Dics.Select(c => c.Key).ToList().IndexOf(item.Key);
 
                 AppGlobalSettings.LastIndex = index;
-
-                this.Words = GetWords(item.Value, index * 1000);
+                int baseCount = 0;
+                if (item.Key.Contains("-"))
+                {
+                    baseCount = index * 1000;
+                }
+                this.Words = GetWords(item.Value, baseCount);
                 await Task.Delay(2000);
                 GetNext();
 
@@ -237,18 +316,32 @@ namespace IELTSWord
             }
         }
 
-        private void UpdateStatistics()
+        private void UpdateStatistics(Func<Word, bool> func = null)
         {
+
             var all = Word.GetAll();
             if (all != null)
             {
                 all = all.OrderByDescending(c => c.HitDate).ToList();
-                TotalWords.Text = all.Count.ToString();
-                WordsListView.ItemsSource = all;
+                if (func != null)
+                {
+                    all = all.Where(c => func(c)).ToList();
+                }
+                if (TotalWords != null)
+                {
+                    TotalWords.Text = all.Count.ToString();
+                }
+                if (WordsListView != null)
+                {
+                    WordsListView.ItemsSource = all;
+                }
             }
             else
             {
-                WordsListView.ItemsSource = null;
+                if (WordsListView != null)
+                {
+                    WordsListView.ItemsSource = null;
+                }
             }
         }
 
@@ -274,6 +367,25 @@ namespace IELTSWord
                         goto PICK;
                     }
                 }
+            }
+        }
+        private void Level_Changed(object sender, SelectionChangedEventArgs e)
+        {
+            var item = (LevelCombo.SelectedItem as ComboBoxItem).Content.ToString();
+            if (int.TryParse(item, out int level))
+            {
+                this.Level = level;
+                UpdateStatistics(w => w.Level == level);
+            }
+            else if (item == "None")
+            {
+                this.Level = -1;
+                UpdateStatistics();
+            }
+            else if (item == "Forever")
+            {
+                this.Level = -1;
+                UpdateStatistics(w => w.Level > 11);
             }
         }
         private void MainPage_Loaded(object sender, RoutedEventArgs e)
@@ -321,6 +433,91 @@ namespace IELTSWord
             return words.DistinctBy(c => c.Name).ToList();
         }
 
+        static string _accessToken;
+        static async Task<byte[]> GetAudioAsync(string text)
+        {
+            // Prompts the user to input text for TTS conversion
+            Debug.Write("What would you like to convert to speech? ");
+
+            // Gets an access token
+
+            Debug.WriteLine("Attempting token exchange. Please wait...\n");
+
+            // Add your subscription key here
+            // If your resource isn't in WEST US, change the endpoint
+            Authentication auth = new Authentication("https://eastasia.api.cognitive.microsoft.com/sts/v1.0/issuetoken", SPEECH_KEY);
+            try
+            {
+                if (_accessToken == null)
+                {
+                    _accessToken = await auth.FetchTokenAsync().ConfigureAwait(false);
+                    Debug.WriteLine("Successfully obtained an access token. \n");
+                }
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine("Failed to obtain an access token.");
+                Debug.WriteLine(ex.ToString());
+                Debug.WriteLine(ex.Message);
+                return null;
+            }
+
+            string host = "https://eastasia.tts.speech.microsoft.com/cognitiveservices/v1";
+
+            // Create SSML document.
+            XDocument body = new XDocument(
+                    new XElement("speak",
+                        new XAttribute("version", "1.0"),
+                        new XAttribute(XNamespace.Xml + "lang", "en-US"),
+                        new XElement("voice",
+                            new XAttribute(XNamespace.Xml + "lang", "en-US"),
+                            new XAttribute(XNamespace.Xml + "gender", "Female"),
+                            new XAttribute("name", "Microsoft Server Speech Text to Speech Voice (en-US, ZiraRUS)"),
+                            text)));
+
+            using (HttpClient client = new HttpClient())
+            {
+                using (HttpRequestMessage request = new HttpRequestMessage())
+                {
+                    // Set the HTTP method
+                    request.Method = HttpMethod.Post;
+                    // Construct the URI
+                    request.RequestUri = new Uri(host);
+                    // Set the content type header
+                    request.Content = new StringContent(body.ToString(), Encoding.UTF8, "application/ssml+xml");
+                    // Set additional header, such as Authorization and User-Agent
+                    request.Headers.Add("Authorization", "Bearer " + _accessToken);
+                    request.Headers.Add("Connection", "Keep-Alive");
+                    // Update your resource name
+                    request.Headers.Add("User-Agent", "YOUR_RESOURCE_NAME");
+                    // Audio output format. See API reference for full list.
+                    request.Headers.Add("X-Microsoft-OutputFormat", "riff-24khz-16bit-mono-pcm");
+                    // Create a request
+                    Debug.WriteLine("Calling the TTS service. Please wait... \n");
+                    using (HttpResponseMessage response = await client.SendAsync(request).ConfigureAwait(false))
+                    {
+                        response.EnsureSuccessStatusCode();
+                        return await response.Content.ReadAsByteArrayAsync().ConfigureAwait(false);
+                        // Asynchronously read the response
+                        //using (Stream dataStream = await response.Content.ReadAsStreamAsync().ConfigureAwait(false))
+                        //{
+                        //    Debug.WriteLine("Your speech file is being written to file...");
+                        //    MemoryStream ms = new MemoryStream();
+                        //    await dataStream.CopyToAsync(ms).ConfigureAwait(false);
+                        //    //using (FileStream fileStream = new FileStream(@"sample.wav", FileMode.Create, FileAccess.Write, FileShare.Write))
+                        //    //{
+                        //    //    await dataStream.CopyToAsync(fileStream).ConfigureAwait(false);
+                        //    //    fileStream.Close();
+                        //    //}
+                        //    Debug.WriteLine("\nYour file is ready. Press any key to exit.");
+                        //    return ms;
+                        //}
+                    }
+                }
+            }
+        }
+
+
         List<Word> Words;
 
         private Word _word;
@@ -328,7 +525,7 @@ namespace IELTSWord
         public Word CurrentWord
         {
             get { return _word; }
-            set { _word = value; }
+            set { _word = value; _audio = null; }
         }
 
         Dictionary<string, string> Dics = new Dictionary<string, string>()
@@ -354,6 +551,7 @@ namespace IELTSWord
             ["20000-1000-19"] = text_1000_19,
             ["20000-1000-20"] = text_1000_20,
             ["20000-1000-21"] = text_1000_21,
+            ["20000 All"] = text,
         };
 
         public bool NeedDispather => !this.Dispatcher.HasThreadAccess;
@@ -403,7 +601,7 @@ namespace IELTSWord
             }
 
         }
-        string text = @"the	art. 这；那 adv. 更加（用于比较级，最高级前） 
+        static string text = @"the	art. 这；那 adv. 更加（用于比较级，最高级前） 
 be	prep. 在，存在；是 n. (Be)人名；(缅)拜；(日)部(姓)；(朝)培；(中非)贝 
 and	conj. 和，与；就；而且；但是；然后 n. (And)人名；(土、瑞典)安德 
 of	prep. 关于；属于；…的；由…组成的 
@@ -40971,10 +41169,21 @@ centralization	n. 集中化；中央集权管理
 #endif
         }
 
+        public static int Level
+        {
+#if WINDOWS_UWP
+            get => SettingService.Get(nameof(Level), -1);
+            set => SettingService.Set(nameof(Level), value);
+#else
+            get => Plugin.Settings.CrossSettings.Current.GetValueOrDefault(nameof(Level), -1);
+            set { Plugin.Settings.CrossSettings.Current.AddOrUpdateValue(nameof(Level), value); }
+#endif
+        }
+
         public static int LastIndex
         {
 #if WINDOWS_UWP
-            get => SettingService.Get(nameof(LastIndex), 3);
+            get => SettingService.Get(nameof(LastIndex), 0);
             set => SettingService.Set(nameof(LastIndex), value);
 #else
             get => Plugin.Settings.CrossSettings.Current.GetValueOrDefault(nameof(LastIndex), 0);
