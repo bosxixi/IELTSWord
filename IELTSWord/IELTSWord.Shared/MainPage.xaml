@@ -38,9 +38,9 @@
                     </StackPanel>
 
                     <StackPanel HorizontalAlignment="Center" Margin="10" Orientation="Vertical" Grid.Row="2">
+                        <Button HorizontalAlignment="Stretch" Margin="10" Width="330" Content="GOOD"  x:Name="Yes"  Click="Yes_Click"></Button>
 
                         <Button HorizontalAlignment="Stretch" Margin="10" Width="330" Content="NAIL IT" Click="Complete_Click"></Button>
-                        <Button HorizontalAlignment="Stretch" Margin="10" Width="330" Content="GOOD"  x:Name="Yes"  Click="Yes_Click"></Button>
                         <Button HorizontalAlignment="Stretch" Margin="10" Width="330" Content="NOT SURE" x:Name="Blur" Click="Blur_Click"></Button>
                         <Button HorizontalAlignment="Stretch" Margin="10" Width="330" Content="NOPE" x:Name="Nope" Click="No_Click"></Button>
                     </StackPanel>
@@ -60,9 +60,11 @@
             </PivotItem>
             <PivotItem Header="Settings">
                 <StackPanel HorizontalAlignment="Center" Margin="10" Orientation="Vertical">
-                    <TextBox HorizontalAlignment="Stretch" Margin="10" Width="330" x:Name="Email"></TextBox>
+                    <TextBox HorizontalAlignment="Stretch" PlaceholderText="Email" Text="{x:Bind Email, Mode=TwoWay}" Margin="10" Width="330"></TextBox>
+                    <PasswordBox x:Name="passwordBox" Width="330" MaxLength="16"
+             PasswordChanged="passwordBox_PasswordChanged"/>
                     <Button HorizontalAlignment="Stretch" Margin="10" Width="330" Content="UPLOADS" x:Name="UPLOADS" Click="UPLOADS_Click"></Button>
-                    <Button HorizontalAlignment="Stretch" Margin="10" Width="330" Content="DOWNLOAD" x:Name="DOWNLOAD"></Button>
+                    <Button HorizontalAlignment="Stretch" Margin="10" Width="330" Content="DOWNLOAD" x:Name="DOWNLOAD" Click="DOWNLOAD_Click"></Button>
                 </StackPanel>
             </PivotItem>
         </Pivot>

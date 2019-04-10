@@ -24,6 +24,7 @@ using Windows.System.Threading;
 using System.Net.Http;
 using System.Text;
 using Windows.UI.Popups;
+using Newtonsoft.Json;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -40,7 +41,15 @@ namespace IELTSWord
             this.InitializeComponent();
             this.Loaded += MainPage_Loaded;
         }
-
+        public string Email
+        {
+            get => AppGlobalSettings.Email;
+            set
+            {
+                AppGlobalSettings.Email = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(Email)));
+            }
+        }
         void Yes_Click(object sender, RoutedEventArgs e)
         {
             if (this.Words != null && this.CurrentWord != null)
@@ -85,12 +94,81 @@ namespace IELTSWord
         }
         async void UPLOADS_Click(object sender, RoutedEventArgs e)
         {
-            HttpClient client = new HttpClient();
-            var post = await client.PostAsync("https://searchscorpio.azurewebsites.net/api/google/AddUpdateKeyValue",
-                new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(new { Id = Email.Text, Value = Newtonsoft.Json.JsonConvert.SerializeObject(new { id = AppGlobalSettings.IDs, items = Word.GetAll() }) }), Encoding.UTF8, "application/json"));
-            if (post.IsSuccessStatusCode)
+            if (!String.IsNullOrEmpty(AppGlobalSettings.Email) && !String.IsNullOrEmpty(AppGlobalSettings.Password))
             {
-                MessageDialog messageDialog = new MessageDialog("UPLOADED", "SUCCESS");
+                HttpClient client = new HttpClient();
+                var post = await client.PostAsync("https://searchscorpio.azurewebsites.net/api/google/AddUpdateKeyValue",
+                    new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(new { Id = _id,
+                        Value = Newtonsoft.Json.JsonConvert.SerializeObject(new
+                        { id = AppGlobalSettings.IDs, items = Word.GetAll() }) }), Encoding.UTF8, "application/json"));
+                if (post.IsSuccessStatusCode)
+                {
+                    MessageDialog messageDialog = new MessageDialog("UPLOADED", "SUCCESS");
+                    await messageDialog.ShowAsync();
+                }
+            }
+            else
+            {
+                MessageDialog messageDialog = new MessageDialog("please set up email and password to sync", "Email");
+                await messageDialog.ShowAsync();
+            }
+        }
+        private void passwordBox_PasswordChanged(object sender, RoutedEventArgs e)
+        {
+            AppGlobalSettings.Password = passwordBox.Password;
+        }
+        public class KeyValue
+        {
+            public string Id { get; set; }
+            public string Value { get; set; }
+        }
+        public class WordItems
+        {
+            public string Id { get; set; }
+            public List<Word> Items { get; set; }
+        }
+        string _id => $"{AppGlobalSettings.Email}_{AppGlobalSettings.Password}";
+        async void DOWNLOAD_Click(object sender, RoutedEventArgs e)
+        {
+            if (!String.IsNullOrEmpty(AppGlobalSettings.Email) && !String.IsNullOrEmpty(AppGlobalSettings.Password))
+            {
+                try
+                {
+                    HttpClient client = new HttpClient();
+                    var post = await client.GetStringAsync($"https://searchscorpio.azurewebsites.net/api/google/GetKeyValue?key={Uri.EscapeDataString(_id)}");
+                    var item = JsonConvert.DeserializeObject<KeyValue>(post);
+                    if (item.Id == _id)
+                    {
+                        var items = JsonConvert.DeserializeObject<WordItems>(item.Value);
+                        if (items.Id != null && items.Items != null)
+                        {
+                            AppGlobalSettings.IDs = items.Id;
+                            foreach (var word in items.Items)
+                            {
+                                word.Save();
+                            }
+                            UpdateStatistics();
+                            MessageDialog messageDialog = new MessageDialog($"update success: {items.Items.Count}", "Download");
+                            await messageDialog.ShowAsync();
+                            return;
+                        }
+                        else
+                        {
+                            MessageDialog messageDialog = new MessageDialog("data crupt", "Error");
+                            await messageDialog.ShowAsync();
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageDialog messageDialog = new MessageDialog("invalid email or password or not match", "Error");
+                    await messageDialog.ShowAsync();
+                }
+
+            }
+            else
+            {
+                MessageDialog messageDialog = new MessageDialog("please set up email to sync", "Email");
                 await messageDialog.ShowAsync();
             }
         }
@@ -206,7 +284,7 @@ namespace IELTSWord
             DicsCombo.ItemsSource = Dics;
 
             DicsCombo.SelectedIndex = AppGlobalSettings.LastIndex;
-
+            passwordBox.Password = AppGlobalSettings.Password;
             Load_Click(null, null);
         }
 
@@ -40766,6 +40844,7 @@ centralization	n. 集中化；中央集权管理
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(Word.Order)));
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(Word.HitDate)));
         }
+
         public static List<Word> GetAll()
         {
             var newIds = AppGlobalSettings.IDs.Split(',').ToList();
@@ -40781,8 +40860,13 @@ centralization	n. 集中化；中央集权管理
         }
         public static Word Load(string id)
         {
+#if WINDOWS_UWP
+            var val = SettingService.Get<string>(id, null, nameof(Word));
+#else
             var val = Plugin.Settings.CrossSettings.Current.GetValueOrDefault(id, null, nameof(Word));
-            //var val = SettingService.Get<string>(id, null, nameof(Word));
+#endif
+
+
             if (val != null)
             {
                 var word = Newtonsoft.Json.JsonConvert.DeserializeObject<Word>(val);
@@ -40798,8 +40882,11 @@ centralization	n. 集中化；中央集权管理
             newIds = newIds.Distinct().ToList();
             AppGlobalSettings.IDs = string.Join(',', newIds);
             var word = Newtonsoft.Json.JsonConvert.SerializeObject(this);
-            //SettingService.Set<string>(this.Id.ToString(), word, nameof(Word));
+#if WINDOWS_UWP
+            SettingService.Set<string>(this.Id.ToString(), word, nameof(Word));
+#else
             Plugin.Settings.CrossSettings.Current.AddOrUpdateValue(this.Id.ToString(), word, nameof(Word));
+#endif
             this.Raise();
         }
         public void Yes()
@@ -40876,27 +40963,55 @@ centralization	n. 集中化；中央集权管理
 
         public static int Test
         {
-            //get => SettingService.Get(nameof(Test), 3);
-            //set => SettingService.Set(nameof(Test), value);
-
+#if WINDOWS_UWP
+            get => SettingService.Get(nameof(Test), 3);
+            set => SettingService.Set(nameof(Test), value);
+#else
             get => Plugin.Settings.CrossSettings.Current.GetValueOrDefault(nameof(Test), 3);
             set { Plugin.Settings.CrossSettings.Current.AddOrUpdateValue(nameof(Test), value); }
+#endif
         }
+
         public static int LastIndex
         {
-            //get => CrossSettings.Current.GetValueOrDefault(nameof(LocalPort), 0);
-            //set { CrossSettings.Current.AddOrUpdateValue(nameof(LocalPort), value); }
-
+#if WINDOWS_UWP
+            get => SettingService.Get(nameof(LastIndex), 3);
+            set => SettingService.Set(nameof(LastIndex), value);
+#else
             get => Plugin.Settings.CrossSettings.Current.GetValueOrDefault(nameof(LastIndex), 0);
             set { Plugin.Settings.CrossSettings.Current.AddOrUpdateValue(nameof(LastIndex), value); }
+#endif
         }
         public static string IDs
         {
-            //get => CrossSettings.Current.GetValueOrDefault(nameof(LocalPort), 0);
-            //set { CrossSettings.Current.AddOrUpdateValue(nameof(LocalPort), value); }
+#if WINDOWS_UWP
+            get => SettingService.Get(nameof(IDs), string.Empty);
+            set => SettingService.Set(nameof(IDs), value);
 
+#else
             get => Plugin.Settings.CrossSettings.Current.GetValueOrDefault(nameof(IDs), string.Empty);
             set { Plugin.Settings.CrossSettings.Current.AddOrUpdateValue(nameof(IDs), value); }
+#endif
+        }
+        public static string Email
+        {
+#if WINDOWS_UWP
+            get => SettingService.Get(nameof(Email), string.Empty);
+            set => SettingService.Set(nameof(Email), value);
+#else
+            get => Plugin.Settings.CrossSettings.Current.GetValueOrDefault(nameof(Email), string.Empty);
+            set { Plugin.Settings.CrossSettings.Current.AddOrUpdateValue(nameof(Email), value); }
+#endif
+        }
+        public static string Password
+        {
+#if WINDOWS_UWP
+            get => SettingService.Get(nameof(Password), string.Empty);
+            set => SettingService.Set(nameof(Password), value);
+#else
+            get => Plugin.Settings.CrossSettings.Current.GetValueOrDefault(nameof(Password), string.Empty);
+            set { Plugin.Settings.CrossSettings.Current.AddOrUpdateValue(nameof(Password), value); }
+#endif
         }
 
 
