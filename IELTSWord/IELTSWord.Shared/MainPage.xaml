@@ -35,12 +35,7 @@
                         </StackPanel>
                             <Button HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="Speaker" Click="Speaker_Click" Background="Transparent">
                                 <Button.Content>
-                                    <FontIcon
-                                         FontSize="48"
-                                        HorizontalAlignment="Center"
-                                        VerticalAlignment="Center"
-                                    FontFamily="Segoe MDL2 Assets" 
-                                    Glyph="&#xE767;" 
+                                    <SymbolIcon Symbol="Volume"
                                     />
                                 </Button.Content>
                             </Button>
@@ -76,12 +71,12 @@
                                     <GradientStop Color="#600200" Offset="1.0" />
                                 </LinearGradientBrush>
                             </Button.Background>
-                            <Button.Content>
+                            <!--<Button.Content>
                                 <FontIcon
                                     FontFamily="Segoe MDL2 Assets" 
                                     Glyph="&#xE7B3;" 
                                     />
-                            </Button.Content>
+                            </Button.Content>-->
                         </Button>
                     </StackPanel>
                 </Grid>
@@ -118,10 +113,11 @@
                     <ListView Grid.Row="1" x:Name="WordsListView">
                         <ListView.ItemTemplate>
                             <DataTemplate x:DataType="local:Word">
-                                <StackPanel Margin="5">
+                                <StackPanel Margin="10">
                                     <StackPanel HorizontalAlignment="Left" Margin="0 0 0 0" Orientation="Vertical" >
                                         <TextBlock Margin="10 0 0 0" FontSize="22" FontWeight="Bold" Text="{x:Bind Name,Mode=OneWay}"></TextBlock>
                                         <TextBlock Margin="10 0 0 0" TextWrapping="Wrap" Text="{x:Bind Elaborate,Mode=OneWay}"></TextBlock>
+                                        <TextBlock Margin="10 0 0 0" TextWrapping="Wrap" FontSize="12" FontWeight="Thin" Text="{x:Bind Order,Mode=OneWay}"></TextBlock>
                                         <ProgressBar Margin="0 10 0 0" HorizontalAlignment="Left" Width="300" Maximum="11" Minimum="0" Value="{x:Bind Level,Mode=OneWay}"></ProgressBar>
                                     </StackPanel>
                                 </StackPanel>
