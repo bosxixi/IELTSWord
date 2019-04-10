@@ -244,7 +244,6 @@ namespace IELTSWord
             {
                 all = all.OrderByDescending(c => c.HitDate).ToList();
                 TotalWords.Text = all.Count.ToString();
-                WordsListView.DisplayMemberPath = nameof(Word.Name);
                 WordsListView.ItemsSource = all;
             }
             else

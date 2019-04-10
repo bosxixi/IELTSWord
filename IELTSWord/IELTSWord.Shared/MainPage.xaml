@@ -38,19 +38,40 @@
                     </StackPanel>
 
                     <StackPanel HorizontalAlignment="Center" Margin="10" Orientation="Vertical" Grid.Row="2">
-                        <Button HorizontalAlignment="Stretch" Margin="10" Width="330" Content="GOOD"  x:Name="Yes" Foreground="White" Click="Yes_Click">
+                        <Button HorizontalAlignment="Stretch" Margin="10" Height="60" Width="330" Content="GOOD"  x:Name="Yes" Foreground="White" Click="Yes_Click">
                             <Button.Background>
                                 <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
                                     <GradientStop Color="#FF7719AA" Offset="0.0" />
                                     <GradientStop Color="#FFA671E6" Offset="1.0" />
                                 </LinearGradientBrush>
                             </Button.Background>
-                            
+                        </Button>
+                        <Button HorizontalAlignment="Stretch" Margin="10" Width="330" Content="NOT SURE" x:Name="Blur" Click="Blur_Click">
+                            <Button.Background>
+                                <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                                    <GradientStop Color="#CBE877" Offset="0.0" />
+                                    <GradientStop Color="#B1E75E" Offset="1.0" />
+                                </LinearGradientBrush>
+                            </Button.Background>
                         </Button>
 
-                        <Button HorizontalAlignment="Stretch" Margin="10" Width="330" Content="NAIL IT" Click="Complete_Click"></Button>
-                        <Button HorizontalAlignment="Stretch" Margin="10" Width="330" Content="NOT SURE" x:Name="Blur" Click="Blur_Click"></Button>
-                        <Button HorizontalAlignment="Stretch" Margin="10" Width="330" Content="NOPE" x:Name="Nope" Click="No_Click"></Button>
+                        <Button HorizontalAlignment="Stretch" Margin="10" Width="330" Content="NOPE" x:Name="Nope"  Foreground="White"  Click="No_Click">
+                            
+                        </Button>
+                        <Button HorizontalAlignment="Stretch" Margin="10" Height="38" Width="330" Foreground="White"  Click="Complete_Click">
+                            <Button.Background>
+                                <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                                    <GradientStop Color="#F80B0A" Offset="0.0" />
+                                    <GradientStop Color="#600200" Offset="1.0" />
+                                </LinearGradientBrush>
+                            </Button.Background>
+                            <Button.Content>
+                                <FontIcon
+                                    FontFamily="Segoe MDL2 Assets" 
+                                    Glyph="&#xE7B3;" 
+                                    />
+                            </Button.Content>
+                        </Button>
                     </StackPanel>
                 </Grid>
             </PivotItem>
@@ -62,7 +83,17 @@
                     </Grid.RowDefinitions>
                     <TextBlock x:Name="TotalWords" FontSize="30" HorizontalAlignment="Center" Margin="20"></TextBlock>
                     <ListView Grid.Row="1" x:Name="WordsListView">
-
+                        <ListView.ItemTemplate>
+                            <DataTemplate x:DataType="local:Word">
+                                <StackPanel Margin="5">
+                                    <StackPanel HorizontalAlignment="Left" Margin="0 0 0 0" Orientation="Vertical" >
+                                        <TextBlock Margin="10 0 0 0" FontSize="22" FontWeight="Bold" Text="{x:Bind Name,Mode=OneWay}"></TextBlock>
+                                        <TextBlock Margin="10 0 0 0" TextWrapping="Wrap" Text="{x:Bind Elaborate,Mode=OneWay}"></TextBlock>
+                                    <ProgressBar Margin="0 10 0 0" HorizontalAlignment="Left" Width="300" Maximum="11" Minimum="0" Value="{x:Bind Level,Mode=OneWay}"></ProgressBar>
+                                    </StackPanel>
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
                     </ListView>
                 </Grid>
             </PivotItem>
