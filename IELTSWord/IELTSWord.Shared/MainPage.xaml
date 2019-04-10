@@ -5,42 +5,44 @@
     xmlns:local="using:IELTSWord"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    Background="Gray" 
     mc:Ignorable="d">
 
-    <Grid Background="Gray" Margin="0 50 0 30">
+    <Grid Margin="0 50 0 30">
         <Pivot SelectionChanged="Pivot_Changed">
             <PivotItem Header="Learning">
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="auto"></RowDefinition>
-                        <RowDefinition Height="auto"></RowDefinition>
                         <RowDefinition Height="*"></RowDefinition>
                         <RowDefinition Height="auto"></RowDefinition>
                     </Grid.RowDefinitions>
 
-                    <ProgressBar Maximum="11" Minimum="0" Value="{x:Bind CurrentWord.Level,Mode=OneWay}"></ProgressBar>
 
-                    <StackPanel HorizontalAlignment="Right" Margin="10" Orientation="Horizontal" Grid.Row="1">
-                        <ComboBox x:Name="DicsCombo"></ComboBox>
-                        <Button Margin="10 0 0 0" Content="LOAD" Click="Load_Click"></Button>
+                    <StackPanel>
+                        <StackPanel HorizontalAlignment="Right" Margin="10" Orientation="Horizontal" >
+                            <ComboBox x:Name="DicsCombo"></ComboBox>
+                            <Button Margin="10 0 0 0" Content="LOAD" Click="Load_Click"></Button>
+                        </StackPanel>
+                        <ProgressBar Maximum="11" Minimum="0" Value="{x:Bind CurrentWord.Level,Mode=OneWay}"></ProgressBar>
                     </StackPanel>
+                   
 
-                    <StackPanel Grid.Row="2" HorizontalAlignment="Center">
+                   
+                    <StackPanel Grid.Row="1" HorizontalAlignment="Center">
                         <StackPanel>
                             <TextBlock HorizontalAlignment="Center" Text="{x:Bind CurrentWord.Name,Mode=OneWay}" FontSize="48" ></TextBlock>
 
                         </StackPanel>
-                        <TextBlock HorizontalAlignment="Center" x:Name="ElaborateText" MaxWidth="300" TextWrapping="Wrap" FontSize="26"></TextBlock>
+                        <TextBlock HorizontalAlignment="Center" x:Name="ElaborateText" MaxWidth="320" TextWrapping="Wrap" FontSize="26"></TextBlock>
                         <TextBlock HorizontalAlignment="Center" Text="{x:Bind CurrentWord.Order,Mode=OneWay}"></TextBlock>
                     </StackPanel>
 
-                    <StackPanel HorizontalAlignment="Center" Margin="10" Orientation="Vertical" Grid.Row="3">
+                    <StackPanel HorizontalAlignment="Center" Margin="10" Orientation="Vertical" Grid.Row="2">
 
-                        <Button HorizontalAlignment="Stretch" Margin="10" Width="300" Content="NAIL IT" Click="Complete_Click"></Button>
-                        <Button HorizontalAlignment="Stretch" Margin="10" Width="300" Content="GOOD"  x:Name="Yes"  Click="Yes_Click"></Button>
-                        <Button HorizontalAlignment="Stretch" Margin="10" Width="300" Content="NOT SURE" x:Name="Blur" Click="Blur_Click"></Button>
-                        <Button HorizontalAlignment="Stretch" Margin="10" Width="300" Content="NOPE" x:Name="Nope" Click="No_Click"></Button>
+                        <Button HorizontalAlignment="Stretch" Margin="10" Width="330" Content="NAIL IT" Click="Complete_Click"></Button>
+                        <Button HorizontalAlignment="Stretch" Margin="10" Width="330" Content="GOOD"  x:Name="Yes"  Click="Yes_Click"></Button>
+                        <Button HorizontalAlignment="Stretch" Margin="10" Width="330" Content="NOT SURE" x:Name="Blur" Click="Blur_Click"></Button>
+                        <Button HorizontalAlignment="Stretch" Margin="10" Width="330" Content="NOPE" x:Name="Nope" Click="No_Click"></Button>
                     </StackPanel>
                 </Grid>
             </PivotItem>
@@ -57,6 +59,11 @@
                 </Grid>
             </PivotItem>
             <PivotItem Header="Settings">
+                <StackPanel HorizontalAlignment="Center" Margin="10" Orientation="Vertical">
+                    <TextBox HorizontalAlignment="Stretch" Margin="10" Width="330" x:Name="Email"></TextBox>
+                    <Button HorizontalAlignment="Stretch" Margin="10" Width="330" Content="UPLOADS" x:Name="UPLOADS" Click="UPLOADS_Click"></Button>
+                    <Button HorizontalAlignment="Stretch" Margin="10" Width="330" Content="DOWNLOAD" x:Name="DOWNLOAD"></Button>
+                </StackPanel>
             </PivotItem>
         </Pivot>
     </Grid>

@@ -21,6 +21,9 @@ using Windows.UI.ViewManagement;
 using System.ComponentModel;
 using bosxixi.Toolkit;
 using Windows.System.Threading;
+using System.Net.Http;
+using System.Text;
+using Windows.UI.Popups;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -53,6 +56,8 @@ namespace IELTSWord
                         this.GenericDispatherActionAsync(() =>
                         {
                             GetNext();
+
+                            UpdateStatistics();
                         });
 #pragma warning restore CS4014 // Because this call is not awaited, execution of the current method continues before the call is completed
                     }, TimeSpan.FromSeconds(2));
@@ -61,6 +66,8 @@ namespace IELTSWord
                 else
                 {
                     GetNext();
+
+                    UpdateStatistics();
                 }
             }
         }
@@ -73,6 +80,18 @@ namespace IELTSWord
                 {
                     ElaborateText.Text = this.CurrentWord.Elaborate;
                 }
+                UpdateStatistics();
+            }
+        }
+        async void UPLOADS_Click(object sender, RoutedEventArgs e)
+        {
+            HttpClient client = new HttpClient();
+            var post = await client.PostAsync("https://searchscorpio.azurewebsites.net/api/google/AddUpdateKeyValue",
+                new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(new { Id = Email.Text, Value = Newtonsoft.Json.JsonConvert.SerializeObject(new { id = AppGlobalSettings.IDs, items = Word.GetAll() }) }), Encoding.UTF8, "application/json"));
+            if (post.IsSuccessStatusCode)
+            {
+                MessageDialog messageDialog = new MessageDialog("UPLOADED", "SUCCESS");
+                await messageDialog.ShowAsync();
             }
         }
         private void No_Click(object sender, RoutedEventArgs e)
@@ -88,22 +107,24 @@ namespace IELTSWord
                 {
                     GetNext();
                 }
+
+                UpdateStatistics();
             }
         }
         private void Pivot_Changed(object sender, RoutedEventArgs e)
         {
-            var all = Word.GetAll();
-            if (all != null)
-            {
-                all = all.OrderByDescending(c => c.HitDate).ToList();
-                TotalWords.Text = all.Count.ToString();
-                WordsListView.DisplayMemberPath = nameof(Word.Name);
-                WordsListView.ItemsSource = all;
-            }
-            else
-            {
-                WordsListView.ItemsSource = null;
-            }
+            //var all = Word.GetAll();
+            //if (all != null)
+            //{
+            //    all = all.OrderByDescending(c => c.HitDate).ToList();
+            //    TotalWords.Text = all.Count.ToString();
+            //    WordsListView.DisplayMemberPath = nameof(Word.Name);
+            //    WordsListView.ItemsSource = all;
+            //}
+            //else
+            //{
+            //    WordsListView.ItemsSource = null;
+            //}
         }
         private void Complete_Click(object sender, RoutedEventArgs e)
         {
@@ -111,6 +132,8 @@ namespace IELTSWord
             {
                 this.CurrentWord.Complete();
                 GetNext();
+
+                UpdateStatistics();
             }
         }
         async void Load_Click(object sender, RoutedEventArgs e)
@@ -126,10 +149,29 @@ namespace IELTSWord
                 this.Words = GetWords(item.Value, index * 1000);
                 await Task.Delay(2000);
                 GetNext();
+
+                UpdateStatistics();
+
             }
             catch (Exception)
             {
 
+            }
+        }
+
+        private void UpdateStatistics()
+        {
+            var all = Word.GetAll();
+            if (all != null)
+            {
+                all = all.OrderByDescending(c => c.HitDate).ToList();
+                TotalWords.Text = all.Count.ToString();
+                WordsListView.DisplayMemberPath = nameof(Word.Name);
+                WordsListView.ItemsSource = all;
+            }
+            else
+            {
+                WordsListView.ItemsSource = null;
             }
         }
 
@@ -40726,6 +40768,11 @@ centralization	n. 集中化；中央集权管理
         }
         public static List<Word> GetAll()
         {
+            var newIds = AppGlobalSettings.IDs.Split(',').ToList();
+            if (!newIds.IsNullOrCountEqualsZero())
+            {
+                return newIds.Select(id => Word.Load(id)).Where(c => c != null).ToList();
+            }
             //get => Plugin.Settings.CrossSettings.Current.GetValueOrDefault(nameof(Test), 3);
             //set { Plugin.Settings.CrossSettings.Current.AddOrUpdateValue(nameof(Test), value); }
             //Plugin.Settings.CrossSettings.Current.GetValueOrDefault()
@@ -40746,6 +40793,10 @@ centralization	n. 集中化；中央集权管理
         TimeSpan Elasped => DateTimeOffset.UtcNow - this.HitDate;
         public void Save()
         {
+            var newIds = AppGlobalSettings.IDs.Split(',').ToList();
+            newIds.Add(this.Id);
+            newIds = newIds.Distinct().ToList();
+            AppGlobalSettings.IDs = string.Join(',', newIds);
             var word = Newtonsoft.Json.JsonConvert.SerializeObject(this);
             //SettingService.Set<string>(this.Id.ToString(), word, nameof(Word));
             Plugin.Settings.CrossSettings.Current.AddOrUpdateValue(this.Id.ToString(), word, nameof(Word));
@@ -40838,6 +40889,14 @@ centralization	n. 集中化；中央集权管理
 
             get => Plugin.Settings.CrossSettings.Current.GetValueOrDefault(nameof(LastIndex), 0);
             set { Plugin.Settings.CrossSettings.Current.AddOrUpdateValue(nameof(LastIndex), value); }
+        }
+        public static string IDs
+        {
+            //get => CrossSettings.Current.GetValueOrDefault(nameof(LocalPort), 0);
+            //set { CrossSettings.Current.AddOrUpdateValue(nameof(LocalPort), value); }
+
+            get => Plugin.Settings.CrossSettings.Current.GetValueOrDefault(nameof(IDs), string.Empty);
+            set { Plugin.Settings.CrossSettings.Current.AddOrUpdateValue(nameof(IDs), value); }
         }
 
 
