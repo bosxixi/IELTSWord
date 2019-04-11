@@ -15,6 +15,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IELTSWord.Wasm", "IELTSWord
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		IELTSWord\IELTSWord.Shared\IELTSWord.Shared.projitems*{4599f181-97ef-4e96-85c4-80b822ab8d3e}*SharedItemsImports = 4
 		IELTSWord\IELTSWord.Shared\IELTSWord.Shared.projitems*{61077ddf-2db0-4134-8d0f-ee5698b528c0}*SharedItemsImports = 4
 		IELTSWord\IELTSWord.Shared\IELTSWord.Shared.projitems*{6279c845-92f8-4333-ab99-3d213163593c}*SharedItemsImports = 13
 		IELTSWord\IELTSWord.Shared\IELTSWord.Shared.projitems*{d8dd16ce-a6eb-4281-8e54-d1a47d8ccc80}*SharedItemsImports = 4

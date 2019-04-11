@@ -129,7 +129,7 @@
             <PivotItem Header="Settings">
                 <StackPanel HorizontalAlignment="Center" Margin="10" Orientation="Vertical">
                     <TextBox HorizontalAlignment="Stretch" PlaceholderText="Email" Text="{x:Bind Email, Mode=TwoWay}" Margin="10" Width="330"></TextBox>
-                    <PasswordBox x:Name="passwordBox" Width="330" MaxLength="16"
+                    <PasswordBox x:Name="passwordBox" Width="330" Margin="10"
              PasswordChanged="passwordBox_PasswordChanged"/>
                     <Button HorizontalAlignment="Stretch" Margin="10" Width="330" Content="UPLOAD" x:Name="UPLOADS" Click="UPLOADS_Click"></Button>
                     <Button HorizontalAlignment="Stretch" Margin="10" Width="330" Content="DOWNLOAD" x:Name="DOWNLOAD" Click="DOWNLOAD_Click"></Button>

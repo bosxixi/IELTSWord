@@ -40935,7 +40935,7 @@ centralization	n. 集中化；中央集权管理
         }
         public static Word Load(string id)
         {
-#if WINDOWS_UWP
+#if WINDOWS_UWP || __WASM__
             var val = SettingService.Get<string>(id, null, nameof(Word));
 #else
             var val = Plugin.Settings.CrossSettings.Current.GetValueOrDefault(id, null, nameof(Word));
@@ -40955,9 +40955,9 @@ centralization	n. 集中化；中央集权管理
             var newIds = AppGlobalSettings.IDs.Split(',').ToList();
             newIds.Add(this.Id);
             newIds = newIds.Distinct().ToList();
-            AppGlobalSettings.IDs = string.Join(',', newIds);
+            AppGlobalSettings.IDs = string.Join(",", newIds);
             var word = Newtonsoft.Json.JsonConvert.SerializeObject(this);
-#if WINDOWS_UWP
+#if WINDOWS_UWP || __WASM__
             SettingService.Set<string>(this.Id.ToString(), word, nameof(Word));
 #else
             Plugin.Settings.CrossSettings.Current.AddOrUpdateValue(this.Id.ToString(), word, nameof(Word));
@@ -41038,7 +41038,7 @@ centralization	n. 集中化；中央集权管理
 
         public static int Test
         {
-#if WINDOWS_UWP
+#if WINDOWS_UWP || __WASM__
             get => SettingService.Get(nameof(Test), 3);
             set => SettingService.Set(nameof(Test), value);
 #else
@@ -41049,7 +41049,7 @@ centralization	n. 集中化；中央集权管理
 
         public static int Level
         {
-#if WINDOWS_UWP
+#if WINDOWS_UWP || __WASM__
             get => SettingService.Get(nameof(Level), -1);
             set => SettingService.Set(nameof(Level), value);
 #else
@@ -41060,7 +41060,7 @@ centralization	n. 集中化；中央集权管理
 
         public static int LastIndex
         {
-#if WINDOWS_UWP
+#if WINDOWS_UWP || __WASM__
             get => SettingService.Get(nameof(LastIndex), 0);
             set => SettingService.Set(nameof(LastIndex), value);
 #else
@@ -41070,7 +41070,7 @@ centralization	n. 集中化；中央集权管理
         }
         public static string IDs
         {
-#if WINDOWS_UWP
+#if WINDOWS_UWP || __WASM__
             get => SettingService.Get(nameof(IDs), string.Empty);
             set => SettingService.Set(nameof(IDs), value);
 
@@ -41081,7 +41081,7 @@ centralization	n. 集中化；中央集权管理
         }
         public static string Email
         {
-#if WINDOWS_UWP
+#if WINDOWS_UWP || __WASM__
             get => SettingService.Get(nameof(Email), string.Empty);
             set => SettingService.Set(nameof(Email), value);
 #else
@@ -41091,7 +41091,7 @@ centralization	n. 集中化；中央集权管理
         }
         public static string Password
         {
-#if WINDOWS_UWP
+#if WINDOWS_UWP || __WASM__
             get => SettingService.Get(nameof(Password), string.Empty);
             set => SettingService.Set(nameof(Password), value);
 #else
