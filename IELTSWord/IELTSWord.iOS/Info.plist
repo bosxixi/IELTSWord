@@ -49,5 +49,7 @@
 	<string>{320, 568}</string>
 	<key>CFBundleDisplayName</key>
 	<string>IELTS Word</string>
+	<key>UIStatusBarHidden</key>
+	<true/>
 </dict>
 </plist>

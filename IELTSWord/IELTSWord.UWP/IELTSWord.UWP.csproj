@@ -13,6 +13,18 @@
 			-->
       <Version>6.2.2</Version>
     </PackageReference>
+    <PackageReference Include="Uno.Microsoft.Toolkit.Uwp.Notifications">
+      <Version>3.1.0-build.68.g1c44fa8ae7</Version>
+    </PackageReference>
+    <PackageReference Include="Uno.Microsoft.Toolkit.Uwp.UI">
+      <Version>5.1.0-build.179.g6aee66f4f3</Version>
+    </PackageReference>
+    <PackageReference Include="Uno.Microsoft.Toolkit.Uwp.UI.Animations">
+      <Version>5.1.0-build.179.g6aee66f4f3</Version>
+    </PackageReference>
+    <PackageReference Include="Uno.Microsoft.Toolkit.Uwp.UI.Controls">
+      <Version>5.1.0-build.179.g6aee66f4f3</Version>
+    </PackageReference>
     <PackageReference Include="Xam.Plugins.Settings">
       <Version>3.1.1</Version>
     </PackageReference>

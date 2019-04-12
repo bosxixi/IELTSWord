@@ -32,6 +32,260 @@ using Windows.Media.Core;
 
 namespace IELTSWord
 {
+    public class NullToVisiblityConverter : IValueConverter
+    {
+
+        public object Convert(object value, Type targetType, object parameter, string language)
+        {
+            if (parameter?.ToString() == "r")
+            {
+                if (value is string vs)
+                {
+                    return !String.IsNullOrEmpty(vs) ? Visibility.Collapsed : Visibility.Visible;
+                }
+                return value != null ? Visibility.Collapsed : Visibility.Visible;
+            }
+
+            if (value is string vs2)
+            {
+                return !String.IsNullOrEmpty(vs2) ? Visibility.Visible : Visibility.Visible;
+            }
+            return value != null ? Visibility.Visible : Visibility.Collapsed;
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, string language)
+        {
+            throw new NotImplementedException();
+        }
+    }
+
+    public class BoolToBrushConverter : IValueConverter
+    {
+        public object Convert(object value, Type targetType, object parameter, string language)
+        {
+            return (bool)value ? new SolidColorBrush(Windows.UI.Color.FromArgb(255, 202, 81, 0)) : new SolidColorBrush(Windows.UI.Color.FromArgb(255, 0, 122, 204));
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, string language)
+        {
+            throw new NotImplementedException();
+        }
+    }
+
+    public class EXAM
+    {
+        public class Root
+        {
+            public string normalizedSource { get; set; }
+            public string normalizedTarget { get; set; }
+            public Example[] examples { get; set; }
+        }
+
+        public class Example
+        {
+            public string sourcePrefix { get; set; }
+            public string sourceTerm { get; set; }
+            public string sourceSuffix { get; set; }
+            public string targetPrefix { get; set; }
+            public string targetTerm { get; set; }
+            public string targetSuffix { get; set; }
+        }
+
+    }
+    public class TM
+    {
+        public class Root
+        {
+            public string normalizedSource { get; set; }
+            public string displaySource { get; set; }
+            public Translation[] translations { get; set; }
+        }
+
+        public class Translation
+        {
+            public string normalizedTarget { get; set; }
+            public string displayTarget { get; set; }
+            public string posTag { get; set; }
+            public float confidence { get; set; }
+            public string prefixWord { get; set; }
+            public Backtranslation[] backTranslations { get; set; }
+        }
+
+        public class Backtranslation
+        {
+            public string normalizedText { get; set; }
+            public string displayText { get; set; }
+            public int numExamples { get; set; }
+            public int frequencyCount { get; set; }
+        }
+
+    }
+    public class WordRoot
+    {
+        public string antonyms { get; set; }
+        public string synonyms { get; set; }
+        public string @class { get; set; }
+        public string[] example { get; set; }
+        public string meaning { get; set; }
+        public string root { get; set; }
+        public string origin { get; set; }
+    }
+    public class WordDetails
+    {
+        public string Phonetic { get; set; }
+        public WordRoot[] WordRoot { get; set; }
+        public string Lemma { get; set; }
+        public TM.Root LoopUp { get; set; }
+        public List<EXAM.Root> Examples { get; set; }
+
+        public string WordRootStr
+        {
+            get
+            {
+                if (WordRoot != null && !WordRoot.IsNullOrCountEqualsZero())
+                {
+                    StringBuilder sb = new StringBuilder();
+                    foreach (var item in WordRoot)
+                    {
+                        sb.AppendLine($"词根:{item.root}");
+                        sb.AppendLine($"意思:{item.meaning}");
+                        sb.AppendLine($"类型:{item.@class}");
+                        //sb.AppendLine($"antonyms:{item.antonyms}");
+                        sb.AppendLine($"同义:{item.synonyms}");
+                        //sb.AppendLine($"meaning:{item.meaning}");
+                        sb.AppendLine($"来源:{item.origin}");
+                    }
+
+                    return sb.ToString();
+
+                }
+                return string.Empty;
+            }
+        }
+        public string PhoneticStr
+        {
+            get
+            {
+                return $"[ {Phonetic} ]";
+            }
+        }
+        public string LoopUpStr
+        {
+            get
+            {
+                if (LoopUp != null && !LoopUp.translations.IsNullOrCountEqualsZero())
+                {
+                    StringBuilder sb = new StringBuilder();
+                    foreach (var item in LoopUp.translations)
+                    {
+                        sb.AppendLine($"[ {item.posTag} ] {item.displayTarget}");
+                    }
+                    return sb.ToString();
+                }
+                return string.Empty;
+            }
+        }
+        public string ExamplesStr
+        {
+            get
+            {
+                if (Examples != null && !Examples.IsNullOrCountEqualsZero())
+                {
+                    StringBuilder sb = new StringBuilder();
+                    foreach (var item in Examples)
+                    {
+                        sb.AppendLine($"{item.normalizedSource} {item.normalizedTarget}");
+
+                        foreach (var item2 in item.examples)
+                        {
+                            sb.AppendLine($"{item2.sourcePrefix} {item2.sourceTerm} {item2.sourceSuffix}");
+                            sb.AppendLine($"{item2.targetPrefix} {item2.targetTerm} {item2.targetSuffix}");
+                        }
+                        sb.AppendLine();
+                    }
+                    return sb.ToString();
+                }
+                return string.Empty;
+            }
+        }
+    }
+    public class CompressedStorage
+    {
+        private readonly Storage storage;
+
+        public enum Storage
+        {
+            Detail,
+        }
+        public CompressedStorage(Storage storage)
+        {
+            this.storage = storage;
+        }
+        StorageFolder _folder;
+        public async Task EnsureFolderAsync()
+        {
+            if (await ApplicationData.Current.TemporaryFolder.TryGetItemAsync(this.storage.ToString()) is StorageFolder folder)
+            {
+                _folder = folder;
+            }
+            else
+            {
+                _folder = await ApplicationData.Current.TemporaryFolder.CreateFolderAsync(this.storage.ToString(), CreationCollisionOption.ReplaceExisting);
+            }
+        }
+        public async Task DeleteAsync()
+        {
+            await EnsureFolderAsync();
+            await this._folder.DeleteAsync();
+        }
+        public async Task<IEnumerable<T>> TryGetAllAsync<T>() where T : class, new()
+        {
+            try
+            {
+                await EnsureFolderAsync();
+                var files = await _folder.GetFilesAsync();
+                List<T> ts = new List<T>();
+                foreach (var item in files)
+                {
+                    var compressed = await FileIO.ReadTextAsync(item);
+                    var result = Newtonsoft.Json.JsonConvert.DeserializeObject<T>(compressed);
+                    ts.Add(result);
+                }
+                return ts;
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
+        public async Task<T> TryGetAsync<T>(string id) where T : class
+        {
+            try
+            {
+                await EnsureFolderAsync();
+                var compressed = await FileIO.ReadTextAsync(await _folder.GetFileAsync(id));
+                var result = Newtonsoft.Json.JsonConvert.DeserializeObject<T>(compressed);
+                return result;
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
+        public async Task TrySetAsync<T>(string id, T value) where T : class
+        {
+            try
+            {
+                await EnsureFolderAsync();
+                var val = Newtonsoft.Json.JsonConvert.SerializeObject(value);
+                var file = await _folder.CreateFileAsync(id, CreationCollisionOption.ReplaceExisting);
+                await FileIO.WriteTextAsync(file, val);
+            }
+            catch (Exception)
+            {
+            }
+        }
+    }
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
@@ -61,6 +315,22 @@ namespace IELTSWord
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(Level)));
             }
         }
+        private bool _downloading;
+
+        public bool IsDownloading
+        {
+            get { return _downloading; }
+            set { _downloading = value; GenericRaisePropertyChanged(nameof(IsDownloading)); }
+        }
+
+        private WordDetails wordDetails;
+
+        public WordDetails CurrentWordDetails
+        {
+            get { return wordDetails; }
+            set { wordDetails = value; GenericRaisePropertyChanged(nameof(CurrentWordDetails)); }
+        }
+
         Windows.Media.Playback.MediaPlayer _media;
         async void Speaker_Click(object sender, RoutedEventArgs e)
         {
@@ -83,15 +353,15 @@ namespace IELTSWord
             }
 
         }
-        void Yes_Click(object sender, RoutedEventArgs e)
+        async void Yes_Click(object sender, RoutedEventArgs e)
         {
             if (this.Words != null && this.CurrentWord != null)
             {
                 this.CurrentWord.Yes();
 
-                if (ElaborateText.Text == string.Empty)
+                if (this.CurrentWordDetails == null)
                 {
-                    ElaborateText.Text = this.CurrentWord.Elaborate;
+                    await UpdateDetailAsync(this.CurrentWord.Name);
                     ThreadPoolTimer.CreateTimer(_ =>
                     {
 #pragma warning disable CS4014 // Because this call is not awaited, execution of the current method continues before the call is completed
@@ -113,40 +383,83 @@ namespace IELTSWord
                 }
             }
         }
-        private void Blur_Click(object sender, RoutedEventArgs e)
+        async void Blur_Click(object sender, RoutedEventArgs e)
         {
             if (this.Words != null && this.CurrentWord != null)
             {
                 this.CurrentWord.Blur();
-                if (ElaborateText.Text == string.Empty)
-                {
-                    ElaborateText.Text = this.CurrentWord.Elaborate;
-                }
+                await UpdateDetailAsync(this.CurrentWord.Name);
                 UpdateStatistics();
             }
         }
+
+        private async Task UpdateDetailAsync(string word)
+        {
+            if (this.CurrentWordDetails == null)
+            {
+                this.CurrentWordDetails = await GetDetailsAsync(word);
+            }
+        }
+
+        private async Task<WordDetails> GetDetailsAsync(string word)
+        {
+            try
+            {
+                this.IsDownloading = true;
+                var ds = await new CompressedStorage(CompressedStorage.Storage.Detail).TryGetAsync<WordDetails>(word);
+                if (ds == null)
+                {
+                    HttpClient client = new HttpClient();
+                    var post = await client.GetStringAsync($"https://searchscorpio.azurewebsites.net/api/google/worddetail?word={Uri.EscapeDataString(this.CurrentWord.Name)}");
+                    var item = JsonConvert.DeserializeObject<WordDetails>(post);
+                    await new CompressedStorage(CompressedStorage.Storage.Detail).TrySetAsync(word, item);
+                    return item;
+                }
+                else
+                {
+                    return ds;
+                }
+            }
+            catch (Exception)
+            {
+            }
+            finally
+            {
+                this.IsDownloading = false;
+            }
+            return null;
+        }
+
         async void UPLOADS_Click(object sender, RoutedEventArgs e)
         {
-            if (!String.IsNullOrEmpty(AppGlobalSettings.Email) && !String.IsNullOrEmpty(AppGlobalSettings.Password))
+            try
             {
-                HttpClient client = new HttpClient();
-                var post = await client.PostAsync("https://searchscorpio.azurewebsites.net/api/google/AddUpdateKeyValue",
-                    new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(new
-                    {
-                        Id = _id,
-                        Value = Newtonsoft.Json.JsonConvert.SerializeObject(new
-                        { id = AppGlobalSettings.IDs, items = Word.GetAll() })
-                    }), Encoding.UTF8, "application/json"));
-                if (post.IsSuccessStatusCode)
+                this.IsDownloading = true;
+                if (!String.IsNullOrEmpty(AppGlobalSettings.Email) && !String.IsNullOrEmpty(AppGlobalSettings.Password))
                 {
-                    MessageDialog messageDialog = new MessageDialog("UPLOADED", "SUCCESS");
+                    HttpClient client = new HttpClient();
+                    var post = await client.PostAsync("https://searchscorpio.azurewebsites.net/api/google/AddUpdateKeyValue",
+                        new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(new
+                        {
+                            Id = _id,
+                            Value = Newtonsoft.Json.JsonConvert.SerializeObject(new
+                            { id = AppGlobalSettings.IDs, items = Word.GetAll() })
+                        }), Encoding.UTF8, "application/json"));
+                    if (post.IsSuccessStatusCode)
+                    {
+                        MessageDialog messageDialog = new MessageDialog("UPLOADED", "SUCCESS");
+                        await messageDialog.ShowAsync();
+                    }
+                }
+                else
+                {
+                    MessageDialog messageDialog = new MessageDialog("please set up email and password to sync", "Email");
                     await messageDialog.ShowAsync();
                 }
             }
-            else
+            finally
             {
-                MessageDialog messageDialog = new MessageDialog("please set up email and password to sync", "Email");
-                await messageDialog.ShowAsync();
+                this.IsDownloading = false;
             }
         }
         private void passwordBox_PasswordChanged(object sender, RoutedEventArgs e)
@@ -166,56 +479,65 @@ namespace IELTSWord
         string _id => $"{AppGlobalSettings.Email}_{AppGlobalSettings.Password}";
         async void DOWNLOAD_Click(object sender, RoutedEventArgs e)
         {
-            if (!String.IsNullOrEmpty(AppGlobalSettings.Email) && !String.IsNullOrEmpty(AppGlobalSettings.Password))
+            try
             {
-                try
+                this.IsDownloading = true;
+                if (!String.IsNullOrEmpty(AppGlobalSettings.Email) && !String.IsNullOrEmpty(AppGlobalSettings.Password))
                 {
-                    HttpClient client = new HttpClient();
-                    var post = await client.GetStringAsync($"https://searchscorpio.azurewebsites.net/api/google/GetKeyValue?key={Uri.EscapeDataString(_id)}");
-                    var item = JsonConvert.DeserializeObject<KeyValue>(post);
-                    if (item.Id == _id)
+                    try
                     {
-                        var items = JsonConvert.DeserializeObject<WordItems>(item.Value);
-                        if (items.Id != null && items.Items != null)
+                        HttpClient client = new HttpClient();
+                        var post = await client.GetStringAsync($"https://searchscorpio.azurewebsites.net/api/google/GetKeyValue?key={Uri.EscapeDataString(_id)}");
+                        var item = JsonConvert.DeserializeObject<KeyValue>(post);
+                        if (item.Id == _id)
                         {
-                            AppGlobalSettings.IDs = items.Id;
-                            foreach (var word in items.Items)
+                            var items = JsonConvert.DeserializeObject<WordItems>(item.Value);
+                            if (items.Id != null && items.Items != null)
                             {
-                                word.Save();
+                                AppGlobalSettings.IDs = items.Id;
+                                foreach (var word in items.Items)
+                                {
+                                    word.Save();
+                                }
+                                UpdateStatistics();
+                                MessageDialog messageDialog = new MessageDialog($"update success: {items.Items.Count}", "Download");
+                                await messageDialog.ShowAsync();
+                                return;
                             }
-                            UpdateStatistics();
-                            MessageDialog messageDialog = new MessageDialog($"update success: {items.Items.Count}", "Download");
-                            await messageDialog.ShowAsync();
-                            return;
-                        }
-                        else
-                        {
-                            MessageDialog messageDialog = new MessageDialog("data crupt", "Error");
-                            await messageDialog.ShowAsync();
+                            else
+                            {
+                                MessageDialog messageDialog = new MessageDialog("data crupt", "Error");
+                                await messageDialog.ShowAsync();
+                            }
                         }
                     }
+                    catch (Exception ex)
+                    {
+                        MessageDialog messageDialog = new MessageDialog("invalid email or password or not match", "Error");
+                        await messageDialog.ShowAsync();
+                    }
+
                 }
-                catch (Exception ex)
+                else
                 {
-                    MessageDialog messageDialog = new MessageDialog("invalid email or password or not match", "Error");
+                    MessageDialog messageDialog = new MessageDialog("please set up email to sync", "Email");
                     await messageDialog.ShowAsync();
                 }
-
             }
-            else
+            finally
             {
-                MessageDialog messageDialog = new MessageDialog("please set up email to sync", "Email");
-                await messageDialog.ShowAsync();
+                this.IsDownloading = false;
             }
+
         }
-        private void No_Click(object sender, RoutedEventArgs e)
+        async void No_Click(object sender, RoutedEventArgs e)
         {
             if (this.Words != null && this.CurrentWord != null)
             {
                 this.CurrentWord.No();
-                if (ElaborateText.Text == string.Empty)
+                if (this.CurrentWordDetails == null)
                 {
-                    ElaborateText.Text = this.CurrentWord.Elaborate;
+                    await UpdateDetailAsync(this.CurrentWord.Name);
                 }
                 else
                 {
@@ -265,7 +587,8 @@ namespace IELTSWord
                     baseCount = index * 1000;
                 }
                 this.Words = GetWords(item.Value, baseCount);
-                await Task.Delay(2000);
+                PackageVersion.Text = item.Key;
+                await Task.Delay(1000);
                 GetNext();
 
                 UpdateStatistics();
@@ -318,7 +641,8 @@ namespace IELTSWord
                     if (word.IsValid())
                     {
                         this.CurrentWord = word;
-                        ElaborateText.Text = string.Empty;
+                        this.CurrentWordDetails = null;
+                        GetDetailsAsync(word.Name);
                         PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(CurrentWord)));
 
                     }
@@ -354,7 +678,7 @@ namespace IELTSWord
             //dicsbob
             DicsCombo.DisplayMemberPath = "Key";
             DicsCombo.ItemsSource = Dics;
-
+            LevelCombo.SelectedIndex = 1;
             DicsCombo.SelectedIndex = AppGlobalSettings.LastIndex;
             passwordBox.Password = AppGlobalSettings.Password;
             Load_Click(null, null);
@@ -460,7 +784,7 @@ namespace IELTSWord
                     }
                     catch (Exception ex)
                     {
-                        
+
                     }
 
                 });
