@@ -147,6 +147,12 @@
     <ImageAsset Include="Media.xcassets\AppIcons.appiconset\iPad-76x76@2x.png">
       <Visible>false</Visible>
     </ImageAsset>
+    <ImageAsset Include="Media.xcassets\AppIcons.appiconset\iPad-App1x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Media.xcassets\AppIcons.appiconset\iPad-App2x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
     <ImageAsset Include="Media.xcassets\AppIcons.appiconset\iPad-Pro-App2x.png">
       <Visible>false</Visible>
     </ImageAsset>

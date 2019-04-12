@@ -3651,4 +3651,28 @@
   <data name="UseLightThemeButton_Text.Text" xml:space="preserve">
     <value>리본 디자인 테마를 사용 하 여</value>
   </data>
+  <data name="UPLOAD_SUCCESS" xml:space="preserve">
+    <value>업로드 완료</value>
+  </data>
+  <data name="UPLOAD_SUCCESS_DETAIL" xml:space="preserve">
+    <value>데이터를 성공적으로 백업</value>
+  </data>
+  <data name="REQUERED_MORE_INFO" xml:space="preserve">
+    <value>백업에 더 많은 정보를 필요</value>
+  </data>
+  <data name="REQUERED_MORE_INFO_DETAIL" xml:space="preserve">
+    <value>클라우드 백업 데이터를 이메일 및 비밀 번호를 입력 해 주시기 바랍니다</value>
+  </data>
+  <data name="DOWNLOAD_SUCCESS" xml:space="preserve">
+    <value>다운로드 완료</value>
+  </data>
+  <data name="DOWNLOAD_SUCCESS_DETAIL" xml:space="preserve">
+    <value>데이터를 성공적으로 복원</value>
+  </data>
+  <data name="ERROR_MORE_INFO" xml:space="preserve">
+    <value>다운로드 수 없습니다</value>
+  </data>
+  <data name="ERROR_MORE_INFO_DETAIL" xml:space="preserve">
+    <value>정확한 이메일과 비밀 번호 복구를 입력 해 주시기 바랍니다</value>
+  </data>
 </root>

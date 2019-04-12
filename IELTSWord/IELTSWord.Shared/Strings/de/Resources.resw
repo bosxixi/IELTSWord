@@ -3651,4 +3651,28 @@
   <data name="UseLightThemeButton_Text.Text" xml:space="preserve">
     <value>Verwenden Sie fließend Design</value>
   </data>
+  <data name="UPLOAD_SUCCESS" xml:space="preserve">
+    <value>Upload abgeschlossen</value>
+  </data>
+  <data name="UPLOAD_SUCCESS_DETAIL" xml:space="preserve">
+    <value>Backup-Daten erfolgreich</value>
+  </data>
+  <data name="REQUERED_MORE_INFO" xml:space="preserve">
+    <value>Weitere Informationen zum Backup erforderlich</value>
+  </data>
+  <data name="REQUERED_MORE_INFO_DETAIL" xml:space="preserve">
+    <value>Bitte geben Sie e-Mail und Passwort für backup-Daten in die cloud</value>
+  </data>
+  <data name="DOWNLOAD_SUCCESS" xml:space="preserve">
+    <value>Download abgeschlossen</value>
+  </data>
+  <data name="DOWNLOAD_SUCCESS_DETAIL" xml:space="preserve">
+    <value>Daten erfolgreich wiederherstellen</value>
+  </data>
+  <data name="ERROR_MORE_INFO" xml:space="preserve">
+    <value>Nicht in der Lage zum Download</value>
+  </data>
+  <data name="ERROR_MORE_INFO_DETAIL" xml:space="preserve">
+    <value>Bitte geben Sie korrekte Emailadresse und Passwort wiederherstellen</value>
+  </data>
 </root>

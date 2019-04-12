@@ -3729,4 +3729,28 @@
   <data name="UseLightThemeButton_Text.Text" xml:space="preserve">
     <value>流暢なデザイン テーマを使用してください。</value>
   </data>
+  <data name="UPLOAD_SUCCESS" xml:space="preserve">
+    <value>アップロードが完了しました</value>
+  </data>
+  <data name="UPLOAD_SUCCESS_DETAIL" xml:space="preserve">
+    <value>データを正常にバックアップします。</value>
+  </data>
+  <data name="REQUERED_MORE_INFO" xml:space="preserve">
+    <value>必要なバックアップの詳細情報</value>
+  </data>
+  <data name="REQUERED_MORE_INFO_DETAIL" xml:space="preserve">
+    <value>クラウドにデータをバックアップするメール アドレスとパスワードを入力してください。</value>
+  </data>
+  <data name="DOWNLOAD_SUCCESS" xml:space="preserve">
+    <value>ダウンロードが完了しました。</value>
+  </data>
+  <data name="DOWNLOAD_SUCCESS_DETAIL" xml:space="preserve">
+    <value>正常にデータを復元します。</value>
+  </data>
+  <data name="ERROR_MORE_INFO" xml:space="preserve">
+    <value>ダウンロードできません。</value>
+  </data>
+  <data name="ERROR_MORE_INFO_DETAIL" xml:space="preserve">
+    <value>正しいメール アドレスとパスワードを復元するを入力してください。</value>
+  </data>
 </root>

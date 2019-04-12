@@ -3729,4 +3729,28 @@
   <data name="UseLightThemeButton_Text.Text" xml:space="preserve">
     <value>使用流暢設計主題</value>
   </data>
+  <data name="UPLOAD_SUCCESS" xml:space="preserve">
+    <value>上傳已完成</value>
+  </data>
+  <data name="UPLOAD_SUCCESS_DETAIL" xml:space="preserve">
+    <value>備份資料成功</value>
+  </data>
+  <data name="REQUERED_MORE_INFO" xml:space="preserve">
+    <value>需要備份的詳細資訊</value>
+  </data>
+  <data name="REQUERED_MORE_INFO_DETAIL" xml:space="preserve">
+    <value>請輸入電子郵件和密碼將資料備份到雲</value>
+  </data>
+  <data name="DOWNLOAD_SUCCESS" xml:space="preserve">
+    <value>下載已完成</value>
+  </data>
+  <data name="DOWNLOAD_SUCCESS_DETAIL" xml:space="preserve">
+    <value>成功還原資料</value>
+  </data>
+  <data name="ERROR_MORE_INFO" xml:space="preserve">
+    <value>無法下載</value>
+  </data>
+  <data name="ERROR_MORE_INFO_DETAIL" xml:space="preserve">
+    <value>請輸入正確的電子郵件和密碼以恢復</value>
+  </data>
 </root>

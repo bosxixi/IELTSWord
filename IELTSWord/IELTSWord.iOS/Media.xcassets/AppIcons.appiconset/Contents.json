@@ -51,17 +51,6 @@
       "idiom": "ipad"
     },
     {
-      "scale": "1x",
-      "size": "76x76",
-      "idiom": "ipad"
-    },
-    {
-      "scale": "2x",
-      "size": "76x76",
-      "idiom": "ipad",
-      "filename": "iPad-76x76@2x.png squaretile-sdk-ipad.png"
-    },
-    {
       "scale": "2x",
       "size": "20x20",
       "idiom": "iphone",
@@ -96,6 +85,18 @@
       "size": "1024x1024",
       "idiom": "ios-marketing",
       "filename": "App-Store@1x.png"
+    },
+    {
+      "scale": "1x",
+      "size": "76x76",
+      "idiom": "ipad",
+      "filename": "iPad-App1x.png"
+    },
+    {
+      "scale": "2x",
+      "size": "76x76",
+      "idiom": "ipad",
+      "filename": "iPad-App2x.png"
     }
   ],
   "properties": {},

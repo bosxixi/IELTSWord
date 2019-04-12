@@ -3651,4 +3651,28 @@
   <data name="UseLightThemeButton_Text.Text" xml:space="preserve">
     <value>使用流畅设计主题</value>
   </data>
+  <data name="UPLOAD_SUCCESS" xml:space="preserve">
+    <value>上传已完成</value>
+  </data>
+  <data name="UPLOAD_SUCCESS_DETAIL" xml:space="preserve">
+    <value>备份数据成功</value>
+  </data>
+  <data name="REQUERED_MORE_INFO" xml:space="preserve">
+    <value>需要备份的详细信息</value>
+  </data>
+  <data name="REQUERED_MORE_INFO_DETAIL" xml:space="preserve">
+    <value>请输入电子邮件和密码将数据备份到云</value>
+  </data>
+  <data name="DOWNLOAD_SUCCESS" xml:space="preserve">
+    <value>下载已完成</value>
+  </data>
+  <data name="DOWNLOAD_SUCCESS_DETAIL" xml:space="preserve">
+    <value>成功还原数据</value>
+  </data>
+  <data name="ERROR_MORE_INFO" xml:space="preserve">
+    <value>无法下载</value>
+  </data>
+  <data name="ERROR_MORE_INFO_DETAIL" xml:space="preserve">
+    <value>请输入正确的电子邮件和密码以恢复</value>
+  </data>
 </root>

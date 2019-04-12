@@ -3711,4 +3711,28 @@
   <data name="UseLightThemeButton_Text.Text" xml:space="preserve">
     <value>Use Fluent Design</value>
   </data>
+  <data name="UPLOAD_SUCCESS" xml:space="preserve">
+    <value>Upload Completed</value>
+  </data>
+  <data name="UPLOAD_SUCCESS_DETAIL" xml:space="preserve">
+    <value>Backup Data Successfully</value>
+  </data>
+  <data name="REQUERED_MORE_INFO" xml:space="preserve">
+    <value>Required more info to backup</value>
+  </data>
+  <data name="REQUERED_MORE_INFO_DETAIL" xml:space="preserve">
+    <value>Please enter email and password to backup data to cloud</value>
+  </data>
+  <data name="DOWNLOAD_SUCCESS" xml:space="preserve">
+    <value>Download Completed</value>
+  </data>
+  <data name="DOWNLOAD_SUCCESS_DETAIL" xml:space="preserve">
+    <value>Restore Data Successfully</value>
+  </data>
+  <data name="ERROR_MORE_INFO" xml:space="preserve">
+    <value>Unable to Download</value>
+  </data>
+  <data name="ERROR_MORE_INFO_DETAIL" xml:space="preserve">
+    <value>Please enter correct email and password to restore</value>
+  </data>
 </root>
