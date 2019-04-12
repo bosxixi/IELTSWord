@@ -3708,4 +3708,25 @@
   <data name="GG_PivotItem1_AudoPlayAudio.OffContent" xml:space="preserve">
     <value>かどうか</value>
   </data>
+  <data name="ReviewAll_Text.Text" xml:space="preserve">
+    <value>すべての単語を確認します。</value>
+  </data>
+  <data name="ShowExamples_Text.Text" xml:space="preserve">
+    <value>例文を表示します。</value>
+  </data>
+  <data name="ShowWordRoot_Text.Text" xml:space="preserve">
+    <value>単語のルートを表示します。</value>
+  </data>
+  <data name="ShowSynonyms_Text.Text" xml:space="preserve">
+    <value>類義語を表示します。</value>
+  </data>
+  <data name="ShowAntonyms_Text.Text" xml:space="preserve">
+    <value>反意語を表示します。</value>
+  </data>
+  <data name="AudoPlayAudio_Text.Text" xml:space="preserve">
+    <value>オーディオの自動再生</value>
+  </data>
+  <data name="UseLightThemeButton_Text.Text" xml:space="preserve">
+    <value>流暢なデザイン テーマを使用してください。</value>
+  </data>
 </root>

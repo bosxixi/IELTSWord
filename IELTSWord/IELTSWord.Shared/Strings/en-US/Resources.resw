@@ -3663,4 +3663,25 @@
   <data name="GG_PivotItem1_AudoPlayAudio.OffContent" xml:space="preserve">
     <value>No</value>
   </data>
+  <data name="ReviewAll_Text.Text" xml:space="preserve">
+    <value>Review All Words</value>
+  </data>
+  <data name="ShowExamples_Text.Text" xml:space="preserve">
+    <value>Show Example Sentences</value>
+  </data>
+  <data name="ShowWordRoot_Text.Text" xml:space="preserve">
+    <value>Show Word Root</value>
+  </data>
+  <data name="ShowSynonyms_Text.Text" xml:space="preserve">
+    <value>Show Synonyms</value>
+  </data>
+  <data name="ShowAntonyms_Text.Text" xml:space="preserve">
+    <value>Show Antonyms</value>
+  </data>
+  <data name="AudoPlayAudio_Text.Text" xml:space="preserve">
+    <value>Auto Play Audio</value>
+  </data>
+  <data name="UseLightThemeButton_Text.Text" xml:space="preserve">
+    <value>Use Fluent Design</value>
+  </data>
 </root>

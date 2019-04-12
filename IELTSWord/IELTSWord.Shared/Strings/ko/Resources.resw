@@ -3630,4 +3630,25 @@
   <data name="GG_PivotItem1_AudoPlayAudio.OffContent" xml:space="preserve">
     <value>여부</value>
   </data>
+  <data name="ReviewAll_Text.Text" xml:space="preserve">
+    <value>모든 단어를 검토</value>
+  </data>
+  <data name="ShowExamples_Text.Text" xml:space="preserve">
+    <value>예제 문장 보기</value>
+  </data>
+  <data name="ShowWordRoot_Text.Text" xml:space="preserve">
+    <value>단어 루트 표시</value>
+  </data>
+  <data name="ShowSynonyms_Text.Text" xml:space="preserve">
+    <value>동의어를 표시</value>
+  </data>
+  <data name="ShowAntonyms_Text.Text" xml:space="preserve">
+    <value>반의어를 표시</value>
+  </data>
+  <data name="AudoPlayAudio_Text.Text" xml:space="preserve">
+    <value>자동 재생 오디오</value>
+  </data>
+  <data name="UseLightThemeButton_Text.Text" xml:space="preserve">
+    <value>리본 디자인 테마를 사용 하 여</value>
+  </data>
 </root>

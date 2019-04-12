@@ -50,6 +50,7 @@
                     <StackPanel>
 
                         <ProgressBar Maximum="12" Minimum="0" Value="{x:Bind CurrentWord.Level,Mode=OneWay}"></ProgressBar>
+                        <TextBlock HorizontalAlignment="Right" Foreground="White" TextWrapping="Wrap" Opacity=".7" Margin="0 6 0 0" Text="{x:Bind CurrentWord.Order,Mode=OneWay}"></TextBlock>
                     </StackPanel>
 
 
@@ -60,6 +61,7 @@
                             <RowDefinition></RowDefinition>
                         </Grid.RowDefinitions>
                         <StackPanel Orientation="Vertical" >
+                         
                             <TextBlock HorizontalAlignment="Center" Foreground="White" Text="{x:Bind CurrentWord.Name,Mode=OneWay, FallbackValue='Hello'}" FontSize="48" ></TextBlock>
                             <StackPanel  Width="360" Orientation="Vertical"  HorizontalAlignment="Center" Visibility="{x:Bind CurrentWordDetails, Converter={StaticResource NullToVisiblityConverter}, Mode=OneWay}">
                                 <TextBlock HorizontalAlignment="Center" Foreground="White" TextWrapping="Wrap" Opacity=".7"  FontSize="28" Text="{x:Bind CurrentWord.Elaborate,Mode=OneWay}"></TextBlock>
@@ -101,26 +103,26 @@
                                                           Visibility="{x:Bind ShowExamples, Mode=OneWay, Converter={StaticResource BooleanToVisiblityConverter}}"
                                         >
 
-                                    <ListView ItemsSource="{x:Bind CurrentWordDetails.Examples, Mode=OneWay}">
+                                    <ListView ItemsSource="{x:Bind CurrentWordDetails.Examples, Mode=OneWay}" SelectionMode="None">
                                         <ListView.ItemTemplate>
                                             <DataTemplate x:DataType="local:EXAMRoot">
                                                 <StackPanel Margin="0 20 0 0">
                                                     <StackPanel HorizontalAlignment="Left" Margin="0 0 0 0" Orientation="Vertical" >
                                                         <TextBlock Margin="10 0 0 10" FontSize="22" Foreground="White" FontWeight="Bold" Text="{x:Bind normalizedTarget,Mode=OneWay}"></TextBlock>
-                                                        <ListView ItemsSource="{x:Bind examples, Mode=OneWay}">
+                                                        <ListView ItemsSource="{x:Bind examples, Mode=OneWay}" SelectionMode="None">
                                                             <ListView.ItemTemplate>
                                                                 <DataTemplate x:DataType="local:EXAMExample">
                                                                     <StackPanel HorizontalAlignment="Left" Margin="0 0 0 0" Orientation="Vertical" >
                                                                         <TextBlock>
-                                                                            <Run  Text="{x:Bind sourcePrefix ,Mode=OneWay}"></Run>
+                                                                            <Run Foreground="White" Text="{x:Bind sourcePrefix ,Mode=OneWay}"></Run>
                                                                             <Run Foreground="Red" Text="{x:Bind sourceTerm ,Mode=OneWay}"></Run>
-                                                                            <Run  Text="{x:Bind sourceSuffix ,Mode=OneWay}"></Run>
+                                                                            <Run Foreground="White" Text="{x:Bind sourceSuffix ,Mode=OneWay}"></Run>
                                                                         </TextBlock>
 
                                                                         <TextBlock>
-                                                                            <Run  Text="{x:Bind targetPrefix ,Mode=OneWay}"></Run>
+                                                                            <Run Foreground="White" Text="{x:Bind targetPrefix ,Mode=OneWay}"></Run>
                                                                             <Run Foreground="Red" Text="{x:Bind targetTerm ,Mode=OneWay}"></Run>
-                                                                            <Run  Text="{x:Bind targetSuffix ,Mode=OneWay}"></Run>
+                                                                            <Run Foreground="White" Text="{x:Bind targetSuffix ,Mode=OneWay}"></Run>
                                                                         </TextBlock>
                                                                     </StackPanel>
                                                                 </DataTemplate>
@@ -132,7 +134,7 @@
                                         </ListView.ItemTemplate>
                                     </ListView>
                                 </StackPanel>
-                                <TextBlock HorizontalAlignment="Center" Foreground="White" TextWrapping="Wrap" Opacity=".7" Text="{x:Bind CurrentWord.Order,Mode=OneWay}"></TextBlock>
+                              
                             </StackPanel>
                         </ScrollViewer>
                     </Grid>
@@ -282,54 +284,99 @@
                         <Border BorderThickness="0,3,0,0" Margin="10" BorderBrush="Purple">
                         </Border>
 
-                        <ToggleSwitch
-                        Margin="10"
-                                   x:Uid="GG_PivotItem1_ReviewAll"
+                        <Grid Margin="10">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="auto"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock x:Uid="ReviewAll_Text" Text="ReviewAll_Text" HorizontalAlignment="Left"></TextBlock>
+                            <ToggleSwitch
+                                HorizontalAlignment="Right"
+                                  Grid.Column="1"
                                       x:Name="ReviewAllToggleSwitch"
                                       IsOn="{x:Bind ReviewAll, Mode=TwoWay}"
                             />
+                        </Grid>
 
-                        <ToggleSwitch
-                        Margin="10"
-                                   x:Uid="GG_PivotItem1_ShowExamples"
+                        <Grid Margin="10">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="auto"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock x:Uid="ShowExamples_Text" Text="ShowExamples_Text" HorizontalAlignment="Left"></TextBlock>
+                            <ToggleSwitch
+                                HorizontalAlignment="Right"
+                                          Grid.Column="1"
                                       x:Name="ShowExamplesToggleSwitch"
                                       IsOn="{x:Bind ShowExamples, Mode=TwoWay}"
                             />
+                        </Grid>
 
-
-                        <ToggleSwitch
-                        Margin="10"
-                                   x:Uid="GG_PivotItem1_ShowWordRoot"
+                        <Grid Margin="10">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="auto"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock x:Uid="ShowWordRoot_Text" Text="ShowWordRoot_Text" HorizontalAlignment="Left"></TextBlock>
+                            <ToggleSwitch
+                                HorizontalAlignment="Right"
+                                          Grid.Column="1"
                                       x:Name="ShowWordRootToggleSwitch"
                                       IsOn="{x:Bind ShowWordRoot, Mode=TwoWay}"
                             />
-
-
-                        <ToggleSwitch
-                        Margin="10"
-                                   x:Uid="GG_PivotItem1_ShowSynonyms"
+                        </Grid>
+                        <Grid Margin="10">
+                            <TextBlock x:Uid="ShowSynonyms_Text" Text="ShowSynonyms_Text" HorizontalAlignment="Left"></TextBlock>
+                            <ToggleSwitch
+                                HorizontalAlignment="Right"
+                                          Grid.Column="1"
                                       x:Name="ShowSynonymsToggleSwitch"
                                       IsOn="{x:Bind ShowSynonyms, Mode=TwoWay}"
                             />
-
-
-                        <ToggleSwitch
-                        Margin="10"
-                                   x:Uid="GG_PivotItem1_ShowAntonyms"
+                        </Grid>
+                        <Grid Margin="10">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="auto"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock x:Uid="ShowAntonyms_Text" Text="ShowAntonyms_Text" HorizontalAlignment="Left"></TextBlock>
+                            <ToggleSwitch
+                                HorizontalAlignment="Right"
+                                          Grid.Column="1"
                                       x:Name="ShowAntonymsToggleSwitch"
                                       IsOn="{x:Bind ShowAntonyms, Mode=TwoWay}"
                             />
-                        <ToggleSwitch
-                        Margin="10"
-                                   x:Uid="GG_PivotItem1_AudoPlayAudio"
+                        </Grid>
+                        <Grid Margin="10">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="auto"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock x:Uid="AudoPlayAudio_Text" Text="AudoPlayAudio_Text" HorizontalAlignment="Left"></TextBlock>
+                            <ToggleSwitch
+                        
+                                HorizontalAlignment="Right"
+                                          Grid.Column="1"
                                       x:Name="AudoPlayAudioToggleSwitch"
                                       IsOn="{x:Bind AudoPlayAudio, Mode=TwoWay}"
                             />
-                        <ToggleSwitch x:Uid="SD_PivotItem1_UseLightThemeToggleSwitch"
-                                      x:Name="UseLightThemeToggleSwitch"
+                        </Grid>
+                        <Grid     Margin="10" x:Name="UseLightThemeToggleSwitch">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="auto"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock x:Uid="UseLightThemeButton_Text" 
+                                        Text="UseLightThemeButton_Text"
+                                       HorizontalAlignment="Left"></TextBlock>
+                            <ToggleSwitch
+                    
+                                HorizontalAlignment="Right"
+                                          Grid.Column="1"
+                                      x:Name="UseLightThemeButtonToggleSwitch"
                                       IsOn="{x:Bind UseLightThemeButton, Mode=TwoWay}"
-                                      Visibility="Collapsed"
                             />
+                        </Grid>
                     </StackPanel>
                 </ScrollViewer>
             </PivotItem>
