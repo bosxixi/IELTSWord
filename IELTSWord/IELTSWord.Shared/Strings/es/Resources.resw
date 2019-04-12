@@ -3513,4 +3513,52 @@
   <data name="GG_LOAD.Content" xml:space="preserve">
     <value>Carga</value>
   </data>
+  <data name="GG_PivotItem1_ReviewAll.Header" xml:space="preserve">
+    <value>Revisar todas las palabras</value>
+  </data>
+  <data name="GG_PivotItem1_ReviewAll.OnContent" xml:space="preserve">
+    <value>Sí</value>
+  </data>
+  <data name="GG_PivotItem1_ReviewAll.OffContent" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="ielts" xml:space="preserve">
+    <value>Palabras IELTS</value>
+  </data>
+  <data name="gre" xml:space="preserve">
+    <value>Palabras GRE</value>
+  </data>
+  <data name="toefl" xml:space="preserve">
+    <value>Palabras TOEFL</value>
+  </data>
+  <data name="ky" xml:space="preserve">
+    <value>KY</value>
+  </data>
+  <data name="cet6" xml:space="preserve">
+    <value>Palabras CET6</value>
+  </data>
+  <data name="cet4" xml:space="preserve">
+    <value>Palabras CET4</value>
+  </data>
+  <data name="gk" xml:space="preserve">
+    <value>GK</value>
+  </data>
+  <data name="zk" xml:space="preserve">
+    <value>ZK</value>
+  </data>
+  <data name="GG_UPLOAD.Content" xml:space="preserve">
+    <value>Subir a la nube</value>
+  </data>
+  <data name="GG_DOWNLOAD.Content" xml:space="preserve">
+    <value>Descarga de nube</value>
+  </data>
+  <data name="LOADED_SUCCESS" xml:space="preserve">
+    <value>Cargar correctamente</value>
+  </data>
+  <data name="GG_REMOVE.Content" xml:space="preserve">
+    <value>Nivel de RESET</value>
+  </data>
+  <data name="20000 All" xml:space="preserve">
+    <value>Contemporáneo de alta frecuencia vocabulario 20000 completa</value>
+  </data>
 </root>

@@ -3591,4 +3591,52 @@
   <data name="GG_LOAD.Content" xml:space="preserve">
     <value>ロード</value>
   </data>
+  <data name="GG_PivotItem1_ReviewAll.Header" xml:space="preserve">
+    <value>すべての単語を確認します。</value>
+  </data>
+  <data name="GG_PivotItem1_ReviewAll.OnContent" xml:space="preserve">
+    <value>は</value>
+  </data>
+  <data name="GG_PivotItem1_ReviewAll.OffContent" xml:space="preserve">
+    <value>かどうか</value>
+  </data>
+  <data name="ielts" xml:space="preserve">
+    <value>IELTS の言葉</value>
+  </data>
+  <data name="gre" xml:space="preserve">
+    <value>GRE 単語</value>
+  </data>
+  <data name="toefl" xml:space="preserve">
+    <value>TOEFL の単語</value>
+  </data>
+  <data name="ky" xml:space="preserve">
+    <value>ケンタッキー</value>
+  </data>
+  <data name="cet6" xml:space="preserve">
+    <value>CET6 言葉</value>
+  </data>
+  <data name="cet4" xml:space="preserve">
+    <value>CET4 言葉</value>
+  </data>
+  <data name="gk" xml:space="preserve">
+    <value>GK</value>
+  </data>
+  <data name="zk" xml:space="preserve">
+    <value>ZK</value>
+  </data>
+  <data name="GG_UPLOAD.Content" xml:space="preserve">
+    <value>クラウドにアップロードします。</value>
+  </data>
+  <data name="GG_DOWNLOAD.Content" xml:space="preserve">
+    <value>クラウドからダウンロードします。</value>
+  </data>
+  <data name="LOADED_SUCCESS" xml:space="preserve">
+    <value>読み込みが正常に</value>
+  </data>
+  <data name="GG_REMOVE.Content" xml:space="preserve">
+    <value>レベルをリセットします。</value>
+  </data>
+  <data name="20000 All" xml:space="preserve">
+    <value>現代の高頻度語彙 20000 完全です</value>
+  </data>
 </root>

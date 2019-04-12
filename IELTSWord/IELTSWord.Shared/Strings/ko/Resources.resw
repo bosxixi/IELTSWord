@@ -3513,4 +3513,52 @@
   <data name="GG_LOAD.Content" xml:space="preserve">
     <value>부하</value>
   </data>
+  <data name="GG_PivotItem1_ReviewAll.Header" xml:space="preserve">
+    <value>모든 단어를 검토</value>
+  </data>
+  <data name="GG_PivotItem1_ReviewAll.OnContent" xml:space="preserve">
+    <value>은</value>
+  </data>
+  <data name="GG_PivotItem1_ReviewAll.OffContent" xml:space="preserve">
+    <value>여부</value>
+  </data>
+  <data name="ielts" xml:space="preserve">
+    <value>IELTS 단어</value>
+  </data>
+  <data name="gre" xml:space="preserve">
+    <value>GRE 단어</value>
+  </data>
+  <data name="toefl" xml:space="preserve">
+    <value>토플 단어</value>
+  </data>
+  <data name="ky" xml:space="preserve">
+    <value>켄터키</value>
+  </data>
+  <data name="cet6" xml:space="preserve">
+    <value>CET6 단어</value>
+  </data>
+  <data name="cet4" xml:space="preserve">
+    <value>CET4 단어</value>
+  </data>
+  <data name="gk" xml:space="preserve">
+    <value>GK</value>
+  </data>
+  <data name="zk" xml:space="preserve">
+    <value>ZK</value>
+  </data>
+  <data name="GG_UPLOAD.Content" xml:space="preserve">
+    <value>클라우드로 업로드</value>
+  </data>
+  <data name="GG_DOWNLOAD.Content" xml:space="preserve">
+    <value>구름에서 다운로드</value>
+  </data>
+  <data name="LOADED_SUCCESS" xml:space="preserve">
+    <value>성공적으로 로드</value>
+  </data>
+  <data name="GG_REMOVE.Content" xml:space="preserve">
+    <value>리셋 수준</value>
+  </data>
+  <data name="20000 All" xml:space="preserve">
+    <value>현대 높은 주파수 어휘 20000 완료</value>
+  </data>
 </root>

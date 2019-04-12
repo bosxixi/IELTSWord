@@ -63,43 +63,33 @@
                             <TextBlock HorizontalAlignment="Center" Foreground="White" Text="{x:Bind CurrentWord.Name,Mode=OneWay, FallbackValue='Hello'}" FontSize="48" ></TextBlock>
 
                             <StackPanel Orientation="Horizontal"  HorizontalAlignment="Center" Visibility="{x:Bind CurrentWordDetails, Converter={StaticResource NullToVisiblityConverter}, Mode=OneWay}">
-                                <TextBlock HorizontalAlignment="Center" Foreground="White" Opacity=".9" Text="{x:Bind CurrentWordDetails.PhoneticStr,Mode=OneWay}" FontSize="48"></TextBlock>
-                                <Button HorizontalAlignment="Center" 
-                                    VerticalAlignment="Center" x:Name="Speaker" 
-                                    Click="Speaker_Click" 
-                                    Background="Transparent">
-                                    <Button.Content>
-                                        <!-- WiFi -->
-                                        <Path Data="M4.0379566,23.576004C6.2679466,23.576004 8.0749053,25.384003 8.0749053,27.612999 8.0749053,29.843002 6.2679466,31.651001 4.0379566,31.651001 1.8079665,31.651001 9.3808922E-08,29.843002 0,27.612999 9.3808922E-08,25.384003 1.8079665,23.576004 4.0379566,23.576004z M0,11.068001C20.522787,12.636002,20.654804,32,20.654804,32L14.576858,32C13.20886,16.515999,9.3808922E-08,17.270004,0,17.270004z M0,0C32.126682,2.776001,31.692696,32,31.692696,32L25.412756,32C23.588768,6.6049995,9.3808922E-08,6.3400002,0,6.3400002z"
-                  Fill="White" 
-                  Margin="0,0,0,0"/>
-                                    </Button.Content>
-
-                                    <Button.RenderTransform>
-                                        <ScaleTransform ScaleX=".5" ScaleY=".5"></ScaleTransform>
-                                    </Button.RenderTransform>
-                                </Button>
-
+                                <TextBlock HorizontalAlignment="Center" Foreground="White" TextWrapping="Wrap" Opacity=".7"  FontSize="28" Text="{x:Bind CurrentWord.Elaborate,Mode=OneWay}"></TextBlock>
                             </StackPanel>
                         </StackPanel>
                         <ScrollViewer Grid.Row="1"  Visibility="{x:Bind CurrentWordDetails, Converter={StaticResource NullToVisiblityConverter}, Mode=OneWay}">
                             <StackPanel Width="360">
-                                <!--<ListView >
-                                    <ListView.ItemTemplate>
-                                        <DataTemplate x:DataType="local:WordDetails">
-                                            <StackPanel Margin="10">
-                                                <StackPanel HorizontalAlignment="Left" Margin="0 0 0 0" Orientation="Vertical" >
-                                                    <TextBlock Margin="10 0 0 0" FontSize="22" Foreground="White" FontWeight="Bold" Text="{x:Bind  Lemma,Mode=OneWay}"></TextBlock>
-                                                    <TextBlock Margin="10 0 0 0" TextWrapping="Wrap" Foreground="White" Text="{x:Bind  Phonetic,Mode=OneWay}"></TextBlock>
-                                                </StackPanel>
-                                            </StackPanel>
-                                        </DataTemplate>
-                                    </ListView.ItemTemplate>
-                                </ListView>-->
-                                <TextBlock HorizontalAlignment="Center" Foreground="White" TextWrapping="Wrap" Opacity=".7" Text="{x:Bind CurrentWord.Elaborate,Mode=OneWay}"></TextBlock>
+                                <StackPanel Orientation="Horizontal"  HorizontalAlignment="Center" Visibility="{x:Bind CurrentWordDetails, Converter={StaticResource NullToVisiblityConverter}, Mode=OneWay}">
+                                <TextBlock HorizontalAlignment="Center" Foreground="White" Opacity="1" FontSize="20" Text="{x:Bind CurrentWordDetails.PhoneticStr,Mode=OneWay}"></TextBlock>
+                                    <Button HorizontalAlignment="Center" 
+                                    VerticalAlignment="Center" x:Name="Speaker" 
+                                    Click="Speaker_Click" 
+                                    Background="Transparent">
+                                        <Button.Content>
+                                            <!-- WiFi -->
+                                            <Path Data="M4.0379566,23.576004C6.2679466,23.576004 8.0749053,25.384003 8.0749053,27.612999 8.0749053,29.843002 6.2679466,31.651001 4.0379566,31.651001 1.8079665,31.651001 9.3808922E-08,29.843002 0,27.612999 9.3808922E-08,25.384003 1.8079665,23.576004 4.0379566,23.576004z M0,11.068001C20.522787,12.636002,20.654804,32,20.654804,32L14.576858,32C13.20886,16.515999,9.3808922E-08,17.270004,0,17.270004z M0,0C32.126682,2.776001,31.692696,32,31.692696,32L25.412756,32C23.588768,6.6049995,9.3808922E-08,6.3400002,0,6.3400002z"
+                  Fill="White" 
+                  Margin="0,0,0,0"/>
+                                        </Button.Content>
+
+                                        <Button.RenderTransform>
+                                            <ScaleTransform ScaleX=".5" ScaleY=".5"></ScaleTransform>
+                                        </Button.RenderTransform>
+                                    </Button>
+
+                                </StackPanel>
                                 <TextBlock HorizontalAlignment="Center" Foreground="White" TextWrapping="Wrap" Opacity=".7" Text="{x:Bind CurrentWordDetails.Lemma,Mode=OneWay}"></TextBlock>
                                 <TextBlock HorizontalAlignment="Center" Foreground="White" TextWrapping="Wrap" Opacity=".7" Text="{x:Bind CurrentWordDetails.WordRootStr,Mode=OneWay}"></TextBlock>
-                                <TextBlock HorizontalAlignment="Center" Foreground="White" TextWrapping="Wrap" Opacity=".7" Text="{x:Bind CurrentWordDetails.LoopUpStr,Mode=OneWay}"></TextBlock>
+                                <!--<TextBlock HorizontalAlignment="Center" Foreground="White" TextWrapping="Wrap" Opacity=".7" Text="{x:Bind CurrentWordDetails.LoopUpStr,Mode=OneWay}"></TextBlock>-->
                                 <TextBlock HorizontalAlignment="Center" Foreground="White" TextWrapping="Wrap" Opacity=".7" Text="{x:Bind CurrentWordDetails.ExamplesStr,Mode=OneWay}"></TextBlock>
                                 <TextBlock HorizontalAlignment="Center" Foreground="White" TextWrapping="Wrap" Opacity=".7" Text="{x:Bind CurrentWord.Order,Mode=OneWay}"></TextBlock>
                             </StackPanel>
@@ -207,6 +197,7 @@
                                 <ComboBoxItem>11</ComboBoxItem>
                                 <ComboBoxItem>Forever</ComboBoxItem>
                             </ComboBox>
+                            <Button Margin="10 0 0 0" x:Uid="GG_REMOVE" Visibility="{x:Bind WordsListView.SelectedItem, Mode=OneWay, Converter={StaticResource NullToVisiblityConverter}}" Content="REMOVE" Click="REMOVE_Click" Foreground="White"></Button>
                         </StackPanel>
                         <TextBlock x:Name="TotalWords" Opacity=".7" Foreground="White"  HorizontalAlignment="Right" FontSize="30" Margin="20"></TextBlock>
                         <ProgressBar Maximum="12" Minimum="0" Value="{x:Bind Level,Mode=OneWay}"></ProgressBar>
@@ -239,11 +230,22 @@
                         <ComboBox x:Name="DicsCombo" Opacity=".7" Foreground="White"></ComboBox>
                         <Button Margin="10 0 0 0" x:Uid="GG_LOAD" Content="LOAD" Click="Load_Click" Foreground="White"></Button>
                     </StackPanel>
+                    
                     <TextBox HorizontalAlignment="Stretch" Foreground="White" PlaceholderText="Email" Text="{x:Bind Email, Mode=TwoWay}" Margin="10" Width="330"></TextBox>
                     <PasswordBox x:Name="passwordBox" Width="330"  Foreground="White" Margin="10"
              PasswordChanged="passwordBox_PasswordChanged"/>
-                    <Button HorizontalAlignment="Stretch" Opacity=".7" Foreground="White" Margin="10" Width="330" Content="UPLOAD" x:Name="UPLOADS" Click="UPLOADS_Click"></Button>
-                    <Button HorizontalAlignment="Stretch" Opacity=".7" Foreground="White" Margin="10" Width="330" Content="DOWNLOAD" x:Name="DOWNLOAD" Click="DOWNLOAD_Click"></Button>
+                    <Button HorizontalAlignment="Stretch" Opacity=".7" Foreground="White" Margin="10" Width="330" x:Uid="GG_UPLOAD" Content="UPLOAD" x:Name="UPLOADS" Click="UPLOADS_Click"></Button>
+                    <Button HorizontalAlignment="Stretch" Opacity=".7" Foreground="White" Margin="10" Width="330" x:Uid="GG_DOWNLOAD" Content="DOWNLOAD" x:Name="DOWNLOAD" Click="DOWNLOAD_Click"></Button>
+
+                    <Border BorderThickness="0,3,0,0" Margin="10" BorderBrush="Purple">
+                    </Border>
+                    
+                    <ToggleSwitch
+                        Margin="10"
+                                   x:Uid="GG_PivotItem1_ReviewAll"
+                                      x:Name="ReviewAllToggleSwitch"
+                                      IsOn="{x:Bind ReviewAll, Mode=TwoWay}"
+                            />
                 </StackPanel>
             </PivotItem>
         </Pivot>

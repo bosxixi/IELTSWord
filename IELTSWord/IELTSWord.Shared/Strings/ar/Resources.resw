@@ -3513,4 +3513,52 @@
   <data name="GG_LOAD.Content" xml:space="preserve">
     <value>تحميل</value>
   </data>
+  <data name="GG_PivotItem1_ReviewAll.Header" xml:space="preserve">
+    <value>استعراض كافة الكلمات</value>
+  </data>
+  <data name="GG_PivotItem1_ReviewAll.OnContent" xml:space="preserve">
+    <value>نعم</value>
+  </data>
+  <data name="GG_PivotItem1_ReviewAll.OffContent" xml:space="preserve">
+    <value>لا</value>
+  </data>
+  <data name="ielts" xml:space="preserve">
+    <value>كلمات IELTS</value>
+  </data>
+  <data name="gre" xml:space="preserve">
+    <value>كلمات GRE</value>
+  </data>
+  <data name="toefl" xml:space="preserve">
+    <value>كلمات التوفل</value>
+  </data>
+  <data name="ky" xml:space="preserve">
+    <value>KY</value>
+  </data>
+  <data name="cet6" xml:space="preserve">
+    <value>كلمات CET6</value>
+  </data>
+  <data name="cet4" xml:space="preserve">
+    <value>كلمات CET4</value>
+  </data>
+  <data name="gk" xml:space="preserve">
+    <value>حارس مرمى</value>
+  </data>
+  <data name="zk" xml:space="preserve">
+    <value>ZK</value>
+  </data>
+  <data name="GG_UPLOAD.Content" xml:space="preserve">
+    <value>إضافة إلى مجموعة النظراء</value>
+  </data>
+  <data name="GG_DOWNLOAD.Content" xml:space="preserve">
+    <value>تحميل من سحابة</value>
+  </data>
+  <data name="LOADED_SUCCESS" xml:space="preserve">
+    <value>تحميل بنجاح</value>
+  </data>
+  <data name="GG_REMOVE.Content" xml:space="preserve">
+    <value>إعادة تعيين مستوى</value>
+  </data>
+  <data name="20000 All" xml:space="preserve">
+    <value>المعاصرة عالية التردد المفردات 20000 كاملة</value>
+  </data>
 </root>

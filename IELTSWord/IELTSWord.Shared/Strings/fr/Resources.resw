@@ -3513,4 +3513,52 @@
   <data name="GG_LOAD.Content" xml:space="preserve">
     <value>Charge</value>
   </data>
+  <data name="GG_PivotItem1_ReviewAll.Header" xml:space="preserve">
+    <value>Examiner tous les mots</value>
+  </data>
+  <data name="GG_PivotItem1_ReviewAll.OnContent" xml:space="preserve">
+    <value>Oui</value>
+  </data>
+  <data name="GG_PivotItem1_ReviewAll.OffContent" xml:space="preserve">
+    <value>N°</value>
+  </data>
+  <data name="ielts" xml:space="preserve">
+    <value>Mots de l’IELTS</value>
+  </data>
+  <data name="gre" xml:space="preserve">
+    <value>Mots GRE</value>
+  </data>
+  <data name="toefl" xml:space="preserve">
+    <value>Mots TOEFL</value>
+  </data>
+  <data name="ky" xml:space="preserve">
+    <value>KY</value>
+  </data>
+  <data name="cet6" xml:space="preserve">
+    <value>CET6 mots</value>
+  </data>
+  <data name="cet4" xml:space="preserve">
+    <value>CET4 mots</value>
+  </data>
+  <data name="gk" xml:space="preserve">
+    <value>GK</value>
+  </data>
+  <data name="zk" xml:space="preserve">
+    <value>ZK</value>
+  </data>
+  <data name="GG_UPLOAD.Content" xml:space="preserve">
+    <value>Télécharger sur nuage</value>
+  </data>
+  <data name="GG_DOWNLOAD.Content" xml:space="preserve">
+    <value>Télécharger Cloud</value>
+  </data>
+  <data name="LOADED_SUCCESS" xml:space="preserve">
+    <value>Se charger correctement</value>
+  </data>
+  <data name="GG_REMOVE.Content" xml:space="preserve">
+    <value>Niveau de remise à zéro</value>
+  </data>
+  <data name="20000 All" xml:space="preserve">
+    <value>Contemporain haute fréquence vocabulaire 20000 complet</value>
+  </data>
 </root>

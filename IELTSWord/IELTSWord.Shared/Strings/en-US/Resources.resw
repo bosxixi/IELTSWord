@@ -3546,4 +3546,52 @@
   <data name="GG_LOAD.Content" xml:space="preserve">
     <value>Load</value>
   </data>
+  <data name="GG_PivotItem1_ReviewAll.Header" xml:space="preserve">
+    <value>Review All Words</value>
+  </data>
+  <data name="GG_PivotItem1_ReviewAll.OnContent" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="GG_PivotItem1_ReviewAll.OffContent" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="ielts" xml:space="preserve">
+    <value>IELTS Words</value>
+  </data>
+  <data name="gre" xml:space="preserve">
+    <value>GRE Words</value>
+  </data>
+  <data name="toefl" xml:space="preserve">
+    <value>TOEFL Words</value>
+  </data>
+  <data name="ky" xml:space="preserve">
+    <value>KY</value>
+  </data>
+  <data name="cet6" xml:space="preserve">
+    <value>CET6 Words</value>
+  </data>
+  <data name="cet4" xml:space="preserve">
+    <value>CET4 Words</value>
+  </data>
+  <data name="gk" xml:space="preserve">
+    <value>GK</value>
+  </data>
+  <data name="zk" xml:space="preserve">
+    <value>ZK</value>
+  </data>
+  <data name="GG_UPLOAD.Content" xml:space="preserve">
+    <value>Upload to Cloud</value>
+  </data>
+  <data name="GG_DOWNLOAD.Content" xml:space="preserve">
+    <value>Download From Cloud</value>
+  </data>
+  <data name="LOADED_SUCCESS" xml:space="preserve">
+    <value>Load successfully</value>
+  </data>
+  <data name="GG_REMOVE.Content" xml:space="preserve">
+    <value>Reset Level</value>
+  </data>
+  <data name="20000 All" xml:space="preserve">
+    <value>Contemporary high frequency Vocabulary 20000 complete</value>
+  </data>
 </root>
