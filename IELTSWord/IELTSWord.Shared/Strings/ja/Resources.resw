@@ -117,1418 +117,1400 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="GG_NO.Content" xml:space="preserve">
-    <value>IELTSWord</value>
-  </data>
   <data name="SD.SecondaryButtonText" xml:space="preserve">
-    <value>Close</value>
+    <value>シャットダウン</value>
   </data>
   <data name="SD_TITLE.Text" xml:space="preserve">
-    <value>Settings</value>
-  </data>
-  <data name="SD_PivotItem1.Header" xml:space="preserve">
-    <value>General</value>
+    <value>セットアップ パネル</value>
   </data>
   <data name="SD_PivotItem2.Header" xml:space="preserve">
-    <value>Subtitle</value>
+    <value>字幕</value>
   </data>
   <data name="SD_PivotItem3_Header.Text" xml:space="preserve">
-    <value>Advance</value>
+    <value>高</value>
   </data>
   <data name="SD_PivotItem4.Header" xml:space="preserve">
-    <value>About</value>
+    <value>上</value>
   </data>
   <data name="SD_PivotItem1_UseLightThemeToggleSwitch.Header" xml:space="preserve">
-    <value>Use Fluent Design</value>
+    <value>流暢なデザイン テーマを使用してください。</value>
   </data>
   <data name="SD_PivotItem1_UseLightThemeToggleSwitch.OnContent" xml:space="preserve">
-    <value>Fluent Design</value>
+    <value>流暢なデザイン</value>
   </data>
   <data name="SD_PivotItem1_UseLightThemeToggleSwitch.OffContent" xml:space="preserve">
-    <value>Dark</value>
+    <value>暗い</value>
   </data>
   <data name="SD_PivotItem1_UseGestureToggleSwitch.Header" xml:space="preserve">
-    <value>Use Gesture</value>
+    <value>ジェスチャー コントロールの使用</value>
   </data>
   <data name="SD_PivotItem1_UseGestureToggleSwitch.OnContent" xml:space="preserve">
-    <value>Yes</value>
+    <value>オープン</value>
   </data>
   <data name="SD_PivotItem1_UseGestureToggleSwitch.OffContent" xml:space="preserve">
-    <value>No</value>
+    <value>シャットダウン</value>
   </data>
   <data name="SD_PivotItem1_RememberLastPositionToggleSwitch.Header" xml:space="preserve">
-    <value>Remember Playback Progress</value>
+    <value>メモリ再生の進行状況</value>
   </data>
   <data name="SD_PivotItem1_RememberLastPositionToggleSwitch.OnContent" xml:space="preserve">
-    <value>Yes</value>
+    <value>オープン</value>
   </data>
   <data name="SD_PivotItem1_RememberLastPositionToggleSwitch.OffContent" xml:space="preserve">
-    <value>No</value>
+    <value>シャットダウン</value>
   </data>
   <data name="SD_PivotItem1_UseSoundToggleSwitch.Header" xml:space="preserve">
-    <value>Use Element Sound</value>
+    <value>キー音をオンに</value>
   </data>
   <data name="SD_PivotItem1_UseSoundToggleSwitch.OnContent" xml:space="preserve">
-    <value>On</value>
+    <value>オープン</value>
   </data>
   <data name="SD_PivotItem1_UseSoundToggleSwitch.OffContent" xml:space="preserve">
-    <value>Auto</value>
+    <value>自動的に</value>
   </data>
   <data name="SD_PivotItem2_AutoDownLoadSubtitleToggleSwitch.Header" xml:space="preserve">
-    <value>Auto Download Subtitle From Internet</value>
+    <value>自動的に字幕をダウンロードします。</value>
   </data>
   <data name="SD_PivotItem2_AutoDownLoadSubtitleToggleSwitch.OnContent" xml:space="preserve">
-    <value>Yes</value>
+    <value>オープン</value>
   </data>
   <data name="SD_PivotItem2_AutoDownLoadSubtitleToggleSwitch.OffContent" xml:space="preserve">
-    <value>No</value>
+    <value>シャットダウン</value>
   </data>
   <data name="SD_PivotItem2_SecondaryUnderPrimarySutitleToggleSwitch.Header" xml:space="preserve">
-    <value>Secondary Subtitle Under Primary Subtitle</value>
+    <value>主なキャプションの下 2 番目のキャプションは、します。</value>
   </data>
   <data name="SD_PivotItem2_SecondaryUnderPrimarySutitleToggleSwitch.OnContent" xml:space="preserve">
-    <value>Yes</value>
+    <value>は</value>
   </data>
   <data name="SD_PivotItem2_SecondaryUnderPrimarySutitleToggleSwitch.OffContent" xml:space="preserve">
-    <value>No</value>
+    <value>かどうか</value>
   </data>
   <data name="SD_PivotItem2_UseSutitleBackgroundToggleSwitch.Header" xml:space="preserve">
-    <value>Subtitle Has Background</value>
+    <value>マーキーの背景色を使用します。</value>
   </data>
   <data name="SD_PivotItem2_UseSutitleBackgroundToggleSwitch.OnContent" xml:space="preserve">
-    <value>Yes</value>
+    <value>オープン</value>
   </data>
   <data name="SD_PivotItem2_UseSutitleBackgroundToggleSwitch.OffContent" xml:space="preserve">
-    <value>No</value>
+    <value>シャットダウン</value>
   </data>
   <data name="SD_PivotItem2_UseSutitleBlackBackgroundToggleSwitch.Header" xml:space="preserve">
-    <value>Subtitle Has White Background</value>
+    <value>マーキーの背景色は白</value>
   </data>
   <data name="SD_PivotItem2_UseSutitleBlackBackgroundToggleSwitch.OnContent" xml:space="preserve">
-    <value>White</value>
+    <value>ホワイト</value>
   </data>
   <data name="SD_PivotItem2_UseSutitleBlackBackgroundToggleSwitch.OffContent" xml:space="preserve">
-    <value>Black</value>
+    <value>ブラック</value>
   </data>
   <data name="SD_PivotItem2_sutitleSlider.Header" xml:space="preserve">
-    <value>Subtitle Opacity</value>
+    <value>字幕の透明度</value>
   </data>
   <data name="SD_PivotItem2_sutitleBackgroundSlider.Header" xml:space="preserve">
-    <value>Subtitle Background Opacity</value>
+    <value>字幕背景透明</value>
   </data>
   <data name="SD_PivotItem2_primarySubtitleFontSizeSlider.Header" xml:space="preserve">
-    <value>Primary Subtitle Font Size</value>
+    <value>主なマーキーのフォント サイズ</value>
   </data>
   <data name="SD_PivotItem2_secondarySubtitleFontSizeSlider.Header" xml:space="preserve">
-    <value>Secondary Subtitle Font Size</value>
+    <value>2 番目の字幕のフォント サイズ</value>
   </data>
   <data name="SD_PivotItem3_PrimaryShowOneLineOnlyToggleSwitch.Header" xml:space="preserve">
-    <value>Primary Subtitle Only Show One Line</value>
+    <value>主なキャプションは、1 つだけ行を示しています</value>
   </data>
   <data name="SD_PivotItem3_PrimaryShowOneLineOnlyToggleSwitch.OnContent" xml:space="preserve">
-    <value>Yes</value>
+    <value>は</value>
   </data>
   <data name="SD_PivotItem3_PrimaryShowOneLineOnlyToggleSwitch.OffContent" xml:space="preserve">
-    <value>No</value>
+    <value>かどうか</value>
   </data>
   <data name="SD_PivotItem3_PrimaryShowFirstLineToggleSwitch.Header" xml:space="preserve">
-    <value>Primary Show First Line</value>
+    <value>主なキャプションは、最初の行を示しています</value>
   </data>
   <data name="SD_PivotItem3_PrimaryShowFirstLineToggleSwitch.OnContent" xml:space="preserve">
-    <value>First Line</value>
+    <value>最初の行を表示します。</value>
   </data>
   <data name="SD_PivotItem3_PrimaryShowFirstLineToggleSwitch.OffContent" xml:space="preserve">
-    <value>Last Line</value>
+    <value>最後の行を表示します。</value>
   </data>
   <data name="SD_PivotItem3_ShowSubtitleTimeRangeToggleSwitch.Header" xml:space="preserve">
-    <value>Show Subtile Time Frame</value>
+    <value>キャプションの時間を表示</value>
   </data>
   <data name="SD_PivotItem3_ShowSubtitleTimeRangeToggleSwitch.OnContent" xml:space="preserve">
-    <value>Show</value>
+    <value>ディスプレイ</value>
   </data>
   <data name="SD_PivotItem3_ShowSubtitleTimeRangeToggleSwitch.OffContent" xml:space="preserve">
-    <value>Not Show</value>
+    <value>表示されません。</value>
   </data>
   <data name="CM_Close" xml:space="preserve">
-    <value>Close</value>
+    <value>シャットダウン</value>
   </data>
   <data name="CM_OpenFile" xml:space="preserve">
-    <value>Open File...</value>
+    <value>ファイルを開く.</value>
   </data>
   <data name="CM_Open" xml:space="preserve">
-    <value>Open</value>
-  </data>
-  <data name="CM_Open_Uri" xml:space="preserve">
-    <value>Network Stream</value>
-  </data>
-  <data name="CM_Open_Folder" xml:space="preserve">
-    <value>Open Folder</value>
+    <value>開けて下さい</value>
   </data>
   <data name="CM_Recent" xml:space="preserve">
-    <value>Recent Playback</value>
+    <value>最近再生しました。</value>
   </data>
   <data name="CM_Recent_ClearHistory" xml:space="preserve">
-    <value>Clear History</value>
+    <value>履歴を削除します。</value>
   </data>
   <data name="CM_Recent_DisableHistory" xml:space="preserve">
-    <value>Do not Track History</value>
+    <value>履歴を無効にします。</value>
   </data>
   <data name="CM_Favorite" xml:space="preserve">
-    <value>Favorites</value>
+    <value>お気に入り</value>
   </data>
   <data name="CM_Favorite_File" xml:space="preserve">
-    <value>File...</value>
+    <value>ファイル.</value>
   </data>
   <data name="CM_Favorite_Folder" xml:space="preserve">
-    <value>Folder...</value>
+    <value>フォルダー.</value>
+  </data>
+  <data name="CM_Graghic" xml:space="preserve">
+    <value>画像</value>
+  </data>
+  <data name="CM_Graghic_Rotation" xml:space="preserve">
+    <value>画面反転</value>
   </data>
   <data name="CM_Graghic_Rotation_Vertical" xml:space="preserve">
-    <value>Vertical</value>
+    <value>垂直方向に反転します。</value>
   </data>
   <data name="CM_Graghic_Rotation_Horizontal" xml:space="preserve">
-    <value>Horizontal</value>
+    <value>水平方向に反転します。</value>
   </data>
   <data name="CM_Graghic_Rotation_Left90" xml:space="preserve">
-    <value>Left 90°C</value>
+    <value>90 ° c 左</value>
   </data>
   <data name="CM_Graghic_Rotation_Right90" xml:space="preserve">
-    <value>Right 90°C</value>
+    <value>右に 90 ° c</value>
   </data>
   <data name="CM_Graghic_Rotation_180" xml:space="preserve">
-    <value>180°C Rotation</value>
+    <value>180 度回転</value>
   </data>
   <data name="CM_Graghic_Rotation_DefaultAngle" xml:space="preserve">
-    <value>Default Angle</value>
+    <value>既定の角度を復元します。</value>
   </data>
   <data name="CM_Graghic_FullScreen" xml:space="preserve">
-    <value>Full Screen</value>
+    <value>全画面表示</value>
   </data>
   <data name="CM_Graghic_PIP" xml:space="preserve">
-    <value>Picture in picture (Alway on top)</value>
+    <value>絵画</value>
   </data>
   <data name="CM_Graghic_OriginalSize" xml:space="preserve">
-    <value>Original Size</value>
+    <value>元のサイズ</value>
   </data>
   <data name="CM_Graghic_Fill" xml:space="preserve">
-    <value>Fill</value>
+    <value>完全再生ウィンドウ</value>
   </data>
   <data name="CM_Graghic_Default" xml:space="preserve">
-    <value>Default</value>
+    <value>標準</value>
   </data>
   <data name="CM_Graghic_UniformToFill" xml:space="preserve">
-    <value>Uniform To Fill</value>
+    <value>黒のサイドにスマート移動</value>
   </data>
   <data name="CM_Graghic_FreeTransform" xml:space="preserve">
-    <value>Free Transform</value>
+    <value>自由変形</value>
   </data>
   <data name="CM_Sound" xml:space="preserve">
-    <value>Sound</value>
+    <value>声</value>
   </data>
   <data name="CM_Sound_SystemDefault" xml:space="preserve">
-    <value>Default</value>
+    <value>システムの既定値</value>
   </data>
   <data name="CM_Sound_LeftChannel" xml:space="preserve">
-    <value>Left Channel</value>
+    <value>左チャンネルだけを再生します。</value>
   </data>
   <data name="CM_Sound_RightChannel" xml:space="preserve">
-    <value>Right Channel</value>
+    <value>右チャンネルだけを再生します。</value>
   </data>
   <data name="CM_Sound_Track" xml:space="preserve">
-    <value>Track</value>
+    <value>トラック</value>
   </data>
   <data name="CM_Playback" xml:space="preserve">
-    <value>Playback</value>
+    <value>再生</value>
   </data>
   <data name="CM_Playback_Loop_Audio" xml:space="preserve">
-    <value>Loop Current Music</value>
+    <value>ループ再生 (現在の音楽)</value>
   </data>
   <data name="CM_Playback_Loop_Video" xml:space="preserve">
-    <value>Loop Current Video</value>
+    <value>ループ再生 (現在映画)</value>
   </data>
   <data name="CM_Playback_Loop_CurrentList" xml:space="preserve">
-    <value>Loop Current Playlist</value>
+    <value>ループ再生 (現在のリスト)</value>
   </data>
   <data name="CM_Playback_Loop_SetAPoint" xml:space="preserve">
-    <value>Set A Point</value>
+    <value>ポイントを設定します。</value>
   </data>
   <data name="CM_Playback_Loop_SetBPoint" xml:space="preserve">
-    <value>Set B Point</value>
+    <value>セット ポイント B</value>
   </data>
   <data name="CM_Playback_Loop_APoint" xml:space="preserve">
-    <value>A Point</value>
+    <value>ポイント A</value>
   </data>
   <data name="CM_Playback_Loop_BPoint" xml:space="preserve">
-    <value>B Point</value>
+    <value>ポイント B</value>
   </data>
   <data name="CM_Playback_ForceDecodeAudio" xml:space="preserve">
-    <value>Force Decode Audio</value>
+    <value>ソフト ソリューション オーディオ</value>
   </data>
   <data name="CM_Playback_ForceDecodeVideo" xml:space="preserve">
-    <value>Force Decode Video</value>
+    <value>ソフト ソリューション ビデオ</value>
   </data>
   <data name="CM_Playback_UseSystemDecoder" xml:space="preserve">
-    <value>Use System Decoder</value>
+    <value>システムのデコーダーを使用</value>
   </data>
   <data name="CM_Playback_FastenPlaybackRate" xml:space="preserve">
-    <value>Fasten Playback Rate</value>
+    <value>再生を高速化します。</value>
   </data>
   <data name="CM_Playback_SlowDownPlaybackRate" xml:space="preserve">
-    <value>Slow Down Playback Rate</value>
+    <value>遅い再生速度</value>
   </data>
   <data name="CM_Playback_StartABLoop" xml:space="preserve">
-    <value>Start A-B Loop</value>
+    <value>B サイクルを開始します。</value>
   </data>
   <data name="CM_Playback_StopABLoop" xml:space="preserve">
-    <value>Stop A-B Loop</value>
+    <value>B サイクルを停止します。</value>
   </data>
   <data name="CM_MediaInfo" xml:space="preserve">
-    <value>Media Info</value>
+    <value>メディア情報</value>
   </data>
   <data name="CM_Settings" xml:space="preserve">
-    <value>Settings</value>
+    <value>を設定します。</value>
   </data>
   <data name="CM_EnterLockMode" xml:space="preserve">
-    <value>Enter Lock Mode</value>
+    <value>ロック画面表示モードを入力してください。</value>
   </data>
   <data name="CM_ExitLockMode" xml:space="preserve">
-    <value>Exit Lock Mode</value>
+    <value>出口のロック画面表示モード</value>
   </data>
   <data name="TCCM_RememberTransportControlPostion" xml:space="preserve">
-    <value>Remember Transport Control Postion</value>
+    <value>メモリ コントロール バーの位置</value>
   </data>
   <data name="TCCM_RememberTransportControlPostion_Reset" xml:space="preserve">
-    <value>Reset TransportControl Postion</value>
+    <value>リセット</value>
   </data>
   <data name="CM_Subtitle" xml:space="preserve">
-    <value>Subtitle</value>
+    <value>字幕</value>
   </data>
   <data name="CM_Subtitle_Disable" xml:space="preserve">
-    <value>Disable Subtitle</value>
+    <value>マーキーを閉じる</value>
   </data>
   <data name="CM_Subtitle_Style" xml:space="preserve">
-    <value>Subtitle Style Setting</value>
-  </data>
-  <data name="CM_Subtitle_SmartMathingDownload" xml:space="preserve">
-    <value>Download from internet</value>
+    <value>マーキー スタイルの設定</value>
   </data>
   <data name="CM_Subtitle_Item" xml:space="preserve">
-    <value>Subtitle</value>
+    <value>字幕</value>
   </data>
   <data name="WM_CurrentPlaying" xml:space="preserve">
-    <value>Current Playing</value>
+    <value>再生</value>
   </data>
   <data name="WM_PlayRateChangedTo" xml:space="preserve">
-    <value>Playback Rate Changed To</value>
+    <value>再生速度になります。</value>
   </data>
   <data name="MV_FreeTransform_Reset.Text" xml:space="preserve">
-    <value>Reset</value>
+    <value>リセット</value>
   </data>
   <data name="MV_FreeTransform_Save.Text" xml:space="preserve">
-    <value>Save</value>
+    <value>保存</value>
   </data>
   <data name="MV_FreeTransform_Confirm.Text" xml:space="preserve">
-    <value>Confirm</value>
+    <value>確かですか</value>
   </data>
   <data name="MV_FreeTransform_Advance.Text" xml:space="preserve">
-    <value>Advance</value>
+    <value>高</value>
   </data>
   <data name="MV_FreeTransform_ZoomOut.Text" xml:space="preserve">
-    <value>Zoom Out</value>
+    <value>狭い</value>
   </data>
   <data name="MV_FreeTransform_Center.Text" xml:space="preserve">
-    <value>Center</value>
+    <value>センター</value>
   </data>
   <data name="MV_FreeTransform_ZoomIn.Text" xml:space="preserve">
-    <value>Zoom In</value>
+    <value>増幅器</value>
   </data>
   <data name="MI.SecondaryButtonText" xml:space="preserve">
-    <value>Close</value>
+    <value>シャットダウン</value>
   </data>
   <data name="MI_VideoType.Text" xml:space="preserve">
-    <value>Video Type</value>
+    <value>ビデオの種類</value>
   </data>
   <data name="MI_VideoBitrate.Text" xml:space="preserve">
-    <value>Video Bitrate</value>
+    <value>ビデオ ビット レート</value>
   </data>
   <data name="MI_AudioBitrate.Text" xml:space="preserve">
-    <value>Audio Bitrate</value>
+    <value>オーディオ ビット レート</value>
   </data>
   <data name="MI_VideoFramerate.Text" xml:space="preserve">
-    <value>Video Framerate</value>
+    <value>ビデオのフレーム レート</value>
   </data>
   <data name="MI_Resolution.Text" xml:space="preserve">
-    <value>Resolution</value>
+    <value>解像度</value>
   </data>
   <data name="MI_SubType.Text" xml:space="preserve">
-    <value>SubType</value>
+    <value>特定の種類</value>
   </data>
   <data name="MI_Type.Text" xml:space="preserve">
-    <value>Type</value>
+    <value>タイプ</value>
   </data>
   <data name="MI_FileSize.Text" xml:space="preserve">
-    <value>File Size</value>
+    <value>ファイルのサイズ</value>
   </data>
   <data name="MI_Duration.Text" xml:space="preserve">
-    <value>Duration</value>
+    <value>期間</value>
   </data>
   <data name="MI_VideoCodecName.Text" xml:space="preserve">
-    <value>Video Codec Name</value>
+    <value>動画像符号化</value>
   </data>
   <data name="MI_AudioCodecName.Text" xml:space="preserve">
-    <value>Audio Codec Name</value>
+    <value>オーディオ符号化</value>
   </data>
   <data name="MV_TP_AddFolderAsFavorite.Content" xml:space="preserve">
-    <value>Add folder to favorite</value>
+    <value>お気に入りに追加</value>
   </data>
   <data name="WM_CurrentSubtitle" xml:space="preserve">
-    <value>Current Subtitle</value>
+    <value>現在のキャプション</value>
   </data>
   <data name="WM_Delay" xml:space="preserve">
-    <value>Delay</value>
+    <value>遅延</value>
   </data>
   <data name="WM_DecodeType" xml:space="preserve">
-    <value>HD</value>
+    <value>ハードウェア HD</value>
   </data>
   <data name="WM_SubtileNotFound" xml:space="preserve">
-    <value>No subtitle Found</value>
+    <value>字幕なしが見つかりました</value>
   </data>
   <data name="WM_SubtitleFound" xml:space="preserve">
-    <value>Subtitle Found, downloading...</value>
+    <value>字幕は、発見されているし、ダウンロードされています。</value>
   </data>
   <data name="WM_SubtitleDownloadSuccess_Part1" xml:space="preserve">
-    <value>Subtitle download success, total</value>
+    <value>字幕ダウンロード成功、合計</value>
   </data>
   <data name="WM_SubtitleDownloadSuccess_Part2" xml:space="preserve">
-    <value>files</value>
+    <value>字幕ファイル</value>
   </data>
   <data name="WM_CanNotOpenFile" xml:space="preserve">
-    <value>Can Not Open File</value>
+    <value>ファイルを開くことができません。</value>
   </data>
   <data name="WM_UseSystemDecoder" xml:space="preserve">
-    <value>Use System Decoder</value>
+    <value>システムのデコーダーを使用</value>
   </data>
   <data name="WM_NoNextFileCanPlay" xml:space="preserve">
-    <value>No next file to play</value>
+    <value>ない次のファイルを再生</value>
   </data>
   <data name="WM_Volume" xml:space="preserve">
-    <value>Volume</value>
+    <value>ボリューム</value>
   </data>
   <data name="WM_FileNotExist" xml:space="preserve">
-    <value>File not exist</value>
+    <value>ファイルが存在しません。</value>
   </data>
   <data name="WM_ShowPrimarySubtitle_Part1" xml:space="preserve">
-    <value>Showing primary subtitle</value>
+    <value>主な字幕を表示します。</value>
   </data>
   <data name="WM_ShowPrimarySubtitle_Part2" xml:space="preserve">
-    <value>delay as</value>
+    <value>遅延時間は</value>
   </data>
   <data name="WM_ShowPrimarySubtitle_Part3" xml:space="preserve">
-    <value>ms</value>
+    <value>(ミリ秒)</value>
   </data>
   <data name="WM_PrimarySubtitleDelayAs" xml:space="preserve">
-    <value>Primary subtitle delay set to</value>
+    <value>主キャプションの遅延に設定されています。</value>
   </data>
   <data name="CM_Subtitle_Load" xml:space="preserve">
-    <value>Load subtitle</value>
+    <value>キャプションを読み込む</value>
   </data>
   <data name="MV_PanePivot_Item1.Header" xml:space="preserve">
-    <value>Recent</value>
+    <value>最近再生しました。</value>
   </data>
   <data name="MV_PanePivot_Item2.Header" xml:space="preserve">
-    <value>Favorites</value>
+    <value>お気に入り</value>
   </data>
   <data name="MV_PanePivot_Item3.Header" xml:space="preserve">
-    <value>Playlist</value>
+    <value>再生リスト</value>
+  </data>
+  <data name="MV_TP_OpenFIle.Content" xml:space="preserve">
+    <value>ファイルを開く</value>
+  </data>
+  <data name="MV_TP_OpenFolder.Content" xml:space="preserve">
+    <value>フォルダーを開く</value>
   </data>
   <data name="CM_Start_Loop" xml:space="preserve">
-    <value>A-B Stopped</value>
+    <value>B サイクルを停止します。</value>
   </data>
   <data name="CM_Stop_Loop" xml:space="preserve">
-    <value>A-B Started</value>
+    <value>B サイクルを開始します。</value>
   </data>
   <data name="CM_SecondarySubtitle" xml:space="preserve">
-    <value>Secondary Subtitle</value>
+    <value>2 番目のキャプション</value>
   </data>
   <data name="SD_PivotItem3_screenLuminanceSlider.Header" xml:space="preserve">
-    <value>Video Luminance</value>
+    <value>ビデオの明るさを再生します。</value>
   </data>
   <data name="CM_Graghic_Effect" xml:space="preserve">
-    <value>Effect</value>
+    <value>効果</value>
   </data>
   <data name="CM_Graghic_Effect_OldMovie" xml:space="preserve">
-    <value>Memo</value>
+    <value>思い出</value>
   </data>
   <data name="WM_MediaFailed" xml:space="preserve">
-    <value>Media Failed</value>
+    <value>再生できませんでした。</value>
   </data>
   <data name="WM_TryReadEmbbedSubtitle" xml:space="preserve">
-    <value>Try load embbed subtitle</value>
+    <value>インライン キャプションを読み込むしようとしました。</value>
   </data>
   <data name="WM_LoadingFolder" xml:space="preserve">
-    <value>Loading folder...</value>
+    <value>フォルダーを読み込んでいます.</value>
   </data>
   <data name="WM_LoadingFolderCompleted" xml:space="preserve">
-    <value>Folder loaded</value>
+    <value>フォルダーは正常に読み込まれました</value>
   </data>
   <data name="WM_LoadingFolderFailed" xml:space="preserve">
-    <value>Can not open folder, no media file to playback</value>
+    <value>再生可能なファイルがないフォルダーを読み込むことができません。</value>
   </data>
   <data name="WM_OnlyOnFileOrFolder" xml:space="preserve">
-    <value>Please drop one file, or one folder</value>
+    <value>ファイルまたはフォルダーをドラッグしてください。</value>
   </data>
   <data name="SYS_NewWindow" xml:space="preserve">
-    <value>New Window</value>
+    <value>新しいウィンドウ</value>
   </data>
   <data name="SD_PivotItem3_ReadMkvEmbbedSubtitleToggleSwitch.Header" xml:space="preserve">
-    <value>Try extract .mkv video embbed subtitle</value>
+    <value>しようと mkv 抽出します。 インライン ビデオ字幕</value>
   </data>
   <data name="SD_PivotItem3_ReadMkvEmbbedSubtitleToggleSwitch.OnContent" xml:space="preserve">
-    <value>Yes</value>
+    <value>は</value>
   </data>
   <data name="SD_PivotItem3_ReadMkvEmbbedSubtitleToggleSwitch.OffContent" xml:space="preserve">
-    <value>No</value>
+    <value>かどうか</value>
   </data>
   <data name="MV_TP_AddFileAsFavorite.Content" xml:space="preserve">
-    <value>Add file to favorite</value>
+    <value>現在の再生ファイルをお気に入りに追加します。</value>
   </data>
   <data name="CM_Playback_Shuffling" xml:space="preserve">
-    <value>Shuffling</value>
+    <value>ランダム再生</value>
   </data>
   <data name="MI_AspectRatio.Text" xml:space="preserve">
-    <value>Aspect Ratio</value>
+    <value>ビデオの比</value>
   </data>
   <data name="Screenshot_Saved_Part1" xml:space="preserve">
-    <value>File </value>
+    <value>ファイル </value>
   </data>
   <data name="Screenshot_Saved_Part2" xml:space="preserve">
-    <value>Saved</value>
+    <value>保存されています。</value>
   </data>
   <data name="CM_Graghic_Screenshot" xml:space="preserve">
-    <value>Screenshot</value>
+    <value>スクリーン ショット</value>
   </data>
   <data name="CM_Graghic_Screenshot_SaveAs" xml:space="preserve">
-    <value>Save as...</value>
+    <value>としてを保存.</value>
   </data>
   <data name="CM_Sound_RenderDevice" xml:space="preserve">
-    <value>Render sound to...</value>
+    <value>サウンドを出力.</value>
   </data>
   <data name="CM_Sound_RenderDevice_default" xml:space="preserve">
-    <value>System default</value>
+    <value>システムの既定値</value>
   </data>
   <data name="MV_TP_StepNextFrame.Content" xml:space="preserve">
-    <value>Next frame</value>
+    <value>次のフレーム</value>
   </data>
   <data name="SD_PivotItem1_UseEnglish.Header" xml:space="preserve">
-    <value>Language (may need restart app)</value>
+    <value>言語 (アプリケーションを再起動する必要があります)</value>
   </data>
   <data name="SD_PivotItem1_UseEnglish.OffContent" xml:space="preserve">
-    <value>Auto</value>
+    <value>自動的に</value>
   </data>
   <data name="Cast_Disconnected" xml:space="preserve">
-    <value>Disconnected</value>
+    <value>接続の終了</value>
   </data>
   <data name="Cast_Connected" xml:space="preserve">
-    <value>Connected</value>
+    <value>接続されています。</value>
   </data>
   <data name="Cast_Rendering" xml:space="preserve">
-    <value>Rendering</value>
+    <value>劇中で</value>
   </data>
   <data name="Cast_Disconnecting" xml:space="preserve">
-    <value>Disconnecting</value>
+    <value>切断</value>
   </data>
   <data name="Cast_Connecting" xml:space="preserve">
-    <value>Connecting</value>
+    <value>接続で</value>
   </data>
   <data name="Cast_Error" xml:space="preserve">
-    <value>Connection Error Occured</value>
+    <value>ストリーミング メディア エラー</value>
   </data>
   <data name="CM_Playback_Casting_Stop" xml:space="preserve">
-    <value>Stop casting</value>
+    <value>ストリーミング メディアを停止します。</value>
   </data>
   <data name="CM_Playback_Casting_Start" xml:space="preserve">
-    <value>Cast media to...</value>
+    <value>メディアのストリーミング.</value>
   </data>
   <data name="SD_PivotItem1_CreateTransparentTile.Header" xml:space="preserve">
-    <value>Create Transparent Tile</value>
+    <value>透明のタイルを作成します。</value>
   </data>
   <data name="SD_PivotItem3_BackgroundPlaybackVideoToggleSwitch.Header" xml:space="preserve">
-    <value>Background playback video</value>
+    <value>バック グラウンド再生ビデオ</value>
   </data>
   <data name="MV_PanePivot_Item2_ShowFileOrFolderToggleSwitch.OnContent" xml:space="preserve">
-    <value>Folder</value>
+    <value>フォルダー</value>
   </data>
   <data name="MV_PanePivot_Item2_ShowFileOrFolderToggleSwitch.OffContent" xml:space="preserve">
-    <value>File</value>
+    <value>ファイル</value>
   </data>
   <data name="SCORPIOPLAYERPRO_BTN" xml:space="preserve">
-    <value>LIFETIME SUBSCRIPTION</value>
+    <value>寿命のサブスクリプション</value>
   </data>
   <data name="SCORPIOPLAYERPRO3MONTH_BTN" xml:space="preserve">
-    <value>3-MONTH SUBSCRIPTION</value>
+    <value>3 つの月サブスクリプション</value>
   </data>
   <data name="SD_PivotItem3_ADDON_NetworkError.Text" xml:space="preserve">
-    <value>network error, please try again.</value>
+    <value>ネットワーク エラー、もう一度試してください。</value>
   </data>
   <data name="SCORPIOPLAYERPRO_TRIAL_BTN.Content" xml:space="preserve">
-    <value>1 Hour Trial</value>
+    <value>1 時間の試験</value>
   </data>
   <data name="SCORPIOPLAYERPRO_TRIAL_Message" xml:space="preserve">
-    <value>For 1 hour, over time the following settings will return to default</value>
+    <value>次の設定が既定値に戻る時間をかけて 1 時間をみてください。</value>
   </data>
   <data name="SCORPIOPLAYERPRO_TRIAL_Message_Confirm" xml:space="preserve">
-    <value>Confirm</value>
+    <value>確かですか</value>
   </data>
   <data name="SCORPIOPLAYERPRO_TRIAL_Message_Close" xml:space="preserve">
-    <value>Cancel</value>
+    <value>キャンセル</value>
   </data>
   <data name="CM_Graghic_BRIGHTNESS" xml:space="preserve">
-    <value>Brightness</value>
+    <value>明るさ</value>
   </data>
   <data name="MSD_TITLE.Text" xml:space="preserve">
-    <value>UPNP DLNA Devices</value>
+    <value>UPNP DLNA 機器</value>
   </data>
   <data name="MSD.PrimaryButtonText" xml:space="preserve">
-    <value>Reflesh</value>
+    <value>更新</value>
   </data>
   <data name="CM_Open_MediaServer" xml:space="preserve">
     <value>DLNA</value>
   </data>
   <data name="MSD.SecondaryButtonText" xml:space="preserve">
-    <value>Confirm</value>
-  </data>
-  <data name="NO_DLNA.Text" xml:space="preserve">
-    <value>No DLNA Device found, Please Click Refresh Button</value>
-  </data>
-  <data name="CM_Graghic" xml:space="preserve">
-    <value>Graphic</value>
-  </data>
-  <data name="CM_Graghic_Rotation" xml:space="preserve">
-    <value>Graphic Rotation</value>
+    <value>確かですか</value>
   </data>
   <data name="WM_CUE_FOUND" xml:space="preserve">
-    <value>.cue file found</value>
+    <value>。 キュー ファイルが見つかりません</value>
   </data>
   <data name="WM_CUE_ASSOCIATE_FAILED" xml:space="preserve">
-    <value>.cue associate audio file not found, must use same name</value>
+    <value>一致するオーディオ ファイル キューが見つかりました。</value>
   </data>
   <data name="WM_CUE_FAILED" xml:space="preserve">
-    <value>.cue parse fail</value>
+    <value>。 キューの解析に失敗しました</value>
   </data>
   <data name="WM_CUE_MUST_OPEN_WITH_FOLDER" xml:space="preserve">
-    <value>.cue must open within folder</value>
+    <value>しますキュー ファイルはフォルダーを開く必要があります。</value>
   </data>
   <data name="CM_Open_EQ" xml:space="preserve">
-    <value>EQ</value>
+    <value>イコライザー</value>
   </data>
   <data name="CD_E_TITLE.Text" xml:space="preserve">
-    <value>Equalizer</value>
+    <value>イコライザー</value>
   </data>
   <data name="CD_Equalizer.PrimaryButtonText" xml:space="preserve">
-    <value>Close</value>
+    <value>シャットダウン</value>
   </data>
   <data name="CNE_PRESET.Text" xml:space="preserve">
-    <value>Preset for audio</value>
+    <value>オーディオのプリセット</value>
   </data>
   <data name="PS_none" xml:space="preserve">
-    <value>None</value>
+    <value>違います</value>
   </data>
   <data name="PS_acoustic" xml:space="preserve">
-    <value>Acoustic</value>
+    <value>音</value>
   </data>
   <data name="PS_bass_boost" xml:space="preserve">
-    <value>Bass boost</value>
+    <value>低音強化</value>
   </data>
   <data name="PS_classical" xml:space="preserve">
-    <value>Classical</value>
+    <value>クラシック音楽</value>
   </data>
   <data name="PS_dance" xml:space="preserve">
-    <value>Dance</value>
+    <value>ダンス</value>
   </data>
   <data name="PS_electronic" xml:space="preserve">
-    <value>Electronic</value>
+    <value>地図</value>
   </data>
   <data name="PS_hip_hop" xml:space="preserve">
-    <value>Hip hop</value>
+    <value>ホップ</value>
   </data>
   <data name="PS_jazz" xml:space="preserve">
-    <value>Jazz</value>
+    <value>サー</value>
   </data>
   <data name="PS_loudness" xml:space="preserve">
-    <value>Loudness</value>
+    <value>ラウドネス</value>
   </data>
   <data name="PS_pop" xml:space="preserve">
-    <value>Pop</value>
+    <value>ポップ ミュージック</value>
   </data>
   <data name="PS_r_b" xml:space="preserve">
-    <value>RB</value>
+    <value>リズム ブルース</value>
   </data>
   <data name="PS_rock" xml:space="preserve">
-    <value>Rock</value>
+    <value>ロック</value>
   </data>
   <data name="PS_speech" xml:space="preserve">
-    <value>Speech</value>
+    <value>声</value>
   </data>
   <data name="PS_treble_boost" xml:space="preserve">
-    <value>Treble boost</value>
+    <value>高音強化</value>
   </data>
   <data name="PS_vocal_boost" xml:space="preserve">
-    <value>Vocal boost</value>
+    <value>サウンドエンハンスメント</value>
   </data>
   <data name="PS_custom" xml:space="preserve">
-    <value>Custom</value>
+    <value>カスタム</value>
   </data>
   <data name="WhatsNew.Content" xml:space="preserve">
-    <value>What's new in this version</value>
+    <value>このリリースの新機能</value>
   </data>
   <data name="SD_RateMe" xml:space="preserve">
-    <value>Rate</value>
+    <value>評価</value>
   </data>
   <data name="SD_Close" xml:space="preserve">
-    <value>Close</value>
+    <value>シャットダウン</value>
   </data>
   <data name="CM_Favorite_Manager" xml:space="preserve">
-    <value>Manager</value>
+    <value>マネージャー</value>
   </data>
   <data name="FD_PivotItem1.Header" xml:space="preserve">
-    <value>Browse</value>
+    <value>[参照]</value>
   </data>
   <data name="FD_PivotItem2.Header" xml:space="preserve">
-    <value>Folders</value>
+    <value>フォルダー</value>
   </data>
   <data name="FD_PivotItem3.Header" xml:space="preserve">
-    <value>Files</value>
+    <value>ファイル</value>
   </data>
   <data name="FD.SecondaryButtonText" xml:space="preserve">
-    <value>Close</value>
+    <value>シャットダウン</value>
   </data>
   <data name="FD.PrimaryButtonText" xml:space="preserve">
-    <value>Browse</value>
+    <value>[参照]</value>
   </data>
   <data name="FD_MUST_FOLDERS_WARNING" xml:space="preserve">
-    <value>Must pick a folder that have sub folders</value>
+    <value>サブフォルダーを持つフォルダーを選択する必要があります。</value>
   </data>
   <data name="FD_BTN_P_BROWSE" xml:space="preserve">
-    <value>Browse</value>
+    <value>[参照]</value>
   </data>
   <data name="FD_BTN_P_ADD_TO_FAVORITE" xml:space="preserve">
-    <value>Add to favorite</value>
+    <value>お気に入りに追加</value>
   </data>
   <data name="FD_BTN_P_REMOVE_FROM_FAVORITE" xml:space="preserve">
-    <value>Remove from favorite</value>
+    <value>お気に入りから削除します。</value>
   </data>
   <data name="FD_TITLE.Text" xml:space="preserve">
-    <value>Favorites Manager</value>
+    <value>お気に入りマネージャー</value>
   </data>
   <data name="FD_RecursiveCheckBox.Content" xml:space="preserve">
-    <value>Recursively</value>
+    <value>再帰</value>
   </data>
   <data name="MV_TP_OpenManager.Content" xml:space="preserve">
-    <value>Favorites Manager</value>
+    <value>お気に入りマネージャー</value>
   </data>
   <data name="SD_PivotItem3_ShowNextFrameButtonToggleSwitch.Header" xml:space="preserve">
-    <value>Show Next Frame button</value>
+    <value>次のフレーム コントロール ボタンを表示します。</value>
   </data>
   <data name="SD_PivotItem3_ShowNextFrameButtonToggleSwitch.OnContent" xml:space="preserve">
-    <value>Yes</value>
+    <value>は</value>
   </data>
   <data name="SD_PivotItem3_ShowNextFrameButtonToggleSwitch.OffContent" xml:space="preserve">
-    <value>No</value>
+    <value>かどうか</value>
   </data>
   <data name="CM_Open_VISUALIZER" xml:space="preserve">
-    <value>Visualization</value>
+    <value>可視化</value>
   </data>
   <data name="SD_PivotItem3_ShowVisualizationoggleSwitch.Header" xml:space="preserve">
-    <value>Music visualization</value>
+    <value>音楽の可視化</value>
   </data>
   <data name="SD_PivotItem3_ShowVisualizationoggleSwitch.OnContent" xml:space="preserve">
-    <value>Yes</value>
+    <value>オープン</value>
   </data>
   <data name="SD_PivotItem3_ShowVisualizationoggleSwitch.OffContent" xml:space="preserve">
-    <value>Close</value>
+    <value>シャットダウン</value>
   </data>
   <data name="MV_TP_ToggleSearch.Content" xml:space="preserve">
-    <value>Search</value>
+    <value>検索</value>
   </data>
   <data name="LIMIT_EXCEED_FOLDER" xml:space="preserve">
-    <value>Unlock Advanced Edition - unlimited number of favorites!</value>
+    <value>お気に入り数の高度なバージョン-無制限のロックを解除!</value>
   </data>
   <data name="LIMIT_EXCEED_FOLDER_Confirm" xml:space="preserve">
-    <value>Unlock</value>
+    <value>ロックを解除します。</value>
   </data>
   <data name="LIMIT_EXCEED_FOLDER_Close" xml:space="preserve">
-    <value>Close</value>
-  </data>
-  <data name="AutoSuggestBox.PlaceholderText" xml:space="preserve">
-    <value>Search or Youtube Link or Playlist Link or Channel Link</value>
+    <value>シャットダウン</value>
   </data>
   <data name="SD_PivotItem3_IsRoamingToggleSwitch.Header" xml:space="preserve">
-    <value>Roaming play progress</value>
+    <value>再生の進行状況をローミング</value>
   </data>
   <data name="SD_PivotItem3_IsRoamingToggleSwitch.OnContent" xml:space="preserve">
-    <value>Yes</value>
+    <value>は</value>
   </data>
   <data name="SD_PivotItem3_IsRoamingToggleSwitch.OffContent" xml:space="preserve">
-    <value>No</value>
+    <value>かどうか</value>
   </data>
   <data name="WM_Bookmark_AddSuccess" xml:space="preserve">
-    <value>Bookmark Added</value>
+    <value>ブックマーク追加</value>
   </data>
   <data name="WM_Bookmark_RemoveSuccess" xml:space="preserve">
-    <value>Bookmark Removed</value>
+    <value>ブックマークの削除</value>
   </data>
   <data name="WM_Bookmark_Loaded" xml:space="preserve">
-    <value>Bookmark Loaded</value>
+    <value>ブックマークを読み込む</value>
   </data>
   <data name="CM_Bookmard_Point" xml:space="preserve">
-    <value>Open Time Point</value>
-  </data>
-  <data name="CM_Bookmark_AddPoint" xml:space="preserve">
-    <value>Add Time Point</value>
+    <value>オープンの時点で</value>
   </data>
   <data name="CM_Bookmard_AB_Point" xml:space="preserve">
-    <value>Open Video Clip</value>
+    <value>オープンのフラグメント</value>
   </data>
   <data name="CM_Bookmard_Remove_List" xml:space="preserve">
-    <value>Remove</value>
+    <value>削除</value>
   </data>
   <data name="CM_Bookmard_Rename_List" xml:space="preserve">
-    <value>Rename</value>
+    <value>名前を変更します。</value>
   </data>
   <data name="CM_Bookmark" xml:space="preserve">
-    <value>Bookmark/Chapter</value>
+    <value>ブックマーク/チャプター</value>
   </data>
   <data name="CM_Bookmark_AddAB" xml:space="preserve">
-    <value>Add Video Clip</value>
+    <value>フラグメントを追加します。</value>
+  </data>
+  <data name="CM_Bookmark_AddPoint" xml:space="preserve">
+    <value>時間のポイントを追加します。</value>
   </data>
   <data name="BCD_TITLE.Text" xml:space="preserve">
-    <value>Rename Bookmark</value>
+    <value>ブックマークの名前を変更します。</value>
   </data>
   <data name="BCD.SecondaryButtonText" xml:space="preserve">
-    <value>Cancel</value>
+    <value>キャンセル</value>
   </data>
   <data name="BCD.PrimaryButtonText" xml:space="preserve">
-    <value>Confirm</value>
+    <value>確かですか</value>
   </data>
   <data name="WM_Bookmark_Rename_Success" xml:space="preserve">
-    <value>Bookmark Renamed</value>
+    <value>ブックマーク名前の変更に成功しました</value>
   </data>
   <data name="CM_Bookmard_Manage" xml:space="preserve">
-    <value>Manage</value>
+    <value>管理</value>
   </data>
   <data name="LIMIT_EXCEED_BOOKMARK" xml:space="preserve">
-    <value>Unlock Advanced Edition - unlimited number of Bookmarks!</value>
+    <value>ブックマーク数の高度なバージョン-無制限のロックを解除!</value>
   </data>
   <data name="CM_Playback_Loop_ResetAB" xml:space="preserve">
-    <value>Clear A-B</value>
+    <value>クリア B</value>
   </data>
   <data name="SD_PivotItem3_RememberAudioProgressToggleSwitch.Header" xml:space="preserve">
-    <value>Remember Audio Playback Progress</value>
+    <value>メモリ オーディオ再生の進行状況</value>
   </data>
   <data name="SD_PivotItem3_RememberAudioProgressToggleSwitch.OnContent" xml:space="preserve">
-    <value>Yes</value>
+    <value>は</value>
   </data>
   <data name="SD_PivotItem3_RememberAudioProgressToggleSwitch.OffContent" xml:space="preserve">
-    <value>No</value>
+    <value>かどうか</value>
   </data>
   <data name="FD_RecursiveToggleSwitch.Header" xml:space="preserve">
-    <value>Recursively</value>
-  </data>
-  <data name="FD_RecursiveToggleSwitch.OffContent" xml:space="preserve">
-    <value>Yes</value>
+    <value>再帰</value>
   </data>
   <data name="FD_RecursiveToggleSwitch.OnContent" xml:space="preserve">
-    <value>No</value>
+    <value>は</value>
+  </data>
+  <data name="FD_RecursiveToggleSwitch.OffContent" xml:space="preserve">
+    <value>かどうか</value>
   </data>
   <data name="WM_SUCCESS_ADD_FILE_TO_FAVORITE" xml:space="preserve">
-    <value>Success add file to favorites</value>
+    <value>お気に入りにファイルを正常に追加しました</value>
   </data>
   <data name="WM_SUCCESS_REMOVE_FILE_TO_FAVORITE" xml:space="preserve">
-    <value>Success remove file from favorites</value>
+    <value>正常に削除されたお気に入りからファイルの</value>
   </data>
   <data name="WM_SUCCESS_ADD_FOLDER_TO_FAVORITE" xml:space="preserve">
-    <value>Success add folder to favorites</value>
+    <value>お気に入りにフォルダーを正常に追加しました</value>
   </data>
   <data name="WM_SUCCESS_REMOVE_FOLDER_TO_FAVORITE" xml:space="preserve">
-    <value>Success remove folder from favorites</value>
+    <value>お気に入りからフォルダーを削除しました</value>
   </data>
   <data name="ADD_FILE_FAVORITE" xml:space="preserve">
-    <value>Add to favorites</value>
+    <value>お気に入りに追加</value>
   </data>
   <data name="REMOVE_FILE_FAVORITE" xml:space="preserve">
-    <value>Remove from favorite</value>
+    <value>お気に入りから削除します。</value>
   </data>
   <data name="SD_PivotItem3_IsSubtitleSelectionEnabledToggleSwitch.Header" xml:space="preserve">
-    <value>Subtitle Text Selectable</value>
+    <value>サブタイトルを選択することができます。</value>
   </data>
   <data name="IsSubtitleSelectionEnabledToggleSwitch.OnContent" xml:space="preserve">
-    <value>Yes</value>
+    <value>は</value>
   </data>
   <data name="IsSubtitleSelectionEnabledToggleSwitch.OffContent" xml:space="preserve">
-    <value>No</value>
+    <value>かどうか</value>
   </data>
   <data name="OpenFolder" xml:space="preserve">
-    <value>Open Folder</value>
+    <value>フォルダーを開く</value>
   </data>
   <data name="SD_PivotItem1_SystemDecodeToggleSwitch.Header" xml:space="preserve">
-    <value>Use System Decoder</value>
-  </data>
-  <data name="SD_PivotItem1_ForceDecodeVideoToggleSwitch.Header" xml:space="preserve">
-    <value>Force Decode Video</value>
-  </data>
-  <data name="SD_PivotItem1_ForceDecodeVideoToggleSwitch.OnContent" xml:space="preserve">
-    <value>Yes</value>
-  </data>
-  <data name="SD_PivotItem1_ForceDecodeVideoToggleSwitch.OffContent" xml:space="preserve">
-    <value>Close</value>
-  </data>
-  <data name="SD_PivotItem1_ForceDecodeAudioToggleSwitch.Header" xml:space="preserve">
-    <value>Force Decode Audio</value>
-  </data>
-  <data name="SD_PivotItem1_ForceDecodeAudioToggleSwitch.OnContent" xml:space="preserve">
-    <value>Yes</value>
-  </data>
-  <data name="SD_PivotItem1_ForceDecodeAudioToggleSwitch.OffContent" xml:space="preserve">
-    <value>Close</value>
+    <value>システムのデコーダーを使用</value>
   </data>
   <data name="SD_PivotItem1_SystemDecodeToggleSwitch.OnContent" xml:space="preserve">
-    <value>Yes</value>
+    <value>オープン</value>
   </data>
   <data name="SD_PivotItem1_SystemDecodeToggleSwitch.OffContent" xml:space="preserve">
-    <value>Close</value>
+    <value>シャットダウン</value>
   </data>
-  <data name="MV_TP_OpenFolder.Content" xml:space="preserve">
-    <value>Open Folder</value>
+  <data name="SD_PivotItem1_ForceDecodeVideoToggleSwitch.Header" xml:space="preserve">
+    <value>ソフト ソリューション ビデオ</value>
   </data>
-  <data name="MV_TP_OpenFIle.Content" xml:space="preserve">
-    <value>Open file</value>
+  <data name="SD_PivotItem1_ForceDecodeVideoToggleSwitch.OnContent" xml:space="preserve">
+    <value>オープン</value>
+  </data>
+  <data name="SD_PivotItem1_ForceDecodeVideoToggleSwitch.OffContent" xml:space="preserve">
+    <value>シャットダウン</value>
+  </data>
+  <data name="SD_PivotItem1_ForceDecodeAudioToggleSwitch.Header" xml:space="preserve">
+    <value>ソフト ソリューション オーディオ</value>
+  </data>
+  <data name="SD_PivotItem1_ForceDecodeAudioToggleSwitch.OnContent" xml:space="preserve">
+    <value>オープン</value>
+  </data>
+  <data name="SD_PivotItem1_ForceDecodeAudioToggleSwitch.OffContent" xml:space="preserve">
+    <value>シャットダウン</value>
   </data>
   <data name="CM_Open_WebDAV" xml:space="preserve">
     <value>WebDAV</value>
   </data>
   <data name="WebDAV_TITLE.Text" xml:space="preserve">
-    <value>WebDAV (Beta)</value>
+    <value>WebDAV (ベータ版)</value>
   </data>
   <data name="NO_WebDAV.Text" xml:space="preserve">
-    <value>No WebDAV Found.</value>
-  </data>
-  <data name="WebDAV_Settings.Header" xml:space="preserve">
-    <value>WebDAV Settings</value>
+    <value>WebDAV メディア デバイスが存在しません</value>
   </data>
   <data name="WebDAV_WebDAVBaseURI.Text" xml:space="preserve">
-    <value>Server Endpoint</value>
+    <value>サーバーのアドレス</value>
   </data>
   <data name="WebDAV_WebDAVUsername.Text" xml:space="preserve">
-    <value>Username</value>
+    <value>ユーザー名</value>
   </data>
   <data name="WebDAV_WebDAVPassword.Text" xml:space="preserve">
-    <value>Password</value>
+    <value>パスワード</value>
+  </data>
+  <data name="WebDAV_Settings.Header" xml:space="preserve">
+    <value>WebDAV 設定</value>
   </data>
   <data name="WebDAV_Warning.Text" xml:space="preserve">
-    <value>WebDAV Feature isn't fully ready, open file means fully download the file, please do not open very large file.</value>
+    <value>WebDAV ファイルが完全にダウンロードされることを意味初期のサポートに現在開いているファイルは大きすぎるファイルを開けないように。</value>
   </data>
   <data name="WebDAV_WebDAVNote.Text" xml:space="preserve">
-    <value>Note</value>
+    <value>説明</value>
   </data>
   <data name="SD_PivotItem3__360VideoPlaybackToggleSwitch.Header" xml:space="preserve">
-    <value>Show 360° Video Playback Button</value>
+    <value>360 ° のビデオ再生ボタンを表示します。</value>
   </data>
   <data name="SD_PivotItem3__360VideoPlaybackToggleSwitch.OnContent" xml:space="preserve">
-    <value>Yes</value>
+    <value>は</value>
   </data>
   <data name="SD_PivotItem3__360VideoPlaybackToggleSwitch.OffContent" xml:space="preserve">
-    <value>No</value>
+    <value>かどうか</value>
   </data>
   <data name="CM_Bookmard_ChapterList" xml:space="preserve">
-    <value>Open Chapter</value>
+    <value>オープンの章</value>
   </data>
   <data name="CM_Open_NewWindow" xml:space="preserve">
-    <value>New Window</value>
+    <value>新しいウィンドウ</value>
   </data>
   <data name="SD_PivotItem1_ShowAutoSuggestBoxButtonToggleSwitch.Header" xml:space="preserve">
-    <value>Show Search Box</value>
+    <value>普遍的な検索ボックスを表示します。</value>
   </data>
   <data name="SD_PivotItem1_ShowAutoSuggestBoxButtonToggleSwitch.OnContent" xml:space="preserve">
-    <value>Yes</value>
+    <value>は</value>
   </data>
   <data name="SD_PivotItem1_ShowAutoSuggestBoxButtonToggleSwitch.OffContent" xml:space="preserve">
-    <value>No</value>
+    <value>かどうか</value>
   </data>
   <data name="CM_Opacity" xml:space="preserve">
-    <value>Opacity</value>
+    <value>透明性</value>
   </data>
   <data name="SD_PivotItem2_AdjustImageSubtitleSizeToggleSwitch.Header" xml:space="preserve">
-    <value>Adjust Image Subtitle Size</value>
+    <value>画像キャプションのサイズ変更します。</value>
   </data>
   <data name="SD_PivotItem2_AdjustImageSubtitleSizeToggleSwitch.OnContent" xml:space="preserve">
-    <value>Yes</value>
+    <value>は</value>
   </data>
   <data name="SD_PivotItem2_AdjustImageSubtitleSizeToggleSwitch.OffContent" xml:space="preserve">
-    <value>No</value>
+    <value>かどうか</value>
   </data>
   <data name="SD_PivotItem2_ImageSubtitleSizeSizeSlider.Header" xml:space="preserve">
-    <value>Image Subtitle Size</value>
+    <value>図のキャプションのサイズ</value>
   </data>
   <data name="SD_PivotItem3_PrimarySubtitlePositionSlider.Header" xml:space="preserve">
-    <value>Primary Subtitle Position</value>
+    <value>主なキャプションの位置</value>
   </data>
   <data name="SD_PivotItem3_SeconderySubtitlePositionSlider.Header" xml:space="preserve">
-    <value>Secondary Subtitle Position</value>
+    <value>2 番目のキャプションの位置</value>
   </data>
   <data name="SD_PivotItem2_UseDefaultFontFamilyToggleSwitch.Header" xml:space="preserve">
-    <value>Use Default FontFamily</value>
+    <value>既定フォントを使用</value>
   </data>
   <data name="SD_PivotItem2_UseDefaultFontFamilyToggleSwitch.OnContent" xml:space="preserve">
-    <value>Yes</value>
+    <value>は</value>
   </data>
   <data name="SD_PivotItem2_UseDefaultFontFamilyToggleSwitch.OffContent" xml:space="preserve">
-    <value>No</value>
+    <value>かどうか</value>
   </data>
   <data name="SD_PivotItem1_GlobalStretchModeComboBox.Header" xml:space="preserve">
-    <value>Global Graphic Mode</value>
+    <value>グローバル形式モード</value>
   </data>
   <data name="WM_SubtitleSearching" xml:space="preserve">
-    <value>Searching Subtitle...</value>
+    <value>字幕を探しています.</value>
   </data>
   <data name="PBCD.PrimaryButtonText" xml:space="preserve">
-    <value>Confirm</value>
+    <value>確かですか</value>
   </data>
   <data name="PBCD.SecondaryButtonText" xml:space="preserve">
-    <value>Cancel</value>
+    <value>キャンセル</value>
   </data>
   <data name="PBCD_TITLE.Text" xml:space="preserve">
-    <value>Playlist Name</value>
+    <value>プレイリストの名前</value>
   </data>
   <data name="MV_TP_NewPlaylist.Content" xml:space="preserve">
-    <value>New Playlist</value>
+    <value>新しい再生リスト</value>
   </data>
   <data name="AddToPlaylist" xml:space="preserve">
-    <value>Add To Playlist</value>
+    <value>プレイリストに追加します。</value>
   </data>
   <data name="WM_Playlist_Empty" xml:space="preserve">
-    <value>Playlist Is Empty</value>
+    <value>再生リストは空です。</value>
   </data>
   <data name="MV_TP_RenamePlaylist.Content" xml:space="preserve">
-    <value>Rename Playlist</value>
+    <value>プレイリストの名前を変更します。</value>
   </data>
   <data name="RemoveFromPlaylist" xml:space="preserve">
-    <value>Remove From Playlist</value>
+    <value>プレイリストから削除します。</value>
   </data>
   <data name="MV_TP_RemovePlaylist.Content" xml:space="preserve">
-    <value>Delete Playlist</value>
+    <value>プレイリストを削除します。</value>
   </data>
   <data name="ClearRecentButton.Content" xml:space="preserve">
-    <value>Clear All</value>
+    <value>すべてクリア</value>
   </data>
   <data name="ADDON_CanNotBuyAdvanceInTrialVersion_TextBlock.Text" xml:space="preserve">
-    <value>Can not purchase Premium in trial version</value>
+    <value>試用版は高度な版を購入することはできません。</value>
   </data>
   <data name="SD_PivotItem2_UseCustomFontColorToggleSwitch.Header" xml:space="preserve">
-    <value>Use Custom Color</value>
+    <value>カスタム色を使用してください。</value>
   </data>
   <data name="SD_PivotItem2_UseCustomFontColorToggleSwitch.OnContent" xml:space="preserve">
-    <value>Yes</value>
+    <value>オープン</value>
   </data>
   <data name="SD_PivotItem2_UseCustomFontColorToggleSwitch.OffContent" xml:space="preserve">
-    <value>No</value>
+    <value>オフ</value>
   </data>
   <data name="CM_Playlist" xml:space="preserve">
-    <value>Playlist</value>
+    <value>再生リスト</value>
   </data>
   <data name="MV_TP_AddToPlaylist.Content" xml:space="preserve">
-    <value>Add To Playlist</value>
+    <value>プレイリストに追加します。</value>
   </data>
   <data name="SelectMultiple" xml:space="preserve">
-    <value>Select</value>
+    <value>選択します。</value>
   </data>
   <data name="SD_PivotItem3_UseCustomBackgroundToggleSwitch.Header" xml:space="preserve">
-    <value>Use Custom Background Image</value>
+    <value>カスタムの背景画像を使用します。</value>
   </data>
   <data name="SD_PivotItem3_UseCustomBackgroundToggleSwitch.OnContent" xml:space="preserve">
-    <value>Yes</value>
+    <value>は</value>
   </data>
   <data name="SD_PivotItem3_UseCustomBackgroundToggleSwitch.OffContent" xml:space="preserve">
-    <value>No</value>
-  </data>
-  <data name="SD_PivotItem3_bufferTimeSlider.Header" xml:space="preserve">
-    <value>Buffer Time Network (ms)</value>
+    <value>かどうか</value>
   </data>
   <data name="SYS_PIP" xml:space="preserve">
-    <value>Picture in picture (Alway on top)</value>
+    <value>絵画</value>
+  </data>
+  <data name="SD_PivotItem1_UseEnglish.OnContent" xml:space="preserve">
+    <value> </value>
   </data>
   <data name="SD_PivotItem1_UsePreviewerToggleSwitch.Header" xml:space="preserve">
-    <value>Use Seek Previewer</value>
+    <value>使用を求めるプレビューアー</value>
   </data>
   <data name="HD_TITLE_TEXT.Text" xml:space="preserve">
-    <value>Installed Codec Info</value>
+    <value>インストールされているコーデック情報</value>
   </data>
   <data name="HD_PivotItem1.Header" xml:space="preserve">
-    <value>Video Decoder</value>
+    <value>ビデオ ・ デコーダー</value>
   </data>
   <data name="HD_PivotItem2.Header" xml:space="preserve">
-    <value>Video Encoder</value>
+    <value>ビデオ ・ エンコーダー</value>
   </data>
   <data name="HD_PivotItem3.Header" xml:space="preserve">
-    <value>Audio Decoder</value>
+    <value>オーディオ デコーダー</value>
   </data>
   <data name="HD_PivotItem4.Header" xml:space="preserve">
-    <value>Audio Encoder</value>
+    <value>オーディオ エンコーダー</value>
   </data>
   <data name="CM_HardwareInfo" xml:space="preserve">
-    <value>Installed Codec Info</value>
+    <value>インストールされているコーデック情報</value>
   </data>
   <data name="HD.PrimaryButtonText" xml:space="preserve">
-    <value>Close</value>
+    <value>シャットダウン</value>
   </data>
   <data name="Meta_WhatsNew" xml:space="preserve">
-    <value>what's new in this version</value>
+    <value>このバージョンの新機能します。</value>
   </data>
   <data name="Meta_RateMe" xml:space="preserve">
-    <value>Rate</value>
+    <value>評価</value>
   </data>
   <data name="Meta_Close" xml:space="preserve">
-    <value>Close</value>
+    <value>シャットダウン</value>
   </data>
   <data name="Meta_Message1" xml:space="preserve">
-    <value>Your feedback is important!</value>
+    <value>あなたのフィードバックは重要です!</value>
   </data>
   <data name="Meta_Message2" xml:space="preserve">
-    <value>if your like this app, give it a good rate or review will make this app better.</value>
-  </data>
-  <data name="SD_PivotItem1_UseHevcToggleSwitch.Header" xml:space="preserve">
-    <value>Use H265/HEVC/HDR Hardware Acceleration</value>
+    <value>場合は、このアプリのような良いレートを付けるか、このアプリを改善することのレビュー。</value>
   </data>
   <data name="SD_PivotItem1_UseHevcToggleSwitch.OnContent" xml:space="preserve">
-    <value>Yes</value>
+    <value>は</value>
   </data>
   <data name="SD_PivotItem1_UseHevcToggleSwitch.OffContent" xml:space="preserve">
-    <value>No</value>
+    <value>かどうか</value>
   </data>
   <data name="CM_Graghic_Effect_Displacement" xml:space="preserve">
-    <value>Displacement</value>
+    <value>変位</value>
   </data>
   <data name="CM_Graghic_Effect_DynamicBlur" xml:space="preserve">
-    <value>Dynamic Blur</value>
+    <value>動的なぼかし</value>
   </data>
   <data name="CM_Graghic_Effect_RotatedTiles" xml:space="preserve">
-    <value>Rotated Tiles</value>
+    <value>回転したタイル</value>
   </data>
   <data name="CM_Graghic_Effect_GrayScale" xml:space="preserve">
-    <value>GrayScale</value>
+    <value>グレースケール</value>
   </data>
   <data name="CM_Graghic_Effect_Invert" xml:space="preserve">
-    <value>Invert</value>
+    <value>「反転」</value>
   </data>
   <data name="CM_Graghic_Effect_ColorMatrix" xml:space="preserve">
-    <value>Color Matrix</value>
+    <value>カラー マトリックス</value>
   </data>
   <data name="CM_Graghic_Effect_ColorMatrix_On" xml:space="preserve">
-    <value>Enabled</value>
+    <value>有効になっています。</value>
   </data>
   <data name="CM_Graghic_Effect_ColorMatrix_Off" xml:space="preserve">
-    <value>Disabled</value>
-  </data>
-  <data name="CD_CM_TITLE.Text" xml:space="preserve">
-    <value>Color Matrix</value>
+    <value>無効になっています。</value>
   </data>
   <data name="CM_Graghic_Effect_ColorMatrix_Custom" xml:space="preserve">
-    <value>Custom</value>
+    <value>カスタム</value>
   </data>
   <data name="CD_ColorMatrix.PrimaryButtonText" xml:space="preserve">
-    <value>Close</value>
+    <value>シャットダウン</value>
+  </data>
+  <data name="CD_CM_TITLE.Text" xml:space="preserve">
+    <value>カラー マトリックス</value>
   </data>
   <data name="CM_Slider_hue.Header" xml:space="preserve">
-    <value>hue</value>
+    <value>色相</value>
   </data>
   <data name="CM_Slider_saturation.Header" xml:space="preserve">
-    <value>saturation</value>
+    <value>彩度</value>
   </data>
   <data name="CM_Slider_brightness.Header" xml:space="preserve">
-    <value>brightness</value>
+    <value>明るさ</value>
   </data>
   <data name="hevcVideoExtensionButton.Content" xml:space="preserve">
-    <value>Download HEVC Video Extension</value>
+    <value>HEVC ビデオ拡張をダウンロードします。</value>
   </data>
   <data name="hevcVideoExtensionButton_ToolTip.Content" xml:space="preserve">
-    <value>Windows 10 Fall Creator Update, Microsoft Remove HEVC Decoder, So it need manually download Codec From Microsoft Store, If your hardware support it.</value>
+    <value>Windows 10 秋作成者 Update、Microsoft 削除 HEVC デコーダー、のでそれ必要があります手動でお使いのハードウェアがサポートしている場合、マイクロソフトストアからコーデックをダウンロードします。</value>
   </data>
   <data name="SD_PivotItem1_SetDefaultMediaPlayer.Header" xml:space="preserve">
-    <value>Set Default Media Player</value>
+    <value>設定の既定のメディア プレーヤー</value>
+  </data>
+  <data name="SD_PivotItem1_SetDefaultMediaPlayer.OffContent" xml:space="preserve">
+    <value> </value>
+  </data>
+  <data name="SD_PivotItem1_SetDefaultMediaPlayer.OnContent" xml:space="preserve">
+    <value> </value>
   </data>
   <data name="SD_PivotItem1_ShowWhatsNew.Header" xml:space="preserve">
-    <value>Show What's New On Updated</value>
+    <value>更新表示での新機能</value>
   </data>
   <data name="SD_PivotItem1_ShowWhatsNew.OnContent" xml:space="preserve">
-    <value>Yes</value>
+    <value>は</value>
   </data>
   <data name="SD_PivotItem1_ShowWhatsNew.OffContent" xml:space="preserve">
-    <value>No</value>
+    <value>かどうか</value>
   </data>
   <data name="SortBy" xml:space="preserve">
-    <value>Sort By</value>
+    <value>並べ替え</value>
   </data>
   <data name="Menu_FileName" xml:space="preserve">
-    <value>File Name</value>
+    <value>ファイル名</value>
   </data>
   <data name="Menu_Size" xml:space="preserve">
-    <value>File Size</value>
+    <value>ファイルのサイズ</value>
   </data>
   <data name="Menu_Date" xml:space="preserve">
-    <value>File Date</value>
+    <value>ファイルの日付</value>
   </data>
   <data name="Menu_Duration" xml:space="preserve">
-    <value>Duration</value>
+    <value>期間</value>
+  </data>
+  <data name="SD_PivotItem1_UseHevcToggleSwitch.Header" xml:space="preserve">
+    <value>H265/HEVC/HDR ハードウェア アクセラレーションを使用します。</value>
   </data>
   <data name="CD_Effects.PrimaryButtonText" xml:space="preserve">
-    <value>Close</value>
+    <value>シャットダウン</value>
   </data>
   <data name="CD_Effects_TITLE.Text" xml:space="preserve">
-    <value>Video Effects Manager</value>
+    <value>ビデオ マネージャー</value>
   </data>
   <data name="CM_Graghic_Effect_EffectManager" xml:space="preserve">
-    <value>Effects Manager</value>
+    <value>エフェクト マネージャー</value>
   </data>
   <data name="Effects_Manager_MemoToggleSwitch.Header" xml:space="preserve">
-    <value>Memo</value>
+    <value>思い出</value>
   </data>
   <data name="Effects_Manager_MemoToggleSwitch.OnContent" xml:space="preserve">
-    <value>Enabled</value>
+    <value>有効になっています。</value>
   </data>
   <data name="Effects_Manager_MemoToggleSwitch.OffContent" xml:space="preserve">
-    <value>Disabled</value>
-  </data>
-  <data name="Effects_Manager_DynamicBlurToggleSwitch.Header" xml:space="preserve">
-    <value>Dynamic Blur</value>
-  </data>
-  <data name="Effects_Manager_RotatedTilesToggleSwitch.Header" xml:space="preserve">
-    <value>Rotated Tiles</value>
-  </data>
-  <data name="Effects_Manager_GrayScaleToggleSwitch.Header" xml:space="preserve">
-    <value>GrayScale</value>
-  </data>
-  <data name="Effects_Manager_InvertToggleSwitch.Header" xml:space="preserve">
-    <value>Invert</value>
+    <value>無効になっています。</value>
   </data>
   <data name="Effects_Manager_DisplacementToggleSwitch.Header" xml:space="preserve">
-    <value>Displacement</value>
+    <value>変位</value>
+  </data>
+  <data name="Effects_Manager_DynamicBlurToggleSwitch.Header" xml:space="preserve">
+    <value>動的なぼかし</value>
+  </data>
+  <data name="Effects_Manager_RotatedTilesToggleSwitch.Header" xml:space="preserve">
+    <value>回転したタイル</value>
+  </data>
+  <data name="Effects_Manager_GrayScaleToggleSwitch.Header" xml:space="preserve">
+    <value>グレースケール</value>
+  </data>
+  <data name="Effects_Manager_InvertToggleSwitch.Header" xml:space="preserve">
+    <value>「反転」</value>
   </data>
   <data name="Effects_Manager_DisplacementToggleSwitch.OnContent" xml:space="preserve">
-    <value>Enabled</value>
+    <value>有効になっています。</value>
   </data>
   <data name="Effects_Manager_DisplacementToggleSwitch.OffContent" xml:space="preserve">
-    <value>Disabled</value>
+    <value>無効になっています。</value>
   </data>
   <data name="Effects_Manager_DynamicBlurToggleSwitch.OnContent" xml:space="preserve">
-    <value>Enabled</value>
+    <value>有効になっています。</value>
   </data>
   <data name="Effects_Manager_DynamicBlurToggleSwitch.OffContent" xml:space="preserve">
-    <value>Disabled</value>
+    <value>無効になっています。</value>
   </data>
   <data name="Effects_Manager_RotatedTilesToggleSwitch.OnContent" xml:space="preserve">
-    <value>Enabled</value>
+    <value>有効になっています。</value>
   </data>
   <data name="Effects_Manager_RotatedTilesToggleSwitch.OffContent" xml:space="preserve">
-    <value>Disabled</value>
+    <value>無効になっています。</value>
   </data>
   <data name="Effects_Manager_GrayScaleToggleSwitch.OnContent" xml:space="preserve">
-    <value>Enabled</value>
+    <value>有効になっています。</value>
   </data>
   <data name="Effects_Manager_GrayScaleToggleSwitch.OffContent" xml:space="preserve">
-    <value>Disabled</value>
+    <value>無効になっています。</value>
   </data>
   <data name="Effects_Manager_InvertToggleSwitch.OnContent" xml:space="preserve">
-    <value>Enabled</value>
+    <value>有効になっています。</value>
   </data>
   <data name="Effects_Manager_InvertToggleSwitch.OffContent" xml:space="preserve">
-    <value>Disabled</value>
+    <value>無効になっています。</value>
   </data>
   <data name="Effects_Manager_ColorMatrixToggleSwitch.OnContent" xml:space="preserve">
-    <value>Enabled</value>
+    <value>有効になっています。</value>
   </data>
   <data name="Effects_Manager_ColorMatrixToggleSwitch.OffContent" xml:space="preserve">
-    <value>Disabled</value>
+    <value>無効になっています。</value>
   </data>
   <data name="Effects_Manager_ColorMatrixToggleSwitch.Header" xml:space="preserve">
-    <value>Color Matrix</value>
+    <value>カラー マトリックス</value>
   </data>
   <data name="CM_Slider_PixelsPerTile.Header" xml:space="preserve">
-    <value>Pixels Per Tile</value>
+    <value>タイルあたりのピクセル数</value>
   </data>
   <data name="CM_Slider_Amount.Header" xml:space="preserve">
-    <value>Displacement Amount</value>
+    <value>変位量</value>
   </data>
   <data name="CM_Slider_DisplacementX.Header" xml:space="preserve">
-    <value>Displacement X</value>
+    <value>変位 X</value>
   </data>
   <data name="CM_Slider_DisplacementY.Header" xml:space="preserve">
-    <value>Displacement Y</value>
+    <value>変位 Y</value>
   </data>
   <data name="CM_Slider_BlurAmount.Header" xml:space="preserve">
-    <value>Blur Amount</value>
+    <value>ぼかす量</value>
   </data>
   <data name="Effects_Manager_ExposureToggleSwitch.Header" xml:space="preserve">
-    <value>Exposure</value>
+    <value>露出</value>
   </data>
   <data name="CM_Slider_Exposure.Header" xml:space="preserve">
-    <value>Exposure Amount</value>
+    <value>露光量</value>
   </data>
   <data name="Effects_Manager_ExposureToggleSwitch.OnContent" xml:space="preserve">
-    <value>Enabled</value>
+    <value>有効になっています。</value>
   </data>
   <data name="Effects_Manager_ExposureToggleSwitch.OffContent" xml:space="preserve">
-    <value>Disabled</value>
+    <value>無効になっています。</value>
   </data>
   <data name="CM_Slider_Contrast.Header" xml:space="preserve">
-    <value>Contrast</value>
+    <value>コントラスト</value>
   </data>
   <data name="Effects_Manager_ContrastToggleSwitch.Header" xml:space="preserve">
-    <value>Contrast</value>
+    <value>コントラスト</value>
   </data>
   <data name="Effects_Manager_ContrastToggleSwitch.OnContent" xml:space="preserve">
-    <value>Enabled</value>
+    <value>有効になっています。</value>
   </data>
   <data name="Effects_Manager_ContrastToggleSwitch.OffContent" xml:space="preserve">
-    <value>Disabled</value>
+    <value>無効になっています。</value>
   </data>
   <data name="Effects_Manager_SharpenToggleSwitch.Header" xml:space="preserve">
-    <value>Sharpen</value>
+    <value>シャープ</value>
   </data>
   <data name="Effects_Manager_SharpenToggleSwitch.OnContent" xml:space="preserve">
-    <value>Enabled</value>
+    <value>有効になっています。</value>
   </data>
   <data name="Effects_Manager_SharpenToggleSwitch.OffContent" xml:space="preserve">
-    <value>Disabled</value>
+    <value>無効になっています。</value>
   </data>
   <data name="CM_Slider_Sharpen.Header" xml:space="preserve">
-    <value>Sharpen</value>
-  </data>
-  <data name="Effects_Manager_MorphologyToggleSwitch.Header" xml:space="preserve">
-    <value>Morphology</value>
+    <value>シャープ</value>
   </data>
   <data name="Effects_Manager_MorphologyToggleSwitch.OnContent" xml:space="preserve">
-    <value>Enabled</value>
+    <value>有効になっています。</value>
   </data>
   <data name="Effects_Manager_MorphologyToggleSwitch.OffContent" xml:space="preserve">
-    <value>Disabled</value>
+    <value>無効になっています。</value>
+  </data>
+  <data name="Effects_Manager_MorphologyToggleSwitch.Header" xml:space="preserve">
+    <value>形態</value>
   </data>
   <data name="Effects_Manager_MorphologyModeToggleSwitch.Header" xml:space="preserve">
-    <value>Morphology Mode</value>
+    <value>形態モード</value>
   </data>
   <data name="Effects_Manager_MorphologyModeToggleSwitch.OnContent" xml:space="preserve">
-    <value>Erode</value>
+    <value>むしばむ</value>
   </data>
   <data name="Effects_Manager_MorphologyModeToggleSwitch.OffContent" xml:space="preserve">
-    <value>Dilate</value>
+    <value>拡張</value>
   </data>
   <data name="CM_Slider_Morphology_Height.Header" xml:space="preserve">
-    <value>Morphology Height</value>
+    <value>形態の高さ</value>
   </data>
   <data name="CM_Slider_Morphology_Width.Header" xml:space="preserve">
-    <value>Morphology Width</value>
+    <value>形態の幅</value>
   </data>
   <data name="SD_PivotItem1_ShowChangePlaybackRateButtonToggleSwitch.Header" xml:space="preserve">
-    <value>Show Playback Rate Button</value>
-  </data>
-  <data name="SD_PivotItem1_ShowChangePlaybackRateButtonToggleSwitch.OffContent" xml:space="preserve">
-    <value>No</value>
+    <value>再生率] ボタンを表示します。</value>
   </data>
   <data name="SD_PivotItem1_ShowChangePlaybackRateButtonToggleSwitch.OnContent" xml:space="preserve">
-    <value>Yes</value>
+    <value>は</value>
+  </data>
+  <data name="SD_PivotItem1_ShowChangePlaybackRateButtonToggleSwitch.OffContent" xml:space="preserve">
+    <value>かどうか</value>
   </data>
   <data name="Effects_Manager_EmbossToggleSwitch.Header" xml:space="preserve">
-    <value>Emboss</value>
+    <value>エンボス</value>
   </data>
   <data name="CM_Slider_EmbossAmount.Header" xml:space="preserve">
-    <value>Emboss Amount</value>
+    <value>量をエンボスします。</value>
   </data>
   <data name="CM_Slider_EmbossAngle.Header" xml:space="preserve">
-    <value>Emboss Angle</value>
+    <value>角度をエンボスします。</value>
   </data>
   <data name="Effects_Manager_EmbossToggleSwitch.OnContent" xml:space="preserve">
-    <value>Enabled</value>
+    <value>有効になっています。</value>
   </data>
   <data name="Effects_Manager_EmbossToggleSwitch.OffContent" xml:space="preserve">
-    <value>Disabled</value>
-  </data>
-  <data name="Meta_UpdateInfo1" xml:space="preserve">
-    <value>custom click tile action</value>
+    <value>無効になっています。</value>
   </data>
   <data name="CD_Socket_TITLE.Text" xml:space="preserve">
-    <value>Scorpio Network Streaming</value>
+    <value>蠍座ネットワーク ストリーミング</value>
   </data>
   <data name="CM_Open_Socket" xml:space="preserve">
-    <value>Scorpio Network Streaming</value>
-  </data>
-  <data name="CD_Socket_RemoteHostName.Text" xml:space="preserve">
-    <value>Remote Host Name / IP Address</value>
+    <value>蠍座ネットワーク ストリーミング</value>
   </data>
   <data name="CD_Socket_RemotePort.Text" xml:space="preserve">
-    <value>Remote Port</value>
+    <value>リモート ポート</value>
   </data>
   <data name="CD_Socket_Connect_Button.Content" xml:space="preserve">
-    <value>Connect</value>
+    <value>接続</value>
   </data>
   <data name="CD_Socket_Disonnect_Button.Content" xml:space="preserve">
-    <value>Disconnect</value>
-  </data>
-  <data name="CD_Socket_Refresh_Button.Content" xml:space="preserve">
-    <value>Fetch Media File Info</value>
+    <value>切断</value>
   </data>
   <data name="CD_Socket_ConnectionTimedOut" xml:space="preserve">
-    <value>could not contact remote server, make sure remote host name and remote port are correct</value>
+    <value>リモート サーバーへの接続にリモート ホスト名およびリモート ポートが正しいことを確認でした。</value>
   </data>
   <data name="CD_Socket_Connected" xml:space="preserve">
-    <value>remote server connected</value>
+    <value>リモート サーバーの接続</value>
   </data>
   <data name="SCD_PivotItem1.Header" xml:space="preserve">
-    <value>Folders</value>
+    <value>フォルダー</value>
   </data>
   <data name="SCD_PivotItem2.Header" xml:space="preserve">
-    <value>Files</value>
+    <value>ファイル</value>
   </data>
   <data name="CD_Socket.SecondaryButtonText" xml:space="preserve">
-    <value>Close</value>
+    <value>シャットダウン</value>
   </data>
   <data name="CD_Socket_PrimaryButtonText_Connect" xml:space="preserve">
-    <value>Connect</value>
+    <value>接続</value>
   </data>
   <data name="CD_Socket_PrimaryButtonText_Disconnect" xml:space="preserve">
-    <value>Disconnect</value>
-  </data>
-  <data name="CD_Socket_LocalHostName.Text" xml:space="preserve">
-    <value>Local Host Name / IP Address</value>
+    <value>切断</value>
   </data>
   <data name="CD_Socket_LocalPort.Text" xml:space="preserve">
-    <value>Listening Port</value>
+    <value>リッスン ポート</value>
+  </data>
+  <data name="CD_Socket_RemoteHostName.Text" xml:space="preserve">
+    <value>リモート ホスト名/IP アドレス</value>
+  </data>
+  <data name="CD_Socket_LocalHostName.Text" xml:space="preserve">
+    <value>ローカル ホスト名/IP アドレス</value>
   </data>
   <data name="CD_Socket_IsScorpioNetworkingStreamServerToggleSwitch.Header" xml:space="preserve">
-    <value>Act As Media Server</value>
+    <value>メディア サーバーをとしてください。</value>
   </data>
   <data name="CD_Socket_IsScorpioNetworkingStreamServerToggleSwitch.OnContent" xml:space="preserve">
-    <value>Share My Favorites To My Local Network</value>
+    <value>私のローカル ネットワークに私のお気に入りを共有します。</value>
   </data>
   <data name="CD_Socket_IsScorpioNetworkingStreamServerToggleSwitch.OffContent" xml:space="preserve">
-    <value>No</value>
+    <value>かどうか</value>
   </data>
   <data name="CD_Socket_Invalid_HostName" xml:space="preserve">
-    <value>Invalid Host Name or IP Address</value>
+    <value>無効なホスト名または IP アドレス</value>
   </data>
   <data name="CD_Socket_Listen_Success" xml:space="preserve">
-    <value>Success Listen On Port</value>
+    <value>ポートをリッスンする成功</value>
   </data>
   <data name="CD_Socket_Listen_Fail" xml:space="preserve">
-    <value>Fail to act as Media Server, please make sure host name and port are valid.</value>
+    <value>メディア サーバーとして、ホスト名やポートが有効なを確認してくださいに失敗します。</value>
   </data>
   <data name="CD_Socket_HelpButton.Content" xml:space="preserve">
-    <value>Help</value>
+    <value>ヘルプ</value>
   </data>
   <data name="SocketNetworkingStream_Message" xml:space="preserve">
-    <value>Scorpio Networking Stream is a unique feature that can stream your Favorites Media including video or audio, via local network or internet between Scorpio Player, or with Scorpio Player Server software. Enable cross streaming between your PC, Xbox, Windows 10 Mobile Phone, and other Windows 10 Devices, When Scorpio Player act as Media Server it must in active window mode not minimize mode or background mode, you can download Scorpio Networking Stream app for Linux, MacOS, Windows 7, 10 8, 8.1 and learn more from http://scorpioplayer.com, thanks.</value>
+    <value>蠍座ネットワーク ストリームは、ビデオまたはオーディオの蠍座プレーヤー サーバー ソフトウェアをローカル ネットワークまたは蠍座プレーヤー間またはインターネット経由でを含むお気に入りメディアをストリーム配信することができますユニークな機能です。あなたの PC、Xbox、Windows 10 携帯電話間でクロスのストリーミングを有効にして他の Windows 10 デバイス、それはアクティブなウィンドウ モードにする必要がありますメディア サーバーとしてときに蠍座のプレーヤー法を最小化モードまたはバック グラウンド モード、Linux 用の蠍座ネットワーク ストリーム アプリをダウンロードすることができます。MacOS、Windows 7 10 8 8.1、おかげで http://scorpioplayer.com からより多くを学ぶ。</value>
   </data>
   <data name="CD_Socket_SocketOfflineModeToggleSwitch.OffContent" xml:space="preserve">
-    <value>Download</value>
+    <value>ダウンロード</value>
   </data>
   <data name="CD_Socket_SocketOfflineModeToggleSwitch.OnContent" xml:space="preserve">
-    <value>Streaming</value>
+    <value>ストリーミング</value>
+  </data>
+  <data name="CD_Socket_SocketOfflineModeToggleSwitch.Header" xml:space="preserve">
+    <value> </value>
   </data>
   <data name="CM_Open_FTP" xml:space="preserve">
     <value>FTP</value>
@@ -1537,601 +1519,589 @@
     <value>FTP</value>
   </data>
   <data name="FTP_Settings.Header" xml:space="preserve">
-    <value>FTP Setting</value>
+    <value>FTP 設定</value>
   </data>
   <data name="NO_FTP.Text" xml:space="preserve">
-    <value>No FTP Server Found</value>
+    <value>FTP サーバーが見つかりました</value>
   </data>
   <data name="FTP_Warning.Text" xml:space="preserve">
-    <value>FTP Feature isn't fully ready, open file means fully download the file, please do not open very large file.</value>
+    <value>FTP 機能は完全に準備ができて、オープン ファイル ファイルを完全にダウンロードする非常に大きなファイルを開かないでください。</value>
   </data>
   <data name="CM_Open_SMB" xml:space="preserve">
     <value>SMB</value>
   </data>
-  <data name="UCD_TITLE.Text" xml:space="preserve">
-    <value>Network Streaming</value>
-  </data>
   <data name="UCD.PrimaryButtonText" xml:space="preserve">
-    <value>Open</value>
+    <value>開けて下さい</value>
   </data>
   <data name="UCD.SecondaryButtonText" xml:space="preserve">
-    <value>Close</value>
+    <value>シャットダウン</value>
+  </data>
+  <data name="CM_Open_Uri" xml:space="preserve">
+    <value>ネットワーク ストリーム</value>
   </data>
   <data name="UCD_Enter_message_textblock.Text" xml:space="preserve">
-    <value>Please enter a network URL:</value>
+    <value>ネットワークの URL を入力してください。</value>
   </data>
   <data name="Downloading" xml:space="preserve">
-    <value>Downloading</value>
+    <value>ダウンロード</value>
   </data>
   <data name="exampleTextBlock.Text" xml:space="preserve">
-    <value>example</value>
+    <value>例</value>
   </data>
   <data name="SCD_PivotItem4.Header" xml:space="preserve">
-    <value>Cache</value>
+    <value>キャッシュ</value>
   </data>
   <data name="Cache" xml:space="preserve">
-    <value>Cache</value>
+    <value>キャッシュ</value>
   </data>
   <data name="ClearCacheButton.Content" xml:space="preserve">
-    <value>Clear Cache</value>
+    <value>キャッシュのクリア</value>
   </data>
   <data name="WM_CacheFolderDeleted" xml:space="preserve">
-    <value>cache clear completed</value>
+    <value>キャッシュ クリア完成品</value>
   </data>
   <data name="CD_Socket_SocketOpenAfterDownloadedToggleSwitch.Header" xml:space="preserve">
-    <value>open after downloaded</value>
+    <value>ダウンロード後に開く</value>
   </data>
   <data name="CD_Socket_SocketOpenAfterDownloadedToggleSwitch.OnContent" xml:space="preserve">
-    <value>Yes</value>
+    <value>は</value>
   </data>
   <data name="CD_Socket_SocketOpenAfterDownloadedToggleSwitch.OffContent" xml:space="preserve">
-    <value>No</value>
+    <value>かどうか</value>
   </data>
   <data name="WM_ReadFromCache" xml:space="preserve">
-    <value>read from cache</value>
+    <value>キャッシュからの読み取り</value>
   </data>
   <data name="WM_DownloadCompleted" xml:space="preserve">
-    <value>download completed</value>
+    <value>ダウンロードが完了しました</value>
   </data>
   <data name="SD_PivotItem3_BindSocketToFavoriteToggleSwitch.Header" xml:space="preserve">
-    <value>Use Scorpio Network Streaming as Favorites Source</value>
+    <value>お気に入りのソースとしてストリーミング蠍座ネットワークを使用します。</value>
   </data>
   <data name="SD_PivotItem3_BindSocketToFavoriteToggleSwitch.OnContent" xml:space="preserve">
-    <value>Yes</value>
+    <value>は</value>
   </data>
   <data name="SD_PivotItem3_BindSocketToFavoriteToggleSwitch.OffContent" xml:space="preserve">
-    <value>No</value>
+    <value>かどうか</value>
   </data>
   <data name="WM_load_socket_folder_fail" xml:space="preserve">
-    <value>Scorpio Network Streaming Folder Load Failed</value>
+    <value>蠍座ネットワークストリーミング フォルダーの読み込みに失敗しました</value>
   </data>
   <data name="WM_load_socket_folder" xml:space="preserve">
-    <value>Scorpio Network Streaming Folder Load Completed</value>
+    <value>蠍座ネットワーク フォルダーの読み込み完了をストリーミング</value>
   </data>
   <data name="WM_load_socket_file_fail" xml:space="preserve">
-    <value>Scorpio Network Streaming Files Load Failed</value>
+    <value>蠍座ネットワーク ストリーミング ファイルの読み込みに失敗しました</value>
   </data>
   <data name="WM_load_socket_file" xml:space="preserve">
-    <value>Scorpio Network Streaming Files Load Completed</value>
+    <value>蠍座ネットワーク ストリーミング ファイルのロードが完了しました</value>
   </data>
   <data name="WM_scorpio_network_stream_not_set" xml:space="preserve">
-    <value>remote host settings for Scorpio Network Streaming is required</value>
-  </data>
-  <data name="Meta_UpdateInfo6" xml:space="preserve">
-    <value>support channel link</value>
-  </data>
-  <data name="Meta_UpdateInfo3" xml:space="preserve">
-    <value>support retry on task</value>
-  </data>
-  <data name="Meta_UpdateInfo8" xml:space="preserve">
-    <value>background download</value>
+    <value>蠍座ネットワーク ストリーミングのリモート ホスト設定が必要</value>
   </data>
   <data name="SD_PivotItem1_DisableLayoutScalingToggleSwitch.Header" xml:space="preserve">
-    <value>Disable Layout Scaling</value>
+    <value>レイアウト スケーリングを無効にします。</value>
   </data>
   <data name="SD_PivotItem1_DisableLayoutScalingToggleSwitch.OnContent" xml:space="preserve">
-    <value>Yes</value>
+    <value>は</value>
   </data>
   <data name="SD_PivotItem1_DisableLayoutScalingToggleSwitch.OffContent" xml:space="preserve">
-    <value>No</value>
+    <value>かどうか</value>
   </data>
   <data name="TrySetDisableLayoutScalingSuccess" xml:space="preserve">
-    <value>Set Disable Layout Scaling Success</value>
+    <value>成功をスケーリング設定無効レイアウト</value>
   </data>
   <data name="TrySetDisableLayoutScalingFail" xml:space="preserve">
-    <value>Set Disable Layout Scaling Fail</value>
+    <value>失敗をスケーリング設定無効レイアウト</value>
+  </data>
+  <data name="CM_Subtitle_SmartMathingDownload" xml:space="preserve">
+    <value>インターネットからダウンロードします。</value>
   </data>
   <data name="WM_SubtitleNotFound" xml:space="preserve">
-    <value>Subtitle Not Found.</value>
+    <value>字幕が見つかりません。</value>
   </data>
   <data name="WM_SubtitleNotFoundAudio" xml:space="preserve">
-    <value>Lyrics Not Found.</value>
+    <value>歌詞が見つかりませんでした。</value>
   </data>
   <data name="chi" xml:space="preserve">
-    <value>Chinese</value>
+    <value>中国語</value>
   </data>
   <data name="WM_not_support" xml:space="preserve">
-    <value>not support</value>
+    <value>サポートしていません</value>
   </data>
   <data name="CM_TransportControlShowDuration" xml:space="preserve">
-    <value>Show Duration</value>
+    <value>ショーの時間</value>
   </data>
   <data name="Commom_Seconds" xml:space="preserve">
-    <value>Seconds</value>
+    <value>秒</value>
   </data>
   <data name="CM_Track_face" xml:space="preserve">
-    <value>Track Faces</value>
+    <value>顔を追跡します。</value>
   </data>
   <data name="WM_decode_fail_switching_codec" xml:space="preserve">
-    <value>decode failed, try switch codec</value>
+    <value>デコードしようとスイッチ コーデックが失敗しました。</value>
   </data>
   <data name="SD_PivotItem3_ShowDanmuButtonToggleSwitch.Header" xml:space="preserve">
-    <value>Show Barrage Subtitle Button</value>
+    <value>画面の表示] ボタン</value>
   </data>
   <data name="SD_PivotItem3_ShowDanmuButtonToggleSwitch.OnContent" xml:space="preserve">
-    <value>Yes</value>
+    <value>は</value>
   </data>
   <data name="SD_PivotItem3_ShowDanmuButtonToggleSwitch.OffContent" xml:space="preserve">
-    <value>No</value>
+    <value>かどうか</value>
   </data>
   <data name="MV_Danmu.Content" xml:space="preserve">
-    <value>barrage</value>
+    <value>弾幕</value>
   </data>
   <data name="MV_TP_Danmu_Explain.Content" xml:space="preserve">
-    <value>in order to use this feature, barrage subtitle file need to be loaded , example .xml or .json format are support, compatible with blibli.com / acfun.com</value>
+    <value>この機能を使用して集中砲火します xml 形式の字幕ファイルの読み込みや。 JSON、互換性のある blibli.com/acfun.com。</value>
   </data>
   <data name="WM_danmu_subtitle_loaded" xml:space="preserve">
-    <value>barrage subtitle loaded</value>
-  </data>
-  <data name="Meta_UpdateInfo2" xml:space="preserve">
-    <value>add animation</value>
+    <value>弾幕が正常に積み込まれました！</value>
   </data>
   <data name="SD_PivotItem2_UseGlowTextToggleSwitch.Header" xml:space="preserve">
-    <value>Use Glow Effect</value>
+    <value>グロー効果を使用します。</value>
   </data>
   <data name="SD_PivotItem2_UseGlowTextToggleSwitch.OnContent" xml:space="preserve">
-    <value>Yes</value>
+    <value>は</value>
   </data>
   <data name="SD_PivotItem2_UseGlowTextToggleSwitch.OffContent" xml:space="preserve">
-    <value>No</value>
+    <value>かどうか</value>
   </data>
   <data name="SD_PivotItem2_GlowAmountSlider.Header" xml:space="preserve">
-    <value>Glow Amount</value>
+    <value>発光量</value>
   </data>
   <data name="SD_PivotItem3_PrimarySubtitleFontWeightSlider.Header" xml:space="preserve">
-    <value>Primary Subtitle Font Weight</value>
+    <value>主な選択範囲のフォントの太さ</value>
   </data>
   <data name="CM_Subtitle_Subhub" xml:space="preserve">
-    <value>Subtitle Search Panel</value>
-  </data>
-  <data name="SUCD_TITLE.Text" xml:space="preserve">
-    <value>Subtitle Search Panel</value>
+    <value>字幕検索パネル</value>
   </data>
   <data name="SUCD.PrimaryButtonText" xml:space="preserve">
-    <value>Search</value>
+    <value>検索</value>
   </data>
   <data name="SUCD.SecondaryButtonText" xml:space="preserve">
-    <value>Download</value>
+    <value>ダウンロード</value>
+  </data>
+  <data name="SUCD_TITLE.Text" xml:space="preserve">
+    <value>字幕検索パネル</value>
   </data>
   <data name="SUCD_Query.Header" xml:space="preserve">
-    <value>Text Search</value>
+    <value>クエリ</value>
   </data>
   <data name="SUCD_FileHash.Header" xml:space="preserve">
-    <value>Hash</value>
+    <value>ハッシュ</value>
   </data>
   <data name="SUCD_Episode.Header" xml:space="preserve">
-    <value>Episode</value>
+    <value>エピソード</value>
   </data>
   <data name="SUCD_Season.Header" xml:space="preserve">
-    <value>Season</value>
+    <value>シーズン</value>
   </data>
   <data name="SUCD_ImdbId.Header" xml:space="preserve">
     <value>IMDb ID</value>
   </data>
   <data name="Afrikaans" xml:space="preserve">
-    <value>Afrikaans</value>
+    <value>アフリカーンス語</value>
   </data>
   <data name="Albanian" xml:space="preserve">
-    <value>Albanian</value>
+    <value>アルバニア語</value>
   </data>
   <data name="Arabic" xml:space="preserve">
-    <value>Arabic</value>
+    <value>アラビア語</value>
   </data>
   <data name="Armenian" xml:space="preserve">
-    <value>Armenian</value>
+    <value>アルメニア語</value>
   </data>
   <data name="Basque" xml:space="preserve">
-    <value>Basque</value>
+    <value>バスク語</value>
   </data>
   <data name="Belarusian" xml:space="preserve">
-    <value>Belarusian</value>
+    <value>ベラルーシ語</value>
   </data>
   <data name="Bengali" xml:space="preserve">
-    <value>Bengali</value>
+    <value>ベンガル語</value>
   </data>
   <data name="Bosnian" xml:space="preserve">
-    <value>Bosnian</value>
+    <value>ボスニア語</value>
   </data>
   <data name="Bulgarian" xml:space="preserve">
-    <value>Bulgarian</value>
+    <value>ブルガリア語</value>
   </data>
   <data name="Burmese" xml:space="preserve">
-    <value>Burmese</value>
+    <value>ビルマ</value>
   </data>
   <data name="Catalan" xml:space="preserve">
-    <value>Catalan</value>
+    <value>カタロニア語</value>
   </data>
   <data name="Chinese (simplified)" xml:space="preserve">
-    <value>Chinese (simplified)</value>
+    <value>中国語 (簡体)</value>
   </data>
   <data name="Chinese (traditional)" xml:space="preserve">
-    <value>Chinese (traditional)</value>
+    <value>中国語 (繁体)</value>
   </data>
   <data name="Chinese bilingual" xml:space="preserve">
-    <value>Chinese bilingual</value>
+    <value>中国語バイリンガル</value>
   </data>
   <data name="Croatian" xml:space="preserve">
-    <value>Croatian</value>
+    <value>クロアチア語</value>
   </data>
   <data name="Czech" xml:space="preserve">
-    <value>Czech</value>
+    <value>チェコ語</value>
   </data>
   <data name="Danish" xml:space="preserve">
-    <value>Danish</value>
+    <value>デンマーク語</value>
   </data>
   <data name="Dutch" xml:space="preserve">
-    <value>Dutch</value>
+    <value>オランダ語</value>
   </data>
   <data name="English" xml:space="preserve">
-    <value>English</value>
+    <value>英語</value>
   </data>
   <data name="Esperanto" xml:space="preserve">
-    <value>Esperanto</value>
+    <value>エスペラント語</value>
   </data>
   <data name="Estonian" xml:space="preserve">
-    <value>Estonian</value>
+    <value>エストニア語</value>
   </data>
   <data name="Finnish" xml:space="preserve">
-    <value>Finnish</value>
+    <value>フィンランド語</value>
   </data>
   <data name="French" xml:space="preserve">
-    <value>French</value>
+    <value>フランス語</value>
   </data>
   <data name="Galician" xml:space="preserve">
-    <value>Galician</value>
+    <value>ガリシア語</value>
   </data>
   <data name="Georgian" xml:space="preserve">
-    <value>Georgian</value>
+    <value>グルジア語</value>
   </data>
   <data name="German" xml:space="preserve">
-    <value>German</value>
+    <value>ドイツ語</value>
   </data>
   <data name="Greek" xml:space="preserve">
-    <value>Greek</value>
+    <value>ギリシャ語</value>
   </data>
   <data name="Hebrew" xml:space="preserve">
-    <value>Hebrew</value>
+    <value>ヘブライ語</value>
   </data>
   <data name="Hindi" xml:space="preserve">
-    <value>Hindi</value>
+    <value>ヒンディー語</value>
   </data>
   <data name="Hungarian" xml:space="preserve">
-    <value>Hungarian</value>
+    <value>ハンガリー語</value>
   </data>
   <data name="Icelandic" xml:space="preserve">
-    <value>Icelandic</value>
+    <value>アイスランド語</value>
   </data>
   <data name="Indonesian" xml:space="preserve">
-    <value>Indonesian</value>
+    <value>インドネシア語</value>
   </data>
   <data name="Italian" xml:space="preserve">
-    <value>Italian</value>
+    <value>イタリア語</value>
   </data>
   <data name="Japanese" xml:space="preserve">
-    <value>Japanese</value>
+    <value>日本語</value>
   </data>
   <data name="Kazakh" xml:space="preserve">
-    <value>Kazakh</value>
+    <value>カザフ語</value>
   </data>
   <data name="Khmer" xml:space="preserve">
-    <value>Khmer</value>
+    <value>クメール</value>
   </data>
   <data name="Korean" xml:space="preserve">
-    <value>Korean</value>
+    <value>韓国語</value>
   </data>
   <data name="Latvian" xml:space="preserve">
-    <value>Latvian</value>
+    <value>ラトビア語</value>
   </data>
   <data name="Lithuanian" xml:space="preserve">
-    <value>Lithuanian</value>
+    <value>リトアニア語</value>
   </data>
   <data name="Luxembourgish" xml:space="preserve">
-    <value>Luxembourgish</value>
+    <value>ルクセンブルク語</value>
   </data>
   <data name="Macedonian" xml:space="preserve">
-    <value>Macedonian</value>
+    <value>マケドニアの</value>
   </data>
   <data name="Malay" xml:space="preserve">
-    <value>Malay</value>
+    <value>マレー語</value>
   </data>
   <data name="Malayalam" xml:space="preserve">
-    <value>Malayalam</value>
+    <value>マラヤラム語</value>
   </data>
   <data name="Manipuri" xml:space="preserve">
-    <value>Manipuri</value>
+    <value>マニプリ</value>
   </data>
   <data name="Mongolian" xml:space="preserve">
-    <value>Mongolian</value>
+    <value>モンゴル語</value>
   </data>
   <data name="Montenegrin" xml:space="preserve">
-    <value>Montenegrin</value>
+    <value>モンテネグロ</value>
   </data>
   <data name="Norwegian" xml:space="preserve">
-    <value>Norwegian</value>
+    <value>ノルウェー語</value>
   </data>
   <data name="Occitan" xml:space="preserve">
-    <value>Occitan</value>
+    <value>オック語</value>
   </data>
   <data name="Persian" xml:space="preserve">
-    <value>Persian</value>
+    <value>ペルシャ語</value>
   </data>
   <data name="Polish" xml:space="preserve">
-    <value>Polish</value>
+    <value>ポーランド語</value>
   </data>
   <data name="Portuguese" xml:space="preserve">
-    <value>Portuguese</value>
+    <value>ポルトガル語</value>
   </data>
   <data name="Portuguese (BR)" xml:space="preserve">
-    <value>Portuguese (BR)</value>
+    <value>ポルトガル語 (ブラジル)</value>
   </data>
   <data name="Romanian" xml:space="preserve">
-    <value>Romanian</value>
+    <value>ルーマニア語</value>
   </data>
   <data name="Russian" xml:space="preserve">
-    <value>Russian</value>
+    <value>ロシア語</value>
   </data>
   <data name="Serbian" xml:space="preserve">
-    <value>Serbian</value>
+    <value>セルビア語</value>
   </data>
   <data name="Sinhalese" xml:space="preserve">
-    <value>Sinhalese</value>
+    <value>シンハラ語</value>
   </data>
   <data name="Slovak" xml:space="preserve">
-    <value>Slovak</value>
+    <value>スロバキア語</value>
   </data>
   <data name="Slovenian" xml:space="preserve">
-    <value>Slovenian</value>
+    <value>スロベニア語</value>
   </data>
   <data name="Spanish" xml:space="preserve">
-    <value>Spanish</value>
+    <value>スペイン語</value>
   </data>
   <data name="Swahili" xml:space="preserve">
-    <value>Swahili</value>
+    <value>スワヒリ語</value>
   </data>
   <data name="Swedish" xml:space="preserve">
-    <value>Swedish</value>
+    <value>スウェーデン語</value>
   </data>
   <data name="Syriac" xml:space="preserve">
-    <value>Syriac</value>
+    <value>シリア語</value>
   </data>
   <data name="Tagalog" xml:space="preserve">
-    <value>Tagalog</value>
+    <value>タガログ語</value>
   </data>
   <data name="Tamil" xml:space="preserve">
-    <value>Tamil</value>
+    <value>タミール語</value>
   </data>
   <data name="Telugu" xml:space="preserve">
-    <value>Telugu</value>
+    <value>テルグ語</value>
   </data>
   <data name="Thai" xml:space="preserve">
-    <value>Thai</value>
+    <value>タイ語</value>
   </data>
   <data name="Turkish" xml:space="preserve">
-    <value>Turkish</value>
+    <value>トルコ語</value>
   </data>
   <data name="Ukrainian" xml:space="preserve">
-    <value>Ukrainian</value>
+    <value>ウクライナ語</value>
   </data>
   <data name="Urdu" xml:space="preserve">
-    <value>Urdu</value>
+    <value>ウルドゥ語</value>
   </data>
   <data name="Vietnamese" xml:space="preserve">
-    <value>Vietnamese</value>
+    <value>ベトナム語</value>
   </data>
   <data name="Breton" xml:space="preserve">
-    <value>Breton</value>
+    <value>ブルトン語</value>
   </data>
   <data name="Hash" xml:space="preserve">
-    <value>Hash</value>
+    <value>ハッシュ</value>
   </data>
   <data name="FullText" xml:space="preserve">
-    <value>Text</value>
+    <value>テキスト</value>
   </data>
   <data name="Imdb" xml:space="preserve">
     <value>IMDb</value>
   </data>
   <data name="Subhub_languages_combox.Header" xml:space="preserve">
-    <value>Language</value>
+    <value>言語</value>
   </data>
   <data name="Subhub_SearchMethod_combox.Header" xml:space="preserve">
-    <value>Search Method</value>
+    <value>検索メソッド</value>
   </data>
   <data name="WM_subtitle_loaded" xml:space="preserve">
-    <value>Current Subtitle</value>
+    <value>現在のキャプション</value>
   </data>
   <data name="WM_file_corrupted" xml:space="preserve">
-    <value>File Corrupted</value>
+    <value>ファイルが破損しています。</value>
   </data>
   <data name="Embed" xml:space="preserve">
-    <value>Embed</value>
+    <value>埋め込み</value>
   </data>
   <data name="Close" xml:space="preserve">
-    <value>Close</value>
+    <value>シャットダウン</value>
   </data>
   <data name="Download" xml:space="preserve">
-    <value>Download</value>
-  </data>
-  <data name="SD_PivotItem3_GlobalSubtitleDelayMilliseconds.Header" xml:space="preserve">
-    <value>Global Subtitle Delay Time In Milliseconds</value>
+    <value>ダウンロード</value>
   </data>
   <data name="Milliseconds" xml:space="preserve">
-    <value>Milliseconds</value>
+    <value>(ミリ秒)</value>
   </data>
   <data name="Seconds" xml:space="preserve">
-    <value>Seconds</value>
+    <value>秒</value>
   </data>
   <data name="CM_Subtitle_Delay" xml:space="preserve">
-    <value>Set Subtitle Timeline</value>
-  </data>
-  <data name="DCD.PrimaryButtonText" xml:space="preserve">
-    <value>Reset</value>
+    <value>設定字幕タイムライン</value>
   </data>
   <data name="DCD_TITLE.Text" xml:space="preserve">
-    <value>Subtitle Timeline</value>
+    <value>字幕のタイムライン</value>
+  </data>
+  <data name="SD_PivotItem3_GlobalSubtitleDelayMilliseconds.Header" xml:space="preserve">
+    <value>グローバルな字幕の遅延時間 (ミリ秒)</value>
   </data>
   <data name="CM_ExportSubtitle" xml:space="preserve">
-    <value>Export File</value>
+    <value>ファイルをエクスポートします。</value>
   </data>
   <data name="WM_Subtitle_Exported" xml:space="preserve">
-    <value>Subtitle Exported</value>
+    <value>字幕をエクスポート</value>
   </data>
   <data name="WM_Subtitle_Exported_Failed" xml:space="preserve">
-    <value>Subtitle Export Failed</value>
+    <value>字幕エクスポートに失敗しました</value>
   </data>
   <data name="DCD_Subtitle_Reset_Button" xml:space="preserve">
-    <value>Reset</value>
+    <value>リセット</value>
+  </data>
+  <data name="DCD.PrimaryButtonText" xml:space="preserve">
+    <value>リセット</value>
   </data>
   <data name="DCD.SecondaryButtonText" xml:space="preserve">
-    <value>Close</value>
+    <value>シャットダウン</value>
   </data>
   <data name="SD_PivotItem3_UseAdvanceDecodingSettingToggleSwitch.Header" xml:space="preserve">
-    <value>Use Advance Decoding Setting</value>
+    <value>使用する事前設定を復号化</value>
   </data>
   <data name="SD_PivotItem3_UseAdvanceDecodingSettingToggleSwitch.OnContent" xml:space="preserve">
-    <value>Yes</value>
+    <value>は</value>
   </data>
   <data name="SD_PivotItem3_UseAdvanceDecodingSettingToggleSwitch.OffContent" xml:space="preserve">
-    <value>No</value>
+    <value>かどうか</value>
   </data>
   <data name="SD_PivotItem3_VideoOutputAllowNv12ToggleSwitch.Header" xml:space="preserve">
-    <value>Video Output Allow Nv12 Pixel Format</value>
+    <value>ビデオ出力は、Nv12 ピクセル形式を許可します。</value>
   </data>
   <data name="SD_PivotItem3_VideoOutputAllowNv12ToggleSwitch.OnContent" xml:space="preserve">
-    <value>Yes</value>
+    <value>は</value>
   </data>
   <data name="SD_PivotItem3_VideoOutputAllowNv12ToggleSwitch.OffContent" xml:space="preserve">
-    <value>No</value>
+    <value>かどうか</value>
   </data>
   <data name="SD_PivotItem3_VideoOutputAllowBgra8ToggleSwitch.Header" xml:space="preserve">
-    <value>Video Output Allow Bgra8 Pixel Format</value>
+    <value>ビデオ出力は、Bgra8 ピクセル形式を許可します。</value>
   </data>
   <data name="SD_PivotItem3_VideoOutputAllowBgra8ToggleSwitch.OnContent" xml:space="preserve">
-    <value>Yes</value>
+    <value>は</value>
   </data>
   <data name="SD_PivotItem3_VideoOutputAllowBgra8ToggleSwitch.OffContent" xml:space="preserve">
-    <value>No</value>
+    <value>かどうか</value>
   </data>
   <data name="SD_PivotItem3_VideoOutputAllow10bitToggleSwitch.Header" xml:space="preserve">
-    <value>Video Output Allow 10bit Pixel Format</value>
+    <value>ビデオ出力は 10 ビットのピクセル形式を許可します。</value>
   </data>
   <data name="SD_PivotItem3_VideoOutputAllow10bitToggleSwitch.OnContent" xml:space="preserve">
-    <value>Yes</value>
+    <value>は</value>
   </data>
   <data name="SD_PivotItem3_VideoOutputAllow10bitToggleSwitch.OffContent" xml:space="preserve">
-    <value>No</value>
+    <value>かどうか</value>
   </data>
   <data name="SD_PivotItem3_VideoOutputAllowIyuvToggleSwitch.Header" xml:space="preserve">
-    <value>Video Output Allow Iyuv Pixel Format</value>
+    <value>ビデオ出力は、Iyuv ピクセル形式を許可します。</value>
   </data>
   <data name="SD_PivotItem3_VideoOutputAllowIyuvToggleSwitch.OnContent" xml:space="preserve">
-    <value>Yes</value>
+    <value>は</value>
   </data>
   <data name="SD_PivotItem3_VideoOutputAllowIyuvToggleSwitch.OffContent" xml:space="preserve">
-    <value>No</value>
-  </data>
-  <data name="SD_PivotItem3_PassthroughVideoHEVCToggleSwitch.Header" xml:space="preserve">
-    <value>Hardware Accelerate HEVC</value>
+    <value>かどうか</value>
   </data>
   <data name="SD_PivotItem3_PassthroughVideoHEVCToggleSwitch.OnContent" xml:space="preserve">
-    <value>Yes</value>
+    <value>は</value>
   </data>
   <data name="SD_PivotItem3_PassthroughVideoHEVCToggleSwitch.OffContent" xml:space="preserve">
-    <value>No</value>
-  </data>
-  <data name="SD_PivotItem3_PassthroughVideoH264Hi10PToggleSwitch.Header" xml:space="preserve">
-    <value>Hardware Accelerate H264Hi10P</value>
+    <value>かどうか</value>
   </data>
   <data name="SD_PivotItem3_PassthroughVideoH264Hi10PToggleSwitch.OnContent" xml:space="preserve">
-    <value>Yes</value>
+    <value>は</value>
   </data>
   <data name="SD_PivotItem3_PassthroughVideoH264Hi10PToggleSwitch.OffContent" xml:space="preserve">
-    <value>No</value>
-  </data>
-  <data name="SD_PivotItem3_PassthroughVideoH264ToggleSwitch.Header" xml:space="preserve">
-    <value>Hardware Accelerate H264</value>
+    <value>かどうか</value>
   </data>
   <data name="SD_PivotItem3_PassthroughVideoH264ToggleSwitch.OnContent" xml:space="preserve">
-    <value>Yes</value>
+    <value>は</value>
   </data>
   <data name="SD_PivotItem3_PassthroughVideoH264ToggleSwitch.OffContent" xml:space="preserve">
-    <value>No</value>
-  </data>
-  <data name="SD_PivotItem3_PassthroughAudioAACToggleSwitch.Header" xml:space="preserve">
-    <value>Hardware Accelerate AAC</value>
+    <value>かどうか</value>
   </data>
   <data name="SD_PivotItem3_PassthroughAudioAACToggleSwitch.OnContent" xml:space="preserve">
-    <value>Yes</value>
+    <value>は</value>
   </data>
   <data name="SD_PivotItem3_PassthroughAudioAACToggleSwitch.OffContent" xml:space="preserve">
-    <value>No</value>
-  </data>
-  <data name="SD_PivotItem3_PassthroughAudioMP3ToggleSwitch.Header" xml:space="preserve">
-    <value>Hardware Accelerate MP3</value>
+    <value>かどうか</value>
   </data>
   <data name="SD_PivotItem3_PassthroughAudioMP3ToggleSwitch.OnContent" xml:space="preserve">
-    <value>Yes</value>
+    <value>は</value>
   </data>
   <data name="SD_PivotItem3_PassthroughAudioMP3ToggleSwitch.OffContent" xml:space="preserve">
-    <value>No</value>
+    <value>かどうか</value>
   </data>
   <data name="PlaylistActionButton_BringIntoView" xml:space="preserve">
-    <value>Show Current Playing</value>
+    <value>現在再生表示します。</value>
+  </data>
+  <data name="SD_PivotItem3_PassthroughVideoHEVCToggleSwitch.Header" xml:space="preserve">
+    <value>ハードウェア加速の HEVC</value>
+  </data>
+  <data name="SD_PivotItem3_PassthroughVideoH264Hi10PToggleSwitch.Header" xml:space="preserve">
+    <value>ハードウェア加速の H264Hi10P</value>
+  </data>
+  <data name="SD_PivotItem3_PassthroughVideoH264ToggleSwitch.Header" xml:space="preserve">
+    <value>ハードウェア加速の H264</value>
+  </data>
+  <data name="SD_PivotItem3_PassthroughAudioAACToggleSwitch.Header" xml:space="preserve">
+    <value>ハードウェア加速の AAC</value>
+  </data>
+  <data name="SD_PivotItem3_PassthroughAudioMP3ToggleSwitch.Header" xml:space="preserve">
+    <value>ハードウェア加速の MP3</value>
   </data>
   <data name="WM_Caching_Stopped" xml:space="preserve">
-    <value>Fetch For Folder Cache Info Stopped</value>
+    <value>停止フォルダー キャッシュ情報のフェッチ</value>
   </data>
   <data name="SD_PivotItem1_DisableCacheFetchOnFolderOpenedToggleSwitch.Header" xml:space="preserve">
-    <value>Disable Cache Fetch After Folder Opened</value>
+    <value>フォルダーを開いた後キャッシュ フェッチを無効にします。</value>
   </data>
   <data name="SD_PivotItem1_DisableCacheFetchOnFolderOpenedToggleSwitch.OnContent" xml:space="preserve">
-    <value>Yes</value>
+    <value>は</value>
   </data>
   <data name="SD_PivotItem1_DisableCacheFetchOnFolderOpenedToggleSwitch.OffContent" xml:space="preserve">
-    <value>No</value>
+    <value>かどうか</value>
   </data>
   <data name="PlaylistActionButton_DisableCacheFetchOnFolderOpened" xml:space="preserve">
-    <value>Disable Cache Fetch After Folder Opened</value>
+    <value>フォルダーを開いた後キャッシュ フェッチを無効にします。</value>
   </data>
   <data name="PlaylistActionButton_ClearCahe" xml:space="preserve">
-    <value>Clear Cache</value>
-  </data>
-  <data name="PlaylistActionButton_GenCache" xml:space="preserve">
-    <value>Fetch Media File Info</value>
+    <value>キャッシュのクリア</value>
   </data>
   <data name="WM_Link_No_File" xml:space="preserve">
-    <value>can not extract videos from link</value>
+    <value>リンクからビデオを抽出すること</value>
   </data>
-  <data name="UCD_download_youtube_button.Content" xml:space="preserve">
-    <value>Save as</value>
+  <data name="CM_Open_Folder" xml:space="preserve">
+    <value>フォルダーを開く</value>
   </data>
   <data name="SD_PivotItem1_OnXboxAlwaysUseSystemDecoderForAudioToggleSwitch.Header" xml:space="preserve">
-    <value>Audio File Always Use System Decoder (for background music playback)</value>
+    <value>オーディオ ファイル常に使用システム用のデコーダー (バック グラウンド音楽再生)</value>
   </data>
   <data name="SD_PivotItem1_OnXboxAlwaysUseSystemDecoderForAudioToggleSwitch.OnContent" xml:space="preserve">
-    <value>Yes</value>
+    <value>は</value>
   </data>
   <data name="SD_PivotItem1_OnXboxAlwaysUseSystemDecoderForAudioToggleSwitch.OffContent" xml:space="preserve">
-    <value>No</value>
+    <value>かどうか</value>
   </data>
   <data name="CM_Sound_BoostUp" xml:space="preserve">
     <value>+5 dB</value>
@@ -2143,490 +2113,490 @@
     <value>UI/UX</value>
   </data>
   <data name="SD_PivotItem6.Header" xml:space="preserve">
-    <value>Hotkeys</value>
+    <value>ホットキー</value>
   </data>
   <data name="Hotkeys_dataGrid_columnName_Action.Header" xml:space="preserve">
-    <value>Action</value>
+    <value>アクション</value>
   </data>
   <data name="Hotkeys_dataGrid_columnName_Hotkey.Header" xml:space="preserve">
-    <value>Hotkey</value>
+    <value>ホット キー</value>
   </data>
   <data name="HotkeyAction_volume_down" xml:space="preserve">
-    <value>Volume down</value>
+    <value>ボリューム ダウン</value>
   </data>
   <data name="HotkeyAction_volume_up" xml:space="preserve">
-    <value>Volume up</value>
+    <value>ボリューム アップ</value>
   </data>
   <data name="HotkeyAction_action_toggle_full_screen" xml:space="preserve">
-    <value>Fullscreen</value>
-  </data>
-  <data name="HotkeyAction_action_unlock_screen_exit_full_screen" xml:space="preserve">
-    <value>Exit fullscreen</value>
+    <value>全画面表示</value>
   </data>
   <data name="HotkeyAction_action_short_forward_jump" xml:space="preserve">
-    <value>Short forward jump</value>
+    <value>短い前方ジャンプ</value>
   </data>
   <data name="HotkeyAction_action_short_backwards_jump" xml:space="preserve">
-    <value>Short backwards jump</value>
+    <value>ショート後方ジャンプ</value>
+  </data>
+  <data name="SD_PivotItem1.Header" xml:space="preserve">
+    <value>一般</value>
   </data>
   <data name="HotkeyAction_action_toggle_pane_open_status" xml:space="preserve">
-    <value>Pane</value>
+    <value>ウィンドウ</value>
   </data>
   <data name="HotkeyAction_next" xml:space="preserve">
-    <value>Next</value>
+    <value>次へ</value>
   </data>
   <data name="HotkeyAction_action_previous" xml:space="preserve">
-    <value>Previous</value>
+    <value>前へ</value>
   </data>
   <data name="HotkeyAction_action_toggle_play_status" xml:space="preserve">
-    <value>Pause / Play</value>
+    <value>一時停止/再生</value>
   </data>
   <data name="HotkeyAction_action_reset_playbackRate" xml:space="preserve">
-    <value>Normal rate</value>
+    <value>通常料金</value>
   </data>
   <data name="HotkeyAction_action_add_playbackRate" xml:space="preserve">
-    <value>Faster</value>
+    <value>速く</value>
   </data>
   <data name="HotkeyAction_action_reduce_playbackRate" xml:space="preserve">
-    <value>Slower</value>
+    <value>遅く</value>
   </data>
   <data name="HotkeyAction_action_stop" xml:space="preserve">
-    <value>Stop</value>
+    <value>ストップ</value>
+  </data>
+  <data name="HotkeyAction_action_unlock_screen_exit_full_screen" xml:space="preserve">
+    <value>全画面表示を終了</value>
   </data>
   <data name="SD_PivotItem3_BindStreamingPlaylistToFavoriteToggleSwitch.Header" xml:space="preserve">
-    <value>Use Streaming Playlist as Favorites Source</value>
+    <value>お気に入りのソースとして再生リストのストリーミングを使用してください。</value>
   </data>
   <data name="SD_PivotItem3_BindStreamingPlaylistToFavoriteToggleSwitch.OnContent" xml:space="preserve">
-    <value>Yes</value>
+    <value>は</value>
   </data>
   <data name="SD_PivotItem3_BindStreamingPlaylistToFavoriteToggleSwitch.OffContent" xml:space="preserve">
-    <value>No</value>
+    <value>かどうか</value>
   </data>
   <data name="UCD_PivotItem1.Header" xml:space="preserve">
-    <value>Open Network Media</value>
+    <value>オープン ネットワーク メディア</value>
   </data>
   <data name="UCD_PivotItem2.Header" xml:space="preserve">
-    <value>Streaming Playlist Manager</value>
+    <value>ストリーミング再生リスト マネージャー</value>
+  </data>
+  <data name="UCD_TITLE.Text" xml:space="preserve">
+    <value>ストリーミング ネットワーク</value>
   </data>
   <data name="UCD_PivotItem3.Header" xml:space="preserve">
-    <value>Editor</value>
+    <value>エディター</value>
   </data>
   <data name="Save" xml:space="preserve">
-    <value>Save</value>
+    <value>保存</value>
   </data>
   <data name="Open" xml:space="preserve">
-    <value>Open</value>
+    <value>開けて下さい</value>
   </data>
   <data name="Delete" xml:space="preserve">
-    <value>Delete</value>
+    <value>削除</value>
   </data>
   <data name="UCD_PivotItem2_Import_Button.Content" xml:space="preserve">
-    <value>Import</value>
+    <value>インポート</value>
   </data>
   <data name="UCD_PivotItem2_Example_TextBlock.Text" xml:space="preserve">
-    <value>Example</value>
+    <value>例:</value>
   </data>
   <data name="UCD_PivotItem2_Create_Button.Content" xml:space="preserve">
-    <value>Create</value>
+    <value>作成</value>
   </data>
   <data name="RoamingSync" xml:space="preserve">
-    <value>Roaming Data Sync Completed</value>
+    <value>ローミングのデータ同期が完了しました</value>
   </data>
   <data name="SetScorpioStreaming" xml:space="preserve">
-    <value>Use Scorpio Network Streaming as Favorites Source</value>
+    <value>お気に入りのソースとしてストリーミング蠍座ネットワークを使用します。</value>
   </data>
   <data name="SetStreamingPlaylist" xml:space="preserve">
-    <value>Use Streaming Playlist as Favorites Source</value>
+    <value>お気に入りのソースとして再生リストのストリーミングを使用してください。</value>
   </data>
   <data name="SetLocal" xml:space="preserve">
-    <value>Use Local Storage as Favorites Source</value>
+    <value>お気に入りのソースとしてローカル記憶域を使用します。</value>
   </data>
   <data name="SD_PivotItem1_AlwaysUseSystemDecoderForMP4ToggleSwitch.Header" xml:space="preserve">
-    <value>Always Use System Decoder For MP4</value>
+    <value>MP4 のシステムデコーダーを常に使用します。</value>
   </data>
   <data name="SD_PivotItem1_AlwaysUseSystemDecoderForMP4ToggleSwitch.OnContent" xml:space="preserve">
-    <value>Yes</value>
+    <value>は</value>
   </data>
   <data name="SD_PivotItem1_AlwaysUseSystemDecoderForMP4ToggleSwitch.OffContent" xml:space="preserve">
-    <value>No</value>
+    <value>かどうか</value>
   </data>
   <data name="SD_PivotItem3_BindDLNAToFavoriteToggleSwitch.Header" xml:space="preserve">
-    <value>Use DLNA as Favorites Source</value>
+    <value>お気に入りのソースとして DLNA を使用</value>
   </data>
   <data name="SD_PivotItem3_BindDLNAToFavoriteToggleSwitch.OnContent" xml:space="preserve">
-    <value>Yes</value>
+    <value>は</value>
   </data>
   <data name="SD_PivotItem3_BindDLNAToFavoriteToggleSwitch.OffContent" xml:space="preserve">
-    <value>No</value>
-  </data>
-  <data name="MV_TP_Refresh_DLNA.Content" xml:space="preserve">
-    <value>Refresh</value>
+    <value>かどうか</value>
   </data>
   <data name="MV_TP_Open_DLNA_Folder.Content" xml:space="preserve">
-    <value>Open</value>
+    <value>開けて下さい</value>
   </data>
   <data name="SetDLNA" xml:space="preserve">
-    <value>Use DLNA as Favorites Source</value>
+    <value>お気に入りのソースとして DLNA を使用</value>
+  </data>
+  <data name="NO_DLNA.Text" xml:space="preserve">
+    <value>DLNA デバイス検出されない、更新ボタンをクリックしてください。</value>
   </data>
   <data name="MV_TP_StepPreviousFrame.Content" xml:space="preserve">
-    <value>Previous Frame</value>
+    <value>前のフレーム</value>
   </data>
   <data name="SkipCD.SecondaryButtonText" xml:space="preserve">
-    <value>Close</value>
-  </data>
-  <data name="SkipCD_TITLE.Text" xml:space="preserve">
-    <value>Skip Playback</value>
+    <value>シャットダウン</value>
   </data>
   <data name="CM_SKIP" xml:space="preserve">
-    <value>Skip</value>
+    <value>スキップ</value>
   </data>
   <data name="CM_Open_Skip" xml:space="preserve">
-    <value>Skip Setup</value>
+    <value>設定をスキップ</value>
+  </data>
+  <data name="SkipCD_TITLE.Text" xml:space="preserve">
+    <value>スキップ再生</value>
   </data>
   <data name="SkipCD_SkipFeatureEnabledToggleSwitch.Header" xml:space="preserve">
-    <value>Enable skip feature</value>
+    <value>スキップ機能を有効にします。</value>
   </data>
   <data name="SkipCD_SkipFeatureEnabledToggleSwitch.OnContent" xml:space="preserve">
-    <value>Yes</value>
+    <value>は</value>
   </data>
   <data name="SkipCD_SkipFeatureEnabledToggleSwitch.OffContent" xml:space="preserve">
-    <value>No</value>
+    <value>かどうか</value>
   </data>
   <data name="SkipCD_SkipBeginEnabledToggleSwitch.Header" xml:space="preserve">
-    <value>Skip Intro (at the begin)</value>
+    <value>(開始) でイントロをスキップします。</value>
   </data>
   <data name="SkipCD_SkipBeginEnabledToggleSwitch.OnContent" xml:space="preserve">
-    <value>Yes</value>
+    <value>は</value>
   </data>
   <data name="SkipCD_SkipBeginEnabledToggleSwitch.OffContent" xml:space="preserve">
-    <value>No</value>
+    <value>かどうか</value>
   </data>
   <data name="SkipCD_SkipEndEnabledToggleSwitch.Header" xml:space="preserve">
-    <value>Skip Ending (at the end)</value>
+    <value>スキップ エンディング (終わり)</value>
   </data>
   <data name="SkipCD_SkipEndEnabledToggleSwitch.OnContent" xml:space="preserve">
-    <value>Yes</value>
+    <value>は</value>
   </data>
   <data name="SkipCD_SkipEndEnabledToggleSwitch.OffContent" xml:space="preserve">
-    <value>No</value>
+    <value>かどうか</value>
   </data>
   <data name="SkipCD_SkipChapterEnabledToggleSwitch.OnContent" xml:space="preserve">
-    <value>Yes</value>
+    <value>は</value>
   </data>
   <data name="SkipCD_SkipChapterEnabledToggleSwitch.Header" xml:space="preserve">
-    <value>Chapter titles</value>
+    <value>章のタイトル</value>
   </data>
   <data name="SkipCD_SkipChapterEnabledToggleSwitch.OffContent" xml:space="preserve">
-    <value>No</value>
+    <value>かどうか</value>
   </data>
   <data name="SkipCD_beginHour.Header" xml:space="preserve">
-    <value>Hours</value>
+    <value>時間</value>
   </data>
   <data name="SkipCD_beginSecond.Header" xml:space="preserve">
-    <value>Seconds</value>
+    <value>秒</value>
   </data>
   <data name="SkipCD_endHour.Header" xml:space="preserve">
-    <value>Hours</value>
+    <value>時間</value>
   </data>
   <data name="SkipCD_endSecond.Header" xml:space="preserve">
-    <value>Seconds</value>
+    <value>秒</value>
   </data>
   <data name="SkipCD_endMinute.Header" xml:space="preserve">
-    <value>Minutes</value>
+    <value>分</value>
   </data>
   <data name="SkipCD_beginMinute.Header" xml:space="preserve">
-    <value>Minutes</value>
+    <value>分</value>
   </data>
   <data name="CM_Open_skipFeature" xml:space="preserve">
-    <value>Enable skip feature</value>
+    <value>スキップ機能を有効にします。</value>
   </data>
   <data name="CM_Open_skipBegin" xml:space="preserve">
-    <value>Skip Intro</value>
+    <value>イントロ スキップ</value>
   </data>
   <data name="CM_Open_skipEnd" xml:space="preserve">
-    <value>Skip Ending</value>
+    <value>スキップ終了</value>
   </data>
   <data name="CM_Open_skipChapter" xml:space="preserve">
-    <value>Skip Chapters</value>
+    <value>章をスキップします。</value>
   </data>
   <data name="Hours" xml:space="preserve">
-    <value>Hours</value>
+    <value>時間</value>
   </data>
   <data name="Minutes" xml:space="preserve">
-    <value>Minutes</value>
+    <value>分</value>
   </data>
   <data name="CM_Misc" xml:space="preserve">
-    <value>Misc</value>
+    <value>その他</value>
   </data>
   <data name="CM_ExitApplicationIn30Minutes" xml:space="preserve">
-    <value>Exit Application In 30 Minutes</value>
+    <value>30 分でアプリケーションを終了します</value>
   </data>
   <data name="CM_Playback_Loop_SetBPoint_forward" xml:space="preserve">
-    <value>Move Point B 0.1 Seconds Forward</value>
+    <value>移動ポイント B 0.1 秒前方</value>
   </data>
   <data name="CM_Playback_Loop_SetBPoint_backward" xml:space="preserve">
-    <value>Move Point B 0.1 Seconds Backward</value>
+    <value>移動ポイント B 0.1 秒後方</value>
   </data>
   <data name="CM_Playback_Loop_SetAPoint_forward" xml:space="preserve">
-    <value>Move Point A 0.1 Seconds Forward</value>
+    <value>移動ポイントは 0.1 秒前方</value>
   </data>
   <data name="CM_Playback_Loop_SetAPoint_backward" xml:space="preserve">
-    <value>Move Point A 0.1 Seconds Backward</value>
+    <value>ポイント 0.1 秒後方に移動します。</value>
   </data>
   <data name="CM_WhenOpenFileAddToFavorites" xml:space="preserve">
-    <value>When File Opened Add To Favorites</value>
+    <value>ファイルを開いたときをお気に入りに追加します。</value>
   </data>
   <data name="CM_WhenOpenFolderAddToFavorites" xml:space="preserve">
-    <value>When Folder Opened Add To Favorites</value>
+    <value>フォルダーを開いたときをお気に入りに追加します。</value>
   </data>
   <data name="SkipCD_SkipSyncSubtitleEnabledToggleSwitch.Header" xml:space="preserve">
-    <value>Sync Subtitle Timeline</value>
+    <value>同期字幕タイムライン</value>
   </data>
   <data name="IsAudioOnly" xml:space="preserve">
-    <value>Audio Only</value>
+    <value>オーディオのみ</value>
   </data>
   <data name="IsVideoOnly" xml:space="preserve">
-    <value>Video Only</value>
+    <value>ビデオのみ</value>
   </data>
   <data name="CM_ExternalAudio" xml:space="preserve">
-    <value>External Audio</value>
+    <value>外部オーディオ</value>
   </data>
   <data name="Load" xml:space="preserve">
-    <value>Load ...</value>
-  </data>
-  <data name="CM_Open_Twitch" xml:space="preserve">
-    <value>Twitch</value>
-  </data>
-  <data name="Twitch_CD_TITLE.Text" xml:space="preserve">
-    <value>Twitch</value>
+    <value>読み込み</value>
   </data>
   <data name="Twitch_CD.SecondaryButtonText" xml:space="preserve">
-    <value>Close</value>
+    <value>シャットダウン</value>
   </data>
   <data name="Twitch_CD.PrimaryButtonText" xml:space="preserve">
-    <value>Open</value>
+    <value>開けて下さい</value>
   </data>
   <data name="Twitch_CD_PivotItem1.Header" xml:space="preserve">
-    <value>Search</value>
-  </data>
-  <data name="Twitch_CD_PivotItem2.Header" xml:space="preserve">
-    <value>Links</value>
+    <value>検索</value>
   </data>
   <data name="Twitch_CD_PivotItem3.Header" xml:space="preserve">
-    <value>Search Result</value>
-  </data>
-  <data name="Search" xml:space="preserve">
-    <value>Search</value>
+    <value>検索結果</value>
   </data>
   <data name="Twitch_CD_PivotItem1_Search_PivotItem1.Header" xml:space="preserve">
-    <value>Channel</value>
+    <value>チャネル</value>
   </data>
   <data name="Twitch_CD_PivotItem1_Search_PivotItem2.Header" xml:space="preserve">
-    <value>Urls</value>
+    <value>URL</value>
   </data>
   <data name="Twitch_CD_PivotItem1_Search_PivotItem3.Header" xml:space="preserve">
     <value>IDs</value>
   </data>
   <data name="Twitch_CD_PivotItem1_Search_PivotItem1_ChannelName_textblock.Text" xml:space="preserve">
-    <value>Channel Name:</value>
-  </data>
-  <data name="Twitch_CD_PivotItem1_Search_PivotItem1_Urls_textblock.Text" xml:space="preserve">
-    <value>Paste one or more Twitch video urls in the textbox below. Make sure every url is placed in a new line. </value>
-  </data>
-  <data name="Twitch_CD_PivotItem1_Search_PivotItem1_IDs_textblock.Text" xml:space="preserve">
-    <value>Paste one or more Twitch video IDs in the textbox below. Make sure every ID is placed in a new line.</value>
+    <value>チャネル名</value>
   </data>
   <data name="AppRestartFailure" xml:space="preserve">
-    <value>Please manually restart application.</value>
+    <value>アプリケーションを手動で再起動してください。</value>
   </data>
   <data name="loadFromCalendarDatePicker.Header" xml:space="preserve">
-    <value>Load From</value>
+    <value>を読み込む</value>
   </data>
   <data name="loadToCalendarDatePicker.Header" xml:space="preserve">
-    <value>Load To</value>
+    <value>を読み込む</value>
   </data>
   <data name="Twitch_CD_PivotItem1_Search_PivotItem1_VideoType_textblock.Text" xml:space="preserve">
-    <value>Video Type</value>
+    <value>ビデオの種類</value>
   </data>
   <data name="BroadcastRadioButton.Content" xml:space="preserve">
-    <value>Broadcast</value>
+    <value>放送</value>
   </data>
   <data name="HighlightRadioButton.Content" xml:space="preserve">
-    <value>Highlight</value>
+    <value>ハイライト</value>
   </data>
   <data name="UploadRadioButton.Content" xml:space="preserve">
-    <value>Upload</value>
+    <value>アップロード</value>
   </data>
   <data name="Twitch_CD_PivotItem1_Search_PivotItem1_LoadLastVods_Slider.Header" xml:space="preserve">
-    <value>Last Videos</value>
+    <value>最後の動画</value>
   </data>
   <data name="OnlyTodayRadioButton.Content" xml:space="preserve">
-    <value>Only Today</value>
+    <value>今日だけ</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>検索</value>
+  </data>
+  <data name="Twitch_CD_PivotItem1_Search_PivotItem1_Urls_textblock.Text" xml:space="preserve">
+    <value>下のテキスト ボックスに 1 つ以上けいれんビデオ url を貼り付けます。すべての url が新しい行に配置されますを確認します。</value>
+  </data>
+  <data name="Twitch_CD_PivotItem1_Search_PivotItem1_IDs_textblock.Text" xml:space="preserve">
+    <value>下のテキスト ボックスに 1 つまたは複数のけいれんビデオ Id を貼り付けます。すべての ID が新しい行に配置されますを確認します。</value>
   </data>
   <data name="Twitch_CD_PivotItem1_Search_PivotItem1_Urls_textblock2.Text" xml:space="preserve">
-    <value>Example: https://www.twitch.tv/videos/123456789</value>
+    <value>例: https://www.twitch.tv/videos/123456789</value>
   </data>
   <data name="Twitch_CD_PivotItem1_Search_PivotItem1_IDs_textblock2.Text" xml:space="preserve">
-    <value>Example: 123456789</value>
+    <value>例: 123456789</value>
   </data>
   <data name="SuggestionLoadExternalAudio" xml:space="preserve">
-    <value>this video contains no Audio Tracks, please select audio track and load it.</value>
+    <value>オーディオ トラックこのビデオが含まれていない、オーディオ トラックを選択してそれを読み込みます。</value>
   </data>
   <data name="Unload" xml:space="preserve">
-    <value>Unload</value>
+    <value>アンロード</value>
   </data>
   <data name="Transcode_CD_TITLE.Text" xml:space="preserve">
-    <value>Video Audio Combine Transcode Tool</value>
+    <value>ビデオのオーディオを組み合わせて変換ツール</value>
   </data>
   <data name="CM_VideoAudioCombineTranscodeTool" xml:space="preserve">
-    <value>Video Audio Combine Transcode Tool</value>
+    <value>ビデオのオーディオを組み合わせて変換ツール</value>
   </data>
   <data name="Transcode_Video_button.Content" xml:space="preserve">
-    <value>Drag or Pick Video File</value>
+    <value>ドラッグするか、ビデオ ファイルを選択</value>
   </data>
   <data name="Transcode_Audio_button.Content" xml:space="preserve">
-    <value>Drag or Pick Audio File</value>
+    <value>ドラッグするか、オーディオ ファイルを選択</value>
   </data>
   <data name="CM_Transcode_Video_button" xml:space="preserve">
-    <value>Drag or Pick Video File</value>
+    <value>ドラッグするか、ビデオ ファイルを選択</value>
   </data>
   <data name="CM_Transcode_Audio_button" xml:space="preserve">
-    <value>Drag or Pick Audio File</value>
+    <value>ドラッグするか、オーディオ ファイルを選択</value>
   </data>
   <data name="Transcode_CD.PrimaryButtonText" xml:space="preserve">
-    <value>Start</value>
+    <value>スタート</value>
   </data>
   <data name="Transcode_CD.SecondaryButtonText" xml:space="preserve">
-    <value>Close</value>
+    <value>シャットダウン</value>
   </data>
   <data name="TranscodeFailed" xml:space="preserve">
-    <value>Saving was unsuccessful</value>
+    <value>保存に失敗しました</value>
   </data>
   <data name="TranscodeSuccess" xml:space="preserve">
-    <value>saved file successful</value>
+    <value>保存したファイルは正常</value>
   </data>
   <data name="TranscodeProgress" xml:space="preserve">
-    <value>Saving file... Progress:</value>
+    <value>ファイルを保存しています.進行状況:</value>
   </data>
   <data name="CM_Track_histogram" xml:space="preserve">
-    <value>Histogram</value>
-  </data>
-  <data name="CM_Open_Youtube" xml:space="preserve">
-    <value>Youtube</value>
-  </data>
-  <data name="Youtube_CD_TITLE.Text" xml:space="preserve">
-    <value>Youtube</value>
+    <value>ヒストグラム</value>
   </data>
   <data name="Youtube_CD.PrimaryButtonText" xml:space="preserve">
-    <value>Open</value>
+    <value>開けて下さい</value>
   </data>
   <data name="Youtube_CD.SecondaryButtonText" xml:space="preserve">
-    <value>Close</value>
-  </data>
-  <data name="GID_FramePerSecond_Slider.Header" xml:space="preserve">
-    <value>Images Per Second</value>
+    <value>シャットダウン</value>
   </data>
   <data name="GID_Scale_Slider.Header" xml:space="preserve">
-    <value>Scaling ratio</value>
+    <value>倍率</value>
   </data>
   <data name="CM_Open_Gif" xml:space="preserve">
-    <value>Create GIF Image</value>
+    <value>GIF イメージを作成します。</value>
   </data>
   <data name="Gid_CD_TITLE.Text" xml:space="preserve">
-    <value>GIF Image Maker</value>
+    <value>GIF イメージ メーカー</value>
   </data>
   <data name="CanNotCreateGif" xml:space="preserve">
-    <value>Can not create GIF Image</value>
+    <value>GIF イメージを作成することができます。</value>
   </data>
   <data name="Gif_CD.PrimaryButtonText" xml:space="preserve">
-    <value>Generate GIF</value>
+    <value>GIF を生成します。</value>
   </data>
   <data name="Gif_CD.SecondaryButtonText" xml:space="preserve">
-    <value>Close</value>
+    <value>シャットダウン</value>
   </data>
   <data name="GID_SAVE_BUTTON.Content" xml:space="preserve">
-    <value>Save as</value>
+    <value>名前を付けて保存</value>
   </data>
   <data name="GenerateGIF" xml:space="preserve">
-    <value>Generate GIF</value>
+    <value>GIF を生成します。</value>
+  </data>
+  <data name="GID_FramePerSecond_Slider.Header" xml:space="preserve">
+    <value>1 秒あたりの画像</value>
   </data>
   <data name="GenGIF_Abort" xml:space="preserve">
-    <value>Generate GIF Aborted</value>
+    <value>中止 GIF を生成します。</value>
   </data>
   <data name="GID_TextFontSize_Slider.Header" xml:space="preserve">
-    <value>Text Font Size</value>
+    <value>テキストのフォント サイズ</value>
   </data>
   <data name="GID_TextMarginLeft_Slider.Header" xml:space="preserve">
-    <value>Text Margin Left</value>
+    <value>テキストの左余白</value>
   </data>
   <data name="GID_TextMarginTop_Slider.Header" xml:space="preserve">
-    <value>Text Margin Top</value>
+    <value>テキスト マージン トップ</value>
   </data>
   <data name="TextOverlayToggleSwitch.Header" xml:space="preserve">
-    <value>Text overlay</value>
+    <value>テキストのオーバーレイ</value>
   </data>
   <data name="Insert_text_Expander_TextBlock.Text" xml:space="preserve">
-    <value>font family set from subtitle feature</value>
+    <value>字幕機能から設定フォント ファミリ</value>
+  </data>
+  <data name="TextOverlayToggleSwitch.OnContent" xml:space="preserve">
+    <value> </value>
+  </data>
+  <data name="TextOverlayToggleSwitch.OffContent" xml:space="preserve">
+    <value> </value>
   </data>
   <data name="Extension_CD_TITLE.Text" xml:space="preserve">
-    <value>Extension Manager</value>
+    <value>拡張機能マネージャー</value>
   </data>
   <data name="Extension_CD.SecondaryButtonText" xml:space="preserve">
-    <value>Close</value>
+    <value>シャットダウン</value>
   </data>
   <data name="CM_ExtensionManager" xml:space="preserve">
-    <value>Extension Manager</value>
+    <value>拡張機能マネージャー</value>
   </data>
   <data name="CM_AppRecording" xml:space="preserve">
-    <value>Application Recording</value>
+    <value>記録</value>
   </data>
   <data name="CM_StartRecording" xml:space="preserve">
-    <value>Start Recording</value>
+    <value>録音を開始します。</value>
   </data>
   <data name="CM_StopRecording" xml:space="preserve">
-    <value>Stop Recording</value>
+    <value>録画を停止します。</value>
   </data>
   <data name="CM_PickRecordingFolder" xml:space="preserve">
-    <value>Change Save Folder</value>
+    <value>保存フォルダーを変更します。</value>
   </data>
   <data name="AppRecordingManagerNotSupport" xml:space="preserve">
-    <value>Application Recording not support</value>
+    <value>記録をサポートしていないアプリケーション</value>
   </data>
   <data name="CM_AppRecordingOpenOnCompleted" xml:space="preserve">
-    <value>Open File After Recording Completed</value>
+    <value>録音完了後ファイルを開く</value>
   </data>
   <data name="AppRecordingManagerCompleted" xml:space="preserve">
-    <value>Application Recording Successful</value>
+    <value>成功したアプリケーションの記録</value>
   </data>
   <data name="AppRecordingManagerFailed" xml:space="preserve">
-    <value>Application Recording Failed</value>
+    <value>アプリケーションの記録に失敗しました</value>
   </data>
   <data name="HotkeyAction_action_apprecording_start" xml:space="preserve">
-    <value>Start Recording</value>
+    <value>録音を開始します。</value>
   </data>
   <data name="HotkeyAction_action_apprecording_stop" xml:space="preserve">
-    <value>Stop Recording</value>
+    <value>録画を停止します。</value>
   </data>
   <data name="WM_find_no_text" xml:space="preserve">
-    <value>No Text Found</value>
+    <value>テキストが見つかりません</value>
   </data>
   <data name="CM_OCRText_CopyTo" xml:space="preserve">
-    <value>recognize image text then copy to clipboard</value>
+    <value>認識のイメージのテキストをクリップボードにコピー</value>
   </data>
   <data name="SD_PivotItem2_TryExtractTextFromImageSubtitleAndRenderToggleSwitch.Header" xml:space="preserve">
-    <value>OCR Image Subtitle then render as Text</value>
+    <value>OCR 画像字幕をテキストとしてレンダリングします。</value>
   </data>
   <data name="SD_PivotItem2_TryExtractTextFromImageSubtitleAndRenderToggleSwitch.OnContent" xml:space="preserve">
-    <value>Yes</value>
+    <value>は</value>
   </data>
   <data name="SD_PivotItem2_TryExtractTextFromImageSubtitleAndRenderToggleSwitch.OffContent" xml:space="preserve">
-    <value>No</value>
+    <value>かどうか</value>
   </data>
   <data name="HotkeyAction_action_ord_copy" xml:space="preserve">
-    <value>recognize image text then copy to clipboard</value>
+    <value>認識のイメージのテキストをクリップボードにコピー</value>
   </data>
   <data name="ScorpioStreamingServer" xml:space="preserve">
     <value>Scorpio Streaming Server</value>
+  </data>
+  <data name="ScorpioPlayeriOS" xml:space="preserve">
+    <value>Scorpio Player for iPhone</value>
   </data>
   <data name="ScorpioStreamingServerDescription" xml:space="preserve">
     <value>Scorpio Streaming Server is a companion app for Scorpio Player, allow you enjoy your media content anywhere, anytime, cross device high quality streaming raw power base on Socket, light weight server. Whether Streaming you Windows 10 laptop device Video to your Living Room Xbox Console, or Download your Media out side home to your mobile phone.  checkout https://scorpioplayer.com/Docs to lean more!</value>
@@ -2634,341 +2604,341 @@
   <data name="ScorpioPlayeriOSDescription" xml:space="preserve">
     <value>Bring the Scorpio Player Experience to iOS Platform, functionality may not rich as UWP version for now, but it convient. </value>
   </data>
-  <data name="ScorpioPlayeriOS" xml:space="preserve">
-    <value>Scorpio Player for iPhone</value>
-  </data>
   <data name="WM_FolderContainsNofile" xml:space="preserve">
-    <value>Folder is empty</value>
+    <value>フォルダーが空</value>
+  </data>
+  <data name="MV_TP_Refresh_DLNA.Content" xml:space="preserve">
+    <value>更新</value>
   </data>
   <data name="IsServerValidAsyncContent" xml:space="preserve">
-    <value>application outdated, please update through Microsoft App Store, Download from website.</value>
+    <value>web サイトからダウンロード、アプリケーション時代遅れのしてください Microsoft App Store を通じて更新。</value>
   </data>
   <data name="CM_UseSeekPreviewer" xml:space="preserve">
-    <value>Use Seek Previewer</value>
+    <value>使用を求めるプレビューアー</value>
   </data>
   <data name="CM_LiveTranslateSubtitle" xml:space="preserve">
-    <value>Live Translate</value>
+    <value>ライブ翻訳します。</value>
   </data>
   <data name="CM_LiveTranslateSubtitleTo" xml:space="preserve">
-    <value>Translate To</value>
+    <value>変換します。</value>
   </data>
   <data name="Bangla" xml:space="preserve">
-    <value>Bangla</value>
+    <value>バングラ</value>
   </data>
   <data name="Bosnian (Latin)" xml:space="preserve">
-    <value>Bosnian (Latin)</value>
+    <value>ボスニア語 (ラテン)</value>
   </data>
   <data name="Chinese Simplified" xml:space="preserve">
-    <value>Chinese Simplified</value>
+    <value>簡体字中国語</value>
   </data>
   <data name="Chinese Traditional" xml:space="preserve">
-    <value>Chinese Traditional</value>
+    <value>繁体字中国語</value>
   </data>
   <data name="Cantonese (Traditional)" xml:space="preserve">
-    <value>Cantonese (Traditional)</value>
+    <value>広東語 (従来の)</value>
   </data>
   <data name="Fijian" xml:space="preserve">
-    <value>Fijian</value>
+    <value>フィジー</value>
   </data>
   <data name="Filipino" xml:space="preserve">
-    <value>Filipino</value>
+    <value>フィリピノ語</value>
   </data>
   <data name="Haitian Creole" xml:space="preserve">
-    <value>Haitian Creole</value>
+    <value>ハイチ語</value>
   </data>
   <data name="Hmong Daw" xml:space="preserve">
-    <value>Hmong Daw</value>
+    <value>もん族 Daw</value>
   </data>
   <data name="Kiswahili" xml:space="preserve">
-    <value>Kiswahili</value>
+    <value>スワヒリ語</value>
   </data>
   <data name="Klingon" xml:space="preserve">
-    <value>Klingon</value>
+    <value>クリンゴン語</value>
   </data>
   <data name="Klingon (pIqaD)" xml:space="preserve">
-    <value>Klingon (pIqaD)</value>
+    <value>クリンゴン語 (pIqaD)</value>
   </data>
   <data name="Malagasy" xml:space="preserve">
-    <value>Malagasy</value>
+    <value>マダガスカル</value>
   </data>
   <data name="Maltese" xml:space="preserve">
-    <value>Maltese</value>
+    <value>マルタ語</value>
   </data>
   <data name="Yucatec Maya" xml:space="preserve">
-    <value>Yucatec Maya</value>
+    <value>ユカテク語マヤ</value>
   </data>
   <data name="Norwegian Bokmål" xml:space="preserve">
-    <value>Norwegian Bokmål</value>
+    <value>ノルウェー語ブークモール</value>
   </data>
   <data name="Querétaro Otomi" xml:space="preserve">
-    <value>Querétaro Otomi</value>
+    <value>ケレタロ大富</value>
   </data>
   <data name="Samoan" xml:space="preserve">
-    <value>Samoan</value>
+    <value>サモア</value>
   </data>
   <data name="Serbian (Cyrillic)" xml:space="preserve">
-    <value>Serbian (Cyrillic)</value>
+    <value>セルビア語 (キリル)</value>
   </data>
   <data name="Serbian (Latin)" xml:space="preserve">
-    <value>Serbian (Latin)</value>
+    <value>セルビア語 (ラテン)</value>
   </data>
   <data name="Tahitian" xml:space="preserve">
-    <value>Tahitian</value>
+    <value>タヒチアン</value>
   </data>
   <data name="Tongan" xml:space="preserve">
-    <value>Tongan</value>
+    <value>トンガ</value>
   </data>
   <data name="Welsh" xml:space="preserve">
-    <value>Welsh</value>
+    <value>ウェールズ語</value>
   </data>
   <data name="CM_EnableLiveTranslateSubtitle" xml:space="preserve">
-    <value>Enable</value>
+    <value>有効化</value>
   </data>
   <data name="CM_StartScreenCaptureClient" xml:space="preserve">
-    <value>Start Screen Capture Client</value>
+    <value>画面キャプチャ クライアントを起動します。</value>
   </data>
   <data name="CM_StopScreenCaptureClient" xml:space="preserve">
-    <value>Stop Screen Capture Client</value>
-  </data>
-  <data name="SD_PivotItem3_InternetMovieDatabaseEnabledToggleSwitch.Header" xml:space="preserve">
-    <value>Auto Fetch Online Media Info</value>
+    <value>画面キャプチャ クライアントを停止します。</value>
   </data>
   <data name="SD_PivotItem3_InternetMovieDatabaseEnabledToggleSwitch.OnContent" xml:space="preserve">
-    <value>Yes</value>
+    <value>は</value>
   </data>
   <data name="SD_PivotItem3_InternetMovieDatabaseEnabledToggleSwitch.OffContent" xml:space="preserve">
-    <value>No</value>
+    <value>かどうか</value>
+  </data>
+  <data name="CD_Socket_Refresh_Button.Content" xml:space="preserve">
+    <value>メディア ・ ファイル情報を取得します。</value>
+  </data>
+  <data name="PlaylistActionButton_GenCache" xml:space="preserve">
+    <value>メディア ・ ファイル情報を取得します。</value>
+  </data>
+  <data name="SD_PivotItem3_InternetMovieDatabaseEnabledToggleSwitch.Header" xml:space="preserve">
+    <value>自動フェッチ オンライン メディア情報</value>
   </data>
   <data name="InternetMovieDatabaseEnabled" xml:space="preserve">
-    <value>Auto Fetch Online Media Info</value>
+    <value>自動フェッチ オンライン メディア情報</value>
   </data>
   <data name="CM_LiveTranslateSubtitleInit" xml:space="preserve">
-    <value>Initialize Translation Service</value>
+    <value>翻訳サービスを初期化します。</value>
   </data>
   <data name="WM_LiveTranslateInitialization" xml:space="preserve">
-    <value>Translation Service Initialized</value>
+    <value>翻訳サービスの初期化</value>
   </data>
   <data name="CM_RestartApp" xml:space="preserve">
-    <value>Restart Application</value>
+    <value>アプリケーションを再起動します。</value>
   </data>
   <data name="SD_PivotItem1_EnableFullScreenModeToggleSwitch.Header" xml:space="preserve">
-    <value>Disable TV-safe area</value>
+    <value>TV セーフ領域を無効にします。</value>
   </data>
   <data name="SD_PivotItem1_EnableFullScreenModeToggleSwitch.OnContent" xml:space="preserve">
-    <value>Yes</value>
+    <value>は</value>
   </data>
   <data name="SD_PivotItem1_EnableFullScreenModeToggleSwitch.OffContent" xml:space="preserve">
-    <value>No</value>
+    <value>かどうか</value>
   </data>
   <data name="OpenFolderInFileExplorer" xml:space="preserve">
-    <value>Open Folder In File Explorer</value>
+    <value>ファイル エクスプ ローラーでフォルダーを開く</value>
   </data>
   <data name="MD_ImdbIdTextBox.Header" xml:space="preserve">
     <value>IMDb ID</value>
   </data>
   <data name="BatchSetIMDbId" xml:space="preserve">
-    <value>Batch Set IMDb ID</value>
+    <value>バッチは、IMDb の ID を設定</value>
   </data>
   <data name="Input_CD.PrimaryButtonText" xml:space="preserve">
-    <value>Confirm</value>
+    <value>確かですか</value>
   </data>
   <data name="Input_CD.SecondaryButtonText" xml:space="preserve">
-    <value>Cancel</value>
+    <value>キャンセル</value>
   </data>
   <data name="Input_CD_TITLE.Text" xml:space="preserve">
-    <value>Input</value>
+    <value>入力</value>
   </data>
   <data name="InputBatchIMDbId" xml:space="preserve">
-    <value>Change Whole Playlist IMDb ID To: </value>
-  </data>
-  <data name="SD_PivotItem2_UseFallbackImageBrushToggleSwitch.Header" xml:space="preserve">
-    <value>Use Theme Image</value>
+    <value>全体のプレイリスト IMDb ID を変更します。</value>
   </data>
   <data name="SD_PivotItem2_UseFallbackImageBrushToggleSwitch.OnContent" xml:space="preserve">
-    <value>Yes</value>
+    <value>は</value>
   </data>
   <data name="SD_PivotItem2_UseFallbackImageBrushToggleSwitch.OffContent" xml:space="preserve">
-    <value>No</value>
+    <value>かどうか</value>
   </data>
   <data name="SD_PivotItem2_UseThemeImageIgnoreAcrylicBrushToggleSwitch.Header" xml:space="preserve">
-    <value>Override Acrylic Effect</value>
+    <value>アクリルの効果を上書き</value>
   </data>
   <data name="SD_PivotItem2_UseThemeImageIgnoreAcrylicBrushToggleSwitch.OnContent" xml:space="preserve">
-    <value>Yes</value>
+    <value>は</value>
   </data>
   <data name="SD_PivotItem2_UseThemeImageIgnoreAcrylicBrushToggleSwitch.OffContent" xml:space="preserve">
-    <value>No</value>
+    <value>かどうか</value>
+  </data>
+  <data name="SD_PivotItem2_UseFallbackImageBrushToggleSwitch.Header" xml:space="preserve">
+    <value>テーマのイメージを使用</value>
   </data>
   <data name="PlaylistActionButton_AutoLoadLastFileInFolder" xml:space="preserve">
-    <value>Auto play last Playback file when folder opened</value>
+    <value>自動再生の最後のファイルを再生は、フォルダーを開くとき</value>
   </data>
   <data name="detailview_play_button.Text" xml:space="preserve">
-    <value>Start Play</value>
+    <value>再生を開始します。</value>
   </data>
   <data name="detailview_director_textblock.Text" xml:space="preserve">
-    <value>Director</value>
+    <value>ディレクター</value>
   </data>
   <data name="StartPlay" xml:space="preserve">
-    <value>Start Play</value>
+    <value>再生を開始します。</value>
   </data>
   <data name="ResumePlay" xml:space="preserve">
-    <value>Resume Play</value>
+    <value>再生を再開します。</value>
   </data>
   <data name="detailview_plot.Text" xml:space="preserve">
-    <value>Plot</value>
+    <value>プロット</value>
   </data>
   <data name="detailview_actors.Text" xml:space="preserve">
-    <value>Actors</value>
+    <value>俳優</value>
   </data>
   <data name="detailview_Writer.Text" xml:space="preserve">
-    <value>Writers</value>
+    <value>脚本</value>
   </data>
   <data name="detailview_Chapter.Text" xml:space="preserve">
-    <value>Chapters</value>
+    <value>章</value>
   </data>
   <data name="detailview_Bookmark.Text" xml:space="preserve">
-    <value>Bookmark</value>
+    <value>ブックマーク</value>
   </data>
   <data name="SetPodcastPlaylist" xml:space="preserve">
-    <value>Use Podcasts as Favorites Source</value>
+    <value>お気に入りのソースとしてポッド キャストを使用します。</value>
   </data>
   <data name="Subscribe" xml:space="preserve">
-    <value>Subscribe</value>
+    <value>購読</value>
   </data>
   <data name="Podcast_CD.SecondaryButtonText" xml:space="preserve">
-    <value>Close</value>
+    <value>シャットダウン</value>
   </data>
   <data name="Podcast_CD.PrimaryButtonText" xml:space="preserve">
-    <value>Search</value>
+    <value>検索</value>
   </data>
   <data name="Podcast_CD_TITLE.Text" xml:space="preserve">
-    <value>Podcast Manager</value>
+    <value>ポッド キャスト マネージャー</value>
   </data>
   <data name="CM_Open_Podcast" xml:space="preserve">
-    <value>Podcast Manager</value>
+    <value>ポッド キャスト マネージャー</value>
   </data>
   <data name="SD_PivotItem3_BindPodcastPlaylistToFavoriteToggleSwitch.Header" xml:space="preserve">
-    <value>Use Podcasts as Favorites Source</value>
+    <value>お気に入りのソースとしてポッド キャストを使用します。</value>
   </data>
   <data name="SD_PivotItem3_BindPodcastPlaylistToFavoriteToggleSwitch.OnContent" xml:space="preserve">
-    <value>Yes</value>
+    <value>は</value>
   </data>
   <data name="SD_PivotItem3_BindPodcastPlaylistToFavoriteToggleSwitch.OffContent" xml:space="preserve">
-    <value>No</value>
+    <value>かどうか</value>
   </data>
   <data name="EnterSearchOrFeedUrl_TextBlock.Text" xml:space="preserve">
-    <value>Search Podcast or Enter Feed Url</value>
+    <value>ポッド キャストを検索またはフィードの Url を入力してください。</value>
   </data>
   <data name="AutoSuggestBox_Podcast.PlaceholderText" xml:space="preserve">
-    <value>Search Podcast or Enter Feed Url</value>
+    <value>ポッド キャストを検索またはフィードの Url を入力してください。</value>
   </data>
   <data name="SD_PivotItem1_RemoteControlEnabledToggleSwitch.Header" xml:space="preserve">
-    <value>Allow Remote Control</value>
+    <value>リモート制御を許可します。</value>
   </data>
   <data name="SD_PivotItem1_RemoteControlEnabledToggleSwitch.OnContent" xml:space="preserve">
-    <value>Yes</value>
+    <value>は</value>
   </data>
   <data name="SD_PivotItem1_RemoteControlEnabledToggleSwitch.OffContent" xml:space="preserve">
-    <value>No</value>
+    <value>かどうか</value>
   </data>
   <data name="CD_Remote_Listen_Success" xml:space="preserve">
-    <value>Remote Control Enabled</value>
+    <value>リモート管理を有効に</value>
   </data>
   <data name="CD_Remote_Listen_Fail" xml:space="preserve">
-    <value>Remote Control fail to start</value>
+    <value>リモート コントロールが起動に失敗します。</value>
   </data>
   <data name="ScorpioPlayerRemote" xml:space="preserve">
-    <value>Remote Controller</value>
+    <value>リモート コント ローラー</value>
   </data>
   <data name="ScorpioPlayerRemoteDescription" xml:space="preserve">
-    <value>Remote Controller for Scorpio Player Xbox One/Windows 10 PC Version.</value>
+    <value>蠍座プレーヤー Xbox 1 つのリモート コント ローラー/Windows 10 PC 版。</value>
   </data>
   <data name="ScorpioPlayerRemoteiOS" xml:space="preserve">
-    <value>Remote Controller iPhone/iPad</value>
+    <value>リモート コント ローラーの iPhone/計算されました。</value>
   </data>
   <data name="ScorpioPlayerRemoteDroid" xml:space="preserve">
-    <value>Remote Controller Android</value>
+    <value>リモート コント ローラーのアンドロイド</value>
   </data>
   <data name="ScorpioPlayerRemoteiOSUWP" xml:space="preserve">
-    <value>Remote Controller Windows Phone</value>
+    <value>リモート コント ローラー Windows Phone</value>
   </data>
   <data name="CD_Remote_Listen_Disabled" xml:space="preserve">
-    <value>Remote Control Stopped</value>
+    <value>リモート制御の停止</value>
   </data>
   <data name="CM_DisableHDR" xml:space="preserve">
-    <value>Disable HDR Color Space</value>
+    <value>HDR カラー スペースを無効にする</value>
   </data>
   <data name="CM_EnableLiveTranslatePreserveOrigin" xml:space="preserve">
-    <value>Preserve origin text</value>
+    <value>元のテキストを保持します。</value>
   </data>
   <data name="CM_ShowDanmuButton" xml:space="preserve">
-    <value>Show Barrage Subtitle Button</value>
+    <value>画面の表示] ボタン</value>
   </data>
   <data name="CM_ShowChangePlaybackRateButton" xml:space="preserve">
-    <value>Show Playback Rate Button</value>
+    <value>再生率] ボタンを表示します。</value>
   </data>
   <data name="CM_ShowAutoSuggestBoxButton" xml:space="preserve">
-    <value>Show Search Box</value>
+    <value>普遍的な検索ボックスを表示します。</value>
   </data>
   <data name="CM_Show360VideoPlaybackButton" xml:space="preserve">
-    <value>Show 360° Video Playback Button</value>
+    <value>360 ° のビデオ再生ボタンを表示します。</value>
   </data>
   <data name="CM_ShowNextFrameButton" xml:space="preserve">
-    <value>Show Next Frame button</value>
+    <value>次のフレーム コントロール ボタンを表示します。</value>
   </data>
   <data name="SD_PivotItem3_bufferTimeLocalSlider.Header" xml:space="preserve">
-    <value>Buffer Time Local (ms)</value>
+    <value>バッファー時間ローカル (ms)</value>
+  </data>
+  <data name="SD_PivotItem3_bufferTimeSlider.Header" xml:space="preserve">
+    <value>バッファー時間ネットワーク (ms)</value>
   </data>
   <data name="CM_Open_Samba" xml:space="preserve">
     <value>SMB/CIFS</value>
   </data>
   <data name="Samba_SMBConnectionString1_TextBlock.PlaceholderText" xml:space="preserve">
-    <value>SMB/CIFS Connection String 1</value>
-  </data>
-  <data name="Samba_SMBConnectionString2_TextBlock.PlaceholderText" xml:space="preserve">
-    <value>SMB/CIFS Connection String 1</value>
-  </data>
-  <data name="Samba_SMBConnectionString3_TextBlock.PlaceholderText" xml:space="preserve">
-    <value>SMB/CIFS Connection String 2</value>
+    <value>SMB/CIFS 接続文字列 1</value>
   </data>
   <data name="Samba_CD_TITLE.Text" xml:space="preserve">
     <value>SMB/CIFS</value>
   </data>
-  <data name="Samba_CD.PrimaryButtonText" xml:space="preserve">
-    <value>Test</value>
-  </data>
   <data name="Samba_CD.SecondaryButtonText" xml:space="preserve">
-    <value>Close</value>
+    <value>シャットダウン</value>
   </data>
   <data name="BindSambaToFavoriteToggleSwitch.Header" xml:space="preserve">
-    <value>Use SMB/CIFS as Favorites Source</value>
+    <value>お気に入りのソースとして SMB/CIFS を使用します。</value>
   </data>
   <data name="Samba_CD_PivotItem1.Header" xml:space="preserve">
-    <value>Setting</value>
+    <value>設定</value>
   </data>
   <data name="Samba_SMBLocalPort_TextBlock.Header" xml:space="preserve">
-    <value>SMB/CIFS Local Port</value>
+    <value>SMB/CIFS ローカル ポート</value>
   </data>
   <data name="SetSAMBA" xml:space="preserve">
-    <value>Use SMB/CIFS as Favorites Source</value>
+    <value>お気に入りのソースとして SMB/CIFS を使用します。</value>
   </data>
   <data name="BindSFTPToFavoriteToggleSwitch.Header" xml:space="preserve">
-    <value>Use SFTP/SSH as Favorites Source</value>
+    <value>お気に入りのソースとして SFTP/SSH を使用します。</value>
   </data>
   <data name="Sftp_SFTPHostName_TextBlock.Header" xml:space="preserve">
-    <value>Host Name / IP Address</value>
+    <value>ホスト名/IP アドレス</value>
   </data>
   <data name="Sftp_SFTPPort_TextBlock.Header" xml:space="preserve">
-    <value>Remote Port</value>
+    <value>リモート ポート</value>
   </data>
   <data name="Sftp_SFTPUserName_TextBlock.Header" xml:space="preserve">
-    <value>Username</value>
+    <value>ユーザー名</value>
   </data>
   <data name="Sftp_SFTPPassword_TextBlock.Header" xml:space="preserve">
-    <value>Password</value>
+    <value>パスワード</value>
   </data>
   <data name="Sftp_SFTPEntryPath_TextBlock.Header" xml:space="preserve">
-    <value>Entry Path</value>
+    <value>エントリのパス</value>
   </data>
   <data name="CM_Open_Sftp" xml:space="preserve">
     <value>SFTP/SSH</value>
@@ -2976,601 +2946,649 @@
   <data name="Sftp_CD_TITLE.Text" xml:space="preserve">
     <value>SFTP/SSH</value>
   </data>
-  <data name="Sftp_CD.PrimaryButtonText" xml:space="preserve">
-    <value>Test</value>
-  </data>
   <data name="Sftp_CD.SecondaryButtonText" xml:space="preserve">
-    <value>Close</value>
+    <value>シャットダウン</value>
   </data>
   <data name="Sftp_CD_PivotItem1.Header" xml:space="preserve">
-    <value>Setting</value>
+    <value>設定</value>
   </data>
   <data name="SetSFTP" xml:space="preserve">
-    <value>Use SFTP/SSH as Favorites Source</value>
+    <value>お気に入りのソースとして SFTP/SSH を使用します。</value>
+  </data>
+  <data name="Samba_CD.PrimaryButtonText" xml:space="preserve">
+    <value>テスト</value>
+  </data>
+  <data name="Sftp_CD.PrimaryButtonText" xml:space="preserve">
+    <value>テスト</value>
   </data>
   <data name="Success" xml:space="preserve">
-    <value>Test Pass</value>
+    <value>テスト パス</value>
   </data>
   <data name="Fail" xml:space="preserve">
-    <value>Test Failed</value>
+    <value>テストに失敗しました</value>
   </data>
   <data name="CM_ResizePlaybackWindowsSize" xml:space="preserve">
-    <value>Resize Window To Fit Video</value>
+    <value>ビデオに合わせてウィンドウのサイズを変更します。</value>
+  </data>
+  <data name="Samba_SMBConnectionString2_TextBlock.PlaceholderText" xml:space="preserve">
+    <value>SMB/CIFS 接続文字列 1</value>
+  </data>
+  <data name="Samba_SMBConnectionString3_TextBlock.PlaceholderText" xml:space="preserve">
+    <value>SMB/CIFS 接続文字列 2</value>
   </data>
   <data name="WM_Podcast_Down" xml:space="preserve">
-    <value>Podcast Not Available</value>
+    <value>ポッド キャストは使用できません。</value>
   </data>
   <data name="CM_Open_Download" xml:space="preserve">
-    <value>Download Manager</value>
+    <value>マネージャーをダウンロードします。</value>
   </data>
   <data name="Download_CD_TITLE.Text" xml:space="preserve">
-    <value>Download Manager</value>
-  </data>
-  <data name="Download_CD.SecondaryButtonText" xml:space="preserve">
-    <value>Hide</value>
+    <value>マネージャーをダウンロードします。</value>
   </data>
   <data name="Download_CD_PivotItem1.Header" xml:space="preserve">
-    <value>Downloading</value>
+    <value>ダウンロード</value>
   </data>
   <data name="Download_CD_PivotItem2.Header" xml:space="preserve">
-    <value>Offline</value>
+    <value>オフライン</value>
   </data>
   <data name="Download_CD_PivotItem3.Header" xml:space="preserve">
-    <value>Setting</value>
+    <value>設定</value>
   </data>
   <data name="CM_DownloadThisVideo" xml:space="preserve">
-    <value>Download This File</value>
+    <value>このファイルをダウンロードします。</value>
+  </data>
+  <data name="CM_Open_Twitch" xml:space="preserve">
+    <value>Twitch</value>
+  </data>
+  <data name="Twitch_CD_TITLE.Text" xml:space="preserve">
+    <value>Twitch</value>
+  </data>
+  <data name="Youtube_CD_TITLE.Text" xml:space="preserve">
+    <value>Youtube</value>
+  </data>
+  <data name="CM_Open_Youtube" xml:space="preserve">
+    <value>Youtube</value>
+  </data>
+  <data name="UCD_download_youtube_button.Content" xml:space="preserve">
+    <value>名前を付けて保存</value>
+  </data>
+  <data name="Download_CD.SecondaryButtonText" xml:space="preserve">
+    <value>非表示</value>
   </data>
   <data name="CM_DownloadThisPlayList" xml:space="preserve">
-    <value>Download This PlayList</value>
+    <value>この再生リストをダウンロードします。</value>
   </data>
   <data name="CannotDownload" xml:space="preserve">
-    <value>Can't Download</value>
+    <value>ダウンロードできません。</value>
   </data>
   <data name="NotSupport" xml:space="preserve">
-    <value>Not Support</value>
+    <value>サポートしていません</value>
   </data>
   <data name="Transcode_CD_PivotItem1.Header" xml:space="preserve">
-    <value>Combine Tool</value>
-  </data>
-  <data name="Transcode_CD_PivotItem2.Header" xml:space="preserve">
-    <value>Tasks</value>
+    <value>ツールを組み合わせてください。</value>
   </data>
   <data name="T_CD_SelectSource.Content" xml:space="preserve">
-    <value>Pick Video File</value>
+    <value>動画ファイルを選ぶ</value>
   </data>
   <data name="T_CD_SelectOutput.Content" xml:space="preserve">
-    <value>Set Output File</value>
+    <value>設定出力ファイル</value>
   </data>
   <data name="EnableMrfCrf444.Content" xml:space="preserve">
-    <value>Enable MRFCRF444 video processing algorithm (disables hardware acceleration)</value>
+    <value>MRFCRF444 ビデオ処理アルゴリズム (ハードウェア アクセラレーションを無効にします) を有効にします。</value>
   </data>
   <data name="T_CD_UseHevc.Content" xml:space="preserve">
-    <value>Use HEVC/H265 Codec</value>
+    <value>HEVC/H265 コーデックを使用します。</value>
   </data>
   <data name="T_CD_VideoSettings.Text" xml:space="preserve">
-    <value>Video Settings</value>
+    <value>ビデオの設定</value>
   </data>
   <data name="T_CD_VideoW.Text" xml:space="preserve">
-    <value>Video Width</value>
+    <value>ビデオの幅</value>
   </data>
   <data name="T_CD_VideoH.Text" xml:space="preserve">
-    <value>Video Height</value>
+    <value>ビデオの高さ</value>
   </data>
   <data name="T_CD_VideoBPS.Text" xml:space="preserve">
-    <value>Bits Per Sample</value>
+    <value>サンプルあたりのビット数</value>
   </data>
   <data name="T_CD_SampleRate.Text" xml:space="preserve">
-    <value>Sample Rate</value>
+    <value>サンプル レート</value>
   </data>
   <data name="T_CD_BitRate.Text" xml:space="preserve">
-    <value>Bit Rate</value>
+    <value>ビット レート</value>
   </data>
   <data name="T_CD_FrameRate.Text" xml:space="preserve">
-    <value>Frame Rate</value>
+    <value>フレーム レート</value>
   </data>
   <data name="T_CD_ChannelCount.Text" xml:space="preserve">
-    <value>Channel Count</value>
+    <value>チャンネル数</value>
   </data>
   <data name="T_CD_AudioSettings.Text" xml:space="preserve">
-    <value>Audio Settings</value>
+    <value>オーディオ設定</value>
   </data>
   <data name="T_CD_Play.Content" xml:space="preserve">
-    <value>Play</value>
+    <value>再生</value>
   </data>
   <data name="T_CD_Pause.Content" xml:space="preserve">
-    <value>Pause</value>
+    <value>一時停止</value>
   </data>
   <data name="T_CD_Stop.Content" xml:space="preserve">
-    <value>Stop</value>
+    <value>ストップ</value>
   </data>
   <data name="T_CD_Transcode.Content" xml:space="preserve">
-    <value>Transcode</value>
+    <value>トランス コード</value>
   </data>
   <data name="T_CD_Cancel.Content" xml:space="preserve">
-    <value>Cancel</value>
+    <value>キャンセル</value>
   </data>
   <data name="TranscodeCanceled" xml:space="preserve">
-    <value>Transcode Canceled</value>
+    <value>トランス コードをキャンセル</value>
   </data>
   <data name="Progress" xml:space="preserve">
-    <value>Progress</value>
+    <value>進行状況</value>
   </data>
   <data name="TranscodeCompleted" xml:space="preserve">
-    <value>Transcode Completed</value>
+    <value>トランス コード完了</value>
   </data>
   <data name="Codecnotfound" xml:space="preserve">
-    <value>Codec not found</value>
+    <value>コーデックが見つかりません</value>
   </data>
   <data name="Invalidprofile" xml:space="preserve">
-    <value>Invalid profile</value>
+    <value>無効なプロファイル</value>
   </data>
   <data name="Unknownfailure" xml:space="preserve">
-    <value>Unknown failure</value>
+    <value>不明なエラー</value>
   </data>
   <data name="Transcode_CD_PivotItem3.Header" xml:space="preserve">
-    <value>Media Encoding Profile</value>
-  </data>
-  <data name="T_CD_AudioTemplate.Header" xml:space="preserve">
-    <value>Audio Format</value>
-  </data>
-  <data name="T_CD_VideoTemplate.Header" xml:space="preserve">
-    <value>Video Format</value>
+    <value>メディア エンコード プロファイル</value>
   </data>
   <data name="T_CD_Create.Content" xml:space="preserve">
-    <value>Create</value>
+    <value>作成</value>
   </data>
   <data name="T_CD_CreateFromFile.Text" xml:space="preserve">
-    <value>Create Media Encoding Profile From File</value>
+    <value>ファイルからプロファイルをエンコード メディアを作成します。</value>
   </data>
   <data name="T_CD_CreateFromStream.Text" xml:space="preserve">
-    <value>Read Media Encoding Profile From Current Playing Media</value>
+    <value>現在のメディアの再生からプロファイルをエンコード メディアを読む</value>
   </data>
   <data name="T_CD_AudioBitrate.Header" xml:space="preserve">
-    <value>Audio Bitrate</value>
+    <value>オーディオ ビット レート</value>
   </data>
   <data name="T_CD_AudioBitsPerSample.Header" xml:space="preserve">
-    <value>Audio Bits Per Sample</value>
+    <value>1 サンプルあたりのオーディオ ビット</value>
   </data>
   <data name="T_CD_AudioChannelCount.Header" xml:space="preserve">
-    <value>Audio Channel Count</value>
+    <value>オーディオ チャンネル数</value>
   </data>
   <data name="T_CD_AudioSampleRate.Header" xml:space="preserve">
-    <value>Audio Sample Rate</value>
+    <value>オーディオ サンプル レート</value>
   </data>
   <data name="T_CD_VideoWidth.Header" xml:space="preserve">
-    <value>Video Width</value>
+    <value>ビデオの幅</value>
   </data>
   <data name="T_CD_VideoHeight.Header" xml:space="preserve">
-    <value>Video Height</value>
+    <value>ビデオの高さ</value>
   </data>
   <data name="T_CD_VideoBitrate.Header" xml:space="preserve">
-    <value>Video Bitrate</value>
+    <value>ビデオ ビット レート</value>
   </data>
   <data name="T_CD_VideoFrameRateNumerator.Header" xml:space="preserve">
-    <value>Video FrameRate Numerator</value>
+    <value>ビデオのフレーム レートの分子</value>
   </data>
   <data name="T_CD_VideoFrameRateDenominator.Header" xml:space="preserve">
-    <value>Video FrameRate Denominator</value>
+    <value>ビデオのフレーム レートの分母</value>
   </data>
   <data name="T_CD_VideoPixelAspectRatioNumerator.Header" xml:space="preserve">
-    <value>Video Pixel Aspect Ratio Numerator</value>
+    <value>ビデオのピクセル縦横比の分子</value>
   </data>
   <data name="T_CD_VideoPixelAspectRatioDenominator.Header" xml:space="preserve">
-    <value>Video Pixel Aspect Ratio Denominator</value>
+    <value>ビデオのピクセル縦横比の分母</value>
   </data>
   <data name="T_CD_VideoTemplateQuality.Header" xml:space="preserve">
-    <value>Quality</value>
+    <value>品質</value>
+  </data>
+  <data name="T_CD_AudioTemplate.Header" xml:space="preserve">
+    <value>オーディオ フォーマット</value>
+  </data>
+  <data name="T_CD_VideoTemplate.Header" xml:space="preserve">
+    <value>ビデオ フォーマット</value>
   </data>
   <data name="T_CD_AlwaysReencode.Content" xml:space="preserve">
-    <value>Always Re-encode</value>
+    <value>常に再エンコードします。</value>
   </data>
   <data name="T_CD_HardwareAccelerationEnabled.Content" xml:space="preserve">
-    <value>Hardware Acceleration Enabled</value>
+    <value>ハードウェア アクセラレーションを有効に</value>
   </data>
   <data name="T_CD_SAVE_Profile.Content" xml:space="preserve">
-    <value>Save</value>
+    <value>保存</value>
   </data>
   <data name="T_CD_ProfileName.PlaceholderText" xml:space="preserve">
-    <value>Media Encoding Profile Name</value>
+    <value>メディア エンコード プロファイル名</value>
   </data>
   <data name="MustCreateFormatTemplateFirst" xml:space="preserve">
-    <value>Must Create Format Template First</value>
+    <value>最初の書式テンプレートを作成する必要があります。</value>
   </data>
   <data name="ProfileFileNameCanNotEmpty" xml:space="preserve">
-    <value>Profile File Name Can't be Empty</value>
+    <value>できませんプロファイル ファイル名を空にします。</value>
   </data>
   <data name="T_CD_TestFromFile.Text" xml:space="preserve">
-    <value>Test Media Encoding Profile From File</value>
+    <value>プロファイルをファイルからのエンコード テスト メディア</value>
   </data>
   <data name="T_CD_TestFromStream.Text" xml:space="preserve">
-    <value>Test Media Encoding Profile From Current Playing Media</value>
+    <value>メディアのエンコーディング プロファイルから現在のメディアの再生をテストします。</value>
   </data>
   <data name="T_CD_DELETE_Profile.Content" xml:space="preserve">
-    <value>Delete</value>
+    <value>削除</value>
   </data>
   <data name="Transcode_CD_PivotItem4.Header" xml:space="preserve">
-    <value>Transcoding</value>
+    <value>トランス コード</value>
   </data>
   <data name="CM_TranscodeThisVideo" xml:space="preserve">
-    <value>Transcode This File</value>
+    <value>このファイルをトランス コード</value>
   </data>
   <data name="CannotTranscode" xml:space="preserve">
-    <value>Can't Transcode</value>
+    <value>トランス コードことはできません。</value>
   </data>
   <data name="CM_TranscodeThisPlayList" xml:space="preserve">
-    <value>Transcode This PlayList</value>
+    <value>トランス コード再生リスト</value>
   </data>
   <data name="T_CD_ConcurrentTranscodeCount.Header" xml:space="preserve">
-    <value>Concurrent Transcode Count</value>
+    <value>同時変換数</value>
   </data>
   <data name="T_CD_ConcurrentDownloadCount.Header" xml:space="preserve">
-    <value>Concurrent Download Count</value>
+    <value>同時ダウンロード数</value>
   </data>
   <data name="T_CD_TranscodeIncludeSkip.Content" xml:space="preserve">
-    <value>Trim Media File Timeline Use Skip Feature</value>
+    <value>スキップ機能を使用するメディア ・ ファイルのタイムラインをトリムします。</value>
   </data>
   <data name="CM_Playback_MixedReality" xml:space="preserve">
-    <value>Try Use Windows Mixed Reality Mode</value>
+    <value>使用 Windows 混合現実モードを試してみる</value>
   </data>
   <data name="WM_Scanned" xml:space="preserve">
-    <value>Scanned</value>
+    <value>スキャン</value>
   </data>
   <data name="CD_Socket.PrimaryButtonText" xml:space="preserve">
-    <value>Test</value>
+    <value>テスト</value>
   </data>
   <data name="VideoQualityCannotBeAuto" xml:space="preserve">
-    <value>Must Specify Video Quality</value>
+    <value>ビデオの品質を指定する必要があります。</value>
   </data>
   <data name="CM_EncodingSubtitle" xml:space="preserve">
-    <value>Reopen with Encoding</value>
+    <value>エンコードを再開します。</value>
   </data>
   <data name="SD_PivotItem1_UsePreviewerToggleSwitch.OnContent" xml:space="preserve">
-    <value>Yes</value>
+    <value>は</value>
   </data>
   <data name="SD_PivotItem1_UsePreviewerToggleSwitch.OffContent" xml:space="preserve">
-    <value>No</value>
+    <value>かどうか</value>
   </data>
   <data name="SD_PivotItem3_IsSubtitleSelectionEnabledToggleSwitch.OnContent" xml:space="preserve">
-    <value>Yes</value>
+    <value>は</value>
   </data>
   <data name="SD_PivotItem3_IsSubtitleSelectionEnabledToggleSwitch.OffContent" xml:space="preserve">
-    <value>No</value>
+    <value>かどうか</value>
   </data>
   <data name="SD_PivotItem3_BackgroundPlaybackVideoToggleSwitch.OnContent" xml:space="preserve">
-    <value>Yes</value>
+    <value>は</value>
   </data>
   <data name="SD_PivotItem3_BackgroundPlaybackVideoToggleSwitch.OffContent" xml:space="preserve">
-    <value>No</value>
+    <value>かどうか</value>
   </data>
   <data name="hevcVideoExtensionButton_Installed" xml:space="preserve">
-    <value>Download HEVC Video Extension (Installed)</value>
+    <value>ダウンロード (インストール) HEVC ビデオ拡張</value>
   </data>
   <data name="hevcVideoExtensionButton_not_installed" xml:space="preserve">
-    <value>Download HEVC Video Extension</value>
+    <value>HEVC ビデオ拡張をダウンロードします。</value>
+  </data>
+  <data name="Transcode_CD_PivotItem2.Header" xml:space="preserve">
+    <value>タスク</value>
   </data>
   <data name="T_CD_OpenFolder.Text" xml:space="preserve">
-    <value>Open Folder</value>
+    <value>フォルダーを開く</value>
   </data>
   <data name="T_CD_StartTranscode.Text" xml:space="preserve">
-    <value>Start Transcode</value>
+    <value>変換を開始します。</value>
   </data>
   <data name="T_CD_Clear_Transcode.Content" xml:space="preserve">
-    <value>Reset</value>
+    <value>リセット</value>
+  </data>
+  <data name="Twitch_CD_PivotItem2.Header" xml:space="preserve">
+    <value>リンク</value>
   </data>
   <data name="UCD_Open_Merge.Content" xml:space="preserve">
-    <value>Merge Audio Video File</value>
+    <value>オーディオ ビデオ ファイルをマージします。</value>
   </data>
   <data name="UCD_RemoveCompletedItem.Content" xml:space="preserve">
-    <value>Remove</value>
+    <value>削除</value>
   </data>
   <data name="UCD_Open_Muxing.Content" xml:space="preserve">
-    <value>Muxing to .mkv</value>
+    <value>多重化の .mkv</value>
   </data>
   <data name="WM_AudioVideoRequired" xml:space="preserve">
-    <value>select both audio file and video file is required</value>
+    <value>両方のオーディオ ファイルを選択し、ビデオ ファイルが必要</value>
   </data>
   <data name="WM_ContentLength" xml:space="preserve">
-    <value>parse failed, please try again</value>
+    <value>解析失敗した、もう一度やり直してください。</value>
   </data>
   <data name="SD_PivotItem1_UseSaveLocationToggleSwitch.Header" xml:space="preserve">
-    <value>Use Save Location</value>
+    <value>使用保存場所</value>
   </data>
   <data name="SD_PivotItem1_UseSaveLocationToggleSwitch.OnContent" xml:space="preserve">
-    <value>Yes</value>
+    <value>は</value>
   </data>
   <data name="SD_PivotItem1_UseSaveLocationToggleSwitch.OffContent" xml:space="preserve">
-    <value>No</value>
+    <value>かどうか</value>
   </data>
   <data name="UseAsDownloadLocation" xml:space="preserve">
-    <value>Use here as default download location</value>
+    <value>ここを使用して、デフォルト ・ ダウンロード場所として</value>
   </data>
   <data name="WM_AddedDownloadTask" xml:space="preserve">
-    <value>enqueue download task</value>
+    <value>エンキュー ダウンロード タスク</value>
   </data>
   <data name="SD_PivotItem1_SendToastOnCompletedToggleSwitch.Header" xml:space="preserve">
-    <value>Send notification on download completed</value>
+    <value>ダウンロードの完了に関する通知を送信します。</value>
   </data>
   <data name="SD_PivotItem1_SendToastOnCompletedToggleSwitch.OnContent" xml:space="preserve">
-    <value>Yes</value>
+    <value>は</value>
   </data>
   <data name="SD_PivotItem1_SendToastOnCompletedToggleSwitch.OffContent" xml:space="preserve">
-    <value>No</value>
+    <value>かどうか</value>
   </data>
   <data name="WM_DownloadBestVideoAndAudio" xml:space="preserve">
-    <value>Download Best Video and Audio (Multiple File)</value>
+    <value>最高のビデオとオーディオ (複数ファイル) をダウンロードします。</value>
   </data>
   <data name="WM_DownloadBestVideo" xml:space="preserve">
-    <value>Download Best Video (Single File with Audio)</value>
+    <value>ベストビデオ (オーディオを 1 つのファイル) をダウンロードします。</value>
   </data>
   <data name="WM_DownloadBestAudio" xml:space="preserve">
-    <value>Download Best Audio</value>
+    <value>最高のオーディオをダウンロードします。</value>
   </data>
   <data name="WM_DownloadAvailable" xml:space="preserve">
-    <value>Open</value>
+    <value>開けて下さい</value>
   </data>
   <data name="WM_DownloadPreview" xml:space="preserve">
-    <value>Preview</value>
+    <value>プレビュー</value>
   </data>
   <data name="WM_ExtractSuccess" xml:space="preserve">
-    <value>Extract Link Completed</value>
+    <value>リンクの抽出が完了しました</value>
   </data>
   <data name="WM_Extracting" xml:space="preserve">
-    <value>Extracting Link</value>
+    <value>抽出</value>
   </data>
   <data name="SD_PivotItem1_WebViewDefaultUriStringTextBox.Header" xml:space="preserve">
-    <value>Home Page</value>
+    <value>ホーム ページ</value>
   </data>
   <data name="SD_PivotItem1_UsePointerToggleSwitch.Header" xml:space="preserve">
-    <value>Requires Pointer Mode (may need restart app)</value>
+    <value>ポインター モード (アプリ再起動が必要可能性があります) が必要です。</value>
   </data>
   <data name="SD_PivotItem1_UsePointerToggleSwitch.OnContent" xml:space="preserve">
-    <value>Auto</value>
+    <value>自動的に</value>
   </data>
   <data name="SD_PivotItem1_UsePointerToggleSwitch.OffContent" xml:space="preserve">
-    <value>When Requested</value>
+    <value>要求されたとき</value>
   </data>
   <data name="SD_PivotItem1_LoadPopularVideo.Header" xml:space="preserve">
-    <value>Load popular videos when starting app</value>
+    <value>アプリを起動するときに人気のある動画を読み込む</value>
   </data>
   <data name="SD_PivotItem1_LoadPopularVideo.OnContent" xml:space="preserve">
-    <value>Yes</value>
+    <value>は</value>
   </data>
   <data name="SD_PivotItem1_LoadPopularVideo.OffContent" xml:space="preserve">
-    <value>No</value>
+    <value>かどうか</value>
   </data>
   <data name="WM_DownloadDescription" xml:space="preserve">
-    <value>Description</value>
+    <value>説明</value>
   </data>
   <data name="SD_PivotItem3_ThumbnailQualitySlider.Header" xml:space="preserve">
-    <value>Thumbnail Quality</value>
+    <value>サムネイルの品質</value>
   </data>
   <data name="ThumbnailQualityLow" xml:space="preserve">
-    <value>Default</value>
+    <value>標準</value>
   </data>
   <data name="ThumbnailQualityMedium" xml:space="preserve">
-    <value>Medium</value>
+    <value>媒体</value>
   </data>
   <data name="ThumbnailQualityHigh" xml:space="preserve">
-    <value>High</value>
+    <value>高</value>
   </data>
   <data name="WM_PleasePressXboxButton" xml:space="preserve">
-    <value>Application Deactivated Please press Xbox button in your controller to re-activate app</value>
+    <value>アプリを再アクティブにするコント ローラーで Xbox ボタンを押してアプリケーションを非アクティブ化ください。</value>
   </data>
   <data name="WM_ExpectedCompletion" xml:space="preserve">
-    <value>Expected Completion</value>
+    <value>竣工予定</value>
   </data>
   <data name="SD_PivotItem1_BookmarksBlockStringTextBox.Header" xml:space="preserve">
-    <value>Bookmarks</value>
+    <value>ブックマーク</value>
   </data>
   <data name="WM_Paused" xml:space="preserve">
-    <value>Paused</value>
+    <value>一時停止</value>
   </data>
   <data name="WM_GetDownloadingItemListViewItemMenuResume" xml:space="preserve">
-    <value>Resume</value>
+    <value>再開</value>
   </data>
   <data name="WM_GetDownloadingItemListViewItemMenuPause" xml:space="preserve">
-    <value>Pause</value>
+    <value>一時停止</value>
   </data>
   <data name="WM_GetDownloadingItemListViewItemMenuCancel" xml:space="preserve">
-    <value>Cancel</value>
+    <value>キャンセル</value>
   </data>
   <data name="WM_Canceled" xml:space="preserve">
-    <value>Canceled</value>
+    <value>キャンセル済み</value>
   </data>
   <data name="WM_AreYouSure" xml:space="preserve">
-    <value>Are your sure delete this item?</value>
+    <value>確かに削除この項目ですか。</value>
   </data>
   <data name="WM_RemoveItem" xml:space="preserve">
-    <value>Delete Item</value>
+    <value>項目を削除します。</value>
   </data>
   <data name="WM_RemoveItem_JustItem" xml:space="preserve">
-    <value>Just Item</value>
+    <value>単項目</value>
   </data>
   <data name="WM_RemoveItem_IncludeFile" xml:space="preserve">
-    <value>Include Disk File</value>
+    <value>ディスクのファイルを含める</value>
   </data>
   <data name="WM_RemoveItem_Cancel" xml:space="preserve">
-    <value>Cancel</value>
+    <value>キャンセル</value>
   </data>
   <data name="WM_OpenMerge" xml:space="preserve">
-    <value>Merge Audio Video File</value>
+    <value>オーディオ ビデオ ファイルをマージします。</value>
   </data>
   <data name="WM_Remove" xml:space="preserve">
-    <value>Remove</value>
+    <value>削除</value>
   </data>
   <data name="WM_Playback" xml:space="preserve">
-    <value>Playback</value>
+    <value>再生</value>
   </data>
   <data name="WM_DownloadFailed" xml:space="preserve">
-    <value>Download Failed</value>
+    <value>ダウンロードに失敗しました</value>
   </data>
   <data name="WM_DownloadSizeInvalid" xml:space="preserve">
-    <value>Download File Size Invalid</value>
+    <value>無効なファイル サイズをダウンロードします。</value>
   </data>
   <data name="WM_ALLCategories" xml:space="preserve">
-    <value>All Categories</value>
+    <value>すべてのカテゴリ</value>
   </data>
   <data name="WM_NoResult" xml:space="preserve">
-    <value>No Result</value>
+    <value>結果はありません。</value>
   </data>
   <data name="RD_Header.Header" xml:space="preserve">
-    <value>Region / Country</value>
+    <value>地域/国</value>
   </data>
   <data name="Australia and New Zealand" xml:space="preserve">
-    <value>Australia and New Zealand</value>
+    <value>オーストラリアとニュージーランド</value>
   </data>
   <data name="Central Asia" xml:space="preserve">
-    <value>Central Asia</value>
+    <value>中央アジア</value>
   </data>
   <data name="Eastern Asia" xml:space="preserve">
-    <value>Eastern Asia</value>
+    <value>東アジア</value>
   </data>
   <data name="Eastern Europe" xml:space="preserve">
-    <value>Eastern Europe</value>
+    <value>東ヨーロッパ</value>
   </data>
   <data name="Latin America and the Caribbean" xml:space="preserve">
-    <value>Latin America and the Caribbean</value>
+    <value>ラテン アメリカおよびカリブ</value>
   </data>
   <data name="Melanesia" xml:space="preserve">
-    <value>Melanesia</value>
+    <value>メラネシア</value>
   </data>
   <data name="Micronesia" xml:space="preserve">
-    <value>Micronesia</value>
+    <value>ミクロネシア</value>
   </data>
   <data name="Northern Africa" xml:space="preserve">
-    <value>Northern Africa</value>
+    <value>北アフリカ</value>
   </data>
   <data name="Northern America" xml:space="preserve">
-    <value>Northern America</value>
+    <value>北アメリカ</value>
   </data>
   <data name="Northern Europe" xml:space="preserve">
-    <value>Northern Europe</value>
+    <value>北ヨーロッパ</value>
   </data>
   <data name="Polynesia" xml:space="preserve">
-    <value>Polynesia</value>
+    <value>ポリネシア</value>
   </data>
   <data name="South-eastern Asia" xml:space="preserve">
-    <value>South-eastern Asia</value>
+    <value>南東アジア</value>
   </data>
   <data name="Southern Asia" xml:space="preserve">
-    <value>Southern Asia</value>
+    <value>南アジア</value>
   </data>
   <data name="Southern Europe" xml:space="preserve">
-    <value>Southern Europe</value>
+    <value>南ヨーロッパ</value>
   </data>
   <data name="Sub-Saharan Africa" xml:space="preserve">
-    <value>Sub-Saharan Africa</value>
+    <value>サハラ以南のアフリカ</value>
   </data>
   <data name="Western Asia" xml:space="preserve">
-    <value>Western Asia</value>
+    <value>西アジア</value>
   </data>
   <data name="Western Europe" xml:space="preserve">
-    <value>Western Europe</value>
+    <value>西ヨーロッパ</value>
   </data>
   <data name="Other" xml:space="preserve">
-    <value>Other</value>
+    <value>その他</value>
   </data>
   <data name="WM_OpenInFileExplore" xml:space="preserve">
-    <value>Open folder</value>
+    <value>フォルダーを開く</value>
   </data>
   <data name="WM_OpenInWebView" xml:space="preserve">
-    <value>Open source webpage</value>
+    <value>オープン ソースの web ページ</value>
   </data>
   <data name="WM_MoreSelectionModeSingle" xml:space="preserve">
-    <value>Single Selection</value>
+    <value>単一選択</value>
   </data>
   <data name="WM_MoreSelectionModeMultiple" xml:space="preserve">
-    <value>Multiple Selection</value>
-  </data>
-  <data name="WM_MoreSelectAll" xml:space="preserve">
-    <value>Select All</value>
+    <value>複数選択</value>
   </data>
   <data name="WM_MoreUnSelectAll" xml:space="preserve">
-    <value>Unselect All</value>
+    <value>すべての選択を解除します。</value>
+  </data>
+  <data name="WM_MoreSelectAll" xml:space="preserve">
+    <value>すべてを選択します。</value>
   </data>
   <data name="WM_MoreReverseSelect" xml:space="preserve">
-    <value>Reverse Selection</value>
+    <value>選択を反転します。</value>
   </data>
   <data name="WM_YouCanChangeDownloadTargetFolderAnytimeInSettings" xml:space="preserve">
-    <value>You can change download target folder anytime in settings</value>
+    <value>ダウンロード先フォルダーがいつでも設定を変更できます。</value>
   </data>
   <data name="WM_DoYouWantToSetupDownloadTargetFolder" xml:space="preserve">
-    <value>Do you want to setup download target folder</value>
+    <value>セットアップ ダウンロード先フォルダーにしますか</value>
   </data>
   <data name="WM_PickFolder" xml:space="preserve">
-    <value>Pick Folder</value>
+    <value>フォルダーを選択します。</value>
   </data>
   <data name="WM_SelectValidAudioVideo" xml:space="preserve">
-    <value>select .webm audio with .webm video, .m4a audio with .mp4 video</value>
+    <value>.webm .webm ビデオ、.m4a オーディオ .mp4 ビデオとオーディオを選択します。</value>
   </data>
   <data name="SD_PivotItem1_EnableAutoMerge.Header" xml:space="preserve">
-    <value>Auto Merge Audio Video</value>
+    <value>自動マージ オーディオ ビデオ</value>
   </data>
   <data name="SD_PivotItem1_EnableAutoMerge.OnContent" xml:space="preserve">
-    <value>Yes</value>
+    <value>は</value>
   </data>
   <data name="SD_PivotItem1_EnableAutoMerge.OffContent" xml:space="preserve">
-    <value>No</value>
+    <value>かどうか</value>
   </data>
   <data name="SD_PivotItem1_DeleteFileAfterMerge.Header" xml:space="preserve">
-    <value>Delete File After Merge</value>
+    <value>マージ後にファイルを削除します。</value>
   </data>
   <data name="SD_PivotItem1_DeleteFileAfterMerge.OnContent" xml:space="preserve">
-    <value>Yes</value>
+    <value>は</value>
   </data>
   <data name="SD_PivotItem1_DeleteFileAfterMerge.OffContent" xml:space="preserve">
-    <value>No</value>
+    <value>かどうか</value>
   </data>
   <data name="UCD_Open_ConvertAudio.Content" xml:space="preserve">
-    <value>Convert Audio To .mp3</value>
+    <value>オーディオを .mp3 に変換します。</value>
+  </data>
+  <data name="Meta_UpdateInfo8" xml:space="preserve">
+    <value>背景ダウンロード</value>
+  </data>
+  <data name="Meta_UpdateInfo2" xml:space="preserve">
+    <value>アニメーションを追加します。</value>
   </data>
   <data name="SD_PivotItem3_TileSizeSlider.Header" xml:space="preserve">
-    <value>Tile Size</value>
+    <value>タイルのサイズ</value>
   </data>
   <data name="SD_PivotItem3_TileItemRightMenuActionSlider.Header" xml:space="preserve">
-    <value>Tile Click Action</value>
+    <value>タイル クリック アクション</value>
+  </data>
+  <data name="Meta_UpdateInfo1" xml:space="preserve">
+    <value>カスタムをクリックしてタイル アクション</value>
   </data>
   <data name="WM_MoreSelectionModeMultiple_MD" xml:space="preserve">
-    <value>Multi-Selection Mode (Download Multiple)</value>
+    <value>複数選択モード (ダウンロード複数)</value>
   </data>
   <data name="WM_LP_TaskStarted" xml:space="preserve">
-    <value>Task Started</value>
+    <value>タスクが開始されました</value>
   </data>
   <data name="WM_LP_TaskCompleted" xml:space="preserve">
-    <value>Task Completed</value>
+    <value>タスクが完了しました</value>
   </data>
   <data name="SD_PivotItem1_SaveLastActionToggleSwitch.Header" xml:space="preserve">
-    <value>Save Last Click Action</value>
+    <value>最後のクリック アクションを保存します。</value>
   </data>
   <data name="SD_PivotItem1_SaveLastActionToggleSwitch.OnContent" xml:space="preserve">
-    <value>Yes</value>
+    <value>は</value>
   </data>
   <data name="SD_PivotItem1_SaveLastActionToggleSwitch.OffContent" xml:space="preserve">
-    <value>No</value>
+    <value>かどうか</value>
+  </data>
+  <data name="AutoSuggestBox.PlaceholderText" xml:space="preserve">
+    <value>検索または Youtube のリンクまたは再生リスト リンク チャネルのリンク</value>
+  </data>
+  <data name="Meta_UpdateInfo6" xml:space="preserve">
+    <value>チャネル リンクをサポートします。</value>
   </data>
   <data name="WM_GetDownloadingItemListViewItemMenuRetry" xml:space="preserve">
-    <value>Retry</value>
+    <value>再試行</value>
+  </data>
+  <data name="Meta_UpdateInfo3" xml:space="preserve">
+    <value>タスクの再試行をサポートします。</value>
+  </data>
+  <data name="GG_NO.Content" xml:space="preserve">
+    <value>かどうか</value>
   </data>
   <data name="GG_GOOD.Content" xml:space="preserve">
-    <value>Yes</value>
+    <value>は</value>
   </data>
   <data name="GG_HANDLED.Content" xml:space="preserve">
-    <value>MASTER</value>
+    <value>マスター</value>
   </data>
   <data name="GG_NOSURE.Content" xml:space="preserve">
-    <value>NOT SURE</value>
+    <value>自信がありません</value>
   </data>
   <data name="GG_LEARN.Text" xml:space="preserve">
-    <value>Learning</value>
+    <value>学習</value>
   </data>
   <data name="GG_Statistics.Text" xml:space="preserve">
-    <value>Statistics</value>
+    <value>統計情報</value>
   </data>
   <data name="GG_Settings.Text" xml:space="preserve">
-    <value>Settings</value>
+    <value>セットアップ パネル</value>
   </data>
   <data name="GG_LOAD.Content" xml:space="preserve">
-    <value>Load</value>
+    <value>ロード</value>
   </data>
 </root>

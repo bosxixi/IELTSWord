@@ -38,7 +38,7 @@
         <Pivot SelectionChanged="Pivot_Changed" Margin="0 30 0 0">
             <PivotItem>
                 <PivotItem.Header>
-                    <TextBlock Foreground="White" Opacity=".8" Text="Learning"></TextBlock>
+                    <TextBlock Foreground="White" Opacity=".8" x:Uid="GG_LEARN" Text="Learning"></TextBlock>
                 </PivotItem.Header>
                 <Grid Margin="0 12 0 10">
                     <Grid.RowDefinitions>
@@ -109,7 +109,12 @@
                     <StackPanel HorizontalAlignment="Center" Margin="10" Orientation="Vertical" Grid.Row="2">
                         <Button HorizontalAlignment="Stretch" Height="60"
                                 Margin="0 0 0 10"
-                                Width="360" Content="GOOD"  x:Name="Yes" Foreground="White" Click="Yes_Click">
+                                Width="360"
+                                      Opacity=".9"
+                                Content="YES"
+                                FontWeight="Bold"
+                                x:Uid="GG_GOOD" 
+                                x:Name="Yes" Foreground="White" Click="Yes_Click">
                             <Button.Background>
                                 <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
                                     <GradientStop Color="#3F3F46" Offset="0.0" />
@@ -120,7 +125,9 @@
                         <Button HorizontalAlignment="Stretch" 
                                 Width="360"
                                 Margin="0 0 0 10"
-                                
+                                FontWeight="Bold"
+                                      Opacity=".9"
+                                x:Uid="GG_NOSURE"
                               Foreground="White"  Content="NOT SURE" x:Name="Blur" Click="Blur_Click">
                             <!--<Button.Background>
                                 <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
@@ -136,14 +143,22 @@
                                 <ColumnDefinition></ColumnDefinition>
                                 <ColumnDefinition></ColumnDefinition>
                             </Grid.ColumnDefinitions>
-                            <Button HorizontalAlignment="Stretch" Content="NOPE" x:Name="Nope" 
+                            <Button HorizontalAlignment="Stretch"
+                                    Content="NOPE" 
+                                    x:Name="Nope" 
                                     Margin="0 0 5 0"
+                                    x:Uid="GG_NO"
+                                    FontWeight="Bold"
+                                          Opacity=".9"
                                    Height="38" Foreground="White"  Click="No_Click">
 
                             </Button>
                             <Button HorizontalAlignment="Stretch" 
                                     Content="NAIL IT"
                                     Margin="5 0 0 0"
+                                     x:Uid="GG_HANDLED"
+                                    FontWeight="Bold"
+                                    Opacity=".9"
                                     Grid.Column="1" Height="38" Foreground="White"  Click="Complete_Click">
                                 <Button.Background>
                                     <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
@@ -168,7 +183,7 @@
             </PivotItem>
             <PivotItem>
                 <PivotItem.Header>
-                    <TextBlock Foreground="White" Opacity=".8" Text="Statistics"></TextBlock>
+                    <TextBlock Foreground="White" Opacity=".8"  x:Uid="GG_Statistics" Text="Statistics"></TextBlock>
                 </PivotItem.Header>
                 <Grid>
                     <Grid.RowDefinitions>
@@ -216,13 +231,13 @@
             </PivotItem>
             <PivotItem>
                 <PivotItem.Header>
-                    <TextBlock Foreground="White" Opacity=".8" Text="Settings"></TextBlock>
+                    <TextBlock Foreground="White" Opacity=".8"  x:Uid="GG_Settings" Text="Settings"></TextBlock>
                 </PivotItem.Header>
 
                 <StackPanel HorizontalAlignment="Center" Margin="10" Orientation="Vertical">
                     <StackPanel HorizontalAlignment="Right" Margin="10" Orientation="Horizontal" >
                         <ComboBox x:Name="DicsCombo" Opacity=".7" Foreground="White"></ComboBox>
-                        <Button Margin="10 0 0 0" Content="LOAD" Click="Load_Click" Foreground="White"></Button>
+                        <Button Margin="10 0 0 0" x:Uid="GG_LOAD" Content="LOAD" Click="Load_Click" Foreground="White"></Button>
                     </StackPanel>
                     <TextBox HorizontalAlignment="Stretch" Foreground="White" PlaceholderText="Email" Text="{x:Bind Email, Mode=TwoWay}" Margin="10" Width="330"></TextBox>
                     <PasswordBox x:Name="passwordBox" Width="330"  Foreground="White" Margin="10"

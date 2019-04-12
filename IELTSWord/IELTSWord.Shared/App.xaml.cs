@@ -5,8 +5,11 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
+using Windows.ApplicationModel.Core;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI;
+using Windows.UI.ViewManagement;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -32,6 +35,30 @@ namespace IELTSWord
             this.Suspending += OnSuspending;
         }
 
+        public static void ExtendTitleBar()
+        {
+            ApplicationViewTitleBar formattableTitleBar = ApplicationView.GetForCurrentView().TitleBar;
+            formattableTitleBar.ButtonBackgroundColor = Colors.Transparent;
+            CoreApplicationViewTitleBar coreTitleBar = CoreApplication.GetCurrentView().TitleBar;
+            coreTitleBar.ExtendViewIntoTitleBar = true;
+
+            var cu = ApplicationView.GetForCurrentView();
+            cu.TitleBar.BackgroundColor = Colors.Transparent;
+            cu.TitleBar.InactiveBackgroundColor = Colors.Transparent;
+
+            cu.TitleBar.ButtonBackgroundColor = Colors.Transparent;
+            cu.TitleBar.ButtonInactiveBackgroundColor = Colors.Transparent;
+
+            cu.TitleBar.ButtonInactiveForegroundColor = Colors.White;
+            cu.TitleBar.ButtonForegroundColor = Colors.White;
+
+            //if (Windows.Foundation.Metadata.ApiInformation.IsTypePresent("Windows.UI.ViewManagement.ApplicationViewScaling"))
+            //{
+            //    var result = ApplicationViewScaling.TrySetDisableLayoutScaling(AppGlobalSettings.DisableLayoutScaling);
+            //}
+
+        }
+
         /// <summary>
         /// Invoked when the application is launched normally by the end user.  Other entry points
         /// will be used such as when the application is launched to open a specific file.
@@ -46,6 +73,7 @@ namespace IELTSWord
             }
 #endif
             Frame rootFrame = Windows.UI.Xaml.Window.Current.Content as Frame;
+            ExtendTitleBar();
 
             // Do not repeat app initialization when the Window already has content,
             // just ensure that the window is active
