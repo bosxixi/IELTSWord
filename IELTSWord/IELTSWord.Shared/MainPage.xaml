@@ -8,8 +8,8 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
     <Page.Resources>
+        <local:BooleanToVisiblityConverter x:Key="BooleanToVisiblityConverter" />
         <!--<toolkit:DoubleToStringConverter x:Key="DoubleToStringConverter" />
-        <toolkit:BooleanToVisiblityConverter x:Key="BooleanToVisiblityConverter" />
         <toolkit:MathConverter x:Key="MathConverter" />
         <toolkit:DoubleToPercentageConverter x:Key="DoubleToPercentageConverter" />
         <toolkit:ColorConverter x:Key="ColorConverter" />
@@ -27,7 +27,7 @@
         <CollectionViewSource x:Name="groupInfoCatagories" IsSourceGrouped="True"/>-->
 
     </Page.Resources>
-    <Grid>
+    <Grid x:Name="root">
         <Grid.Background>
             <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
                 <GradientStop Color="#2D2D30" Offset="0.0" />
@@ -61,15 +61,10 @@
                         </Grid.RowDefinitions>
                         <StackPanel Orientation="Vertical" >
                             <TextBlock HorizontalAlignment="Center" Foreground="White" Text="{x:Bind CurrentWord.Name,Mode=OneWay, FallbackValue='Hello'}" FontSize="48" ></TextBlock>
-
-                            <StackPanel Orientation="Horizontal"  HorizontalAlignment="Center" Visibility="{x:Bind CurrentWordDetails, Converter={StaticResource NullToVisiblityConverter}, Mode=OneWay}">
+                            <StackPanel  Width="360" Orientation="Vertical"  HorizontalAlignment="Center" Visibility="{x:Bind CurrentWordDetails, Converter={StaticResource NullToVisiblityConverter}, Mode=OneWay}">
                                 <TextBlock HorizontalAlignment="Center" Foreground="White" TextWrapping="Wrap" Opacity=".7"  FontSize="28" Text="{x:Bind CurrentWord.Elaborate,Mode=OneWay}"></TextBlock>
-                            </StackPanel>
-                        </StackPanel>
-                        <ScrollViewer Grid.Row="1"  Visibility="{x:Bind CurrentWordDetails, Converter={StaticResource NullToVisiblityConverter}, Mode=OneWay}">
-                            <StackPanel Width="360">
                                 <StackPanel Orientation="Horizontal"  HorizontalAlignment="Center" Visibility="{x:Bind CurrentWordDetails, Converter={StaticResource NullToVisiblityConverter}, Mode=OneWay}">
-                                <TextBlock HorizontalAlignment="Center" Foreground="White" Opacity="1" FontSize="20" Text="{x:Bind CurrentWordDetails.PhoneticStr,Mode=OneWay}"></TextBlock>
+                                    <TextBlock HorizontalAlignment="Center" Foreground="White" Opacity="1" FontSize="20" Text="{x:Bind CurrentWordDetails.PhoneticStr,Mode=OneWay}"></TextBlock>
                                     <Button HorizontalAlignment="Center" 
                                     VerticalAlignment="Center" x:Name="Speaker" 
                                     Click="Speaker_Click" 
@@ -87,10 +82,56 @@
                                     </Button>
 
                                 </StackPanel>
+                            </StackPanel>
+                        </StackPanel>
+                        <ScrollViewer Grid.Row="1" Width="360"  Visibility="{x:Bind CurrentWordDetails, Converter={StaticResource NullToVisiblityConverter}, Mode=OneWay}">
+                            <StackPanel>
+                                <!--<controls:Expander Grid.Row="0"
+                           x:Uid="GG_EXP_MEANING"
+                   Foreground="White"
+                   Background="Gray"
+                   IsExpanded="True">
+                                    <StackPanel Width="360">-->
                                 <TextBlock HorizontalAlignment="Center" Foreground="White" TextWrapping="Wrap" Opacity=".7" Text="{x:Bind CurrentWordDetails.Lemma,Mode=OneWay}"></TextBlock>
                                 <TextBlock HorizontalAlignment="Center" Foreground="White" TextWrapping="Wrap" Opacity=".7" Text="{x:Bind CurrentWordDetails.WordRootStr,Mode=OneWay}"></TextBlock>
-                                <!--<TextBlock HorizontalAlignment="Center" Foreground="White" TextWrapping="Wrap" Opacity=".7" Text="{x:Bind CurrentWordDetails.LoopUpStr,Mode=OneWay}"></TextBlock>-->
-                                <TextBlock HorizontalAlignment="Center" Foreground="White" TextWrapping="Wrap" Opacity=".7" Text="{x:Bind CurrentWordDetails.ExamplesStr,Mode=OneWay}"></TextBlock>
+                                <!--</StackPanel>
+                                </controls:Expander>-->
+
+                                <StackPanel
+                                                          Visibility="{x:Bind ShowExamples, Mode=OneWay, Converter={StaticResource BooleanToVisiblityConverter}}"
+                                        >
+
+                                    <ListView ItemsSource="{x:Bind CurrentWordDetails.Examples, Mode=OneWay}">
+                                        <ListView.ItemTemplate>
+                                            <DataTemplate x:DataType="local:EXAMRoot">
+                                                <StackPanel Margin="0 20 0 0">
+                                                    <StackPanel HorizontalAlignment="Left" Margin="0 0 0 0" Orientation="Vertical" >
+                                                        <TextBlock Margin="10 0 0 10" FontSize="22" Foreground="White" FontWeight="Bold" Text="{x:Bind normalizedTarget,Mode=OneWay}"></TextBlock>
+                                                        <ListView ItemsSource="{x:Bind examples, Mode=OneWay}">
+                                                            <ListView.ItemTemplate>
+                                                                <DataTemplate x:DataType="local:EXAMExample">
+                                                                    <StackPanel HorizontalAlignment="Left" Margin="0 0 0 0" Orientation="Vertical" >
+                                                                        <TextBlock>
+                                                                            <Run  Text="{x:Bind sourcePrefix ,Mode=OneWay}"></Run>
+                                                                            <Run Foreground="Red" Text="{x:Bind sourceTerm ,Mode=OneWay}"></Run>
+                                                                            <Run  Text="{x:Bind sourceSuffix ,Mode=OneWay}"></Run>
+                                                                        </TextBlock>
+
+                                                                        <TextBlock>
+                                                                            <Run  Text="{x:Bind targetPrefix ,Mode=OneWay}"></Run>
+                                                                            <Run Foreground="Red" Text="{x:Bind targetTerm ,Mode=OneWay}"></Run>
+                                                                            <Run  Text="{x:Bind targetSuffix ,Mode=OneWay}"></Run>
+                                                                        </TextBlock>
+                                                                    </StackPanel>
+                                                                </DataTemplate>
+                                                            </ListView.ItemTemplate>
+                                                        </ListView>
+                                                    </StackPanel>
+                                                </StackPanel>
+                                            </DataTemplate>
+                                        </ListView.ItemTemplate>
+                                    </ListView>
+                                </StackPanel>
                                 <TextBlock HorizontalAlignment="Center" Foreground="White" TextWrapping="Wrap" Opacity=".7" Text="{x:Bind CurrentWord.Order,Mode=OneWay}"></TextBlock>
                             </StackPanel>
                         </ScrollViewer>
@@ -225,28 +266,72 @@
                     <TextBlock Foreground="White" Opacity=".8"  x:Uid="GG_Settings" Text="Settings"></TextBlock>
                 </PivotItem.Header>
 
-                <StackPanel HorizontalAlignment="Center" Margin="10" Orientation="Vertical">
-                    <StackPanel HorizontalAlignment="Right" Margin="10" Orientation="Horizontal" >
-                        <ComboBox x:Name="DicsCombo" Opacity=".7" Foreground="White"></ComboBox>
-                        <Button Margin="10 0 0 0" x:Uid="GG_LOAD" Content="LOAD" Click="Load_Click" Foreground="White"></Button>
-                    </StackPanel>
-                    
-                    <TextBox HorizontalAlignment="Stretch" Foreground="White" PlaceholderText="Email" Text="{x:Bind Email, Mode=TwoWay}" Margin="10" Width="330"></TextBox>
-                    <PasswordBox x:Name="passwordBox" Width="330"  Foreground="White" Margin="10"
-             PasswordChanged="passwordBox_PasswordChanged"/>
-                    <Button HorizontalAlignment="Stretch" Opacity=".7" Foreground="White" Margin="10" Width="330" x:Uid="GG_UPLOAD" Content="UPLOAD" x:Name="UPLOADS" Click="UPLOADS_Click"></Button>
-                    <Button HorizontalAlignment="Stretch" Opacity=".7" Foreground="White" Margin="10" Width="330" x:Uid="GG_DOWNLOAD" Content="DOWNLOAD" x:Name="DOWNLOAD" Click="DOWNLOAD_Click"></Button>
+                <ScrollViewer HorizontalAlignment="Center" Margin="10">
+                    <StackPanel Orientation="Vertical">
+                        <StackPanel HorizontalAlignment="Right" Margin="10" Orientation="Horizontal" >
+                            <ComboBox x:Name="DicsCombo" Opacity=".7" Foreground="White"></ComboBox>
+                            <Button Margin="10 0 0 0" x:Uid="GG_LOAD" Content="LOAD" Click="Load_Click" Foreground="White"></Button>
+                        </StackPanel>
 
-                    <Border BorderThickness="0,3,0,0" Margin="10" BorderBrush="Purple">
-                    </Border>
-                    
-                    <ToggleSwitch
+                        <TextBox HorizontalAlignment="Stretch" Foreground="White" PlaceholderText="Email" Text="{x:Bind Email, Mode=TwoWay}" Margin="10" Width="330"></TextBox>
+                        <PasswordBox x:Name="passwordBox" Width="330"  Foreground="White" Margin="10"
+             PasswordChanged="passwordBox_PasswordChanged"/>
+                        <Button HorizontalAlignment="Stretch" Opacity=".7" Foreground="White" Margin="10" Width="330" x:Uid="GG_UPLOAD" Content="UPLOAD" x:Name="UPLOADS" Click="UPLOADS_Click"></Button>
+                        <Button HorizontalAlignment="Stretch" Opacity=".7" Foreground="White" Margin="10" Width="330" x:Uid="GG_DOWNLOAD" Content="DOWNLOAD" x:Name="DOWNLOAD" Click="DOWNLOAD_Click"></Button>
+
+                        <Border BorderThickness="0,3,0,0" Margin="10" BorderBrush="Purple">
+                        </Border>
+
+                        <ToggleSwitch
                         Margin="10"
                                    x:Uid="GG_PivotItem1_ReviewAll"
                                       x:Name="ReviewAllToggleSwitch"
                                       IsOn="{x:Bind ReviewAll, Mode=TwoWay}"
                             />
-                </StackPanel>
+
+                        <ToggleSwitch
+                        Margin="10"
+                                   x:Uid="GG_PivotItem1_ShowExamples"
+                                      x:Name="ShowExamplesToggleSwitch"
+                                      IsOn="{x:Bind ShowExamples, Mode=TwoWay}"
+                            />
+
+
+                        <ToggleSwitch
+                        Margin="10"
+                                   x:Uid="GG_PivotItem1_ShowWordRoot"
+                                      x:Name="ShowWordRootToggleSwitch"
+                                      IsOn="{x:Bind ShowWordRoot, Mode=TwoWay}"
+                            />
+
+
+                        <ToggleSwitch
+                        Margin="10"
+                                   x:Uid="GG_PivotItem1_ShowSynonyms"
+                                      x:Name="ShowSynonymsToggleSwitch"
+                                      IsOn="{x:Bind ShowSynonyms, Mode=TwoWay}"
+                            />
+
+
+                        <ToggleSwitch
+                        Margin="10"
+                                   x:Uid="GG_PivotItem1_ShowAntonyms"
+                                      x:Name="ShowAntonymsToggleSwitch"
+                                      IsOn="{x:Bind ShowAntonyms, Mode=TwoWay}"
+                            />
+                        <ToggleSwitch
+                        Margin="10"
+                                   x:Uid="GG_PivotItem1_AudoPlayAudio"
+                                      x:Name="AudoPlayAudioToggleSwitch"
+                                      IsOn="{x:Bind AudoPlayAudio, Mode=TwoWay}"
+                            />
+                        <ToggleSwitch x:Uid="SD_PivotItem1_UseLightThemeToggleSwitch"
+                                      x:Name="UseLightThemeToggleSwitch"
+                                      IsOn="{x:Bind UseLightThemeButton, Mode=TwoWay}"
+                                      Visibility="Collapsed"
+                            />
+                    </StackPanel>
+                </ScrollViewer>
             </PivotItem>
         </Pivot>
 

@@ -3561,4 +3561,73 @@
   <data name="20000 All" xml:space="preserve">
     <value>Contemporain haute fréquence vocabulaire 20000 complet</value>
   </data>
+  <data name="GG_EXP_EXAMPLE.Header" xml:space="preserve">
+    <value>Exemples de phrases</value>
+  </data>
+  <data name="GG_PivotItem1_ShowExamples.Header" xml:space="preserve">
+    <value>Montrer des exemples de phrases</value>
+  </data>
+  <data name="GG_PivotItem1_ShowExamples.OnContent" xml:space="preserve">
+    <value>Oui</value>
+  </data>
+  <data name="GG_PivotItem1_ShowExamples.OffContent" xml:space="preserve">
+    <value>N°</value>
+  </data>
+  <data name="GG_PivotItem1_ShowWordRoot.Header" xml:space="preserve">
+    <value>Voir la racine de mot</value>
+  </data>
+  <data name="GG_PivotItem1_ShowWordRoot.OnContent" xml:space="preserve">
+    <value>Oui</value>
+  </data>
+  <data name="GG_PivotItem1_ShowWordRoot.OffContent" xml:space="preserve">
+    <value>N°</value>
+  </data>
+  <data name="GG_PivotItem1_ShowSynonyms.Header" xml:space="preserve">
+    <value>Synonymes de spectacle</value>
+  </data>
+  <data name="GG_PivotItem1_ShowSynonyms.OnContent" xml:space="preserve">
+    <value>Oui</value>
+  </data>
+  <data name="GG_PivotItem1_ShowSynonyms.OffContent" xml:space="preserve">
+    <value>N°</value>
+  </data>
+  <data name="GG_PivotItem1_ShowAntonyms.Header" xml:space="preserve">
+    <value>Voir l’antonymes</value>
+  </data>
+  <data name="GG_PivotItem1_ShowAntonyms.OnContent" xml:space="preserve">
+    <value>Oui</value>
+  </data>
+  <data name="GG_PivotItem1_ShowAntonyms.OffContent" xml:space="preserve">
+    <value>N°</value>
+  </data>
+  <data name="root" xml:space="preserve">
+    <value>racine</value>
+  </data>
+  <data name="meaning" xml:space="preserve">
+    <value>sens</value>
+  </data>
+  <data name="class" xml:space="preserve">
+    <value>classe</value>
+  </data>
+  <data name="synonyms" xml:space="preserve">
+    <value>synonymes</value>
+  </data>
+  <data name="origin" xml:space="preserve">
+    <value>origine</value>
+  </data>
+  <data name="antonyms" xml:space="preserve">
+    <value>antonymes</value>
+  </data>
+  <data name="examples" xml:space="preserve">
+    <value>exemples</value>
+  </data>
+  <data name="GG_PivotItem1_AudoPlayAudio.Header" xml:space="preserve">
+    <value>Auto Play Audio</value>
+  </data>
+  <data name="GG_PivotItem1_AudoPlayAudio.OnContent" xml:space="preserve">
+    <value>Oui</value>
+  </data>
+  <data name="GG_PivotItem1_AudoPlayAudio.OffContent" xml:space="preserve">
+    <value>N°</value>
+  </data>
 </root>

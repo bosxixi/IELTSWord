@@ -3639,4 +3639,73 @@
   <data name="20000 All" xml:space="preserve">
     <value>現代の高頻度語彙 20000 完全です</value>
   </data>
+  <data name="GG_EXP_EXAMPLE.Header" xml:space="preserve">
+    <value>例文</value>
+  </data>
+  <data name="GG_PivotItem1_ShowExamples.Header" xml:space="preserve">
+    <value>例文を表示します。</value>
+  </data>
+  <data name="GG_PivotItem1_ShowExamples.OnContent" xml:space="preserve">
+    <value>は</value>
+  </data>
+  <data name="GG_PivotItem1_ShowExamples.OffContent" xml:space="preserve">
+    <value>かどうか</value>
+  </data>
+  <data name="GG_PivotItem1_ShowWordRoot.Header" xml:space="preserve">
+    <value>単語のルートを表示します。</value>
+  </data>
+  <data name="GG_PivotItem1_ShowWordRoot.OnContent" xml:space="preserve">
+    <value>は</value>
+  </data>
+  <data name="GG_PivotItem1_ShowWordRoot.OffContent" xml:space="preserve">
+    <value>かどうか</value>
+  </data>
+  <data name="GG_PivotItem1_ShowSynonyms.Header" xml:space="preserve">
+    <value>類義語を表示します。</value>
+  </data>
+  <data name="GG_PivotItem1_ShowSynonyms.OnContent" xml:space="preserve">
+    <value>は</value>
+  </data>
+  <data name="GG_PivotItem1_ShowSynonyms.OffContent" xml:space="preserve">
+    <value>かどうか</value>
+  </data>
+  <data name="GG_PivotItem1_ShowAntonyms.Header" xml:space="preserve">
+    <value>反意語を表示します。</value>
+  </data>
+  <data name="GG_PivotItem1_ShowAntonyms.OnContent" xml:space="preserve">
+    <value>は</value>
+  </data>
+  <data name="GG_PivotItem1_ShowAntonyms.OffContent" xml:space="preserve">
+    <value>かどうか</value>
+  </data>
+  <data name="root" xml:space="preserve">
+    <value>ルート</value>
+  </data>
+  <data name="meaning" xml:space="preserve">
+    <value>意味</value>
+  </data>
+  <data name="class" xml:space="preserve">
+    <value>クラス</value>
+  </data>
+  <data name="synonyms" xml:space="preserve">
+    <value>類義語</value>
+  </data>
+  <data name="origin" xml:space="preserve">
+    <value>起源</value>
+  </data>
+  <data name="antonyms" xml:space="preserve">
+    <value>反意語</value>
+  </data>
+  <data name="examples" xml:space="preserve">
+    <value>例</value>
+  </data>
+  <data name="GG_PivotItem1_AudoPlayAudio.Header" xml:space="preserve">
+    <value>オーディオの自動再生</value>
+  </data>
+  <data name="GG_PivotItem1_AudoPlayAudio.OnContent" xml:space="preserve">
+    <value>は</value>
+  </data>
+  <data name="GG_PivotItem1_AudoPlayAudio.OffContent" xml:space="preserve">
+    <value>かどうか</value>
+  </data>
 </root>

@@ -3561,4 +3561,73 @@
   <data name="20000 All" xml:space="preserve">
     <value>현대 높은 주파수 어휘 20000 완료</value>
   </data>
+  <data name="GG_EXP_EXAMPLE.Header" xml:space="preserve">
+    <value>예제 문장</value>
+  </data>
+  <data name="GG_PivotItem1_ShowExamples.Header" xml:space="preserve">
+    <value>예제 문장 보기</value>
+  </data>
+  <data name="GG_PivotItem1_ShowExamples.OnContent" xml:space="preserve">
+    <value>은</value>
+  </data>
+  <data name="GG_PivotItem1_ShowExamples.OffContent" xml:space="preserve">
+    <value>여부</value>
+  </data>
+  <data name="GG_PivotItem1_ShowWordRoot.Header" xml:space="preserve">
+    <value>단어 루트 표시</value>
+  </data>
+  <data name="GG_PivotItem1_ShowWordRoot.OnContent" xml:space="preserve">
+    <value>은</value>
+  </data>
+  <data name="GG_PivotItem1_ShowWordRoot.OffContent" xml:space="preserve">
+    <value>여부</value>
+  </data>
+  <data name="GG_PivotItem1_ShowSynonyms.Header" xml:space="preserve">
+    <value>동의어를 표시</value>
+  </data>
+  <data name="GG_PivotItem1_ShowSynonyms.OnContent" xml:space="preserve">
+    <value>은</value>
+  </data>
+  <data name="GG_PivotItem1_ShowSynonyms.OffContent" xml:space="preserve">
+    <value>여부</value>
+  </data>
+  <data name="GG_PivotItem1_ShowAntonyms.Header" xml:space="preserve">
+    <value>반의어를 표시</value>
+  </data>
+  <data name="GG_PivotItem1_ShowAntonyms.OnContent" xml:space="preserve">
+    <value>은</value>
+  </data>
+  <data name="GG_PivotItem1_ShowAntonyms.OffContent" xml:space="preserve">
+    <value>여부</value>
+  </data>
+  <data name="root" xml:space="preserve">
+    <value>루트</value>
+  </data>
+  <data name="meaning" xml:space="preserve">
+    <value>의미</value>
+  </data>
+  <data name="class" xml:space="preserve">
+    <value>클래스</value>
+  </data>
+  <data name="synonyms" xml:space="preserve">
+    <value>동의어</value>
+  </data>
+  <data name="origin" xml:space="preserve">
+    <value>기원</value>
+  </data>
+  <data name="antonyms" xml:space="preserve">
+    <value>반의어</value>
+  </data>
+  <data name="examples" xml:space="preserve">
+    <value>예제</value>
+  </data>
+  <data name="GG_PivotItem1_AudoPlayAudio.Header" xml:space="preserve">
+    <value>자동 재생 오디오</value>
+  </data>
+  <data name="GG_PivotItem1_AudoPlayAudio.OnContent" xml:space="preserve">
+    <value>은</value>
+  </data>
+  <data name="GG_PivotItem1_AudoPlayAudio.OffContent" xml:space="preserve">
+    <value>여부</value>
+  </data>
 </root>
