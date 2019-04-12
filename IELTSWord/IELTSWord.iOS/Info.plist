@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>CFBundleIdentifier</key>
-	<string>com.companyname.IELTSWord</string>
+	<string>com.bosxixi.IELTSWord</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
@@ -48,7 +48,7 @@
 	<key>UILaunchImageSize</key>
 	<string>{320, 568}</string>
 	<key>CFBundleDisplayName</key>
-	<string>IELTS Word</string>
+	<string>乖乖背单词</string>
 	<key>UIStatusBarHidden</key>
 	<true/>
 </dict>
