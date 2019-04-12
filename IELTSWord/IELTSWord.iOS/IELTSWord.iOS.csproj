@@ -133,31 +133,37 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <ImageAsset Include="Media.xcassets\AppIcons.appiconset\Contents.json">
+    <ImageAsset Include="Media.xcassets\AppIcons.appiconset\App-Store@1x.png">
       <Visible>false</Visible>
     </ImageAsset>
-    <ImageAsset Include="Media.xcassets\AppIcons.appiconset\ios-marketing-1024x1024@1x.png">
+    <ImageAsset Include="Media.xcassets\AppIcons.appiconset\Contents.json">
       <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Media.xcassets\AppIcons.appiconset\iPad-76x76@2x.png">
       <Visible>false</Visible>
     </ImageAsset>
-    <ImageAsset Include="Media.xcassets\AppIcons.appiconset\iPad-84x84@2x.png">
+    <ImageAsset Include="Media.xcassets\AppIcons.appiconset\iPad-Pro-App2x.png">
       <Visible>false</Visible>
     </ImageAsset>
-    <ImageAsset Include="Media.xcassets\AppIcons.appiconset\iPhone-20x20@2x.png">
+    <ImageAsset Include="Media.xcassets\AppIcons.appiconset\iPhone-App@2x.png">
       <Visible>false</Visible>
     </ImageAsset>
-    <ImageAsset Include="Media.xcassets\AppIcons.appiconset\iPhone-20x20@3x.png">
+    <ImageAsset Include="Media.xcassets\AppIcons.appiconset\iPhone-Notification@2x.png">
       <Visible>false</Visible>
     </ImageAsset>
-    <ImageAsset Include="Media.xcassets\AppIcons.appiconset\iPhone-40x40@3x.png">
+    <ImageAsset Include="Media.xcassets\AppIcons.appiconset\iPhone-Notification@3x.png">
       <Visible>false</Visible>
     </ImageAsset>
-    <ImageAsset Include="Media.xcassets\AppIcons.appiconset\iPhone-60x60@2x.png">
+    <ImageAsset Include="Media.xcassets\AppIcons.appiconset\iPhone-Spotlight@3x.png">
       <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Media.xcassets\LaunchImages.launchimage\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Media.xcassets\LaunchImages.launchimage\SplashScreen-potrait-retina4.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Media.xcassets\LaunchImages.launchimage\SplashScreen-potrait@2x.png">
       <Visible>false</Visible>
     </ImageAsset>
   </ItemGroup>

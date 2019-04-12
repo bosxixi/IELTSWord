@@ -289,7 +289,10 @@
                                 <ColumnDefinition Width="*"></ColumnDefinition>
                                 <ColumnDefinition Width="auto"></ColumnDefinition>
                             </Grid.ColumnDefinitions>
-                            <TextBlock x:Uid="ReviewAll_Text" Text="ReviewAll_Text" HorizontalAlignment="Left"></TextBlock>
+                            <TextBlock x:Uid="ReviewAll_Text"
+                                       Margin="0 10 0 0"
+                                       FontWeight="Bold"
+                                       Foreground="White" Text="ReviewAll_Text" HorizontalAlignment="Left"></TextBlock>
                             <ToggleSwitch
                                 HorizontalAlignment="Right"
                                   Grid.Column="1"
@@ -303,7 +306,10 @@
                                 <ColumnDefinition Width="*"></ColumnDefinition>
                                 <ColumnDefinition Width="auto"></ColumnDefinition>
                             </Grid.ColumnDefinitions>
-                            <TextBlock x:Uid="ShowExamples_Text" Text="ShowExamples_Text" HorizontalAlignment="Left"></TextBlock>
+                            <TextBlock x:Uid="ShowExamples_Text"
+                                       Margin="0 10 0 0"
+                                       FontWeight="Bold"
+                                       Foreground="White" Text="ShowExamples_Text" HorizontalAlignment="Left"></TextBlock>
                             <ToggleSwitch
                                 HorizontalAlignment="Right"
                                           Grid.Column="1"
@@ -317,7 +323,10 @@
                                 <ColumnDefinition Width="*"></ColumnDefinition>
                                 <ColumnDefinition Width="auto"></ColumnDefinition>
                             </Grid.ColumnDefinitions>
-                            <TextBlock x:Uid="ShowWordRoot_Text" Text="ShowWordRoot_Text" HorizontalAlignment="Left"></TextBlock>
+                            <TextBlock x:Uid="ShowWordRoot_Text"
+                                       Margin="0 10 0 0"
+                                       FontWeight="Bold"
+                                       Foreground="White" Text="ShowWordRoot_Text" HorizontalAlignment="Left"></TextBlock>
                             <ToggleSwitch
                                 HorizontalAlignment="Right"
                                           Grid.Column="1"
@@ -326,7 +335,10 @@
                             />
                         </Grid>
                         <Grid Margin="10">
-                            <TextBlock x:Uid="ShowSynonyms_Text" Text="ShowSynonyms_Text" HorizontalAlignment="Left"></TextBlock>
+                            <TextBlock x:Uid="ShowSynonyms_Text"
+                                       Margin="0 10 0 0"
+                                       FontWeight="Bold"
+                                       Foreground="White" Text="ShowSynonyms_Text" HorizontalAlignment="Left"></TextBlock>
                             <ToggleSwitch
                                 HorizontalAlignment="Right"
                                           Grid.Column="1"
@@ -339,10 +351,14 @@
                                 <ColumnDefinition Width="*"></ColumnDefinition>
                                 <ColumnDefinition Width="auto"></ColumnDefinition>
                             </Grid.ColumnDefinitions>
-                            <TextBlock x:Uid="ShowAntonyms_Text" Text="ShowAntonyms_Text" HorizontalAlignment="Left"></TextBlock>
+                            <TextBlock x:Uid="ShowAntonyms_Text"
+                                       Margin="0 10 0 0"
+                                       FontWeight="Bold"
+                                       Foreground="White" Text="ShowAntonyms_Text" HorizontalAlignment="Left"></TextBlock>
                             <ToggleSwitch
                                 HorizontalAlignment="Right"
                                           Grid.Column="1"
+                                
                                       x:Name="ShowAntonymsToggleSwitch"
                                       IsOn="{x:Bind ShowAntonyms, Mode=TwoWay}"
                             />
@@ -352,11 +368,15 @@
                                 <ColumnDefinition Width="*"></ColumnDefinition>
                                 <ColumnDefinition Width="auto"></ColumnDefinition>
                             </Grid.ColumnDefinitions>
-                            <TextBlock x:Uid="AudoPlayAudio_Text" Text="AudoPlayAudio_Text" HorizontalAlignment="Left"></TextBlock>
+                            <TextBlock x:Uid="AudoPlayAudio_Text"
+                                       Margin="0 10 0 0"
+                                       FontWeight="Bold"
+                                       Foreground="White" Text="AudoPlayAudio_Text" HorizontalAlignment="Left"></TextBlock>
                             <ToggleSwitch
                         
                                 HorizontalAlignment="Right"
                                           Grid.Column="1"
+                                
                                       x:Name="AudoPlayAudioToggleSwitch"
                                       IsOn="{x:Bind AudoPlayAudio, Mode=TwoWay}"
                             />
@@ -368,6 +388,9 @@
                             </Grid.ColumnDefinitions>
                             <TextBlock x:Uid="UseLightThemeButton_Text" 
                                         Text="UseLightThemeButton_Text"
+                                       Foreground="White"
+                                       Margin="0 10 0 0"
+                                       FontWeight="Bold"
                                        HorizontalAlignment="Left"></TextBlock>
                             <ToggleSwitch
                     

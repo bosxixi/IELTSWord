@@ -4,23 +4,6 @@
       "orientation": "portrait",
       "extent": "full-screen",
       "minimum-system-version": "7.0",
-      "scale": "2x",
-      "size": "640x960",
-      "idiom": "iphone"
-    },
-    {
-      "orientation": "portrait",
-      "extent": "full-screen",
-      "minimum-system-version": "7.0",
-      "subtype": "retina4",
-      "scale": "2x",
-      "size": "640x1136",
-      "idiom": "iphone"
-    },
-    {
-      "orientation": "portrait",
-      "extent": "full-screen",
-      "minimum-system-version": "7.0",
       "scale": "1x",
       "size": "768x1024",
       "idiom": "ipad"
@@ -48,6 +31,25 @@
       "scale": "2x",
       "size": "2048x1536",
       "idiom": "ipad"
+    },
+    {
+      "orientation": "portrait",
+      "extent": "full-screen",
+      "minimum-system-version": "7.0",
+      "scale": "2x",
+      "size": "640x960",
+      "idiom": "iphone",
+      "filename": "SplashScreen-potrait@2x.png"
+    },
+    {
+      "orientation": "portrait",
+      "extent": "full-screen",
+      "minimum-system-version": "7.0",
+      "subtype": "retina4",
+      "scale": "2x",
+      "size": "640x1136",
+      "idiom": "iphone",
+      "filename": "SplashScreen-potrait-retina4.png"
     }
   ],
   "properties": {},
