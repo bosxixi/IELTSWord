@@ -40,7 +40,7 @@
                 <PivotItem.Header>
                     <TextBlock Foreground="White" Opacity=".8" Text="Learning"></TextBlock>
                 </PivotItem.Header>
-                <Grid>
+                <Grid Margin="0 12 0 10">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="auto"></RowDefinition>
                         <RowDefinition Height="*"></RowDefinition>
@@ -112,8 +112,8 @@
                                 Width="360" Content="GOOD"  x:Name="Yes" Foreground="White" Click="Yes_Click">
                             <Button.Background>
                                 <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
-                                    <GradientStop Color="#FF7719AA" Offset="0.0" />
-                                    <GradientStop Color="#FFA671E6" Offset="1.0" />
+                                    <GradientStop Color="#3F3F46" Offset="0.0" />
+                                    <GradientStop Color="#2D2D30" Offset="1.0" />
                                 </LinearGradientBrush>
                             </Button.Background>
                         </Button>
@@ -122,13 +122,13 @@
                                 Margin="0 0 0 10"
                                 
                               Foreground="White"  Content="NOT SURE" x:Name="Blur" Click="Blur_Click">
-                            <Button.Background>
+                            <!--<Button.Background>
                                 <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
                                     <GradientStop Color="#3F3F46" Offset="0.0" />
                                     
                                     <GradientStop Color="#2D2D30" Offset="1.0" />
                                 </LinearGradientBrush>
-                            </Button.Background>
+                            </Button.Background>-->
                         </Button>
 
                         <Grid>
@@ -137,13 +137,13 @@
                                 <ColumnDefinition></ColumnDefinition>
                             </Grid.ColumnDefinitions>
                             <Button HorizontalAlignment="Stretch" Content="NOPE" x:Name="Nope" 
-                                    Margin="0"
+                                    Margin="0 0 5 0"
                                    Height="38" Foreground="White"  Click="No_Click">
 
                             </Button>
                             <Button HorizontalAlignment="Stretch" 
                                     Content="NAIL IT"
-                                    Margin="0"
+                                    Margin="5 0 0 0"
                                     Grid.Column="1" Height="38" Foreground="White"  Click="Complete_Click">
                                 <Button.Background>
                                     <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
@@ -293,9 +293,9 @@
                         Foreground="DarkRed"
                                 Background="Transparent"
                                 Command="{x:Bind HeartCommand}"/>-->
-                <TextBlock Margin="16" x:Name="PackageVersion" 
+                <TextBlock Margin="10 12 10 16" x:Name="PackageVersion" 
                            VerticalAlignment="Center"
-                           FontSize="18"
+                           FontSize="12"
                            FontWeight="Thin"
                            FontStyle="Italic"
                            HorizontalAlignment="Right" Foreground="White"></TextBlock>
