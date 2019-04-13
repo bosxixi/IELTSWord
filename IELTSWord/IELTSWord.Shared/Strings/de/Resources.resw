@@ -3675,4 +3675,7 @@
   <data name="ERROR_MORE_INFO_DETAIL" xml:space="preserve">
     <value>Bitte geben Sie korrekte Emailadresse und Passwort wiederherstellen</value>
   </data>
+  <data name="GG_WordBook.Text" xml:space="preserve">
+    <value>Wort-Buch</value>
+  </data>
 </root>

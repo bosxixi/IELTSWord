@@ -3675,4 +3675,7 @@
   <data name="ERROR_MORE_INFO_DETAIL" xml:space="preserve">
     <value>Introduce email correcto y la contraseña para restaurar</value>
   </data>
+  <data name="GG_WordBook.Text" xml:space="preserve">
+    <value>Libro de la palabra</value>
+  </data>
 </root>

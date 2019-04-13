@@ -35,10 +35,10 @@
                 <GradientStop Color="#999999" Offset="1.0" />
             </LinearGradientBrush>
         </Grid.Background>
-        <Pivot SelectionChanged="Pivot_Changed" Margin="0 30 0 0">
+        <Pivot x:Name="pivot" PivotItemLoaded="PanePivot_PivotItemLoaded" SelectionChanged="Pivot_Changed" Margin="0 30 0 0">
             <PivotItem>
                 <PivotItem.Header>
-                    <TextBlock Foreground="White" Opacity=".8" x:Uid="GG_LEARN" Text="Learning"></TextBlock>
+                    <TextBlock Foreground="White" Opacity=".8" FontWeight="Bold" x:Uid="GG_LEARN" Text="Learning"></TextBlock>
                 </PivotItem.Header>
                 <Grid Margin="0 12 0 10">
                     <Grid.RowDefinitions>
@@ -216,7 +216,7 @@
             </PivotItem>
             <PivotItem>
                 <PivotItem.Header>
-                    <TextBlock Foreground="White" Opacity=".8"  x:Uid="GG_Statistics" Text="Statistics"></TextBlock>
+                    <TextBlock Foreground="White" Opacity=".8" FontWeight="Bold" x:Uid="GG_Statistics" Text="Statistics"></TextBlock>
                 </PivotItem.Header>
                 <Grid>
                     <Grid.RowDefinitions>
@@ -265,7 +265,12 @@
             </PivotItem>
             <PivotItem>
                 <PivotItem.Header>
-                    <TextBlock Foreground="White" Opacity=".8"  x:Uid="GG_Settings" Text="Settings"></TextBlock>
+                    <TextBlock Foreground="White" Opacity=".8" FontWeight="Bold" x:Uid="GG_WordBook" Text="Words"></TextBlock>
+                </PivotItem.Header>
+            </PivotItem>
+            <PivotItem>
+                <PivotItem.Header>
+                    <TextBlock Foreground="White" Opacity=".8" FontWeight="Bold" x:Uid="GG_Settings" Text="Settings"></TextBlock>
                 </PivotItem.Header>
 
                 <ScrollViewer HorizontalAlignment="Center" Margin="10">
@@ -280,6 +285,9 @@
              PasswordChanged="passwordBox_PasswordChanged"/>
                         <Button HorizontalAlignment="Stretch" Opacity=".7" Foreground="White" Margin="10" Width="330" x:Uid="GG_UPLOAD" Content="UPLOAD" x:Name="UPLOADS" Click="UPLOADS_Click"></Button>
                         <Button HorizontalAlignment="Stretch" Opacity=".7" Foreground="White" Margin="10" Width="330" x:Uid="GG_DOWNLOAD" Content="DOWNLOAD" x:Name="DOWNLOAD" Click="DOWNLOAD_Click"></Button>
+
+                        <!--<Button HorizontalAlignment="Stretch" Opacity=".7" Foreground="White" Margin="10" Width="330" 
+                                Content="Test_Click" Click="Test_Click"></Button>-->
 
                         <Border BorderThickness="0,3,0,0" Margin="10" BorderBrush="Purple">
                         </Border>
@@ -328,7 +336,7 @@
                                        FontWeight="Bold"
                                        Foreground="White" Text="ShowWordRoot_Text" HorizontalAlignment="Left"></TextBlock>
                             <ToggleSwitch
-                                HorizontalAlignment="Right"
+                                HorizontalAlignment="Left"
                                           Grid.Column="1"
                                       x:Name="ShowWordRootToggleSwitch"
                                       IsOn="{x:Bind ShowWordRoot, Mode=TwoWay}"
@@ -402,6 +410,7 @@
                     </StackPanel>
                 </ScrollViewer>
             </PivotItem>
+
         </Pivot>
 
         <Grid Grid.Row="1" Background="{x:Bind IsDownloading, Converter={StaticResource BoolToBrushConverter}, Mode=OneWay}">
@@ -470,6 +479,14 @@
                            FontWeight="Thin"
                            FontStyle="Italic"
                            HorizontalAlignment="Right" Foreground="White"></TextBlock>
+                <!--<TextBlock Margin="10 12 10 16" x:Name="PackageVersion1" 
+                           VerticalAlignment="Center"
+                           FontSize="12"
+                           Width="60"
+                           TextWrapping="Wrap"
+                           FontWeight="Thin"
+                           FontStyle="Italic"
+                           HorizontalAlignment="Right" Foreground="White"></TextBlock>-->
             </StackPanel>
         </Grid>
         <!--<ProgressRing IsActive="True" Visibility="Visible" HorizontalAlignment="Center" VerticalAlignment="Center" Height="120" Width="120"></ProgressRing>-->

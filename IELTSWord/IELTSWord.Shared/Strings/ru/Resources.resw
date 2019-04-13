@@ -3675,4 +3675,7 @@
   <data name="ERROR_MORE_INFO_DETAIL" xml:space="preserve">
     <value>Пожалуйста, введите правильный адрес электронной почты и пароль для восстановления</value>
   </data>
+  <data name="GG_WordBook.Text" xml:space="preserve">
+    <value>Книга слова</value>
+  </data>
 </root>

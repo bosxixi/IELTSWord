@@ -78,22 +78,16 @@
     <Content Include="$(MSBuildThisFileDirectory)Assets\Small\Small71x71Logo.scale-150.png" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\Small\Small71x71Logo.scale-200.png" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\Small\Small71x71Logo.scale-400.png" />
-    <Content Include="$(MSBuildThisFileDirectory)Assets\SplashScreen.scale-200.png" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\SplashScreen\SplashScreen.scale-100.png" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\SplashScreen\SplashScreen.scale-125.png" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\SplashScreen\SplashScreen.scale-150.png" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\SplashScreen\SplashScreen.scale-200.png" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\SplashScreen\SplashScreen.scale-400.png" />
-    <Content Include="$(MSBuildThisFileDirectory)Assets\Square150x150Logo.scale-200.png" />
-    <Content Include="$(MSBuildThisFileDirectory)Assets\Square44x44Logo.scale-200.png" />
-    <Content Include="$(MSBuildThisFileDirectory)Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
-    <Content Include="$(MSBuildThisFileDirectory)Assets\StoreLogo.png" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\Store\StoreLogo.scale-100.png" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\Store\StoreLogo.scale-125.png" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\Store\StoreLogo.scale-150.png" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\Store\StoreLogo.scale-200.png" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\Store\StoreLogo.scale-400.png" />
-    <Content Include="$(MSBuildThisFileDirectory)Assets\Wide310x150Logo.scale-200.png" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\Wide\Wide310x150Logo.scale-100.png" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\Wide\Wide310x150Logo.scale-125.png" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\Wide\Wide310x150Logo.scale-150.png" />
@@ -117,5 +111,13 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="$(MSBuildThisFileDirectory)Assets\logo.svg" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\word_books\cet4.tsv" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\word_books\cet6.tsv" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\word_books\gk.tsv" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\word_books\gre.tsv" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\word_books\ielts.tsv" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\word_books\ky.tsv" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\word_books\toefl.tsv" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\word_books\zk.tsv" />
   </ItemGroup>
 </Project>

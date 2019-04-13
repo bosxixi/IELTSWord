@@ -3753,4 +3753,7 @@
   <data name="ERROR_MORE_INFO_DETAIL" xml:space="preserve">
     <value>請輸入正確的電子郵件和密碼以恢復</value>
   </data>
+  <data name="GG_WordBook.Text" xml:space="preserve">
+    <value>单词書</value>
+  </data>
 </root>

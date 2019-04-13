@@ -3675,4 +3675,7 @@
   <data name="ERROR_MORE_INFO_DETAIL" xml:space="preserve">
     <value>정확한 이메일과 비밀 번호 복구를 입력 해 주시기 바랍니다</value>
   </data>
+  <data name="GG_WordBook.Text" xml:space="preserve">
+    <value>단어 책</value>
+  </data>
 </root>
