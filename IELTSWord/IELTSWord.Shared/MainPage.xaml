@@ -376,7 +376,6 @@
                         
                                 HorizontalAlignment="Right"
                                           Grid.Column="1"
-                                
                                       x:Name="AudoPlayAudioToggleSwitch"
                                       IsOn="{x:Bind AudoPlayAudio, Mode=TwoWay}"
                             />

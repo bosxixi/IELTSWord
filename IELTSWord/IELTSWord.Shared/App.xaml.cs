@@ -37,6 +37,9 @@ namespace IELTSWord
 
         public static void ExtendTitleBar()
         {
+#if !WINDOWS_UWP
+            StatusBar.GetForCurrentView().ForegroundColor = Colors.White;
+#endif
             ApplicationViewTitleBar formattableTitleBar = ApplicationView.GetForCurrentView().TitleBar;
             formattableTitleBar.ButtonBackgroundColor = Colors.Transparent;
             CoreApplicationViewTitleBar coreTitleBar = CoreApplication.GetCurrentView().TitleBar;
@@ -69,7 +72,7 @@ namespace IELTSWord
 #if DEBUG
             if (System.Diagnostics.Debugger.IsAttached)
             {
-               // this.DebugSettings.EnableFrameRateCounter = true;
+                // this.DebugSettings.EnableFrameRateCounter = true;
             }
 #endif
             Frame rootFrame = Windows.UI.Xaml.Window.Current.Content as Frame;
