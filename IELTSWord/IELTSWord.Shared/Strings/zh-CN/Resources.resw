@@ -3714,4 +3714,7 @@
   <data name="DELETE_SUBTITLE_BOOK_CLICK.Content" xml:space="preserve">
     <value>删除</value>
   </data>
+  <data name="SpeakNatural_Text.Text" xml:space="preserve">
+    <value>单词语音自然 (在线获取)</value>
+  </data>
 </root>

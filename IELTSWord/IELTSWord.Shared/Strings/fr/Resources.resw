@@ -3714,4 +3714,7 @@
   <data name="DELETE_SUBTITLE_BOOK_CLICK.Content" xml:space="preserve">
     <value>Supprimer</value>
   </data>
+  <data name="SpeakNatural_Text.Text" xml:space="preserve">
+    <value>Mot des discours naturel (extraction en ligne)</value>
+  </data>
 </root>

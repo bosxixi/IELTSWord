@@ -3792,4 +3792,7 @@
   <data name="DELETE_SUBTITLE_BOOK_CLICK.Content" xml:space="preserve">
     <value>刪除</value>
   </data>
+  <data name="SpeakNatural_Text.Text" xml:space="preserve">
+    <value>單詞語音自然 (線上獲取)</value>
+  </data>
 </root>

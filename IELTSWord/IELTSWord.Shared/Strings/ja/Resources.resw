@@ -3792,4 +3792,7 @@
   <data name="DELETE_SUBTITLE_BOOK_CLICK.Content" xml:space="preserve">
     <value>削除</value>
   </data>
+  <data name="SpeakNatural_Text.Text" xml:space="preserve">
+    <value>音声を単語自然 (フェッチ オンライン)</value>
+  </data>
 </root>

@@ -3714,4 +3714,7 @@
   <data name="DELETE_SUBTITLE_BOOK_CLICK.Content" xml:space="preserve">
     <value>삭제</value>
   </data>
+  <data name="SpeakNatural_Text.Text" xml:space="preserve">
+    <value>음성 단어 자연 (Fetch 온라인)</value>
+  </data>
 </root>
