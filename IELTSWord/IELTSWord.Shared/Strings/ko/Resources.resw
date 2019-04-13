@@ -3678,4 +3678,40 @@
   <data name="GG_WordBook.Text" xml:space="preserve">
     <value>단어 책</value>
   </data>
+  <data name="GG_CUSTOM.Text" xml:space="preserve">
+    <value>사용자 정의</value>
+  </data>
+  <data name="GG_SUBTITLE.Text" xml:space="preserve">
+    <value>자막</value>
+  </data>
+  <data name="GG_BOOKS.Text" xml:space="preserve">
+    <value>단어 책</value>
+  </data>
+  <data name="DOWNLOAD_CUSTOM_TEXT.Content" xml:space="preserve">
+    <value>텍스트 가져오기</value>
+  </data>
+  <data name="EXTRACT_CUSTOM_TEXT.Content" xml:space="preserve">
+    <value>단어 추출</value>
+  </data>
+  <data name="ADD_OR_CREATE_WORDBOOK.Content" xml:space="preserve">
+    <value>만들기</value>
+  </data>
+  <data name="NewWordBookName.PlaceholderText" xml:space="preserve">
+    <value>단어 책 이름</value>
+  </data>
+  <data name="SEARCH_SUBTITLE.PlaceholderText" xml:space="preserve">
+    <value>검색 영화 또는 TV 프로그램</value>
+  </data>
+  <data name="SEARCH_SUBTITLE_CLICK.Content" xml:space="preserve">
+    <value>검색</value>
+  </data>
+  <data name="DOWNLOAD_SUBTITLE_CLICK.Content" xml:space="preserve">
+    <value>인출 문장</value>
+  </data>
+  <data name="LOAD_SUBTITLE_BOOK_CLICK.Content" xml:space="preserve">
+    <value>부하</value>
+  </data>
+  <data name="DELETE_SUBTITLE_BOOK_CLICK.Content" xml:space="preserve">
+    <value>삭제</value>
+  </data>
 </root>

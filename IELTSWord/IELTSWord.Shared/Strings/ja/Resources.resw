@@ -3756,4 +3756,40 @@
   <data name="GG_WordBook.Text" xml:space="preserve">
     <value>単語帳</value>
   </data>
+  <data name="GG_CUSTOM.Text" xml:space="preserve">
+    <value>カスタム</value>
+  </data>
+  <data name="GG_SUBTITLE.Text" xml:space="preserve">
+    <value>字幕</value>
+  </data>
+  <data name="GG_BOOKS.Text" xml:space="preserve">
+    <value>単語帳</value>
+  </data>
+  <data name="DOWNLOAD_CUSTOM_TEXT.Content" xml:space="preserve">
+    <value>テキストをフェッチします。</value>
+  </data>
+  <data name="EXTRACT_CUSTOM_TEXT.Content" xml:space="preserve">
+    <value>単語を抽出します。</value>
+  </data>
+  <data name="ADD_OR_CREATE_WORDBOOK.Content" xml:space="preserve">
+    <value>作成</value>
+  </data>
+  <data name="NewWordBookName.PlaceholderText" xml:space="preserve">
+    <value>単語帳名</value>
+  </data>
+  <data name="SEARCH_SUBTITLE.PlaceholderText" xml:space="preserve">
+    <value>検索映画またはテレビ番組</value>
+  </data>
+  <data name="SEARCH_SUBTITLE_CLICK.Content" xml:space="preserve">
+    <value>検索</value>
+  </data>
+  <data name="DOWNLOAD_SUBTITLE_CLICK.Content" xml:space="preserve">
+    <value>フェッチ文</value>
+  </data>
+  <data name="LOAD_SUBTITLE_BOOK_CLICK.Content" xml:space="preserve">
+    <value>ロード</value>
+  </data>
+  <data name="DELETE_SUBTITLE_BOOK_CLICK.Content" xml:space="preserve">
+    <value>削除</value>
+  </data>
 </root>

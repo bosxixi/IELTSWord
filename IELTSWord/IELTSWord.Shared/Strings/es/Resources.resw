@@ -3678,4 +3678,40 @@
   <data name="GG_WordBook.Text" xml:space="preserve">
     <value>Libro de la palabra</value>
   </data>
+  <data name="GG_CUSTOM.Text" xml:space="preserve">
+    <value>Custom</value>
+  </data>
+  <data name="GG_SUBTITLE.Text" xml:space="preserve">
+    <value>Subtítulos</value>
+  </data>
+  <data name="GG_BOOKS.Text" xml:space="preserve">
+    <value>Libro de la palabra</value>
+  </data>
+  <data name="DOWNLOAD_CUSTOM_TEXT.Content" xml:space="preserve">
+    <value>Buscar texto</value>
+  </data>
+  <data name="EXTRACT_CUSTOM_TEXT.Content" xml:space="preserve">
+    <value>Extracto de la palabra</value>
+  </data>
+  <data name="ADD_OR_CREATE_WORDBOOK.Content" xml:space="preserve">
+    <value>Crear</value>
+  </data>
+  <data name="NewWordBookName.PlaceholderText" xml:space="preserve">
+    <value>Nombre del libro palabra</value>
+  </data>
+  <data name="SEARCH_SUBTITLE.PlaceholderText" xml:space="preserve">
+    <value>Buscar películas o series de televisión</value>
+  </data>
+  <data name="SEARCH_SUBTITLE_CLICK.Content" xml:space="preserve">
+    <value>Búsqueda de</value>
+  </data>
+  <data name="DOWNLOAD_SUBTITLE_CLICK.Content" xml:space="preserve">
+    <value>Buscar frases</value>
+  </data>
+  <data name="LOAD_SUBTITLE_BOOK_CLICK.Content" xml:space="preserve">
+    <value>Carga</value>
+  </data>
+  <data name="DELETE_SUBTITLE_BOOK_CLICK.Content" xml:space="preserve">
+    <value>Eliminar</value>
+  </data>
 </root>

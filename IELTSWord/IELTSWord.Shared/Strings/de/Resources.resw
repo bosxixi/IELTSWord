@@ -3678,4 +3678,40 @@
   <data name="GG_WordBook.Text" xml:space="preserve">
     <value>Wort-Buch</value>
   </data>
+  <data name="GG_CUSTOM.Text" xml:space="preserve">
+    <value>Brauch</value>
+  </data>
+  <data name="GG_SUBTITLE.Text" xml:space="preserve">
+    <value>Untertitel</value>
+  </data>
+  <data name="GG_BOOKS.Text" xml:space="preserve">
+    <value>Wort-Buch</value>
+  </data>
+  <data name="DOWNLOAD_CUSTOM_TEXT.Content" xml:space="preserve">
+    <value>Text zu holen</value>
+  </data>
+  <data name="EXTRACT_CUSTOM_TEXT.Content" xml:space="preserve">
+    <value>Wort zu extrahieren</value>
+  </data>
+  <data name="ADD_OR_CREATE_WORDBOOK.Content" xml:space="preserve">
+    <value>Erstellen</value>
+  </data>
+  <data name="NewWordBookName.PlaceholderText" xml:space="preserve">
+    <value>Wort-Buch-Namen</value>
+  </data>
+  <data name="SEARCH_SUBTITLE.PlaceholderText" xml:space="preserve">
+    <value>Suche Film oder TV-Shows</value>
+  </data>
+  <data name="SEARCH_SUBTITLE_CLICK.Content" xml:space="preserve">
+    <value>Suche</value>
+  </data>
+  <data name="DOWNLOAD_SUBTITLE_CLICK.Content" xml:space="preserve">
+    <value>Sätze zu holen</value>
+  </data>
+  <data name="LOAD_SUBTITLE_BOOK_CLICK.Content" xml:space="preserve">
+    <value>Last</value>
+  </data>
+  <data name="DELETE_SUBTITLE_BOOK_CLICK.Content" xml:space="preserve">
+    <value>Löschen</value>
+  </data>
 </root>

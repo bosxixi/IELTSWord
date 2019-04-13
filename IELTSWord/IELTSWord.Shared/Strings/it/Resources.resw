@@ -3678,4 +3678,40 @@
   <data name="GG_WordBook.Text" xml:space="preserve">
     <value>Libro di parola</value>
   </data>
+  <data name="GG_CUSTOM.Text" xml:space="preserve">
+    <value>Su ordinazione</value>
+  </data>
+  <data name="GG_SUBTITLE.Text" xml:space="preserve">
+    <value>Sottotitoli</value>
+  </data>
+  <data name="GG_BOOKS.Text" xml:space="preserve">
+    <value>Libro di parola</value>
+  </data>
+  <data name="DOWNLOAD_CUSTOM_TEXT.Content" xml:space="preserve">
+    <value>Testo di recupero</value>
+  </data>
+  <data name="EXTRACT_CUSTOM_TEXT.Content" xml:space="preserve">
+    <value>Estratto di parola</value>
+  </data>
+  <data name="ADD_OR_CREATE_WORDBOOK.Content" xml:space="preserve">
+    <value>Crea</value>
+  </data>
+  <data name="NewWordBookName.PlaceholderText" xml:space="preserve">
+    <value>Nome della Rubrica di Word</value>
+  </data>
+  <data name="SEARCH_SUBTITLE.PlaceholderText" xml:space="preserve">
+    <value>Cerca film o spettacoli televisivi</value>
+  </data>
+  <data name="SEARCH_SUBTITLE_CLICK.Content" xml:space="preserve">
+    <value>Ricerca</value>
+  </data>
+  <data name="DOWNLOAD_SUBTITLE_CLICK.Content" xml:space="preserve">
+    <value>Frasi di recupero</value>
+  </data>
+  <data name="LOAD_SUBTITLE_BOOK_CLICK.Content" xml:space="preserve">
+    <value>Carico</value>
+  </data>
+  <data name="DELETE_SUBTITLE_BOOK_CLICK.Content" xml:space="preserve">
+    <value>Elimina</value>
+  </data>
 </root>
