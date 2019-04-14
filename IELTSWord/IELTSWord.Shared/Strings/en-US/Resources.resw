@@ -267,4 +267,22 @@
   <data name="SpeakNatural_Text.Text" xml:space="preserve">
     <value>Word Speech Natural (Fetch Online)</value>
   </data>
+  <data name="GG_DELETE.Content" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="GG_Gerneral.Text" xml:space="preserve">
+    <value>General</value>
+  </data>
+  <data name="GG_ACCOUNT.Text" xml:space="preserve">
+    <value>Sync</value>
+  </data>
+  <data name="GG_ABOUT.Text" xml:space="preserve">
+    <value>About</value>
+  </data>
+  <data name="GG_Overview.Text" xml:space="preserve">
+    <value>Overview</value>
+  </data>
+  <data name="GG_REPORT.Text" xml:space="preserve">
+    <value>Report</value>
+  </data>
 </root>

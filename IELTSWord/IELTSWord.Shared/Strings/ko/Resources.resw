@@ -267,4 +267,22 @@
   <data name="SpeakNatural_Text.Text" xml:space="preserve">
     <value>음성 단어 자연 (Fetch 온라인)</value>
   </data>
+  <data name="GG_DELETE.Content" xml:space="preserve">
+    <value>삭제</value>
+  </data>
+  <data name="GG_ACCOUNT.Text" xml:space="preserve">
+    <value>동기화</value>
+  </data>
+  <data name="GG_ABOUT.Text" xml:space="preserve">
+    <value>에 대 한</value>
+  </data>
+  <data name="GG_Gerneral.Text" xml:space="preserve">
+    <value>일반</value>
+  </data>
+  <data name="GG_Overview.Text" xml:space="preserve">
+    <value>개요</value>
+  </data>
+  <data name="GG_REPORT.Text" xml:space="preserve">
+    <value>보고서</value>
+  </data>
 </root>

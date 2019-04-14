@@ -33,8 +33,25 @@ namespace IELTSWord
         {
             this.InitializeComponent();
             this.Suspending += OnSuspending;
+            this.UnhandledException += App_UnhandledException;
         }
-
+        LoggingService logger = new LoggingService();
+        private void App_UnhandledException(object sender, Windows.UI.Xaml.UnhandledExceptionEventArgs e)
+        {
+            logger.Event(nameof(App_UnhandledException), e.Exception);
+            bosxixi.ScorpioPlayer.Core.LogService.Event($"{e.Exception.Message}", e.Exception.StackTrace);
+            if (e.Exception.StackTrace == null)
+            {
+                bosxixi.ScorpioPlayer.Core.LogService.Event($":{e.Exception.Message}", Environment.StackTrace);
+            }
+            if (e.Exception.Message.Contains("TypeInitializationException") || e.Exception.Message.Contains("NoTypeAvailable"))
+            {
+                e.Handled = true;
+                bosxixi.ScorpioPlayer.Core.LogService.Event(nameof(App_UnhandledException), e.Exception.GetType().ToString());
+                //Desktop_FromLoggerv2.9.60010.0TypeInitialization_Type_NoTypeAvailable
+                //-Desktop_v2.9.60010.0:Exception_WasThrown, System.TypeInitializationException. For more information, visit http://go.microsoft.com/fwlink/?LinkId=623485
+            }
+        }
         public static void ExtendTitleBar()
         {
 #if !WINDOWS_UWP
