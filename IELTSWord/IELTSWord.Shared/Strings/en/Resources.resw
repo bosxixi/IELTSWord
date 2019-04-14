@@ -363,4 +363,10 @@
   <data name="GG_REPORT.Text" xml:space="preserve">
     <value>Report</value>
   </data>
+  <data name="ShakeLevelStrong_Text.Text" xml:space="preserve">
+    <value>Shake Sensor Fast Speed</value>
+  </data>
+  <data name="ShakeEnabled_Text.Text" xml:space="preserve">
+    <value>Detect Shake</value>
+  </data>
 </root>

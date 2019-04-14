@@ -54,8 +54,7 @@
                     <StackPanel>
 
                         <ProgressBar Maximum="12" Minimum="0" Value="{x:Bind CurrentWord.Level,Mode=OneWay}"></ProgressBar>
-                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-                            <TextBlock HorizontalAlignment="Right" Foreground="White" TextWrapping="Wrap" Opacity=".7" Margin="10 6 0 0" Text="{x:Bind CurrentWord.Order,Mode=OneWay}"></TextBlock>
+                        <Grid HorizontalAlignment="Stretch">
                             <Button HorizontalAlignment="Right"
                                     Background="Transparent"
                                     Foreground="White" 
@@ -63,9 +62,10 @@
                                     x:Name="More_Button"
                                     Click="MORE_Click"
                                     Margin="10 6 0 0" Content="...">
-                                
+
                             </Button>
-                        </StackPanel>
+                            <TextBlock HorizontalAlignment="Left" Foreground="White" TextWrapping="Wrap" Opacity=".7" Margin="10 6 0 0" Text="{x:Bind CurrentWord.Order,Mode=OneWay}"></TextBlock>
+                        </Grid>
                     </StackPanel>
 
                     <StackPanel  Grid.Row="1">
@@ -97,9 +97,9 @@
                         </StackPanel>
                     </StackPanel>
 
-                    <ScrollViewer Grid.Row="2" Width="360" >
+                    <ScrollViewer HorizontalAlignment="Stretch" Grid.Row="2" Width="360" >
 
-                        <StackPanel>
+                        <Grid>
                             <StackPanel  Visibility="{x:Bind CurrentWordDetails, Converter={StaticResource NullToVisiblityConverter}, Mode=OneWay}">
                                 <TextBlock HorizontalAlignment="Center" Foreground="White" TextWrapping="Wrap" Opacity=".7" Text="{x:Bind CurrentWordDetails.Lemma,Mode=OneWay}"></TextBlock>
                                 <TextBlock HorizontalAlignment="Center" Foreground="White" TextWrapping="Wrap" Opacity=".7" Text="{x:Bind CurrentWordDetails.WordRootStr,Mode=OneWay}"></TextBlock>
@@ -128,7 +128,7 @@
                                                                                 <ColumnDefinition Width="*"></ColumnDefinition>
                                                                             </Grid.ColumnDefinitions>
                                                                             <Button HorizontalAlignment="Center" 
-                                    Click="Speaker_of_sentence_source_Click" 
+                                    Tapped="Speaker_of_sentence_sourceButton_Tapped" 
                                                                                     x:Name="Speaker_of_sentence_source"
                                                                                     
                                     Background="Transparent">
@@ -156,7 +156,7 @@
                                                                                 <ColumnDefinition Width="*"></ColumnDefinition>
                                                                             </Grid.ColumnDefinitions>
                                                                             <Button HorizontalAlignment="Center" 
-                                    Click="Speaker_of_sentence_target_Click" 
+                                    Tapped="Speaker_of_sentence_targetButton_Tapped" 
                                                               x:Name="Speaker_of_sentence"                          
                                     Background="Transparent">
                                                                                 <Button.Content>
@@ -187,7 +187,7 @@
                                     </ListView>
                                 </StackPanel>
                             </StackPanel>
-                        </StackPanel>
+                        </Grid>
                     </ScrollViewer>
 
                     <Grid HorizontalAlignment="Center" Margin="10" 
@@ -304,7 +304,7 @@
                                 <RowDefinition Height="auto"></RowDefinition>
                                 <RowDefinition></RowDefinition>
                             </Grid.RowDefinitions>
-                            <StackPanel>
+                            <StackPanel HorizontalAlignment="Stretch">
                                 <StackPanel HorizontalAlignment="Right" Margin="0" Orientation="Horizontal" >
                                     <ComboBox x:Name="LevelCombo" SelectionChanged="Level_Changed" Opacity=".7" Foreground="White">
                                         <ComboBoxItem>None</ComboBoxItem>
@@ -330,20 +330,29 @@
                                                    FontSize="30" Margin="0 0 0 0"></TextBlock>
                                 <ProgressBar Maximum="12" Minimum="0" 
                                                      Margin="0 0 0 3"
+                                             HorizontalAlignment="Stretch"
                                                      Value="{x:Bind Level,Mode=OneWay}"></ProgressBar>
                             </StackPanel>
 
 
-                            <ListView Grid.Row="1" x:Name="WordsListView">
+
+                            <ListView x:Name="WordsListView" 
+                                      Grid.Row="1"
+                                      Margin="0,5,0,0" 
+                                      Width="360" 
+                                      >
+                                <ListView.ItemContainerStyle>
+                                    <Style TargetType="ListViewItem">
+                                        <Setter Property="HorizontalContentAlignment" Value="Stretch"></Setter>
+                                    </Style>
+                                </ListView.ItemContainerStyle>
                                 <ListView.ItemTemplate>
-                                    <DataTemplate x:DataType="local:Word">
-                                        <StackPanel Margin="0 10 0 10">
-                                            <StackPanel HorizontalAlignment="Left" Margin="0 0 0 0" Orientation="Vertical" >
-                                                <TextBlock Margin="10 0 0 0" FontSize="22" Foreground="White" FontWeight="Bold" Text="{x:Bind Name,Mode=OneWay}"></TextBlock>
-                                                <TextBlock Margin="10 0 0 0" TextWrapping="Wrap" Foreground="White" Text="{x:Bind Elaborate,Mode=OneWay}"></TextBlock>
-                                                <TextBlock Margin="10 0 0 0" TextWrapping="Wrap" Foreground="White" FontSize="12" FontWeight="Thin" Text="{x:Bind Order,Mode=OneWay}"></TextBlock>
-                                                <ProgressBar Margin="0 10 0 0" HorizontalAlignment="Left" Width="300" Maximum="12" Minimum="0" Value="{x:Bind Level,Mode=OneWay}"></ProgressBar>
-                                            </StackPanel>
+                                    <DataTemplate x:Name="SingleLineDataTemplate" x:DataType="local:Word">
+                                        <StackPanel Margin="0,8,0,8">
+                                            <TextBlock Foreground="White" FontWeight="Bold" Text="{x:Bind Name}" HorizontalAlignment="Stretch"/>
+                                            <TextBlock Foreground="White" Text="{x:Bind Elaborate}" Opacity=".7" HorizontalAlignment="Left"/>
+                                            <TextBlock Foreground="White" Text="{x:Bind Order}" Opacity=".7" HorizontalAlignment="Left"/>
+                                            <ProgressBar Margin="0 10 0 0" HorizontalAlignment="Stretch" Width="360" Maximum="12" Minimum="0" Value="{x:Bind Level,Mode=OneWay}"></ProgressBar>
                                         </StackPanel>
                                     </DataTemplate>
                                 </ListView.ItemTemplate>
@@ -444,7 +453,7 @@
                                     <DataTemplate x:DataType="local:WorkBook">
                                         <StackPanel Margin="0,8,0,8">
                                             <TextBlock Foreground="White" Text="{x:Bind Name}" HorizontalAlignment="Stretch"/>
-                                            <TextBlock Foreground="White" Text="{x:Bind Count}" Opacity=".7" HorizontalAlignment="Right"/>
+                                            <TextBlock Foreground="White" Text="{x:Bind Count}" Opacity=".7" HorizontalAlignment="Left"/>
                                             <!--<TextBlock Foreground="White" Text="{x:Bind Selection.UploaderNameex}" Opacity=".7" HorizontalAlignment="Right"/>
                                             <TextBlock Foreground="White" Text="{x:Bind Selection.DownloadCountex}" Opacity=".7" HorizontalAlignment="Right"/>-->
                                         </StackPanel>
@@ -500,7 +509,7 @@
                             </StackPanel>
 
                             <TextBox VerticalAlignment="Stretch" 
-                                     Margin="0 10 0 10"
+                                     Margin="10 10 10 10"
                                       Width="360"
                                      Foreground="White" 
                                      x:Name="CustomTextBox"
@@ -625,144 +634,180 @@
                                        Text="Gerneral"></TextBlock>
                         </PivotItem.Header>
 
-                        <ScrollViewer HorizontalAlignment="Center" Margin="10" Width="360">
-                            <StackPanel Orientation="Vertical">
-                                <Border BorderThickness="0,3,0,0" Margin="10" BorderBrush="Purple">
-                                </Border>
+                        <ScrollViewer HorizontalAlignment="Stretch" Margin="10" Width="360">
+                            <Grid>
+                                <StackPanel Orientation="Vertical">
+                                    <Border BorderThickness="0,3,0,0" Margin="10" BorderBrush="Purple">
+                                    </Border>
 
-                                <Grid Margin="10">
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="*"></ColumnDefinition>
-                                        <ColumnDefinition Width="auto"></ColumnDefinition>
-                                    </Grid.ColumnDefinitions>
-                                    <TextBlock x:Uid="ReviewAll_Text"
+                                    <Grid Margin="10">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*"></ColumnDefinition>
+                                            <ColumnDefinition Width="auto"></ColumnDefinition>
+                                        </Grid.ColumnDefinitions>
+                                        <TextBlock x:Uid="ReviewAll_Text"
                                        Margin="0 10 0 0"
                                        FontWeight="Bold"
                                        Foreground="White" Text="ReviewAll_Text" HorizontalAlignment="Left"></TextBlock>
-                                    <ToggleSwitch
+                                        <ToggleSwitch
                                 HorizontalAlignment="Right"
                                   Grid.Column="1"
                                       x:Name="ReviewAllToggleSwitch"
                                       IsOn="{x:Bind ReviewAll, Mode=TwoWay}"
                             />
-                                </Grid>
+                                    </Grid>
 
-                                <Grid Margin="10">
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="*"></ColumnDefinition>
-                                        <ColumnDefinition Width="auto"></ColumnDefinition>
-                                    </Grid.ColumnDefinitions>
-                                    <TextBlock x:Uid="SpeakNatural_Text"
+                                    <Grid Margin="10">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*"></ColumnDefinition>
+                                            <ColumnDefinition Width="auto"></ColumnDefinition>
+                                        </Grid.ColumnDefinitions>
+                                        <TextBlock x:Uid="SpeakNatural_Text"
                                        Margin="0 10 0 0"
                                        FontWeight="Bold"
                                        Foreground="White" Text="SpeakNatural_Text" HorizontalAlignment="Left"></TextBlock>
-                                    <ToggleSwitch
+                                        <ToggleSwitch
                                 HorizontalAlignment="Right"
                                   Grid.Column="1"
                                       x:Name="SpeakNaturalToggleSwitch"
                                       IsOn="{x:Bind SpeakNatural, Mode=TwoWay}"
                             />
-                                </Grid>
+                                    </Grid>
 
-                                <Grid Margin="10">
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="*"></ColumnDefinition>
-                                        <ColumnDefinition Width="auto"></ColumnDefinition>
-                                    </Grid.ColumnDefinitions>
-                                    <TextBlock x:Uid="ShowExamples_Text"
+                                    <Grid Margin="10">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*"></ColumnDefinition>
+                                            <ColumnDefinition Width="auto"></ColumnDefinition>
+                                        </Grid.ColumnDefinitions>
+                                        <TextBlock x:Uid="ShowExamples_Text"
                                        Margin="0 10 0 0"
                                        FontWeight="Bold"
                                        Foreground="White" Text="ShowExamples_Text" HorizontalAlignment="Left"></TextBlock>
-                                    <ToggleSwitch
+                                        <ToggleSwitch
                                 HorizontalAlignment="Right"
                                           Grid.Column="1"
                                       x:Name="ShowExamplesToggleSwitch"
                                       IsOn="{x:Bind ShowExamples, Mode=TwoWay}"
                             />
-                                </Grid>
+                                    </Grid>
 
-                                <Grid Margin="10">
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="*"></ColumnDefinition>
-                                        <ColumnDefinition Width="auto"></ColumnDefinition>
-                                    </Grid.ColumnDefinitions>
-                                    <TextBlock x:Uid="ShowWordRoot_Text"
+                                    <Grid Margin="10">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*"></ColumnDefinition>
+                                            <ColumnDefinition Width="auto"></ColumnDefinition>
+                                        </Grid.ColumnDefinitions>
+                                        <TextBlock x:Uid="ShowWordRoot_Text"
                                        Margin="0 10 0 0"
                                        FontWeight="Bold"
                                        Foreground="White" Text="ShowWordRoot_Text" HorizontalAlignment="Left"></TextBlock>
-                                    <ToggleSwitch
+                                        <ToggleSwitch
                                 HorizontalAlignment="Left"
                                           Grid.Column="1"
                                       x:Name="ShowWordRootToggleSwitch"
                                       IsOn="{x:Bind ShowWordRoot, Mode=TwoWay}"
                             />
-                                </Grid>
-                                <Grid Margin="10">
-                                    <TextBlock x:Uid="ShowSynonyms_Text"
+                                    </Grid>
+                                    <Grid Margin="10">
+                                        <TextBlock x:Uid="ShowSynonyms_Text"
                                        Margin="0 10 0 0"
                                        FontWeight="Bold"
                                        Foreground="White" Text="ShowSynonyms_Text" HorizontalAlignment="Left"></TextBlock>
-                                    <ToggleSwitch
+                                        <ToggleSwitch
                                 HorizontalAlignment="Right"
                                           Grid.Column="1"
                                       x:Name="ShowSynonymsToggleSwitch"
                                       IsOn="{x:Bind ShowSynonyms, Mode=TwoWay}"
                             />
-                                </Grid>
-                                <Grid Margin="10">
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="*"></ColumnDefinition>
-                                        <ColumnDefinition Width="auto"></ColumnDefinition>
-                                    </Grid.ColumnDefinitions>
-                                    <TextBlock x:Uid="ShowAntonyms_Text"
+                                    </Grid>
+                                    <Grid Margin="10">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*"></ColumnDefinition>
+                                            <ColumnDefinition Width="auto"></ColumnDefinition>
+                                        </Grid.ColumnDefinitions>
+                                        <TextBlock x:Uid="ShowAntonyms_Text"
                                        Margin="0 10 0 0"
                                        FontWeight="Bold"
                                        Foreground="White" Text="ShowAntonyms_Text" HorizontalAlignment="Left"></TextBlock>
-                                    <ToggleSwitch
+                                        <ToggleSwitch
                                 HorizontalAlignment="Right"
                                           Grid.Column="1"
                                 
                                       x:Name="ShowAntonymsToggleSwitch"
                                       IsOn="{x:Bind ShowAntonyms, Mode=TwoWay}"
                             />
-                                </Grid>
-                                <Grid Margin="10">
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="*"></ColumnDefinition>
-                                        <ColumnDefinition Width="auto"></ColumnDefinition>
-                                    </Grid.ColumnDefinitions>
-                                    <TextBlock x:Uid="AudoPlayAudio_Text"
+                                    </Grid>
+                                    <Grid Margin="10">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*"></ColumnDefinition>
+                                            <ColumnDefinition Width="auto"></ColumnDefinition>
+                                        </Grid.ColumnDefinitions>
+                                        <TextBlock x:Uid="ShakeEnabled_Text"
+                                       Margin="0 10 0 0"
+                                       FontWeight="Bold"
+                                       Foreground="White" Text="ShakeEnabled_Text" HorizontalAlignment="Left"></TextBlock>
+                                        <ToggleSwitch
+                                HorizontalAlignment="Right"
+                                          Grid.Column="1"
+                                
+                                      x:Name="ShakeEnabledToggleSwitch"
+                                      IsOn="{x:Bind ShakeEnabled, Mode=TwoWay}"
+                            />
+                                    </Grid>
+                                    <Grid Margin="10">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*"></ColumnDefinition>
+                                            <ColumnDefinition Width="auto"></ColumnDefinition>
+                                        </Grid.ColumnDefinitions>
+                                        <TextBlock x:Uid="ShakeLevelStrong_Text"
+                                       Margin="0 10 0 0"
+                                       FontWeight="Bold"
+                                       Foreground="White" Text="ShakeLevelStrong_Text" HorizontalAlignment="Left"></TextBlock>
+                                        <ToggleSwitch
+                                HorizontalAlignment="Right"
+                                          Grid.Column="1"
+                                
+                                      x:Name="ShakeLevelStrongToggleSwitch"
+                                      IsOn="{x:Bind ShakeLevelStrong, Mode=TwoWay}"
+                            />
+                                    </Grid>
+                                    <Grid Margin="10">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*"></ColumnDefinition>
+                                            <ColumnDefinition Width="auto"></ColumnDefinition>
+                                        </Grid.ColumnDefinitions>
+                                        <TextBlock x:Uid="AudoPlayAudio_Text"
                                        Margin="0 10 0 0"
                                        FontWeight="Bold"
                                        Foreground="White" Text="AudoPlayAudio_Text" HorizontalAlignment="Left"></TextBlock>
-                                    <ToggleSwitch
+                                        <ToggleSwitch
                         
                                 HorizontalAlignment="Right"
                                           Grid.Column="1"
                                       x:Name="AudoPlayAudioToggleSwitch"
                                       IsOn="{x:Bind AudoPlayAudio, Mode=TwoWay}"
                             />
-                                </Grid>
-                                <Grid     Margin="10" x:Name="UseLightThemeToggleSwitch" Visibility="Collapsed">
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="*"></ColumnDefinition>
-                                        <ColumnDefinition Width="auto"></ColumnDefinition>
-                                    </Grid.ColumnDefinitions>
-                                    <TextBlock x:Uid="UseLightThemeButton_Text" 
+                                    </Grid>
+                                    <Grid     Margin="10" x:Name="UseLightThemeToggleSwitch" Visibility="Collapsed">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*"></ColumnDefinition>
+                                            <ColumnDefinition Width="auto"></ColumnDefinition>
+                                        </Grid.ColumnDefinitions>
+                                        <TextBlock x:Uid="UseLightThemeButton_Text" 
                                         Text="UseLightThemeButton_Text"
                                        Foreground="White"
                                        Margin="0 10 0 0"
                                        FontWeight="Bold"
                                        HorizontalAlignment="Left"></TextBlock>
-                                    <ToggleSwitch
+                                        <ToggleSwitch
                     
                                 HorizontalAlignment="Right"
                                           Grid.Column="1"
                                       x:Name="UseLightThemeButtonToggleSwitch"
                                       IsOn="{x:Bind UseLightThemeButton, Mode=TwoWay}"
                             />
-                                </Grid>
-                            </StackPanel>
+                                    </Grid>
+                                </StackPanel>
+                            </Grid>
                         </ScrollViewer>
                     </PivotItem>
 
@@ -775,23 +820,26 @@
                                        Text="ACCOUNT"></TextBlock>
                         </PivotItem.Header>
 
-                        <ScrollViewer HorizontalAlignment="Center" Margin="10">
-                            <StackPanel Orientation="Vertical" Width="360">
+                        <ScrollViewer HorizontalAlignment="Stretch" Margin="10" Width="360">
+                            <Grid>
 
-                                <Border BorderThickness="0,3,0,0" Margin="10" BorderBrush="Purple">
-                                </Border>
+                                <StackPanel Orientation="Vertical" Width="360">
 
-                                <TextBox HorizontalAlignment="Stretch" Foreground="White" PlaceholderText="Email" Text="{x:Bind Email, Mode=TwoWay}" Margin="10" Width="360"></TextBox>
-                                <PasswordBox x:Name="passwordBox" Width="360"  Foreground="White" Margin="10"
+                                    <Border BorderThickness="0,3,0,0" Margin="10" BorderBrush="Purple">
+                                    </Border>
+
+                                    <TextBox HorizontalAlignment="Stretch" Foreground="White" PlaceholderText="Email" Text="{x:Bind Email, Mode=TwoWay}" Margin="10" Width="360"></TextBox>
+                                    <PasswordBox x:Name="passwordBox" Width="360"  Foreground="White" Margin="10"
              PasswordChanged="passwordBox_PasswordChanged"/>
-                                <Button HorizontalAlignment="Stretch" Opacity=".7" Foreground="White" Margin="10" Width="360" x:Uid="GG_UPLOAD" Content="UPLOAD" x:Name="UPLOADS" Click="UPLOADS_Click"></Button>
-                                <Button HorizontalAlignment="Stretch" Opacity=".7" Foreground="White" Margin="10" Width="360" x:Uid="GG_DOWNLOAD" Content="DOWNLOAD" x:Name="DOWNLOAD" Click="DOWNLOAD_Click"></Button>
+                                    <Button HorizontalAlignment="Stretch" Opacity=".7" Foreground="White" Margin="10" Width="360" x:Uid="GG_UPLOAD" Content="UPLOAD" x:Name="UPLOADS" Click="UPLOADS_Click"></Button>
+                                    <Button HorizontalAlignment="Stretch" Opacity=".7" Foreground="White" Margin="10" Width="360" x:Uid="GG_DOWNLOAD" Content="DOWNLOAD" x:Name="DOWNLOAD" Click="DOWNLOAD_Click"></Button>
 
-                                <!--<Button HorizontalAlignment="Stretch" Opacity=".7" Foreground="White" Margin="10" Width="360" 
+                                    <!--<Button HorizontalAlignment="Stretch" Opacity=".7" Foreground="White" Margin="10" Width="360" 
                                 Content="Test_Click" Click="Test_Click"></Button>-->
 
 
-                            </StackPanel>
+                                </StackPanel>
+                            </Grid>
                         </ScrollViewer>
                     </PivotItem>
 
@@ -804,13 +852,15 @@
                                        Text="ABOUT"></TextBlock>
                         </PivotItem.Header>
 
-                        <ScrollViewer HorizontalAlignment="Center" Margin="10">
-                            <StackPanel Orientation="Vertical" Width="360">
-                                <Border BorderThickness="0,3,0,0" Margin="0" BorderBrush="Purple">
-                                </Border>
+                        <ScrollViewer HorizontalAlignment="Stretch" Margin="10">
+                            <Grid Width="360">
+                                <StackPanel Orientation="Vertical">
+                                    <Border BorderThickness="0,3,0,0"  Width="360" Margin="0" BorderBrush="Purple">
+                                    </Border>
 
-                                <TextBlock FontWeight="Bold" FontSize="30" Margin="0 10" Foreground="White">乖乖背单词 v1.7.8</TextBlock>
-                            </StackPanel>
+                                    <TextBlock FontWeight="Bold" FontSize="30" Width="360" Margin="0 10" Foreground="White">乖乖背单词 v1.8.0</TextBlock>
+                                </StackPanel>
+                            </Grid>
                         </ScrollViewer>
                     </PivotItem>
                 </Pivot>

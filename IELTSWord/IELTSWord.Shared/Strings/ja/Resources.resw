@@ -363,4 +363,10 @@
   <data name="GG_REPORT.Text" xml:space="preserve">
     <value>レポート</value>
   </data>
+  <data name="ShakeLevelStrong_Text.Text" xml:space="preserve">
+    <value>スピード センサーを振る</value>
+  </data>
+  <data name="ShakeEnabled_Text.Text" xml:space="preserve">
+    <value>手ふれを検出します。</value>
+  </data>
 </root>

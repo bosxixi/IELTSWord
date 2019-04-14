@@ -285,4 +285,10 @@
   <data name="GG_REPORT.Text" xml:space="preserve">
     <value>Relazione</value>
   </data>
+  <data name="ShakeLevelStrong_Text.Text" xml:space="preserve">
+    <value>Agitare sensore velocità veloce</value>
+  </data>
+  <data name="ShakeEnabled_Text.Text" xml:space="preserve">
+    <value>Rilevare Shake</value>
+  </data>
 </root>

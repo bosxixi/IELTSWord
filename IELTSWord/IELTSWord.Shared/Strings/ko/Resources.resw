@@ -285,4 +285,10 @@
   <data name="GG_REPORT.Text" xml:space="preserve">
     <value>보고서</value>
   </data>
+  <data name="ShakeLevelStrong_Text.Text" xml:space="preserve">
+    <value>흔들어 센서 빠른 속도</value>
+  </data>
+  <data name="ShakeEnabled_Text.Text" xml:space="preserve">
+    <value>쉐이크를 감지</value>
+  </data>
 </root>

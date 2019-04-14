@@ -285,4 +285,10 @@
   <data name="GG_REPORT.Text" xml:space="preserve">
     <value>Отчет</value>
   </data>
+  <data name="ShakeLevelStrong_Text.Text" xml:space="preserve">
+    <value>Встряхните датчик быстрая скорость</value>
+  </data>
+  <data name="ShakeEnabled_Text.Text" xml:space="preserve">
+    <value>Обнаружения дрожания</value>
+  </data>
 </root>

@@ -54,8 +54,16 @@ namespace IELTSWord
         }
         public static void ExtendTitleBar()
         {
-#if !WINDOWS_UWP
-            StatusBar.GetForCurrentView().ForegroundColor = Colors.White;
+#if __IOS__
+            try
+            {
+                StatusBar.GetForCurrentView().ForegroundColor = Colors.White;
+            }
+            catch (Exception)
+            {
+
+            }
+          
 #endif
             ApplicationViewTitleBar formattableTitleBar = ApplicationView.GetForCurrentView().TitleBar;
             formattableTitleBar.ButtonBackgroundColor = Colors.Transparent;
@@ -87,7 +95,15 @@ namespace IELTSWord
         protected override void OnLaunched(LaunchActivatedEventArgs e)
         {
 #if !WINDOWS_UWP
-            MediaManager.CrossMediaManager.Current.Init();
+            try
+            {
+                MediaManager.CrossMediaManager.Current.Init();
+            }
+            catch (Exception)
+            {
+
+            }
+          
 #endif
 #if DEBUG
             if (System.Diagnostics.Debugger.IsAttached)

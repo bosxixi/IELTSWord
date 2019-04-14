@@ -5,9 +5,9 @@
 	<key>CFBundleIdentifier</key>
 	<string>com.bosxixi.IELTSWord</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.5</string>
+	<string>1.8</string>
 	<key>CFBundleVersion</key>
-	<string>1.5</string>
+	<string>1.8</string>
 	<key>CFBundleIconName</key>
 	<string>AppIcons</string>
 	<key>LSRequiresIPhoneOS</key>

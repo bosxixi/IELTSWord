@@ -285,4 +285,10 @@
   <data name="GG_REPORT.Text" xml:space="preserve">
     <value>التقرير</value>
   </data>
+  <data name="ShakeLevelStrong_Text.Text" xml:space="preserve">
+    <value>اهتزاز استشعار السرعة</value>
+  </data>
+  <data name="ShakeEnabled_Text.Text" xml:space="preserve">
+    <value>كشف اهتزاز</value>
+  </data>
 </root>

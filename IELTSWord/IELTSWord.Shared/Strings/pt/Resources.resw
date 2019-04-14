@@ -285,4 +285,10 @@
   <data name="GG_REPORT.Text" xml:space="preserve">
     <value>Relatório</value>
   </data>
+  <data name="ShakeLevelStrong_Text.Text" xml:space="preserve">
+    <value>Shake Sensor de velocidade</value>
+  </data>
+  <data name="ShakeEnabled_Text.Text" xml:space="preserve">
+    <value>Detectar o Shake</value>
+  </data>
 </root>
