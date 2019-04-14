@@ -347,7 +347,7 @@
                                     </Style>
                                 </ListView.ItemContainerStyle>
                                 <ListView.ItemTemplate>
-                                    <DataTemplate x:Name="SingleLineDataTemplate" x:DataType="local:Word">
+                                    <DataTemplate x:DataType="local:Word">
                                         <StackPanel Margin="0,8,0,8">
                                             <TextBlock Foreground="White" FontWeight="Bold" Text="{x:Bind Name}" HorizontalAlignment="Stretch"/>
                                             <TextBlock Foreground="White" Text="{x:Bind Elaborate}" Opacity=".7" HorizontalAlignment="Left"/>
