@@ -86,6 +86,9 @@ namespace IELTSWord
         /// <param name="e">Details about the launch request and process.</param>
         protected override void OnLaunched(LaunchActivatedEventArgs e)
         {
+#if !WINDOWS_UWP
+            MediaManager.CrossMediaManager.Current.Init();
+#endif
 #if DEBUG
             if (System.Diagnostics.Debugger.IsAttached)
             {

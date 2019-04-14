@@ -43,8 +43,9 @@
                 <PivotItem.Header>
                     <TextBlock Foreground="White" Opacity=".8" FontWeight="Bold" x:Uid="GG_LEARN" Text="Learning"></TextBlock>
                 </PivotItem.Header>
-                <Grid Margin="0 12 0 10">
+                <Grid Margin="0 12 0 10" HorizontalAlignment="Stretch">
                     <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"></RowDefinition>
                         <RowDefinition Height="auto"></RowDefinition>
                         <RowDefinition Height="*"></RowDefinition>
                         <RowDefinition Height="auto"></RowDefinition>
@@ -53,83 +54,129 @@
                     <StackPanel>
 
                         <ProgressBar Maximum="12" Minimum="0" Value="{x:Bind CurrentWord.Level,Mode=OneWay}"></ProgressBar>
-                        <TextBlock HorizontalAlignment="Right" Foreground="White" TextWrapping="Wrap" Opacity=".7" Margin="0 6 0 0" Text="{x:Bind CurrentWord.Order,Mode=OneWay}"></TextBlock>
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                            <TextBlock HorizontalAlignment="Right" Foreground="White" TextWrapping="Wrap" Opacity=".7" Margin="10 6 0 0" Text="{x:Bind CurrentWord.Order,Mode=OneWay}"></TextBlock>
+                            <Button HorizontalAlignment="Right"
+                                    Background="Transparent"
+                                    Foreground="White" 
+                                    Opacity=".7"
+                                    x:Name="More_Button"
+                                    Click="MORE_Click"
+                                    Margin="10 6 0 0" Content="...">
+                                
+                            </Button>
+                        </StackPanel>
                     </StackPanel>
 
-
-
-                    <Grid Grid.Row="1" HorizontalAlignment="Center" Margin="10 0 0 10">
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="auto"></RowDefinition>
-                            <RowDefinition></RowDefinition>
-                        </Grid.RowDefinitions>
-                        <StackPanel Orientation="Vertical" >
-
-                            <TextBlock HorizontalAlignment="Center" Foreground="White" Text="{x:Bind CurrentWord.Name,Mode=OneWay, FallbackValue='Hello'}" FontSize="48" ></TextBlock>
-                            <StackPanel  Width="360" Orientation="Vertical"  HorizontalAlignment="Center" 
+                    <StackPanel  Grid.Row="1">
+                        <TextBlock HorizontalAlignment="Center" Foreground="White" Text="{x:Bind CurrentWord.Name,Mode=OneWay, FallbackValue='Hello'}" FontSize="48" ></TextBlock>
+                        <StackPanel  Width="360" Orientation="Vertical"  HorizontalAlignment="Center" 
                                          Visibility="{x:Bind CurrentWordDetails, Converter={StaticResource NullToVisiblityConverter}, Mode=OneWay}"
                                          >
-                                <TextBlock HorizontalAlignment="Center" Foreground="White" TextWrapping="Wrap" Opacity=".7"  FontSize="28" Text="{x:Bind CurrentWord.Elaborate,Mode=OneWay}"></TextBlock>
-                                <StackPanel Orientation="Horizontal"  HorizontalAlignment="Center" Visibility="{x:Bind CurrentWordDetails, Converter={StaticResource NullToVisiblityConverter}, Mode=OneWay}">
-                                    <TextBlock HorizontalAlignment="Center" Foreground="White" Opacity="1" FontSize="20" Text="{x:Bind CurrentWordDetails.PhoneticStr,Mode=OneWay}"></TextBlock>
-                                    <Button HorizontalAlignment="Center" 
+                            <TextBlock HorizontalAlignment="Center" Foreground="White" TextWrapping="Wrap" Opacity=".7" 
+                                           FontSize="22" Text="{x:Bind CurrentWord.Elaborate,Mode=OneWay}"></TextBlock>
+                            <StackPanel Orientation="Horizontal"  HorizontalAlignment="Center" Visibility="{x:Bind CurrentWordDetails, Converter={StaticResource NullToVisiblityConverter}, Mode=OneWay}">
+                                <TextBlock HorizontalAlignment="Center" Foreground="White" Opacity="1" FontSize="20" Text="{x:Bind CurrentWordDetails.PhoneticStr,Mode=OneWay}"></TextBlock>
+                                <Button HorizontalAlignment="Center" 
                                     VerticalAlignment="Center" x:Name="Speaker" 
                                     Click="Speaker_Click" 
                                     Background="Transparent">
-                                        <Button.Content>
-                                            <!-- WiFi -->
-                                            <Path Data="M4.0379566,23.576004C6.2679466,23.576004 8.0749053,25.384003 8.0749053,27.612999 8.0749053,29.843002 6.2679466,31.651001 4.0379566,31.651001 1.8079665,31.651001 9.3808922E-08,29.843002 0,27.612999 9.3808922E-08,25.384003 1.8079665,23.576004 4.0379566,23.576004z M0,11.068001C20.522787,12.636002,20.654804,32,20.654804,32L14.576858,32C13.20886,16.515999,9.3808922E-08,17.270004,0,17.270004z M0,0C32.126682,2.776001,31.692696,32,31.692696,32L25.412756,32C23.588768,6.6049995,9.3808922E-08,6.3400002,0,6.3400002z"
+                                    <Button.Content>
+                                        <!-- WiFi -->
+                                        <Path Data="M4.0379566,23.576004C6.2679466,23.576004 8.0749053,25.384003 8.0749053,27.612999 8.0749053,29.843002 6.2679466,31.651001 4.0379566,31.651001 1.8079665,31.651001 9.3608922E-08,29.843002 0,27.612999 9.3608922E-08,25.384003 1.8079665,23.576004 4.0379566,23.576004z M0,11.068001C20.522787,12.636002,20.654804,32,20.654804,32L14.576858,32C13.20886,16.515999,9.3608922E-08,17.270004,0,17.270004z M0,0C32.126682,2.776001,31.692696,32,31.692696,32L25.412756,32C23.588768,6.6049995,9.3608922E-08,6.3400002,0,6.3400002z"
                   Fill="White" 
                   Margin="0,0,0,0"/>
-                                        </Button.Content>
+                                    </Button.Content>
 
-                                        <Button.RenderTransform>
-                                            <ScaleTransform ScaleX=".5" ScaleY=".5"></ScaleTransform>
-                                        </Button.RenderTransform>
-                                    </Button>
+                                    <Button.RenderTransform>
+                                        <ScaleTransform ScaleX=".5" ScaleY=".5"></ScaleTransform>
+                                    </Button.RenderTransform>
+                                </Button>
 
-                                </StackPanel>
                             </StackPanel>
                         </StackPanel>
-                        <ScrollViewer Grid.Row="1" Width="360"  Visibility="{x:Bind CurrentWordDetails, Converter={StaticResource NullToVisiblityConverter}, Mode=OneWay}">
-                            <StackPanel>
-                                <!--<controls:Expander Grid.Row="0"
-                           x:Uid="GG_EXP_MEANING"
-                   Foreground="White"
-                   Background="Gray"
-                   IsExpanded="True">
-                                    <StackPanel Width="360">-->
+                    </StackPanel>
+
+                    <ScrollViewer Grid.Row="2" Width="360" >
+
+                        <StackPanel>
+                            <StackPanel  Visibility="{x:Bind CurrentWordDetails, Converter={StaticResource NullToVisiblityConverter}, Mode=OneWay}">
                                 <TextBlock HorizontalAlignment="Center" Foreground="White" TextWrapping="Wrap" Opacity=".7" Text="{x:Bind CurrentWordDetails.Lemma,Mode=OneWay}"></TextBlock>
                                 <TextBlock HorizontalAlignment="Center" Foreground="White" TextWrapping="Wrap" Opacity=".7" Text="{x:Bind CurrentWordDetails.WordRootStr,Mode=OneWay}"></TextBlock>
-                                <!--</StackPanel>
-                                </controls:Expander>-->
-
                                 <StackPanel
                                                           Visibility="{x:Bind ShowExamples, Mode=OneWay, Converter={StaticResource BooleanToVisiblityConverter}}"
                                         >
 
-                                    <ListView ItemsSource="{x:Bind CurrentWordDetails.Examples, Mode=OneWay}" SelectionMode="None">
+                                    <ListView ItemsSource="{x:Bind CurrentWordDetails.Examples, Mode=OneWay}" 
+                                              SelectionMode="None">
                                         <ListView.ItemTemplate>
                                             <DataTemplate x:DataType="local:EXAMRoot">
                                                 <StackPanel Margin="0 20 0 0">
                                                     <StackPanel HorizontalAlignment="Left" Margin="0 0 0 0" Orientation="Vertical" >
                                                         <TextBlock Margin="10 0 0 10" FontSize="22" Foreground="White" FontWeight="Bold" Text="{x:Bind normalizedTarget,Mode=OneWay}"></TextBlock>
-                                                        <ListView ItemsSource="{x:Bind examples, Mode=OneWay}" SelectionMode="None">
+                                                        <ListView ItemsSource="{x:Bind examples, Mode=OneWay}" IsItemClickEnabled="False" SelectionMode="None">
                                                             <ListView.ItemTemplate>
                                                                 <DataTemplate x:DataType="local:EXAMExample">
-                                                                    <StackPanel HorizontalAlignment="Left" Margin="0 0 0 0" Orientation="Vertical" >
-                                                                        <TextBlock>
+                                                                    <Grid Margin="0 10 0 10">
+                                                                        <Grid.RowDefinitions>
+                                                                            <RowDefinition Height="auto"></RowDefinition>
+                                                                            <RowDefinition></RowDefinition>
+                                                                        </Grid.RowDefinitions>
+                                                                        <Grid>
+                                                                            <Grid.ColumnDefinitions>
+                                                                                <ColumnDefinition Width="auto"></ColumnDefinition>
+                                                                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                                                            </Grid.ColumnDefinitions>
+                                                                            <Button HorizontalAlignment="Center" 
+                                    Click="Speaker_of_sentence_source_Click" 
+                                                                                    x:Name="Speaker_of_sentence_source"
+                                                                                    
+                                    Background="Transparent">
+                                                                                <Button.Content>
+                                                                                    <!-- WiFi -->
+                                                                                    <Path Data="M4.0379566,23.576004C6.2679466,23.576004 8.0749053,25.384003 8.0749053,27.612999 8.0749053,29.843002 6.2679466,31.651001 4.0379566,31.651001 1.8079665,31.651001 9.3608922E-08,29.843002 0,27.612999 9.3608922E-08,25.384003 1.8079665,23.576004 4.0379566,23.576004z M0,11.068001C20.522787,12.636002,20.654804,32,20.654804,32L14.576858,32C13.20886,16.515999,9.3608922E-08,17.270004,0,17.270004z M0,0C32.126682,2.776001,31.692696,32,31.692696,32L25.412756,32C23.588768,6.6049995,9.3608922E-08,6.3400002,0,6.3400002z" 
+                                                                                          Fill="White"/>
+                                                                                </Button.Content>
+
+                                                                                <Button.RenderTransform>
+                                                                                    <ScaleTransform ScaleX=".5" ScaleY=".5"></ScaleTransform>
+                                                                                </Button.RenderTransform>
+                                                                            </Button>
+
+                                                                            <TextBlock TextWrapping="Wrap" Grid.Column="1">
                                                                             <Run Foreground="White" Text="{x:Bind sourcePrefix ,Mode=OneWay}"></Run>
                                                                             <Run Foreground="Red" Text="{x:Bind sourceTerm ,Mode=OneWay}"></Run>
                                                                             <Run Foreground="White" Text="{x:Bind sourceSuffix ,Mode=OneWay}"></Run>
-                                                                        </TextBlock>
+                                                                            </TextBlock>
+                                                                        </Grid>
 
-                                                                        <TextBlock>
+                                                                        <Grid Grid.Row="1">
+                                                                            <Grid.ColumnDefinitions>
+                                                                                <ColumnDefinition Width="auto"></ColumnDefinition>
+                                                                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                                                            </Grid.ColumnDefinitions>
+                                                                            <Button HorizontalAlignment="Center" 
+                                    Click="Speaker_of_sentence_target_Click" 
+                                                              x:Name="Speaker_of_sentence"                          
+                                    Background="Transparent">
+                                                                                <Button.Content>
+                                                                                    <!-- WiFi -->
+                                                                                    <Path Data="M4.0379566,23.576004C6.2679466,23.576004 8.0749053,25.384003 8.0749053,27.612999 8.0749053,29.843002 6.2679466,31.651001 4.0379566,31.651001 1.8079665,31.651001 9.3608922E-08,29.843002 0,27.612999 9.3608922E-08,25.384003 1.8079665,23.576004 4.0379566,23.576004z M0,11.068001C20.522787,12.636002,20.654804,32,20.654804,32L14.576858,32C13.20886,16.515999,9.3608922E-08,17.270004,0,17.270004z M0,0C32.126682,2.776001,31.692696,32,31.692696,32L25.412756,32C23.588768,6.6049995,9.3608922E-08,6.3400002,0,6.3400002z" 
+                                                                                          Fill="White"/>
+                                                                                </Button.Content>
+
+                                                                                <Button.RenderTransform>
+                                                                                    <ScaleTransform ScaleX=".5" ScaleY=".5"></ScaleTransform>
+                                                                                </Button.RenderTransform>
+                                                                            </Button>
+
+                                                                            <TextBlock TextWrapping="Wrap" Grid.Column="1">
                                                                             <Run Foreground="White" Text="{x:Bind targetPrefix ,Mode=OneWay}"></Run>
                                                                             <Run Foreground="Red" Text="{x:Bind targetTerm ,Mode=OneWay}"></Run>
                                                                             <Run Foreground="White" Text="{x:Bind targetSuffix ,Mode=OneWay}"></Run>
-                                                                        </TextBlock>
-                                                                    </StackPanel>
+                                                                            </TextBlock>
+                                                                        </Grid>
+                                                                    </Grid>
                                                                 </DataTemplate>
                                                             </ListView.ItemTemplate>
                                                         </ListView>
@@ -139,48 +186,65 @@
                                         </ListView.ItemTemplate>
                                     </ListView>
                                 </StackPanel>
-
                             </StackPanel>
-                        </ScrollViewer>
-                    </Grid>
+                        </StackPanel>
+                    </ScrollViewer>
 
-                    <StackPanel HorizontalAlignment="Center" Margin="10" Orientation="Vertical" Grid.Row="2">
-                        <Button HorizontalAlignment="Stretch" Height="60"
+                    <Grid HorizontalAlignment="Center" Margin="10" 
+                    Width="360"
+                          Grid.Row="3">
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition  Height="auto"></RowDefinition>
+                            <RowDefinition  Height="auto"></RowDefinition>
+                            <!--<RowDefinition Height="auto"></RowDefinition>-->
+                        </Grid.RowDefinitions>
+
+                        <!--<Border BorderThickness="0,10,0,0" Margin="0 20 0 10" Opacity=".3" BorderBrush="White">
+                            -->
+                        <!--<Button HorizontalAlignment="Center" Background="Transparent">hide</Button>-->
+                        <!--
+                        </Border>-->
+
+                        <StackPanel   Grid.Row="0">
+
+                            <Button HorizontalAlignment="Stretch"
+                                    Height="60"
                                 Margin="0 0 0 10"
-                                Width="360"
-                                      Opacity=".9"
+                             
+                                Opacity=".9"
                                 Content="YES"
                                 FontWeight="Bold"
                                 IsEnabled="{x:Bind IsDownloading, Mode=OneWay, Converter={StaticResource BoolReverveConverter}}"
                                 x:Uid="GG_GOOD" 
                                 x:Name="Yes" Foreground="White" Click="Yes_Click">
-                            <Button.Background>
-                                <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
-                                    <GradientStop Color="#3F3F46" Offset="0.0" />
-                                    <GradientStop Color="#2D2D30" Offset="1.0" />
-                                </LinearGradientBrush>
-                            </Button.Background>
-                        </Button>
-                        <Button HorizontalAlignment="Stretch" 
-                                Width="360"
+                                <Button.Background>
+                                    <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                                        <GradientStop Color="#3F3F46" Offset="0.0" />
+                                        <GradientStop Color="#2D2D30" Offset="1.0" />
+                                    </LinearGradientBrush>
+                                </Button.Background>
+                            </Button>
+                            <Button HorizontalAlignment="Stretch" 
                                 Margin="0 0 0 10"
-                                Height="60"
+                                Height="30"
                                 FontWeight="Bold"
                                       Opacity=".9"
                                 x:Uid="GG_NOSURE"
-                                 Visibility="{x:Bind CurrentWordDetails, Converter={StaticResource NullToVisiblityConverter}, Mode=OneWay, ConverterParameter=r}"
                          IsEnabled="{x:Bind IsDownloading, Mode=OneWay, Converter={StaticResource BoolReverveConverter}}"
                               Foreground="White"  Content="NOT SURE" x:Name="Blur" Click="Blur_Click">
-                            <!--<Button.Background>
+                                <!--Visibility="{x:Bind CurrentWordDetails, Converter={StaticResource NullToVisiblityConverter}, Mode=OneWay, ConverterParameter=r}"-->
+                                <!--<Button.Background>
                                 <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
                                     <GradientStop Color="#3F3F46" Offset="0.0" />
                                     
                                     <GradientStop Color="#2D2D30" Offset="1.0" />
                                 </LinearGradientBrush>
                             </Button.Background>-->
-                        </Button>
+                            </Button>
+                        </StackPanel>
 
-                        <Grid>
+                        <Grid Grid.Row="1">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition></ColumnDefinition>
                                 <ColumnDefinition></ColumnDefinition>
@@ -200,9 +264,10 @@
                                     Content="NAIL IT"
                                     Margin="5 0 0 0"
                                      x:Uid="GG_HANDLED"
+                                  
                                  IsEnabled="{x:Bind IsDownloading, Mode=OneWay, Converter={StaticResource BoolReverveConverter}}"
                                     FontWeight="Bold"
-                                    Opacity=".9"
+                                    Opacity=".8"
                                     Grid.Column="1" Height="38" Foreground="White"  Click="Complete_Click">
                                 <Button.Background>
                                     <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
@@ -213,7 +278,7 @@
                             </Button>
                         </Grid>
 
-                    </StackPanel>
+                    </Grid>
 
 
 
@@ -326,7 +391,8 @@
                             <StackPanel HorizontalAlignment="Center" Margin="0 10 0 0">
                                 <ComboBox x:Name="DicsCombo"
                                       Width="360"
-                                      Opacity=".7" Foreground="White">
+                                      Opacity=".7" 
+                                          Foreground="White">
                                 </ComboBox>
                                 <Button Width="360" x:Uid="GG_LOAD" Content="LOAD"
                                     Margin="0 10 0 0"
@@ -740,10 +806,10 @@
 
                         <ScrollViewer HorizontalAlignment="Center" Margin="10">
                             <StackPanel Orientation="Vertical" Width="360">
-                                <Border BorderThickness="0,3,0,0" Margin="10" BorderBrush="Purple">
+                                <Border BorderThickness="0,3,0,0" Margin="0" BorderBrush="Purple">
                                 </Border>
 
-                                <TextBlock>乖乖背单词 v1.7.5</TextBlock>
+                                <TextBlock FontWeight="Bold" FontSize="30" Margin="0 10" Foreground="White">乖乖背单词 v1.7.8</TextBlock>
                             </StackPanel>
                         </ScrollViewer>
                     </PivotItem>
