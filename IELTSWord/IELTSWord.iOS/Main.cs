@@ -9,6 +9,8 @@ namespace IELTSWord.iOS
         {
             // if you want to use a different Application Delegate class from "AppDelegate"
             // you can specify it here.
+
+            SQLitePCL.Batteries.Init();
             UIApplication.Main(args, null, typeof(App));
 
         }

@@ -25,6 +25,7 @@ namespace IELTSWord
     /// </summary>
     sealed partial class App : Application
     {
+        public static string dbName = "kv.db";
         /// <summary>
         /// Initializes the singleton application object.  This is the first line of authored code
         /// executed, and as such is the logical equivalent of main() or WinMain().
@@ -34,6 +35,27 @@ namespace IELTSWord
             this.InitializeComponent();
             this.Suspending += OnSuspending;
             this.UnhandledException += App_UnhandledException;
+#if __DROID__
+            dbName = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Personal), "kv.db");
+#endif
+#if __IOS__
+            //var documents = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+            //var filename = Path.Combine(documents, "account.json");
+            dbName = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "kv.db");
+#endif
+            try
+            {
+                using (var db = new KVContext(dbName))
+                {
+                    //db.Database.EnsureDeleted();
+                    db.Database.EnsureCreated();
+                }
+            }
+            catch (Exception ex)
+            {
+                logger.Event("App", ex.Message);
+            }
+
         }
         LoggingService logger = new LoggingService();
         private void App_UnhandledException(object sender, Windows.UI.Xaml.UnhandledExceptionEventArgs e)
