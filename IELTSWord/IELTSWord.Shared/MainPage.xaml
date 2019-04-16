@@ -852,8 +852,8 @@
                                        Text="ABOUT"></TextBlock>
                         </PivotItem.Header>
 
-                        <ScrollViewer HorizontalAlignment="Stretch" Margin="10">
-                            <Grid Width="360">
+                        <ScrollViewer HorizontalAlignment="Stretch" Margin="10" Width="360">
+                            <Grid>
                                 <StackPanel Orientation="Vertical">
                                     <Border BorderThickness="0,3,0,0"  Width="360" Margin="0" BorderBrush="Purple">
                                     </Border>

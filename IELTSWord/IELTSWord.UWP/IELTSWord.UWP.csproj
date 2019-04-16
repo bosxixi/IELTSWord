@@ -13,6 +13,9 @@
 			-->
       <Version>6.2.2</Version>
     </PackageReference>
+    <PackageReference Include="MonkeyCache.FileStore">
+      <Version>1.2.0-beta</Version>
+    </PackageReference>
     <PackageReference Include="Plugin.MediaManager">
       <Version>0.5.1</Version>
     </PackageReference>

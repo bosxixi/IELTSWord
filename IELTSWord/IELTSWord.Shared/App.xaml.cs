@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MonkeyCache.FileStore;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -96,6 +97,7 @@ namespace IELTSWord
         /// <param name="e">Details about the launch request and process.</param>
         protected override void OnLaunched(LaunchActivatedEventArgs e)
         {
+            Barrel.ApplicationId = "IELTSWORD";
 #if !WINDOWS_UWP
             try
             {

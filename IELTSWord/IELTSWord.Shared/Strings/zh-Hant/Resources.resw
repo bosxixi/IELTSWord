@@ -136,7 +136,7 @@
     <value>統計</value>
   </data>
   <data name="GG_Settings.Text" xml:space="preserve">
-    <value>設置面板</value>
+    <value>設置</value>
   </data>
   <data name="GG_LOAD.Content" xml:space="preserve">
     <value>負荷</value>

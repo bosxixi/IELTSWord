@@ -58,7 +58,7 @@
     <value>统计</value>
   </data>
   <data name="GG_Settings.Text" xml:space="preserve">
-    <value>设置面板</value>
+    <value>设置</value>
   </data>
   <data name="GG_LOAD.Content" xml:space="preserve">
     <value>加载单词本</value>
