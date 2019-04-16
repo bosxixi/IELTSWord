@@ -30,7 +30,7 @@
         <CollectionViewSource x:Name="groupInfoCatagories" IsSourceGrouped="True"/>-->
         <x:Double x:Key="NarrowMinWidth">0</x:Double>
         <x:Double x:Key="NormalMinWidth">350</x:Double>
-        <x:Double x:Key="WideMinWidth">370</x:Double>
+        <x:Double x:Key="WideMinWidth">380</x:Double>
         <x:Double x:Key="DeskMinWidth">760</x:Double>
         
         <Storyboard x:Name="sb_s">
@@ -59,9 +59,9 @@
                     </VisualState.StateTriggers>
 
                     <VisualState.Setters>
-                        <Setter Target="pivotHeaderText.FontSize" Value="18"/>
+                        <Setter Target="pivotHeaderText.FontSize" Value="16"/>
                         <Setter Target="actionGrid.Width" Value="280"/>
-                        <Setter Target="pivotHeaderText.Foreground" Value="Orange"/>
+                        <!--<Setter Target="pivotHeaderText.Foreground" Value="Orange"/>-->
 
 
                     </VisualState.Setters>
@@ -74,9 +74,9 @@
                     </VisualState.StateTriggers>
 
                     <VisualState.Setters>
-                        <Setter Target="pivotHeaderText.FontSize" Value="18"/>
+                        <Setter Target="pivotHeaderText.FontSize" Value="16"/>
                         <Setter Target="actionGrid.Width" Value="330"/>
-                        <Setter Target="pivotHeaderText.Foreground" Value="Green"/>
+                        <!--<Setter Target="pivotHeaderText.Foreground" Value="Green"/>-->
                     </VisualState.Setters>
                 </VisualState>
                 <VisualState x:Name="WideMinWidth">
@@ -89,7 +89,7 @@
                     <VisualState.Setters>
                         <Setter Target="pivotHeaderText.FontSize" Value="22"/>
                         <Setter Target="actionGrid.Width" Value="360"/>
-                        <Setter Target="pivotHeaderText.Foreground" Value="Red"/>
+                        <!--<Setter Target="pivotHeaderText.Foreground" Value="Red"/>-->
                     </VisualState.Setters>
                 </VisualState>
                 <VisualState x:Name="DeskMinWidth">
@@ -102,7 +102,7 @@
                     <VisualState.Setters>
                         <Setter Target="pivotHeaderText.FontSize" Value="32"/>
                         <Setter Target="actionGrid.Width" Value="640"/>
-                        <Setter Target="pivotHeaderText.Foreground" Value="Yellow"/>
+                        <!--<Setter Target="pivotHeaderText.Foreground" Value="Yellow"/>-->
                     </VisualState.Setters>
                 </VisualState>
             </VisualStateGroup>
@@ -208,7 +208,7 @@
                                                                                 <ColumnDefinition Width="*"></ColumnDefinition>
                                                                             </Grid.ColumnDefinitions>
                                                                             <Button HorizontalAlignment="Center" 
-                                                                                           Command="{x:Bind SpeechTarget, Mode=OneWay}"
+                                                                                           Command="{x:Bind SpeechSource, Mode=OneWay}"
                                                                                     x:Name="Speaker_of_sentence_source"
                                                                                     
                                     Background="Transparent">
@@ -237,7 +237,7 @@
                                                                             </Grid.ColumnDefinitions>
                                                                             <Button HorizontalAlignment="Center" 
                                                               x:Name="Speaker_of_sentence" 
-                                                                                    Command="{x:Bind SpeechSource, Mode=OneWay}"
+                                                                                    Command="{x:Bind SpeechTarget, Mode=OneWay}"
                                     Background="Transparent">
                                                                                 <Button.Content>
                                                                                     <!-- WiFi -->
@@ -941,7 +941,7 @@
                                     <Border BorderThickness="0,3,0,0"  Width="{x:Bind actionGrid.Width, Mode=OneWay}" Margin="0" BorderBrush="Purple">
                                     </Border>
 
-                                    <TextBlock FontWeight="Bold" FontSize="30" Width="{x:Bind actionGrid.Width, Mode=OneWay}" Margin="0 10" Foreground="White">乖乖背单词 v1.8.0</TextBlock>
+                                    <TextBlock FontWeight="Bold" FontSize="30" Width="{x:Bind actionGrid.Width, Mode=OneWay}" Margin="0 10" Foreground="White">乖乖背单词 v1.9</TextBlock>
                                 </StackPanel>
                             </Grid>
                         </ScrollViewer>

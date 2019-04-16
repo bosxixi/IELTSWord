@@ -226,7 +226,7 @@
     <value>Please enter correct email and password to restore</value>
   </data>
   <data name="GG_WordBook.Text" xml:space="preserve">
-    <value>Word Book</value>
+    <value>Word</value>
   </data>
   <data name="GG_CUSTOM.Text" xml:space="preserve">
     <value>Custom</value>
@@ -235,7 +235,7 @@
     <value>Subtitle</value>
   </data>
   <data name="GG_BOOKS.Text" xml:space="preserve">
-    <value>Word Book</value>
+    <value>Word</value>
   </data>
   <data name="DOWNLOAD_CUSTOM_TEXT.Content" xml:space="preserve">
     <value>Fetch Text</value>
