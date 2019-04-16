@@ -65,6 +65,8 @@ namespace IELTSWord
             }
           
 #endif
+
+#if WINDOWS_UWP
             ApplicationViewTitleBar formattableTitleBar = ApplicationView.GetForCurrentView().TitleBar;
             formattableTitleBar.ButtonBackgroundColor = Colors.Transparent;
             CoreApplicationViewTitleBar coreTitleBar = CoreApplication.GetCurrentView().TitleBar;
@@ -79,7 +81,7 @@ namespace IELTSWord
 
             cu.TitleBar.ButtonInactiveForegroundColor = Colors.White;
             cu.TitleBar.ButtonForegroundColor = Colors.White;
-
+#endif
             //if (Windows.Foundation.Metadata.ApiInformation.IsTypePresent("Windows.UI.ViewManagement.ApplicationViewScaling"))
             //{
             //    var result = ApplicationViewScaling.TrySetDisableLayoutScaling(AppGlobalSettings.DisableLayoutScaling);

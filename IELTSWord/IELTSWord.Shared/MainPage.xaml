@@ -114,8 +114,8 @@
                                                 <StackPanel Margin="0 20 0 0">
                                                     <StackPanel HorizontalAlignment="Left" Margin="0 0 0 0" Orientation="Vertical" >
                                                         <TextBlock Margin="10 0 0 10" FontSize="22" Foreground="White" FontWeight="Bold" Text="{x:Bind normalizedTarget,Mode=OneWay}"></TextBlock>
-                                                        <ListView ItemsSource="{x:Bind examples, Mode=OneWay}" IsItemClickEnabled="False" SelectionMode="None">
-                                                            <ListView.ItemTemplate>
+                                                        <ItemsControl ItemsSource="{x:Bind examples, Mode=OneWay}">
+                                                            <ItemsControl.ItemTemplate>
                                                                 <DataTemplate x:DataType="local:EXAMExample">
                                                                     <Grid Margin="0 10 0 10">
                                                                         <Grid.RowDefinitions>
@@ -128,7 +128,7 @@
                                                                                 <ColumnDefinition Width="*"></ColumnDefinition>
                                                                             </Grid.ColumnDefinitions>
                                                                             <Button HorizontalAlignment="Center" 
-                                    Tapped="Speaker_of_sentence_sourceButton_Tapped" 
+                                                                                           Command="{x:Bind SpeechTarget, Mode=OneWay}"
                                                                                     x:Name="Speaker_of_sentence_source"
                                                                                     
                                     Background="Transparent">
@@ -156,8 +156,8 @@
                                                                                 <ColumnDefinition Width="*"></ColumnDefinition>
                                                                             </Grid.ColumnDefinitions>
                                                                             <Button HorizontalAlignment="Center" 
-                                    Tapped="Speaker_of_sentence_targetButton_Tapped" 
-                                                              x:Name="Speaker_of_sentence"                          
+                                                              x:Name="Speaker_of_sentence" 
+                                                                                    Command="{x:Bind SpeechSource, Mode=OneWay}"
                                     Background="Transparent">
                                                                                 <Button.Content>
                                                                                     <!-- WiFi -->
@@ -178,8 +178,8 @@
                                                                         </Grid>
                                                                     </Grid>
                                                                 </DataTemplate>
-                                                            </ListView.ItemTemplate>
-                                                        </ListView>
+                                                            </ItemsControl.ItemTemplate>
+                                                        </ItemsControl>
                                                     </StackPanel>
                                                 </StackPanel>
                                             </DataTemplate>
