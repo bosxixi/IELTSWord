@@ -97,7 +97,7 @@
                         </StackPanel>
                     </StackPanel>
 
-                    <ScrollViewer HorizontalAlignment="Stretch" Grid.Row="2" Width="360" >
+                    <ScrollViewer HorizontalAlignment="Stretch" Grid.Row="2" Width="360"  ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.HorizontalScrollBarVisibility="Hidden">
 
                         <Grid>
                             <StackPanel  Visibility="{x:Bind CurrentWordDetails, Converter={StaticResource NullToVisiblityConverter}, Mode=OneWay}">
@@ -107,12 +107,12 @@
                                                           Visibility="{x:Bind ShowExamples, Mode=OneWay, Converter={StaticResource BooleanToVisiblityConverter}}"
                                         >
 
-                                    <ListView ItemsSource="{x:Bind CurrentWordDetails.Examples, Mode=OneWay}" 
+                                    <ListView ItemsSource="{x:Bind CurrentWordDetails.Examples, Mode=OneWay}"
                                               SelectionMode="None">
                                         <ListView.ItemTemplate>
                                             <DataTemplate x:DataType="local:EXAMRoot">
                                                 <StackPanel Margin="0 20 0 0">
-                                                    <StackPanel HorizontalAlignment="Left" Margin="0 0 0 0" Orientation="Vertical" >
+                                                    <StackPanel HorizontalAlignment="Left" Margin="0 0 0 0" Orientation="Vertical">
                                                         <TextBlock Margin="10 0 0 10" FontSize="22" Foreground="White" FontWeight="Bold" Text="{x:Bind normalizedTarget,Mode=OneWay}"></TextBlock>
                                                         <ItemsControl ItemsSource="{x:Bind examples, Mode=OneWay}">
                                                             <ItemsControl.ItemTemplate>
@@ -339,7 +339,7 @@
                             <ListView x:Name="WordsListView" 
                                       Grid.Row="1"
                                       Margin="0,5,0,0" 
-                                      Width="360" 
+                                      Width="350" 
                                       >
                                 <ListView.ItemContainerStyle>
                                     <Style TargetType="ListViewItem">
