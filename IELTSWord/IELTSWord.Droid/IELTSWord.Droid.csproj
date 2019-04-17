@@ -68,7 +68,7 @@
     <PackageReference Include="bosxixi.ScorpioPlayer.Core">
       <Version>1.5.8</Version>
     </PackageReference>
-    <PackageReference Include="MonkeyCache.FileStore">
+    <PackageReference Include="MonkeyCache.LiteDB">
       <Version>1.2.0-beta</Version>
     </PackageReference>
     <PackageReference Include="Plugin.MediaManager">

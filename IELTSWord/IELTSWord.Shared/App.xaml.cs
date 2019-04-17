@@ -1,4 +1,4 @@
-﻿using MonkeyCache.FileStore;
+﻿using MonkeyCache.LiteDB;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -98,6 +98,19 @@ namespace IELTSWord
         protected override void OnLaunched(LaunchActivatedEventArgs e)
         {
             Barrel.ApplicationId = "IELTSWORD";
+            //Barrel.EncryptionKey = "IELTSWORD";
+#if __IOS__ || __MACOS__
+            var basePath =  Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments));
+#elif __DROID__
+		    var basePath = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
+#elif WINDOWS_UWP
+            var basePath = Windows.Storage.ApplicationData.Current.LocalFolder.Path;
+#else
+            var basePath = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
+#endif
+
+            MonkeyCache.BarrelUtils.SetBaseCachePath(basePath);
+
 #if !WINDOWS_UWP
             try
             {

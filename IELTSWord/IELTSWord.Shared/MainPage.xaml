@@ -941,7 +941,7 @@
                                     <Border BorderThickness="0,3,0,0"  Width="{x:Bind actionGrid.Width, Mode=OneWay}" Margin="0" BorderBrush="Purple">
                                     </Border>
 
-                                    <TextBlock FontWeight="Bold" FontSize="30" Width="{x:Bind actionGrid.Width, Mode=OneWay}" Margin="0 10" Foreground="White">乖乖背单词 v1.9</TextBlock>
+                                    <TextBlock FontWeight="Bold" FontSize="30" Width="{x:Bind actionGrid.Width, Mode=OneWay}" Margin="0 10" Foreground="White">乖乖背单词 v2.0</TextBlock>
                                 </StackPanel>
                             </Grid>
                         </ScrollViewer>
