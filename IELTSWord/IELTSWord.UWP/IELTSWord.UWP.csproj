@@ -56,7 +56,7 @@
     <PackageCertificateKeyFile>IELTSWord.UWP_StoreKey.pfx</PackageCertificateKeyFile>
     <PackageCertificateThumbprint>16C4ABFF42E6B852710E50390AD5DED2C2736C84</PackageCertificateThumbprint>
     <GenerateAppInstallerFile>False</GenerateAppInstallerFile>
-    <AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
+    <AppxAutoIncrementPackageRevision>False</AppxAutoIncrementPackageRevision>
     <AppxBundle>Always</AppxBundle>
     <AppxBundlePlatforms>x86|x64|arm</AppxBundlePlatforms>
     <AppInstallerUpdateFrequency>1</AppInstallerUpdateFrequency>
