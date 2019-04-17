@@ -35,6 +35,17 @@ namespace IELTSWord
             this.InitializeComponent();
             this.Suspending += OnSuspending;
             this.UnhandledException += App_UnhandledException;
+#if WINDOWS_UWP
+            try
+            {
+                this.RequiresPointerMode = Windows.UI.Xaml.ApplicationRequiresPointerMode.WhenRequested;
+                this.FocusVisualKind = FocusVisualKind.Reveal;
+            }
+            catch (Exception)
+            {
+
+            }
+#endif
         }
         LoggingService logger = new LoggingService();
         private void App_UnhandledException(object sender, Windows.UI.Xaml.UnhandledExceptionEventArgs e)
