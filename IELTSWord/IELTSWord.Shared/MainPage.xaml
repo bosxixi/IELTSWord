@@ -100,8 +100,9 @@
                     </VisualState.StateTriggers>
 
                     <VisualState.Setters>
-                        <Setter Target="pivotHeaderText.FontSize" Value="32"/>
+                        <Setter Target="pivotHeaderText.FontSize" Value="26"/>
                         <Setter Target="actionGrid.Width" Value="640"/>
+                        <Setter Target="pivot.Margin" Value="0 10 0 0"/>
                         <!--<Setter Target="pivotHeaderText.Foreground" Value="Yellow"/>-->
                     </VisualState.Setters>
                 </VisualState>
@@ -136,7 +137,7 @@
                             <Button HorizontalAlignment="Right"
                                     Background="Transparent"
                                     Foreground="White" 
-                                    Opacity=".7"
+                                    Opacity=".95"
                                     x:Name="More_Button"
                                     Click="MORE_Click"
                                     Margin="10 6 0 0" Content="...">
@@ -450,6 +451,119 @@
                                        Text="REPORT"></TextBlock>
                         </PivotItem.Header>
 
+                        <ScrollViewer HorizontalAlignment="Stretch" Margin="10" Width="{x:Bind actionGrid.Width, Mode=OneWay}">
+                            <Grid>
+                                <StackPanel Orientation="Vertical">
+                                    <Border BorderThickness="0,3,0,0" Margin="10" BorderBrush="Purple">
+                                    </Border>
+
+                                    <TextBlock Margin="10 12 10 18"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Left">
+                    <Run x:Uid="Report_Text1"
+                         FontSize="22"
+                         x:Name="Report_Text1"
+                         Text="Report"
+                           FontWeight="Thin"
+                           FontStyle="Normal"
+                          Foreground="White"
+                         ></Run>
+                    <Run x:Name="Report_Text11"
+                         FontSize="22"
+                         FontWeight="Bold"
+                          Foreground="White"
+                         ></Run>
+                                    </TextBlock>
+
+                                    <TextBlock Margin="10 12 10 18"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Left">
+                    <Run x:Uid="Report_Text2"
+                         Text="Report"
+                           FontSize="{x:Bind Report_Text1.FontSize}"
+                         FontWeight="{x:Bind Report_Text1.FontWeight}"
+                Foreground="{x:Bind Report_Text1.Foreground}"
+                FontStyle="{x:Bind Report_Text1.FontStyle}"
+                         ></Run>
+                    <Run x:Name="Report_Text22"
+                                   FontSize="{x:Bind Report_Text11.FontSize}"
+                    FontWeight="{x:Bind Report_Text11.FontWeight}"
+                Foreground="{x:Bind Report_Text11.Foreground}"
+                         ></Run>
+                                    </TextBlock>
+
+                                    <TextBlock Margin="10 12 10 18"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Left">
+                    <Run x:Uid="Report_Text3"
+                         Text="Report"
+                           FontSize="{x:Bind Report_Text1.FontSize}"
+                         FontWeight="{x:Bind Report_Text1.FontWeight}"
+                Foreground="{x:Bind Report_Text1.Foreground}"
+                FontStyle="{x:Bind Report_Text1.FontStyle}"
+                         ></Run>
+                    <Run x:Name="Report_Text33"
+                                FontSize="{x:Bind Report_Text11.FontSize}"
+                    FontWeight="{x:Bind Report_Text11.FontWeight}"
+                Foreground="{x:Bind Report_Text11.Foreground}"
+                         ></Run>
+                                    </TextBlock>
+                                    <Border BorderThickness="0,3,0,0" Margin="10" BorderBrush="Purple">
+                                    </Border>
+
+                                    <TextBlock Margin="10 12 10 18"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Left">
+                    <Run x:Uid="Report_Text1_r"
+                         Text="Report"
+                          FontSize="{x:Bind Report_Text1.FontSize}"
+                         FontWeight="{x:Bind Report_Text1.FontWeight}"
+                Foreground="{x:Bind Report_Text1.Foreground}"
+                FontStyle="{x:Bind Report_Text1.FontStyle}"
+                         ></Run>
+                    <Run x:Name="Report_Text11_r"
+                                FontSize="{x:Bind Report_Text11.FontSize}"
+                    FontWeight="{x:Bind Report_Text11.FontWeight}"
+                Foreground="{x:Bind Report_Text11.Foreground}"
+                         ></Run>
+                                    </TextBlock>
+
+                                    <TextBlock Margin="10 12 10 18"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Left">
+                    <Run x:Uid="Report_Text2_r"
+                         Text="Report"
+                           FontSize="{x:Bind Report_Text1.FontSize}"
+                         FontWeight="{x:Bind Report_Text1.FontWeight}"
+                Foreground="{x:Bind Report_Text1.Foreground}"
+                FontStyle="{x:Bind Report_Text1.FontStyle}"
+                         ></Run>
+                    <Run x:Name="Report_Text22_r"
+                                     FontSize="{x:Bind Report_Text11.FontSize}"
+                    FontWeight="{x:Bind Report_Text11.FontWeight}"
+                Foreground="{x:Bind Report_Text11.Foreground}"
+                         ></Run>
+                                    </TextBlock>
+
+                                    <TextBlock Margin="10 12 10 18"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Left">
+                    <Run x:Uid="Report_Text3_r"
+                         Text="Report"
+                             FontSize="{x:Bind Report_Text1.FontSize}"
+                         FontWeight="{x:Bind Report_Text1.FontWeight}"
+                Foreground="{x:Bind Report_Text1.Foreground}"
+                FontStyle="{x:Bind Report_Text1.FontStyle}"
+                         ></Run>
+                    <Run x:Name="Report_Text33_r"
+                           FontSize="{x:Bind Report_Text11.FontSize}"
+                    FontWeight="{x:Bind Report_Text11.FontWeight}"
+                Foreground="{x:Bind Report_Text11.Foreground}"
+                         ></Run>
+                                    </TextBlock>
+                                </StackPanel>
+                            </Grid>
+                        </ScrollViewer>
                     </PivotItem>
 
                 </Pivot>
@@ -564,22 +678,27 @@
                             <StackPanel Orientation="Vertical">
                                 <TextBox HorizontalAlignment="Stretch" 
                                          Foreground="White"
-                                         PlaceholderText="https://www.bing.com/news" 
+                                         x:Name="CustomTextUriTB"
+                                         
+                                         PlaceholderText="example: https://www.bing.com/news" 
                                          Text="{x:Bind CustomTextUri, Mode=TwoWay}" 
                                           Margin="10 10 10 0" 
                                          Width="{x:Bind actionGrid.Width, Mode=OneWay}"></TextBox>
 
-                                <Button HorizontalAlignment="Stretch" Opacity=".7"
+                                <Button HorizontalAlignment="Stretch"
                                             Foreground="White" 
                                             Margin="10 10 10 0" 
+                                            Visibility="{x:Bind CustomTextUriTB.Text, Mode=OneWay, Converter={StaticResource NullToVisiblityConverter}, ConverterParameter=x}"
                                          Width="{x:Bind actionGrid.Width, Mode=OneWay}"
                                         x:Uid="DOWNLOAD_CUSTOM_TEXT"
+                                        FontWeight="Bold"
                                         Content="DOWNLOAD_CUSTOM_TEXT"
                                         Click="DOWNLOAD_CUSTOM_TEXT"
                                         ></Button>
                                 <Button HorizontalAlignment="Stretch" 
-                                        Opacity=".7" Foreground="White" 
+                                        Foreground="White" 
                                         Margin="10 10 10 0" 
+                                        FontWeight="Bold"
                                          x:Uid="EXTRACT_CUSTOM_TEXT"
                                         Content="EXTRACT_CUSTOM_TEXT"
                                         Click="EXTRACT_CUSTOM_TEXT"
@@ -603,14 +722,16 @@
                             <StackPanel Orientation="Vertical" Grid.Row="2">
                                 <TextBox HorizontalAlignment="Stretch" 
                                          Foreground="White"
+                                         x:Name="NewWordBookNameTB"
                                          x:Uid="NewWordBookName"
                                          PlaceholderText="NewWordBookName" 
                                          Text="{x:Bind NewWordBookName, Mode=TwoWay}" 
                                          Margin="10" Width="{x:Bind actionGrid.Width, Mode=OneWay}"></TextBox>
                                 <Button HorizontalAlignment="Stretch" 
-                                            Opacity=".7"
                                             Foreground="White" 
                                             Margin="10" 
+                                        FontWeight="Bold"
+                                           Visibility="{x:Bind NewWordBookNameTB.Text, Mode=OneWay, Converter={StaticResource NullToVisiblityConverter}, ConverterParameter=x}"
                                          Width="{x:Bind actionGrid.Width, Mode=OneWay}"
                                         x:Uid="ADD_OR_CREATE_WORDBOOK"
                                         Content="ADD_OR_CREATE_WORDBOOK"
@@ -755,8 +876,61 @@
                                       x:Name="SpeakNaturalToggleSwitch"
                                       IsOn="{x:Bind SpeakNatural, Mode=TwoWay}"
                             />
+                                        
                                     </Grid>
 
+                                    <Grid Margin="10">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*"></ColumnDefinition>
+                                            <ColumnDefinition Width="auto"></ColumnDefinition>
+                                        </Grid.ColumnDefinitions>
+                                        <TextBlock x:Uid="AutoSync_Text"
+                                       Margin="0 10 0 0"
+                                       FontWeight="Bold"
+                                       Foreground="White" Text="AutoSync_Text" HorizontalAlignment="Left"></TextBlock>
+                                        <ToggleSwitch
+                                HorizontalAlignment="Right"
+                                  Grid.Column="1"
+                                      x:Name="AutoSyncToggleSwitch"
+                                      IsOn="{x:Bind AutoSync, Mode=TwoWay}"
+                            />
+                                    </Grid>
+                                    <Grid Margin="10"       x:Name="UsePointerToggleSwitchGrid"  Visibility="Collapsed">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                                <ColumnDefinition Width="auto"></ColumnDefinition>
+                                            </Grid.ColumnDefinitions>
+                                            <TextBlock x:Uid="UsePointer_Text"
+                                       Margin="0 10 0 0"
+                                       FontWeight="Bold"
+                                       Foreground="White" Text="UsePointer_Text" HorizontalAlignment="Left"></TextBlock>
+                                            <ToggleSwitch
+                                HorizontalAlignment="Right"
+                                  Grid.Column="1"
+                                     x:Name="UsePointerToggleSwitch"
+                                      IsOn="{x:Bind UsePointer, Mode=TwoWay}"
+                            />
+
+                                        </Grid>
+
+                                    <Grid Margin="10"       x:Name="UseSoundToggleSwitchGrid"  Visibility="Collapsed">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*"></ColumnDefinition>
+                                            <ColumnDefinition Width="auto"></ColumnDefinition>
+                                        </Grid.ColumnDefinitions>
+                                        <TextBlock x:Uid="UseSound_Text"
+                                       Margin="0 10 0 0"
+                                       FontWeight="Bold"
+                                       Foreground="White" Text="UseSound_Text" HorizontalAlignment="Left"></TextBlock>
+                                        <ToggleSwitch
+                                HorizontalAlignment="Right"
+                                  Grid.Column="1"
+                                     x:Name="UseSoundToggleSwitch"
+                                      IsOn="{x:Bind UseSound, Mode=TwoWay}"
+                            />
+
+                                    </Grid>
+                                    
                                     <Grid Margin="10">
                                         <Grid.ColumnDefinitions>
                                             <ColumnDefinition Width="*"></ColumnDefinition>
@@ -903,7 +1077,9 @@
                                        Text="ACCOUNT"></TextBlock>
                         </PivotItem.Header>
 
-                        <ScrollViewer HorizontalAlignment="Stretch" Margin="10" Width="{x:Bind actionGrid.Width, Mode=OneWay}">
+                        <ScrollViewer HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden" HorizontalAlignment="Stretch"
+                                      Margin="10" 
+                                      Width="{x:Bind actionGrid.Width, Mode=OneWay}">
                             <Grid>
 
                                 <StackPanel Orientation="Vertical" Width="{x:Bind actionGrid.Width, Mode=OneWay}">
@@ -914,8 +1090,17 @@
                                     <TextBox HorizontalAlignment="Stretch" Foreground="White" PlaceholderText="Email" Text="{x:Bind Email, Mode=TwoWay}" Margin="10" Width="{x:Bind actionGrid.Width, Mode=OneWay}"></TextBox>
                                     <PasswordBox x:Name="passwordBox" Width="{x:Bind actionGrid.Width, Mode=OneWay}"  Foreground="White" Margin="10"
              PasswordChanged="passwordBox_PasswordChanged"/>
-                                    <Button HorizontalAlignment="Stretch" Opacity=".7" Foreground="White" Margin="10" Width="{x:Bind actionGrid.Width, Mode=OneWay}" x:Uid="GG_UPLOAD" Content="UPLOAD" x:Name="UPLOADS" Click="UPLOADS_Click"></Button>
-                                    <Button HorizontalAlignment="Stretch" Opacity=".7" Foreground="White" Margin="10" Width="{x:Bind actionGrid.Width, Mode=OneWay}" x:Uid="GG_DOWNLOAD" Content="DOWNLOAD" x:Name="DOWNLOAD" Click="DOWNLOAD_Click"></Button>
+                                    <Button HorizontalAlignment="Stretch"
+                                            Opacity=".95" Height="36"
+FontWeight="Bold"
+                                            Foreground="White" Margin="10"
+                                            IsEnabled="{x:Bind IsDownloading, Mode=OneWay, Converter={StaticResource BoolReverveConverter}}"
+                                            Width="{x:Bind actionGrid.Width, Mode=OneWay}"
+                                            x:Uid="GG_UPLOAD" 
+                                            Content="UPLOAD" 
+                                            x:Name="UPLOADS" 
+                                            Click="UPLOADS_Click"></Button>
+                                    <!--<Button HorizontalAlignment="Stretch" Opacity=".7" Foreground="White" Margin="10" Width="{x:Bind actionGrid.Width, Mode=OneWay}" x:Uid="GG_DOWNLOAD" Content="DOWNLOAD" x:Name="DOWNLOAD" Click="DOWNLOAD_Click"></Button>-->
 
                                     <!--<Button HorizontalAlignment="Stretch" Opacity=".7" Foreground="White" Margin="10" Width="{x:Bind actionGrid.Width, Mode=OneWay}" 
                                 Content="Test_Click" Click="Test_Click"></Button>-->
@@ -941,7 +1126,7 @@
                                     <Border BorderThickness="0,3,0,0"  Width="{x:Bind actionGrid.Width, Mode=OneWay}" Margin="0" BorderBrush="Purple">
                                     </Border>
 
-                                    <TextBlock FontWeight="Bold" FontSize="30" Width="{x:Bind actionGrid.Width, Mode=OneWay}" Margin="0 10" Foreground="White">乖乖背单词 v2.0</TextBlock>
+                                    <TextBlock FontWeight="Bold" FontSize="30" Width="{x:Bind actionGrid.Width, Mode=OneWay}" Margin="0 10" Foreground="White">乖乖背单词 v2.2</TextBlock>
                                 </StackPanel>
                             </Grid>
                         </ScrollViewer>
@@ -1022,12 +1207,22 @@
                         Foreground="DarkRed"
                                 Background="Transparent"
                                 Command="{x:Bind HeartCommand}"/>-->
-                <TextBlock Margin="10 12 10 18" x:Name="PackageVersion" 
+                <TextBlock Margin="10 12 10 18"
                            VerticalAlignment="Center"
-                           FontSize="12"
+                           
+                           HorizontalAlignment="Right">
+                    <Run x:Name="PackageVersion"
+                         FontSize="12"
                            FontWeight="Thin"
                            FontStyle="Italic"
-                           HorizontalAlignment="Right" Foreground="White"></TextBlock>
+                          Foreground="White"
+                         ></Run>
+                    <Run x:Name="percentRun"
+                         FontSize="12"
+                         FontWeight="Normal"
+                          Foreground="White"
+                         ></Run>
+                </TextBlock>
 
                 <!--<TextBlock Margin="10 12 10 16" x:Name="PackageVersion1" 
                            VerticalAlignment="Center"

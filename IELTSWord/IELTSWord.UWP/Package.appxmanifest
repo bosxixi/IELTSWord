@@ -9,7 +9,7 @@
   <Identity
     Name="35447bosxixi.IELTSWord"
     Publisher="CN=5922754C-322E-4419-9034-750A54B7CD81"
-    Version="1.9.0.0" />
+    Version="2.2.0.0" />
 
   <mp:PhoneIdentity PhoneProductId="42b19d42-3627-47e9-acd8-8e4e9e26f1f3" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 

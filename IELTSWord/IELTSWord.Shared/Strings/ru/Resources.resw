@@ -96,9 +96,6 @@
   <data name="zk" xml:space="preserve">
     <value>ZK</value>
   </data>
-  <data name="GG_UPLOAD.Content" xml:space="preserve">
-    <value>Загрузить в облако</value>
-  </data>
   <data name="GG_DOWNLOAD.Content" xml:space="preserve">
     <value>Скачать из облаков</value>
   </data>
@@ -213,12 +210,6 @@
   <data name="REQUERED_MORE_INFO_DETAIL" xml:space="preserve">
     <value>Пожалуйста, введите адрес электронной почты и пароль для резервного копирования данных в облаке</value>
   </data>
-  <data name="DOWNLOAD_SUCCESS" xml:space="preserve">
-    <value>Загрузка завершена</value>
-  </data>
-  <data name="DOWNLOAD_SUCCESS_DETAIL" xml:space="preserve">
-    <value>Восстановление данных успешно</value>
-  </data>
   <data name="ERROR_MORE_INFO" xml:space="preserve">
     <value>Не удается загрузить</value>
   </data>
@@ -290,5 +281,50 @@
   </data>
   <data name="ShakeEnabled_Text.Text" xml:space="preserve">
     <value>Обнаружения дрожания</value>
+  </data>
+  <data name="DOWNLOAD_SUCCESS_DETAIL" xml:space="preserve">
+    <value>Синхронизация данных успешно</value>
+  </data>
+  <data name="GG_UPLOAD.Content" xml:space="preserve">
+    <value>Синхронизация данных</value>
+  </data>
+  <data name="DOWNLOAD_SUCCESS" xml:space="preserve">
+    <value>Синхронизация данных завершено</value>
+  </data>
+  <data name="UsePointer_Text.Text" xml:space="preserve">
+    <value>Использовать режим указателя</value>
+  </data>
+  <data name="AutoSync_Text.Text" xml:space="preserve">
+    <value>Автоматическая синхронизация данных</value>
+  </data>
+  <data name="URI_IS_EMPTY" xml:space="preserve">
+    <value>Пожалуйста, введите правильный URL-адрес</value>
+  </data>
+  <data name="Error_Title" xml:space="preserve">
+    <value>Ошибки</value>
+  </data>
+  <data name="CustomText_IS_EMPTY" xml:space="preserve">
+    <value>Пожалуйста, введите тексты</value>
+  </data>
+  <data name="Report_Text1.Text" xml:space="preserve">
+    <value>Сегодня новые выученные слова</value>
+  </data>
+  <data name="Report_Text2.Text" xml:space="preserve">
+    <value>На этой неделе новое узнал слова</value>
+  </data>
+  <data name="Report_Text3.Text" xml:space="preserve">
+    <value>В этом месяце нового узнал слова</value>
+  </data>
+  <data name="Report_Text1_r.Text" xml:space="preserve">
+    <value>Сегодня Обзор слова</value>
+  </data>
+  <data name="Report_Text2_r.Text" xml:space="preserve">
+    <value>На этой неделе обзора слова</value>
+  </data>
+  <data name="Report_Text3_r.Text" xml:space="preserve">
+    <value>В этом месяце обзор слова</value>
+  </data>
+  <data name="UseSound_Text.Text" xml:space="preserve">
+    <value>Использование элемента звук</value>
   </data>
 </root>

@@ -96,9 +96,6 @@
   <data name="zk" xml:space="preserve">
     <value>ZK</value>
   </data>
-  <data name="GG_UPLOAD.Content" xml:space="preserve">
-    <value>Fazer o upload para a nuvem</value>
-  </data>
   <data name="GG_DOWNLOAD.Content" xml:space="preserve">
     <value>Download de nuvem</value>
   </data>
@@ -213,12 +210,6 @@
   <data name="REQUERED_MORE_INFO_DETAIL" xml:space="preserve">
     <value>Por favor digite o e-mail e senha para backup de dados para a nuvem</value>
   </data>
-  <data name="DOWNLOAD_SUCCESS" xml:space="preserve">
-    <value>Download concluído</value>
-  </data>
-  <data name="DOWNLOAD_SUCCESS_DETAIL" xml:space="preserve">
-    <value>Restaurar dados com êxito</value>
-  </data>
   <data name="ERROR_MORE_INFO" xml:space="preserve">
     <value>Incapaz de Download</value>
   </data>
@@ -290,5 +281,50 @@
   </data>
   <data name="ShakeEnabled_Text.Text" xml:space="preserve">
     <value>Detectar o Shake</value>
+  </data>
+  <data name="DOWNLOAD_SUCCESS_DETAIL" xml:space="preserve">
+    <value>Sincronização de dados com êxito</value>
+  </data>
+  <data name="GG_UPLOAD.Content" xml:space="preserve">
+    <value>Sincronização de dados</value>
+  </data>
+  <data name="DOWNLOAD_SUCCESS" xml:space="preserve">
+    <value>Dados de sincronização concluídos</value>
+  </data>
+  <data name="UsePointer_Text.Text" xml:space="preserve">
+    <value>Usar o modo de ponteiro</value>
+  </data>
+  <data name="AutoSync_Text.Text" xml:space="preserve">
+    <value>Dados de sincronização automática</value>
+  </data>
+  <data name="URI_IS_EMPTY" xml:space="preserve">
+    <value>Por favor, insira o URL correto da web</value>
+  </data>
+  <data name="Error_Title" xml:space="preserve">
+    <value>Erro ocorrer</value>
+  </data>
+  <data name="CustomText_IS_EMPTY" xml:space="preserve">
+    <value>Por favor, insira textos</value>
+  </data>
+  <data name="Report_Text1.Text" xml:space="preserve">
+    <value>Novas palavras aprendidas hoje</value>
+  </data>
+  <data name="Report_Text2.Text" xml:space="preserve">
+    <value>Novo esta semana aprendi palavras</value>
+  </data>
+  <data name="Report_Text3.Text" xml:space="preserve">
+    <value>Este mês novo aprendi palavras</value>
+  </data>
+  <data name="Report_Text1_r.Text" xml:space="preserve">
+    <value>Palavras de revisão de hoje</value>
+  </data>
+  <data name="Report_Text2_r.Text" xml:space="preserve">
+    <value>Palavras de revisão esta semana</value>
+  </data>
+  <data name="Report_Text3_r.Text" xml:space="preserve">
+    <value>Palavras de revisão deste mês</value>
+  </data>
+  <data name="UseSound_Text.Text" xml:space="preserve">
+    <value>Uso elemento som</value>
   </data>
 </root>

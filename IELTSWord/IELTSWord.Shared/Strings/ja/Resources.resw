@@ -174,9 +174,6 @@
   <data name="zk" xml:space="preserve">
     <value>ZK</value>
   </data>
-  <data name="GG_UPLOAD.Content" xml:space="preserve">
-    <value>クラウドにアップロードします。</value>
-  </data>
   <data name="GG_DOWNLOAD.Content" xml:space="preserve">
     <value>クラウドからダウンロードします。</value>
   </data>
@@ -291,12 +288,6 @@
   <data name="REQUERED_MORE_INFO_DETAIL" xml:space="preserve">
     <value>クラウドにデータをバックアップするメール アドレスとパスワードを入力してください。</value>
   </data>
-  <data name="DOWNLOAD_SUCCESS" xml:space="preserve">
-    <value>ダウンロードが完了しました。</value>
-  </data>
-  <data name="DOWNLOAD_SUCCESS_DETAIL" xml:space="preserve">
-    <value>正常にデータを復元します。</value>
-  </data>
   <data name="ERROR_MORE_INFO" xml:space="preserve">
     <value>ダウンロードできません。</value>
   </data>
@@ -368,5 +359,50 @@
   </data>
   <data name="ShakeEnabled_Text.Text" xml:space="preserve">
     <value>手ふれを検出します。</value>
+  </data>
+  <data name="DOWNLOAD_SUCCESS_DETAIL" xml:space="preserve">
+    <value>データが正常に同期します。</value>
+  </data>
+  <data name="GG_UPLOAD.Content" xml:space="preserve">
+    <value>同期データ</value>
+  </data>
+  <data name="DOWNLOAD_SUCCESS" xml:space="preserve">
+    <value>完了した同期データ</value>
+  </data>
+  <data name="UsePointer_Text.Text" xml:space="preserve">
+    <value>ポインターを使用するモード</value>
+  </data>
+  <data name="AutoSync_Text.Text" xml:space="preserve">
+    <value>自動同期データ</value>
+  </data>
+  <data name="URI_IS_EMPTY" xml:space="preserve">
+    <value>正しい web の URL を入力してください。</value>
+  </data>
+  <data name="Error_Title" xml:space="preserve">
+    <value>エラーが発生します。</value>
+  </data>
+  <data name="CustomText_IS_EMPTY" xml:space="preserve">
+    <value>テキストを入力してください。</value>
+  </data>
+  <data name="Report_Text1.Text" xml:space="preserve">
+    <value>今日新しい言葉を学んだ</value>
+  </data>
+  <data name="Report_Text2.Text" xml:space="preserve">
+    <value>今週新しい言葉を学んだ</value>
+  </data>
+  <data name="Report_Text3.Text" xml:space="preserve">
+    <value>今月新しい言葉を学んだ</value>
+  </data>
+  <data name="Report_Text1_r.Text" xml:space="preserve">
+    <value>今日のレビューの言葉</value>
+  </data>
+  <data name="Report_Text2_r.Text" xml:space="preserve">
+    <value>今週のレビューの言葉</value>
+  </data>
+  <data name="Report_Text3_r.Text" xml:space="preserve">
+    <value>今月のレビューの言葉</value>
+  </data>
+  <data name="UseSound_Text.Text" xml:space="preserve">
+    <value>使用要素の音</value>
   </data>
 </root>
