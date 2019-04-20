@@ -2267,7 +2267,7 @@ namespace IELTSWord
                 }
 
 
-                ).Where(c => c.Level == 0).ToList();
+                ).Where(c => c.Level == 0).OrderBy(c=>c.Order == -1).ToList();
             }
             catch (Exception)
             {

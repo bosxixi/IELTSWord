@@ -845,8 +845,9 @@
                             </Grid.RowDefinitions>
                             <StackPanel HorizontalAlignment="Stretch">
                                 <StackPanel HorizontalAlignment="Right" Margin="0" Orientation="Horizontal" >
-                                    <Button Margin="10 0 0 0" x:Uid="GG_UpComing_Fetch"
+                                    <Button Margin="5 0 0 0" x:Uid="GG_UpComing_Fetch"
                                             Content="REFLESH" 
+                                             Height="38"
                                             Click="Upcoming_Update_Click"
                                             Foreground="White"></Button>
                                     <Button HorizontalAlignment="Right" 
