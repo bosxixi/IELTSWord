@@ -327,4 +327,13 @@
   <data name="UseSound_Text.Text" xml:space="preserve">
     <value>使用元素声音</value>
   </data>
+  <data name="GG_UpComing.Text" xml:space="preserve">
+    <value>即将推出</value>
+  </data>
+  <data name="GG_UpComingREMOVE.Content" xml:space="preserve">
+    <value>已掌握</value>
+  </data>
+  <data name="GG_UpComing_Fetch.Content" xml:space="preserve">
+    <value>刷新</value>
+  </data>
 </root>

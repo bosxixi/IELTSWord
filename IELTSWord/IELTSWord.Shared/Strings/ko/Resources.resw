@@ -327,4 +327,13 @@
   <data name="UseSound_Text.Text" xml:space="preserve">
     <value>사용 하 여 요소 소리</value>
   </data>
+  <data name="GG_UpComing.Text" xml:space="preserve">
+    <value>오는 위로</value>
+  </data>
+  <data name="GG_UpComingREMOVE.Content" xml:space="preserve">
+    <value>마스터</value>
+  </data>
+  <data name="GG_UpComing_Fetch.Content" xml:space="preserve">
+    <value>새로 고침</value>
+  </data>
 </root>

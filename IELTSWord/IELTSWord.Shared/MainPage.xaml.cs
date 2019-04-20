@@ -1875,7 +1875,7 @@ namespace IELTSWord
                                     }
                                     await UpdateMyBooksAsync();
                                 }
-                                UpdateStatistics();
+                                UpdateStatistics(hardmode: true);
                                 if (sender != null)
                                 {
                                     MessageDialog messageDialog1 = new MessageDialog($"{"DOWNLOAD_SUCCESS_DETAIL".Translate()}: {items.Items.Count}", "DOWNLOAD_SUCCESS".Translate());
@@ -2156,7 +2156,7 @@ namespace IELTSWord
                     await Task.Delay(1000);
                     await GetNextAsync();
 
-                    UpdateStatistics();
+                    UpdateStatistics(hardmode: true);
 
                 }
 
@@ -2197,7 +2197,7 @@ namespace IELTSWord
                 await Task.Delay(1000);
                 await GetNextAsync();
 
-                UpdateStatistics();
+                UpdateStatistics(hardmode: true);
 
                 await UpdateMyBooksAsync();
 
@@ -2245,14 +2245,63 @@ namespace IELTSWord
                     word.No();
                 }
 
-                UpdateStatistics();
+                UpdateStatistics(hardmode: true);
 
             }
             catch (Exception)
             {
             }
         }
+        void UpdateUpComing()
+        {
+            try
+            {
+                UpcomingListView.ItemsSource = this.Words.OrderBy(c =>
 
+                {
+
+                    var index = t20000.IndexOf(c.Name);
+                    c.Order = index;
+
+                    return index;
+                }
+
+
+                ).Where(c => c.Level == 0).ToList();
+            }
+            catch (Exception)
+            {
+            }
+        }
+
+        void statistics_Update_Click(object sender, RoutedEventArgs e)
+        {
+            UpdateStatistics(hardmode: true);
+        }
+        void Upcoming_Update_Click(object sender, RoutedEventArgs e)
+        {
+            UpdateUpComing();
+        }
+        void Upcoming_REMOVE_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                if (!UpcomingListView.SelectedItems.IsNullOrCountEqualsZero() && UpcomingListView.SelectedItems.Cast<Word>().ToList() is List<Word> words)
+                {
+                    foreach (var item in words)
+                    {
+                        item.Complete();
+                    }
+                }
+
+                UpdateUpComing();
+
+                UpdateStatistics(hardmode: true);
+            }
+            catch (Exception)
+            {
+            }
+        }
         async void MORE_Click(object sender, RoutedEventArgs e)
         {
             MenuFlyout mf = new MenuFlyout();
@@ -2292,7 +2341,7 @@ namespace IELTSWord
                     }
                 }
 
-                UpdateStatistics();
+                UpdateStatistics(hardmode: true);
 
             }
             catch (Exception)
@@ -2300,49 +2349,50 @@ namespace IELTSWord
 
             }
         }
-        void UpdateStatistics(Func<Word, bool> func = null)
+        void UpdateStatistics(Func<Word, bool> func = null, bool hardmode = false)
         {
-
-            Task.Run(async () =>
+            if (hardmode)
             {
-                try
+                Task.Run(async () =>
                 {
-                    var all = Word.GetAll();
-                    if (all != null)
+                    try
                     {
-                        all = all.OrderByDescending(c => c.HitDate).ToList();
-                        if (func != null)
+                        var all = Word.GetAll();
+                        if (all != null)
                         {
-                            all = all.Where(c => func(c)).ToList();
-                        }
+                            all = all.OrderByDescending(c => c.HitDate).ToList();
+                            if (func != null)
+                            {
+                                all = all.Where(c => func(c)).ToList();
+                            }
 
-                        var perc = string.Empty;
-                        if (!this.Words.IsNullOrCountEqualsZero())
-                        {
-                            var comp = this.Words.Where(c => c.IsConsiderCompleted()).Count();
-                            var percent = ((double)comp / (double)this.Words.Count) * 100;
-                            perc = $" {percent.ToString("0.00")} %";
-                        }
+                            var perc = string.Empty;
+                            if (!this.Words.IsNullOrCountEqualsZero())
+                            {
+                                var comp = this.Words.Where(c => c.IsConsiderCompleted()).Count();
+                                var percent = ((double)comp / (double)this.Words.Count) * 100;
+                                perc = $" {percent.ToString("0.00")} %";
+                            }
 
-                        var new_today = all.Where(c => c.HitDates != null)
-                        .Where(c => c.HitDates.All(d => DateTimeOffset.UtcNow - d < TimeSpan.FromHours(24))).Count();
+                            var new_today = all.Where(c => c.HitDates != null)
+                            .Where(c => c.HitDates.All(d => DateTimeOffset.UtcNow - d < TimeSpan.FromHours(24))).Count();
 
-                        var new_week = all.Where(c => c.HitDates != null)
-                        .Where(c => c.HitDates.All(d => DateTimeOffset.UtcNow - d < TimeSpan.FromDays(7))).Count();
+                            var new_week = all.Where(c => c.HitDates != null)
+                            .Where(c => c.HitDates.All(d => DateTimeOffset.UtcNow - d < TimeSpan.FromDays(7))).Count();
 
-                        var new_month = all.Where(c => c.HitDates != null)
-                        .Where(c => c.HitDates.All(d => DateTimeOffset.UtcNow - d < TimeSpan.FromDays(30))).Count();
+                            var new_month = all.Where(c => c.HitDates != null)
+                            .Where(c => c.HitDates.All(d => DateTimeOffset.UtcNow - d < TimeSpan.FromDays(30))).Count();
 
-                        var re_today = all.Where(c => c.HitDates != null)
-                     .Where(c => c.HitDates.Any(d => DateTimeOffset.UtcNow - d < TimeSpan.FromHours(24)) && !c.HitDates.All(d => DateTimeOffset.UtcNow - d < TimeSpan.FromHours(24))).Count();
+                            var re_today = all.Where(c => c.HitDates != null)
+                         .Where(c => c.HitDates.Any(d => DateTimeOffset.UtcNow - d < TimeSpan.FromHours(24)) && !c.HitDates.All(d => DateTimeOffset.UtcNow - d < TimeSpan.FromHours(24))).Count();
 
-                        var re_week = all.Where(c => c.HitDates != null)
-                        .Where(c => c.HitDates.Any(d => DateTimeOffset.UtcNow - d < TimeSpan.FromDays(7)) && !c.HitDates.All(d => DateTimeOffset.UtcNow - d < TimeSpan.FromDays(7))).Count();
+                            var re_week = all.Where(c => c.HitDates != null)
+                            .Where(c => c.HitDates.Any(d => DateTimeOffset.UtcNow - d < TimeSpan.FromDays(7)) && !c.HitDates.All(d => DateTimeOffset.UtcNow - d < TimeSpan.FromDays(7))).Count();
 
-                        var re_month = all.Where(c => c.HitDates != null)
-                        .Where(c => c.HitDates.Any(d => DateTimeOffset.UtcNow - d < TimeSpan.FromDays(30)) && !c.HitDates.All(d => DateTimeOffset.UtcNow - d < TimeSpan.FromDays(30))).Count();
+                            var re_month = all.Where(c => c.HitDates != null)
+                            .Where(c => c.HitDates.Any(d => DateTimeOffset.UtcNow - d < TimeSpan.FromDays(30)) && !c.HitDates.All(d => DateTimeOffset.UtcNow - d < TimeSpan.FromDays(30))).Count();
 
-                        GenericDispatherActionAsync(() =>
+                            GenericDispatherActionAsync(() =>
                             {
 
                                 Report_Text11.Text = " " + new_today.ToString();
@@ -2363,10 +2413,10 @@ namespace IELTSWord
                                     WordsListView.ItemsSource = all;
                                 }
                             });
-                    }
-                    else
-                    {
-                        GenericDispatherActionAsync(() =>
+                        }
+                        else
+                        {
+                            GenericDispatherActionAsync(() =>
                             {
                                 if (WordsListView != null)
                                 {
@@ -2374,12 +2424,32 @@ namespace IELTSWord
                                 }
                             });
 
+                        }
                     }
-                }
-                finally
+                    finally
+                    {
+                    }
+                });
+
+            }
+            else
+            {
+                Task.Run(async () =>
                 {
-                }
-            });
+
+                    var perc = string.Empty;
+                    if (!this.Words.IsNullOrCountEqualsZero())
+                    {
+                        var comp = this.Words.Where(c => c.IsConsiderCompleted()).Count();
+                        var percent = ((double)comp / (double)this.Words.Count) * 100;
+                        perc = $" {percent.ToString("0.00")} %";
+                    }
+                    GenericDispatherActionAsync(() =>
+                    {
+                        percentRun.Text = perc;
+                    });
+                });
+            }
 
 
         }
@@ -2443,17 +2513,17 @@ namespace IELTSWord
                 if (int.TryParse(item, out int level))
                 {
                     this.Level = level;
-                    UpdateStatistics(w => w.Level == level);
+                    UpdateStatistics(w => w.Level == level, hardmode: true);
                 }
                 else if (item == "None")
                 {
                     this.Level = -1;
-                    UpdateStatistics();
+                    UpdateStatistics(hardmode: true);
                 }
                 else if (item == "Forever")
                 {
                     this.Level = -1;
-                    UpdateStatistics(w => w.Level > 11);
+                    UpdateStatistics(w => w.Level > 11, hardmode: true);
                 }
             }
             catch (Exception ex)

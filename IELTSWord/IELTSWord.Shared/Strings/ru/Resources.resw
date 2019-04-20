@@ -327,4 +327,13 @@
   <data name="UseSound_Text.Text" xml:space="preserve">
     <value>Использование элемента звук</value>
   </data>
+  <data name="GG_UpComing.Text" xml:space="preserve">
+    <value>До прихода</value>
+  </data>
+  <data name="GG_UpComingREMOVE.Content" xml:space="preserve">
+    <value>МАСТЕР</value>
+  </data>
+  <data name="GG_UpComing_Fetch.Content" xml:space="preserve">
+    <value>Обновить</value>
+  </data>
 </root>

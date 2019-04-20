@@ -405,4 +405,13 @@
   <data name="UseSound_Text.Text" xml:space="preserve">
     <value>使用要素の音</value>
   </data>
+  <data name="GG_UpComing.Text" xml:space="preserve">
+    <value>控え</value>
+  </data>
+  <data name="GG_UpComingREMOVE.Content" xml:space="preserve">
+    <value>マスター</value>
+  </data>
+  <data name="GG_UpComing_Fetch.Content" xml:space="preserve">
+    <value>更新</value>
+  </data>
 </root>

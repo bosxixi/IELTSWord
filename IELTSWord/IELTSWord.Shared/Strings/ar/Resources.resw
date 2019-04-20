@@ -327,4 +327,13 @@
   <data name="UseSound_Text.Text" xml:space="preserve">
     <value>استخدام عنصر الصوت</value>
   </data>
+  <data name="GG_UpComing.Text" xml:space="preserve">
+    <value>يصل القادمة</value>
+  </data>
+  <data name="GG_UpComingREMOVE.Content" xml:space="preserve">
+    <value>ماجستير</value>
+  </data>
+  <data name="GG_UpComing_Fetch.Content" xml:space="preserve">
+    <value>قم بتحديث</value>
+  </data>
 </root>

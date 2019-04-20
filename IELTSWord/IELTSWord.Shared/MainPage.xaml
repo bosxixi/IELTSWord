@@ -405,6 +405,10 @@
                                         <ComboBoxItem>11</ComboBoxItem>
                                         <ComboBoxItem>Forever</ComboBoxItem>
                                     </ComboBox>
+                                    <Button Margin="10 0 0 0" x:Uid="GG_UpComing_Fetch"
+                                            Content="REFLESH" 
+                                            Click="statistics_Update_Click"
+                                            Foreground="White"></Button>
                                     <Button Margin="10 0 0 0" x:Uid="GG_REMOVE" Visibility="{x:Bind WordsListView.SelectedItem, Mode=OneWay, Converter={StaticResource NullToVisiblityConverter}}" Content="REMOVE" Click="REMOVE_Click" Foreground="White"></Button>
                                     <Button Margin="10 0 0 0" x:Uid="GG_DELETE" Visibility="{x:Bind WordsListView.SelectedItem, Mode=OneWay, Converter={StaticResource NullToVisiblityConverter}}" Content="DELETE" Click="DELETE_Click" Foreground="White"></Button>
                                 </StackPanel>
@@ -823,6 +827,82 @@
 
 
 
+                    </PivotItem>
+
+                    <PivotItem>
+                        <PivotItem.Header>
+                            <TextBlock Foreground="White" 
+                                       FontSize="16"
+                                       Opacity=".8" FontWeight="Thin" 
+                                       x:Uid="GG_UpComing"
+                                       Text="Upcoming"></TextBlock>
+                        </PivotItem.Header>
+
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto"></RowDefinition>
+                                <RowDefinition></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <StackPanel HorizontalAlignment="Stretch">
+                                <StackPanel HorizontalAlignment="Right" Margin="0" Orientation="Horizontal" >
+                                    <Button Margin="10 0 0 0" x:Uid="GG_UpComing_Fetch"
+                                            Content="REFLESH" 
+                                            Click="Upcoming_Update_Click"
+                                            Foreground="White"></Button>
+                                    <Button HorizontalAlignment="Right" 
+                                    Content="NAIL IT"
+                                    Margin="5 0 0 0"
+                                     x:Uid="GG_HANDLED"
+                                  
+                                    Visibility="{x:Bind UpcomingListView.SelectedItem, Mode=OneWay, Converter={StaticResource NullToVisiblityConverter}}"
+                                    FontWeight="Bold"
+                                    Opacity=".8"
+                                    Height="38" Foreground="White"  Click="Upcoming_REMOVE_Click">
+                                        <Button.Background>
+                                            <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                                                <GradientStop Color="#F80B0A" Offset="0.0" />
+                                                <GradientStop Color="#600200" Offset="1.0" />
+                                            </LinearGradientBrush>
+                                        </Button.Background>
+                                    </Button>
+                                    <!--<Button Margin="10 0 0 0" x:Uid="GG_DELETE" Visibility="{x:Bind WordsListView.SelectedItem, Mode=OneWay, Converter={StaticResource NullToVisiblityConverter}}" Content="DELETE" Click="DELETE_Click" Foreground="White"></Button>-->
+                                </StackPanel>
+                                <TextBlock x:Name="UpcomingTotalWords" Opacity=".7"
+                                                   Foreground="White"
+                                                   HorizontalAlignment="Right" 
+                                                   FontSize="30" Margin="0 0 0 0"></TextBlock>
+                                <ProgressBar Maximum="12" Minimum="0" 
+                                                     Margin="0 0 0 3"
+                                             HorizontalAlignment="Stretch"
+                                                     ></ProgressBar>
+                            </StackPanel>
+
+
+
+                            <ListView x:Name="UpcomingListView" 
+                                      Grid.Row="1"
+                                      SelectionMode="Multiple"
+                                      IsFocusEngagementEnabled="True"
+                                      Margin="0,5,0,0" 
+                                      Width="{x:Bind actionGrid.Width, Mode=OneWay}"
+                                      >
+                                <ListView.ItemContainerStyle>
+                                    <Style TargetType="ListViewItem">
+                                        <Setter Property="HorizontalContentAlignment" Value="Stretch"></Setter>
+                                    </Style>
+                                </ListView.ItemContainerStyle>
+                                <ListView.ItemTemplate>
+                                    <DataTemplate x:DataType="local:Word">
+                                        <StackPanel Margin="0,8,0,8">
+                                            <TextBlock Foreground="White" FontWeight="Bold" Text="{x:Bind Name}" HorizontalAlignment="Stretch"/>
+                                            <!--<TextBlock Foreground="White" Text="{x:Bind Elaborate}" Opacity=".7" HorizontalAlignment="Left"/>-->
+                                            <TextBlock Foreground="White" Text="{x:Bind Order, Converter={StaticResource PositiveConverter}}" Opacity=".7" HorizontalAlignment="Left"/>
+                                            <!--<ProgressBar Margin="0 10 0 0" HorizontalAlignment="Stretch" Maximum="12" Minimum="0" Value="{x:Bind Level,Mode=OneWay}"></ProgressBar>-->
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </ListView.ItemTemplate>
+                            </ListView>
+                        </Grid>
                     </PivotItem>
                 </Pivot>
             </PivotItem>

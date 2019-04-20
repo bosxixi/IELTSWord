@@ -405,4 +405,13 @@
   <data name="UseSound_Text.Text" xml:space="preserve">
     <value>Use Element Sound</value>
   </data>
+  <data name="GG_UpComing.Text" xml:space="preserve">
+    <value>Up Coming</value>
+  </data>
+  <data name="GG_UpComingREMOVE.Content" xml:space="preserve">
+    <value>MASTER</value>
+  </data>
+  <data name="GG_UpComing_Fetch.Content" xml:space="preserve">
+    <value>Refresh</value>
+  </data>
 </root>
