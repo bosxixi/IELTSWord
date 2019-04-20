@@ -336,4 +336,7 @@
   <data name="GG_UpComing_Fetch.Content" xml:space="preserve">
     <value>刷新</value>
   </data>
+  <data name="ShowOneExamples_Text.Text" xml:space="preserve">
+    <value>示例一句</value>
+  </data>
 </root>

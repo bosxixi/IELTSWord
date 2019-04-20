@@ -4,10 +4,6 @@
 <dict>
 	<key>CFBundleIdentifier</key>
 	<string>com.bosxixi.IELTSWord</string>
-	<key>CFBundleShortVersionString</key>
-	<string>2.8</string>
-	<key>CFBundleVersion</key>
-	<string>2.8</string>
 	<key>CFBundleIconName</key>
 	<string>AppIcons</string>
 	<key>LSRequiresIPhoneOS</key>
@@ -57,5 +53,9 @@
 	<string>乖乖背单词</string>
 	<key>UIRequiresFullScreen</key>
 	<true/>
+	<key>CFBundleVersion</key>
+	<string>3.0</string>
+	<key>CFBundleShortVersionString</key>
+	<string>3.0</string>
 </dict>
 </plist>

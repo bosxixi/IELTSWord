@@ -336,4 +336,7 @@
   <data name="GG_UpComing_Fetch.Content" xml:space="preserve">
     <value>새로 고침</value>
   </data>
+  <data name="ShowOneExamples_Text.Text" xml:space="preserve">
+    <value>예를 들어 한 문장</value>
+  </data>
 </root>

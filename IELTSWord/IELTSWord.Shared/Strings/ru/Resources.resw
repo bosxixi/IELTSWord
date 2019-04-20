@@ -336,4 +336,7 @@
   <data name="GG_UpComing_Fetch.Content" xml:space="preserve">
     <value>Обновить</value>
   </data>
+  <data name="ShowOneExamples_Text.Text" xml:space="preserve">
+    <value>Пример одного предложения</value>
+  </data>
 </root>

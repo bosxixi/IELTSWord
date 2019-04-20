@@ -414,4 +414,7 @@
   <data name="GG_UpComing_Fetch.Content" xml:space="preserve">
     <value>更新</value>
   </data>
+  <data name="ShowOneExamples_Text.Text" xml:space="preserve">
+    <value>例文 1</value>
+  </data>
 </root>

@@ -282,13 +282,14 @@ namespace IELTSWord
 
         public static bool ShowExamples
         {
-            //#if WINDOWS_UWP || __WASM__
             get => SettingService.Get(nameof(AppGlobalSettings) + nameof(ShowExamples), true);
             set => SettingService.Set(nameof(AppGlobalSettings) + nameof(ShowExamples), value);
-            //#else
-            //            get => Plugin.Settings.CrossSettings.Current.GetValueOrDefault(nameof(ShowExamples), false);
-            //            set { Plugin.Settings.CrossSettings.Current.AddOrUpdateValue(nameof(ShowExamples), value); }
-            //#endif
+        }
+
+        public static bool ShowOneExamples
+        {
+            get => SettingService.Get(nameof(AppGlobalSettings) + nameof(ShowOneExamples), false);
+            set => SettingService.Set(nameof(AppGlobalSettings) + nameof(ShowOneExamples), value);
         }
 
         public static bool ShowWordRoot
@@ -896,6 +897,26 @@ namespace IELTSWord
             throw new NotImplementedException();
         }
     }
+    public class ExampleConverter : IValueConverter
+    {
+        public object Convert(object value, Type targetType, object parameter, string language)
+        {
+            if (AppGlobalSettings.ShowOneExamples)
+            {
+                if (value is EXAMExample[] exam)
+                {
+                    return new EXAMExample[] { exam.FirstOrDefault() };
+                }
+            }
+          
+            return value;
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, string language)
+        {
+            throw new NotImplementedException();
+        }
+    }
     public class EXAMRoot
     {
         public string normalizedSource { get; set; }
@@ -1337,6 +1358,15 @@ namespace IELTSWord
             {
                 AppGlobalSettings.ShowExamples = value;
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(ShowExamples)));
+            }
+        }
+        public bool ShowOneExamples
+        {
+            get => AppGlobalSettings.ShowOneExamples;
+            set
+            {
+                AppGlobalSettings.ShowOneExamples = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(ShowOneExamples)));
             }
         }
         public bool ShowWordRoot
@@ -1954,6 +1984,9 @@ namespace IELTSWord
 
                 ShowExamplesToggleSwitch.IsOn = !ShowExamplesToggleSwitch.IsOn;
                 ShowExamplesToggleSwitch.IsOn = !ShowExamplesToggleSwitch.IsOn;
+
+                ShowOneExamplesToggleSwitch.IsOn = !ShowOneExamplesToggleSwitch.IsOn;
+                ShowOneExamplesToggleSwitch.IsOn = !ShowOneExamplesToggleSwitch.IsOn;
 
                 ShowWordRootToggleSwitch.IsOn = !ShowWordRootToggleSwitch.IsOn;
                 ShowWordRootToggleSwitch.IsOn = !ShowWordRootToggleSwitch.IsOn;

@@ -336,4 +336,7 @@
   <data name="GG_UpComing_Fetch.Content" xml:space="preserve">
     <value>Refresh</value>
   </data>
+  <data name="ShowOneExamples_Text.Text" xml:space="preserve">
+    <value>Example One Sentence</value>
+  </data>
 </root>
