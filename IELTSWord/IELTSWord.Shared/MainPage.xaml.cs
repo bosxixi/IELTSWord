@@ -815,6 +815,22 @@ namespace IELTSWord
             throw new NotImplementedException();
         }
     }
+    public class PositiveConverter : IValueConverter
+    {
+        public object Convert(object value, Type targetType, object parameter, string language)
+        {
+            if (value is int inte && inte==-1)
+            {
+                return string.Empty;
+            }
+            return value.ToString();
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, string language)
+        {
+            throw new NotImplementedException();
+        }
+    }
     public class NullToVisiblityConverter : IValueConverter
     {
 
@@ -2368,7 +2384,7 @@ namespace IELTSWord
                 {
                     if (word.IsValid(this.CurrentWord))
                     {
-                        word.Order = t20000.IndexOf(this.CurrentWord.Name);
+                        word.Order = t20000.IndexOf(this.CurrentWord?.Name ?? string.Empty);
                         this.CurrentWord = word;
                         this.CurrentWordDetails = null;
                         GetDetailsAsync(word);
@@ -2390,7 +2406,7 @@ namespace IELTSWord
                     var word = this.Words[index + 1];
                     if (word.IsValid(this.CurrentWord))
                     {
-                        word.Order = t20000.IndexOf(this.CurrentWord.Name);
+                        word.Order = t20000.IndexOf(this.CurrentWord?.Name ?? string.Empty);
                         this.CurrentWord = word;
                         this.CurrentWordDetails = null;
                         GetDetailsAsync(word);

@@ -19,7 +19,8 @@
         <local:IsVideoOnlyConverter x:Key="IsVideoOnlyConverter" />-->
         <local:BoolToBrushConverter x:Key="BoolToBrushConverter" />
         <local:BoolReverveConverter x:Key="BoolReverveConverter" />
-
+        <local:PositiveConverter x:Key="PositiveConverter" />
+        
         <local:NullToVisiblityConverter x:Key="NullToVisiblityConverter" />
         <!--<local:TimeAgoConverter x:Key="TimeAgoConverter" />
 
@@ -117,7 +118,7 @@
                 <GradientStop Color="#999999" Offset="1.0" />
             </LinearGradientBrush>
         </Grid.Background>
-        <Pivot x:Name="pivot" PivotItemLoaded="PanePivot_PivotItemLoaded" SelectionChanged="Pivot_Changed" Margin="0 30 0 0">
+        <Pivot x:Name="pivot" PivotItemLoaded="PanePivot_PivotItemLoaded" SelectionChanged="Pivot_Changed" Margin="0 10 0 0">
             <PivotItem>
                 <PivotItem.Header>
                     <TextBlock Foreground="White" x:Name="pivotHeaderText" Opacity=".8" FontWeight="Bold" x:Uid="GG_LEARN" Text="Learning"></TextBlock>
@@ -143,7 +144,7 @@
                                     Margin="10 6 0 0" Content="...">
 
                             </Button>
-                            <TextBlock HorizontalAlignment="Left" Foreground="White" TextWrapping="Wrap" Opacity=".7" Margin="10 6 0 0" Text="{x:Bind CurrentWord.Order,Mode=OneWay}"></TextBlock>
+                            <TextBlock HorizontalAlignment="Left" Foreground="White" TextWrapping="Wrap" Opacity=".7" Margin="10 6 0 0" Text="{x:Bind CurrentWord.Order, Converter={StaticResource PositiveConverter},Mode=OneWay}"></TextBlock>
                         </Grid>
                     </StackPanel>
 
@@ -434,7 +435,7 @@
                                         <StackPanel Margin="0,8,0,8">
                                             <TextBlock Foreground="White" FontWeight="Bold" Text="{x:Bind Name}" HorizontalAlignment="Stretch"/>
                                             <TextBlock Foreground="White" Text="{x:Bind Elaborate}" Opacity=".7" HorizontalAlignment="Left"/>
-                                            <TextBlock Foreground="White" Text="{x:Bind Order}" Opacity=".7" HorizontalAlignment="Left"/>
+                                            <TextBlock Foreground="White" Text="{x:Bind Order, Converter={StaticResource PositiveConverter}}" Opacity=".7" HorizontalAlignment="Left"/>
                                             <ProgressBar Margin="0 10 0 0" HorizontalAlignment="Stretch" Maximum="12" Minimum="0" Value="{x:Bind Level,Mode=OneWay}"></ProgressBar>
                                         </StackPanel>
                                     </DataTemplate>
@@ -1129,7 +1130,7 @@ FontWeight="Bold"
                                     <Border BorderThickness="0,3,0,0"  Width="{x:Bind actionGrid.Width, Mode=OneWay}" Margin="0" BorderBrush="Purple">
                                     </Border>
 
-                                    <TextBlock FontWeight="Bold" FontSize="30" Width="{x:Bind actionGrid.Width, Mode=OneWay}" Margin="0 10" Foreground="White">乖乖背单词 v2.7.2</TextBlock>
+                                    <TextBlock FontWeight="Bold" FontSize="30" Width="{x:Bind actionGrid.Width, Mode=OneWay}" Margin="0 10" Foreground="White">乖乖背单词 v2.8</TextBlock>
                                 </StackPanel>
                             </Grid>
                         </ScrollViewer>
