@@ -65,6 +65,36 @@
     <Content Include="$(MSBuildThisFileDirectory)Assets\Wide\Wide310x150Logo.scale-150.png" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\Wide\Wide310x150Logo.scale-200.png" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\Wide\Wide310x150Logo.scale-400.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\word_books\cet4.txt" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\word_books\cet6.txt" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\word_books\gk.txt" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\word_books\gre.txt" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\word_books\ielts.txt" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\word_books\ky.txt" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\word_books\t-1000-1.txt" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\word_books\t-1000-10.txt" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\word_books\t-1000-11.txt" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\word_books\t-1000-12.txt" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\word_books\t-1000-13.txt" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\word_books\t-1000-14.txt" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\word_books\t-1000-15.txt" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\word_books\t-1000-16.txt" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\word_books\t-1000-17.txt" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\word_books\t-1000-18.txt" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\word_books\t-1000-19.txt" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\word_books\t-1000-2.txt" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\word_books\t-1000-20.txt" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\word_books\t-1000-21.txt" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\word_books\t-1000-3.txt" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\word_books\t-1000-4.txt" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\word_books\t-1000-5.txt" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\word_books\t-1000-6.txt" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\word_books\t-1000-7.txt" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\word_books\t-1000-8.txt" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\word_books\t-1000-9.txt" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\word_books\t-20000.txt" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\word_books\toefl.txt" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\word_books\zk.txt" />
   </ItemGroup>
   <ItemGroup>
     <PRIResource Include="$(MSBuildThisFileDirectory)Strings\ar\Resources.resw" />
@@ -83,13 +113,5 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="$(MSBuildThisFileDirectory)Assets\logo.svg" />
-    <Content Include="$(MSBuildThisFileDirectory)Assets\word_books\cet4.tsv" />
-    <Content Include="$(MSBuildThisFileDirectory)Assets\word_books\cet6.tsv" />
-    <Content Include="$(MSBuildThisFileDirectory)Assets\word_books\gk.tsv" />
-    <Content Include="$(MSBuildThisFileDirectory)Assets\word_books\gre.tsv" />
-    <Content Include="$(MSBuildThisFileDirectory)Assets\word_books\ielts.tsv" />
-    <Content Include="$(MSBuildThisFileDirectory)Assets\word_books\ky.tsv" />
-    <Content Include="$(MSBuildThisFileDirectory)Assets\word_books\toefl.tsv" />
-    <Content Include="$(MSBuildThisFileDirectory)Assets\word_books\zk.tsv" />
   </ItemGroup>
 </Project>

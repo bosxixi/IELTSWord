@@ -133,6 +133,38 @@
   <ItemGroup>
     <AndroidResource Include="Resources\mipmap\icon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\word_books\cet4.txt" />
+    <AndroidAsset Include="Assets\word_books\cet6.txt" />
+    <AndroidAsset Include="Assets\word_books\gk.txt" />
+    <AndroidAsset Include="Assets\word_books\gre.txt" />
+    <AndroidAsset Include="Assets\word_books\ielts.txt" />
+    <AndroidAsset Include="Assets\word_books\ky.txt" />
+    <AndroidAsset Include="Assets\word_books\t-1000-1.txt" />
+    <AndroidAsset Include="Assets\word_books\t-1000-10.txt" />
+    <AndroidAsset Include="Assets\word_books\t-1000-11.txt" />
+    <AndroidAsset Include="Assets\word_books\t-1000-12.txt" />
+    <AndroidAsset Include="Assets\word_books\t-1000-13.txt" />
+    <AndroidAsset Include="Assets\word_books\t-1000-14.txt" />
+    <AndroidAsset Include="Assets\word_books\t-1000-15.txt" />
+    <AndroidAsset Include="Assets\word_books\t-1000-16.txt" />
+    <AndroidAsset Include="Assets\word_books\t-1000-17.txt" />
+    <AndroidAsset Include="Assets\word_books\t-1000-18.txt" />
+    <AndroidAsset Include="Assets\word_books\t-1000-19.txt" />
+    <AndroidAsset Include="Assets\word_books\t-1000-2.txt" />
+    <AndroidAsset Include="Assets\word_books\t-1000-20.txt" />
+    <AndroidAsset Include="Assets\word_books\t-1000-21.txt" />
+    <AndroidAsset Include="Assets\word_books\t-1000-3.txt" />
+    <AndroidAsset Include="Assets\word_books\t-1000-4.txt" />
+    <AndroidAsset Include="Assets\word_books\t-1000-5.txt" />
+    <AndroidAsset Include="Assets\word_books\t-1000-6.txt" />
+    <AndroidAsset Include="Assets\word_books\t-1000-7.txt" />
+    <AndroidAsset Include="Assets\word_books\t-1000-8.txt" />
+    <AndroidAsset Include="Assets\word_books\t-1000-9.txt" />
+    <AndroidAsset Include="Assets\word_books\t-20000.txt" />
+    <AndroidAsset Include="Assets\word_books\toefl.txt" />
+    <AndroidAsset Include="Assets\word_books\zk.txt" />
+  </ItemGroup>
   <Import Project="..\IELTSWord.Shared\IELTSWord.Shared.projitems" Label="Shared" Condition="Exists('..\IELTSWord.Shared\IELTSWord.Shared.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- This will force the generation of the APK when not buildig inside visual studio -->
