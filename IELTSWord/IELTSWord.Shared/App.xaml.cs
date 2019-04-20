@@ -134,7 +134,7 @@ namespace IELTSWord
             {
                 MediaManager.CrossMediaManager.Current.Init();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
             }

@@ -819,7 +819,7 @@ namespace IELTSWord
     {
         public object Convert(object value, Type targetType, object parameter, string language)
         {
-            if (value is int inte && inte==-1)
+            if (value is int inte && inte == -1)
             {
                 return string.Empty;
             }
@@ -1506,7 +1506,16 @@ namespace IELTSWord
                     }
                     catch (Exception)
                     {
-
+                    try 
+	{	        
+#if __DROID__
+                    IELTSWord.Droid.MainActivity.Instance.PlayAudio(uri);
+#endif
+	}
+	catch (global::System.Exception ex)
+	{
+                    var message = ex.Message;
+	}
                     }
 
 #endif
@@ -2400,7 +2409,7 @@ namespace IELTSWord
             if (this.Words != null)
             {
                 int index = 0;
-            PICK:
+                PICK:
                 if (index + 1 < this.Words.Count)
                 {
                     var word = this.Words[index + 1];
@@ -2616,7 +2625,7 @@ namespace IELTSWord
             {
 #if WINDOWS_UWP
                 var uri = new Uri($"ms-appx:///Assets/{folder}/{name}");
-                var file =  await StorageFile.GetFileFromApplicationUriAsync(uri);
+                var file = await StorageFile.GetFileFromApplicationUriAsync(uri);
                 return await file.OpenStreamForReadAsync();
 #elif __DROID__
                 return IELTSWord.Droid.MainActivity.Instance.OpenAsset(folder, name);
