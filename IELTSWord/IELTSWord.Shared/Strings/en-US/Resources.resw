@@ -97,7 +97,7 @@
     <value>ZK</value>
   </data>
   <data name="GG_UPLOAD.Content" xml:space="preserve">
-    <value>Upload to Cloud</value>
+    <value>Sync Data</value>
   </data>
   <data name="GG_DOWNLOAD.Content" xml:space="preserve">
     <value>Download From Cloud</value>
@@ -214,10 +214,10 @@
     <value>Please enter email and password to backup data to cloud</value>
   </data>
   <data name="DOWNLOAD_SUCCESS" xml:space="preserve">
-    <value>Download Completed</value>
+    <value>Sync Data Completed</value>
   </data>
   <data name="DOWNLOAD_SUCCESS_DETAIL" xml:space="preserve">
-    <value>Restore Data Successfully</value>
+    <value>Sync Data Successfully</value>
   </data>
   <data name="ERROR_MORE_INFO" xml:space="preserve">
     <value>Unable to Download</value>
@@ -226,7 +226,7 @@
     <value>Please enter correct email and password to restore</value>
   </data>
   <data name="GG_WordBook.Text" xml:space="preserve">
-    <value>Word Book</value>
+    <value>Word</value>
   </data>
   <data name="GG_CUSTOM.Text" xml:space="preserve">
     <value>Custom</value>
@@ -235,7 +235,7 @@
     <value>Subtitle</value>
   </data>
   <data name="GG_BOOKS.Text" xml:space="preserve">
-    <value>Word Book</value>
+    <value>Word</value>
   </data>
   <data name="DOWNLOAD_CUSTOM_TEXT.Content" xml:space="preserve">
     <value>Fetch Text</value>
@@ -290,5 +290,53 @@
   </data>
   <data name="ShakeEnabled_Text.Text" xml:space="preserve">
     <value>Detect Shake</value>
+  </data>
+  <data name="UsePointer_Text.Text" xml:space="preserve">
+    <value>Use Pointer Mode</value>
+  </data>
+  <data name="AutoSync_Text.Text" xml:space="preserve">
+    <value>Auto Sync Data</value>
+  </data>
+  <data name="URI_IS_EMPTY" xml:space="preserve">
+    <value>Please input correct web URL</value>
+  </data>
+  <data name="Error_Title" xml:space="preserve">
+    <value>Error Occur</value>
+  </data>
+  <data name="CustomText_IS_EMPTY" xml:space="preserve">
+    <value>Please input texts</value>
+  </data>
+  <data name="Report_Text1.Text" xml:space="preserve">
+    <value>Today new learned words</value>
+  </data>
+  <data name="Report_Text2.Text" xml:space="preserve">
+    <value>This week new learned words</value>
+  </data>
+  <data name="Report_Text3.Text" xml:space="preserve">
+    <value>This month new learned words</value>
+  </data>
+  <data name="Report_Text1_r.Text" xml:space="preserve">
+    <value>Today review words</value>
+  </data>
+  <data name="Report_Text2_r.Text" xml:space="preserve">
+    <value>This week review words</value>
+  </data>
+  <data name="Report_Text3_r.Text" xml:space="preserve">
+    <value>This month review words</value>
+  </data>
+  <data name="UseSound_Text.Text" xml:space="preserve">
+    <value>Use Element Sound</value>
+  </data>
+  <data name="GG_UpComing.Text" xml:space="preserve">
+    <value>Up Coming</value>
+  </data>
+  <data name="GG_UpComingREMOVE.Content" xml:space="preserve">
+    <value>MASTER</value>
+  </data>
+  <data name="GG_UpComing_Fetch.Content" xml:space="preserve">
+    <value>Refresh</value>
+  </data>
+  <data name="ShowOneExamples_Text.Text" xml:space="preserve">
+    <value>Example One Sentence</value>
   </data>
 </root>

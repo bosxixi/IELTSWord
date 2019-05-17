@@ -103,6 +103,36 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />
+    <BundleResource Include="Resources\word_books\cet4.txt" />
+    <BundleResource Include="Resources\word_books\cet6.txt" />
+    <BundleResource Include="Resources\word_books\gk.txt" />
+    <BundleResource Include="Resources\word_books\gre.txt" />
+    <BundleResource Include="Resources\word_books\ielts.txt" />
+    <BundleResource Include="Resources\word_books\ky.txt" />
+    <BundleResource Include="Resources\word_books\t-1000-1.txt" />
+    <BundleResource Include="Resources\word_books\t-1000-10.txt" />
+    <BundleResource Include="Resources\word_books\t-1000-11.txt" />
+    <BundleResource Include="Resources\word_books\t-1000-12.txt" />
+    <BundleResource Include="Resources\word_books\t-1000-13.txt" />
+    <BundleResource Include="Resources\word_books\t-1000-14.txt" />
+    <BundleResource Include="Resources\word_books\t-1000-15.txt" />
+    <BundleResource Include="Resources\word_books\t-1000-16.txt" />
+    <BundleResource Include="Resources\word_books\t-1000-17.txt" />
+    <BundleResource Include="Resources\word_books\t-1000-18.txt" />
+    <BundleResource Include="Resources\word_books\t-1000-19.txt" />
+    <BundleResource Include="Resources\word_books\t-1000-2.txt" />
+    <BundleResource Include="Resources\word_books\t-1000-20.txt" />
+    <BundleResource Include="Resources\word_books\t-1000-21.txt" />
+    <BundleResource Include="Resources\word_books\t-1000-3.txt" />
+    <BundleResource Include="Resources\word_books\t-1000-4.txt" />
+    <BundleResource Include="Resources\word_books\t-1000-5.txt" />
+    <BundleResource Include="Resources\word_books\t-1000-6.txt" />
+    <BundleResource Include="Resources\word_books\t-1000-7.txt" />
+    <BundleResource Include="Resources\word_books\t-1000-8.txt" />
+    <BundleResource Include="Resources\word_books\t-1000-9.txt" />
+    <BundleResource Include="Resources\word_books\t-20000.txt" />
+    <BundleResource Include="Resources\word_books\toefl.txt" />
+    <BundleResource Include="Resources\word_books\zk.txt" />
     <None Include="Info.plist" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Content Include="Entitlements.plist" />
@@ -123,6 +153,9 @@
     <PackageReference Include="bosxixi.ScorpioPlayer.Core">
       <Version>1.5.8</Version>
     </PackageReference>
+    <PackageReference Include="MonkeyCache.LiteDB">
+      <Version>1.2.0-beta</Version>
+    </PackageReference>
     <PackageReference Include="Plugin.MediaManager">
       <Version>0.5.1</Version>
     </PackageReference>
@@ -135,10 +168,7 @@
     <PackageReference Include="Uno.Microsoft.Toolkit.Uwp.UI.Controls">
       <Version>5.1.0-build.179.g6aee66f4f3</Version>
     </PackageReference>
-    <PackageReference Include="Uno.UI" Version="1.45.0-dev.1201" />
-    <PackageReference Include="Xam.Plugins.Settings">
-      <Version>3.1.1</Version>
-    </PackageReference>
+    <PackageReference Include="Uno.UI" Version="1.45.0-dev.1292" />
     <PackageReference Include="Xamarin.Essentials">
       <Version>1.1.0</Version>
     </PackageReference>

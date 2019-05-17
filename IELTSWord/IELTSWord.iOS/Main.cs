@@ -1,4 +1,7 @@
-﻿using UIKit;
+﻿using Foundation;
+using System.IO;
+using System.Linq;
+using UIKit;
 
 namespace IELTSWord.iOS
 {
@@ -11,6 +14,13 @@ namespace IELTSWord.iOS
             // you can specify it here.
             UIApplication.Main(args, null, typeof(App));
 
+        }
+
+        public static Stream OpenAsset(string folder, string file)
+        {
+            var fileInfos = NSBundle.GetPathsForResources(".txt", folder)
+        .Select(a => new FileInfo(a)).FirstOrDefault(c=>c.Name == file);
+            return fileInfos.OpenRead();
         }
     }
 }

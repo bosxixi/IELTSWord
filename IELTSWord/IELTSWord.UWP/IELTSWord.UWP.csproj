@@ -13,7 +13,7 @@
 			-->
       <Version>6.2.2</Version>
     </PackageReference>
-    <PackageReference Include="MonkeyCache.FileStore">
+    <PackageReference Include="MonkeyCache.LiteDB">
       <Version>1.2.0-beta</Version>
     </PackageReference>
     <PackageReference Include="Plugin.MediaManager">
@@ -31,9 +31,6 @@
     <PackageReference Include="Uno.Microsoft.Toolkit.Uwp.UI.Controls">
       <Version>5.1.0-build.179.g6aee66f4f3</Version>
     </PackageReference>
-    <PackageReference Include="Xam.Plugins.Settings">
-      <Version>3.1.1</Version>
-    </PackageReference>
     <PackageReference Include="Xamarin.Essentials">
       <Version>1.1.0</Version>
     </PackageReference>
@@ -48,7 +45,7 @@
     <AssemblyName>IELTSWord</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
-    <TargetPlatformVersion>10.0.16299.0</TargetPlatformVersion>
+    <TargetPlatformVersion>10.0.17763.0</TargetPlatformVersion>
     <TargetPlatformMinVersion>10.0.16299.0</TargetPlatformMinVersion>
     <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
     <FileAlignment>512</FileAlignment>
@@ -56,7 +53,7 @@
     <PackageCertificateKeyFile>IELTSWord.UWP_StoreKey.pfx</PackageCertificateKeyFile>
     <PackageCertificateThumbprint>16C4ABFF42E6B852710E50390AD5DED2C2736C84</PackageCertificateThumbprint>
     <GenerateAppInstallerFile>False</GenerateAppInstallerFile>
-    <AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
+    <AppxAutoIncrementPackageRevision>False</AppxAutoIncrementPackageRevision>
     <AppxBundle>Always</AppxBundle>
     <AppxBundlePlatforms>x86|x64|arm</AppxBundlePlatforms>
     <AppInstallerUpdateFrequency>1</AppInstallerUpdateFrequency>

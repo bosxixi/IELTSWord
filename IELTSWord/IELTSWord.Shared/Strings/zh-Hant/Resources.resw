@@ -174,9 +174,6 @@
   <data name="zk" xml:space="preserve">
     <value>中考词汇</value>
   </data>
-  <data name="GG_UPLOAD.Content" xml:space="preserve">
-    <value>上傳到雲</value>
-  </data>
   <data name="GG_DOWNLOAD.Content" xml:space="preserve">
     <value>從雲下載</value>
   </data>
@@ -291,12 +288,6 @@
   <data name="REQUERED_MORE_INFO_DETAIL" xml:space="preserve">
     <value>請輸入電子郵件和密碼將資料備份到雲</value>
   </data>
-  <data name="DOWNLOAD_SUCCESS" xml:space="preserve">
-    <value>下載已完成</value>
-  </data>
-  <data name="DOWNLOAD_SUCCESS_DETAIL" xml:space="preserve">
-    <value>成功還原資料</value>
-  </data>
   <data name="ERROR_MORE_INFO" xml:space="preserve">
     <value>無法下載</value>
   </data>
@@ -343,7 +334,7 @@
     <value>刪除</value>
   </data>
   <data name="SpeakNatural_Text.Text" xml:space="preserve">
-    <value>單詞語音自然 (線上獲取)</value>
+    <value>神经网络阅读文本到语音</value>
   </data>
   <data name="GG_DELETE.Content" xml:space="preserve">
     <value>刪除</value>
@@ -368,5 +359,62 @@
   </data>
   <data name="ShakeEnabled_Text.Text" xml:space="preserve">
     <value>摇动切词</value>
+  </data>
+  <data name="DOWNLOAD_SUCCESS_DETAIL" xml:space="preserve">
+    <value>成功同步資料</value>
+  </data>
+  <data name="GG_UPLOAD.Content" xml:space="preserve">
+    <value>同步資料</value>
+  </data>
+  <data name="DOWNLOAD_SUCCESS" xml:space="preserve">
+    <value>同步資料已完成</value>
+  </data>
+  <data name="UsePointer_Text.Text" xml:space="preserve">
+    <value>使用指標模式</value>
+  </data>
+  <data name="AutoSync_Text.Text" xml:space="preserve">
+    <value>自動同步資料</value>
+  </data>
+  <data name="URI_IS_EMPTY" xml:space="preserve">
+    <value>請輸入正確的 web URL</value>
+  </data>
+  <data name="Error_Title" xml:space="preserve">
+    <value>出現錯誤</value>
+  </data>
+  <data name="CustomText_IS_EMPTY" xml:space="preserve">
+    <value>請輸入文本</value>
+  </data>
+  <data name="Report_Text1.Text" xml:space="preserve">
+    <value>今天新學習的詞</value>
+  </data>
+  <data name="Report_Text2.Text" xml:space="preserve">
+    <value>本周新學習的單詞</value>
+  </data>
+  <data name="Report_Text3.Text" xml:space="preserve">
+    <value>這個月新學習的單詞</value>
+  </data>
+  <data name="Report_Text1_r.Text" xml:space="preserve">
+    <value>今天複習單詞</value>
+  </data>
+  <data name="Report_Text2_r.Text" xml:space="preserve">
+    <value>本周複習詞</value>
+  </data>
+  <data name="Report_Text3_r.Text" xml:space="preserve">
+    <value>本月複習詞</value>
+  </data>
+  <data name="UseSound_Text.Text" xml:space="preserve">
+    <value>使用元素聲音</value>
+  </data>
+  <data name="GG_UpComing.Text" xml:space="preserve">
+    <value>即將推出</value>
+  </data>
+  <data name="GG_UpComingREMOVE.Content" xml:space="preserve">
+    <value>已掌握</value>
+  </data>
+  <data name="GG_UpComing_Fetch.Content" xml:space="preserve">
+    <value>刷新</value>
+  </data>
+  <data name="ShowOneExamples_Text.Text" xml:space="preserve">
+    <value>示例一句</value>
   </data>
 </root>

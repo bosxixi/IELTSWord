@@ -1,4 +1,4 @@
-﻿using MonkeyCache.FileStore;
+﻿using MonkeyCache.LiteDB;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -35,6 +35,24 @@ namespace IELTSWord
             this.InitializeComponent();
             this.Suspending += OnSuspending;
             this.UnhandledException += App_UnhandledException;
+#if WINDOWS_UWP
+            try
+            {
+                if (AppGlobalSettings.UsePointer)
+                {
+                    this.RequiresPointerMode = Windows.UI.Xaml.ApplicationRequiresPointerMode.Auto;
+                }
+                else
+                {
+                    this.RequiresPointerMode = Windows.UI.Xaml.ApplicationRequiresPointerMode.WhenRequested;
+                }
+                this.FocusVisualKind = FocusVisualKind.Reveal;
+            }
+            catch (Exception)
+            {
+
+            }
+#endif
         }
         LoggingService logger = new LoggingService();
         private void App_UnhandledException(object sender, Windows.UI.Xaml.UnhandledExceptionEventArgs e)
@@ -98,12 +116,25 @@ namespace IELTSWord
         protected override void OnLaunched(LaunchActivatedEventArgs e)
         {
             Barrel.ApplicationId = "IELTSWORD";
+            //Barrel.EncryptionKey = "IELTSWORD";
+#if __IOS__ || __MACOS__
+            var basePath =  Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments));
+#elif __DROID__
+		    var basePath = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
+#elif WINDOWS_UWP
+            var basePath = Windows.Storage.ApplicationData.Current.LocalFolder.Path;
+#else
+            var basePath = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
+#endif
+
+            MonkeyCache.BarrelUtils.SetBaseCachePath(basePath);
+
 #if !WINDOWS_UWP
             try
             {
                 MediaManager.CrossMediaManager.Current.Init();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
             }

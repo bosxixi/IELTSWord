@@ -96,9 +96,6 @@
   <data name="zk" xml:space="preserve">
     <value>ZK</value>
   </data>
-  <data name="GG_UPLOAD.Content" xml:space="preserve">
-    <value>Caricare su Cloud</value>
-  </data>
   <data name="GG_DOWNLOAD.Content" xml:space="preserve">
     <value>Scaricare da Cloud</value>
   </data>
@@ -213,12 +210,6 @@
   <data name="REQUERED_MORE_INFO_DETAIL" xml:space="preserve">
     <value>Inserisci email e password di backup dei dati verso il cloud</value>
   </data>
-  <data name="DOWNLOAD_SUCCESS" xml:space="preserve">
-    <value>Download completato</value>
-  </data>
-  <data name="DOWNLOAD_SUCCESS_DETAIL" xml:space="preserve">
-    <value>Ripristinare i dati con successo</value>
-  </data>
   <data name="ERROR_MORE_INFO" xml:space="preserve">
     <value>Impossibile scaricare</value>
   </data>
@@ -290,5 +281,62 @@
   </data>
   <data name="ShakeEnabled_Text.Text" xml:space="preserve">
     <value>Rilevare Shake</value>
+  </data>
+  <data name="DOWNLOAD_SUCCESS_DETAIL" xml:space="preserve">
+    <value>Sincronizzare i dati con successo</value>
+  </data>
+  <data name="GG_UPLOAD.Content" xml:space="preserve">
+    <value>Sincronizzazione dei dati</value>
+  </data>
+  <data name="DOWNLOAD_SUCCESS" xml:space="preserve">
+    <value>Dati di sincronizzazione completati</value>
+  </data>
+  <data name="UsePointer_Text.Text" xml:space="preserve">
+    <value>Utilizzare la modalità puntatore</value>
+  </data>
+  <data name="AutoSync_Text.Text" xml:space="preserve">
+    <value>Auto sincronizzazione dati</value>
+  </data>
+  <data name="URI_IS_EMPTY" xml:space="preserve">
+    <value>Si prega di inserire URL web corretto</value>
+  </data>
+  <data name="Error_Title" xml:space="preserve">
+    <value>Errore verificarsi</value>
+  </data>
+  <data name="CustomText_IS_EMPTY" xml:space="preserve">
+    <value>Si prega di inserire testi</value>
+  </data>
+  <data name="Report_Text1.Text" xml:space="preserve">
+    <value>Nuove parole apprese oggi</value>
+  </data>
+  <data name="Report_Text2.Text" xml:space="preserve">
+    <value>Questa settimana nuovo imparato parole</value>
+  </data>
+  <data name="Report_Text3.Text" xml:space="preserve">
+    <value>Questo mese nuovo imparato parole</value>
+  </data>
+  <data name="Report_Text1_r.Text" xml:space="preserve">
+    <value>Parole di oggi recensione</value>
+  </data>
+  <data name="Report_Text2_r.Text" xml:space="preserve">
+    <value>Questa settimana rassegna parole</value>
+  </data>
+  <data name="Report_Text3_r.Text" xml:space="preserve">
+    <value>Questo mese imparare parole</value>
+  </data>
+  <data name="UseSound_Text.Text" xml:space="preserve">
+    <value>Utilizza elemento suono</value>
+  </data>
+  <data name="GG_UpComing.Text" xml:space="preserve">
+    <value>Fino a venire</value>
+  </data>
+  <data name="GG_UpComingREMOVE.Content" xml:space="preserve">
+    <value>MASTER</value>
+  </data>
+  <data name="GG_UpComing_Fetch.Content" xml:space="preserve">
+    <value>aggiornare</value>
+  </data>
+  <data name="ShowOneExamples_Text.Text" xml:space="preserve">
+    <value>Frase di esempio in uno</value>
   </data>
 </root>

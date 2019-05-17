@@ -68,8 +68,11 @@
     <PackageReference Include="bosxixi.ScorpioPlayer.Core">
       <Version>1.5.8</Version>
     </PackageReference>
+    <PackageReference Include="MonkeyCache.LiteDB">
+      <Version>1.2.0-beta</Version>
+    </PackageReference>
     <PackageReference Include="Plugin.MediaManager">
-      <Version>0.5.1</Version>
+      <Version>0.5.3</Version>
     </PackageReference>
     <PackageReference Include="Uno.Microsoft.Toolkit.Uwp.UI">
       <Version>5.1.0-build.179.g6aee66f4f3</Version>
@@ -80,11 +83,8 @@
     <PackageReference Include="Uno.Microsoft.Toolkit.Uwp.UI.Controls">
       <Version>5.1.0-build.179.g6aee66f4f3</Version>
     </PackageReference>
-    <PackageReference Include="Uno.UI" Version="1.45.0-dev.1201" />
+    <PackageReference Include="Uno.UI" Version="1.45.0-dev.1292" />
     <PackageReference Include="Uno.UniversalImageLoader" Version="1.9.32" />
-    <PackageReference Include="Xam.Plugins.Settings">
-      <Version>3.1.1</Version>
-    </PackageReference>
     <PackageReference Include="Xamarin.Android.Support.Compat">
       <Version>28.0.0.1</Version>
     </PackageReference>
@@ -129,6 +129,38 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\mipmap\icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\word_books\cet4.txt" />
+    <AndroidAsset Include="Assets\word_books\cet6.txt" />
+    <AndroidAsset Include="Assets\word_books\gk.txt" />
+    <AndroidAsset Include="Assets\word_books\gre.txt" />
+    <AndroidAsset Include="Assets\word_books\ielts.txt" />
+    <AndroidAsset Include="Assets\word_books\ky.txt" />
+    <AndroidAsset Include="Assets\word_books\t-1000-1.txt" />
+    <AndroidAsset Include="Assets\word_books\t-1000-10.txt" />
+    <AndroidAsset Include="Assets\word_books\t-1000-11.txt" />
+    <AndroidAsset Include="Assets\word_books\t-1000-12.txt" />
+    <AndroidAsset Include="Assets\word_books\t-1000-13.txt" />
+    <AndroidAsset Include="Assets\word_books\t-1000-14.txt" />
+    <AndroidAsset Include="Assets\word_books\t-1000-15.txt" />
+    <AndroidAsset Include="Assets\word_books\t-1000-16.txt" />
+    <AndroidAsset Include="Assets\word_books\t-1000-17.txt" />
+    <AndroidAsset Include="Assets\word_books\t-1000-18.txt" />
+    <AndroidAsset Include="Assets\word_books\t-1000-19.txt" />
+    <AndroidAsset Include="Assets\word_books\t-1000-2.txt" />
+    <AndroidAsset Include="Assets\word_books\t-1000-20.txt" />
+    <AndroidAsset Include="Assets\word_books\t-1000-21.txt" />
+    <AndroidAsset Include="Assets\word_books\t-1000-3.txt" />
+    <AndroidAsset Include="Assets\word_books\t-1000-4.txt" />
+    <AndroidAsset Include="Assets\word_books\t-1000-5.txt" />
+    <AndroidAsset Include="Assets\word_books\t-1000-6.txt" />
+    <AndroidAsset Include="Assets\word_books\t-1000-7.txt" />
+    <AndroidAsset Include="Assets\word_books\t-1000-8.txt" />
+    <AndroidAsset Include="Assets\word_books\t-1000-9.txt" />
+    <AndroidAsset Include="Assets\word_books\t-20000.txt" />
+    <AndroidAsset Include="Assets\word_books\toefl.txt" />
+    <AndroidAsset Include="Assets\word_books\zk.txt" />
   </ItemGroup>
   <Import Project="..\IELTSWord.Shared\IELTSWord.Shared.projitems" Label="Shared" Condition="Exists('..\IELTSWord.Shared\IELTSWord.Shared.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
