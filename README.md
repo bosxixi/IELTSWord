@@ -27,3 +27,8 @@ https://testflight.apple.com/join/H9xLGATc
 
 Android
 http://scorpioplayer.com/downloads/
+
+Reference-style: 
+![Windows10-img1][Windows10-img1]
+
+[Windows10-img1]: https://store-images.s-microsoft.com/image/apps.49140.13724889055338095.a16c32a5-1919-4b66-90e7-0b0147434016.85343c9a-722a-4c15-903d-fcff5d083e00?w=1399&h=933&q=60 "Windows10-img1"
