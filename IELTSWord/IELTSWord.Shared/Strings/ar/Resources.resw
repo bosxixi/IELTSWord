@@ -339,4 +339,7 @@
   <data name="ShowOneExamples_Text.Text" xml:space="preserve">
     <value>الجملة مثال واحد</value>
   </data>
+  <data name="GG_PRELOAD.Content" xml:space="preserve">
+    <value>التحميل المسبق لتفصيل كلمة</value>
+  </data>
 </root>

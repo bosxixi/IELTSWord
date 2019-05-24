@@ -908,7 +908,7 @@ namespace IELTSWord
                     return new EXAMExample[] { exam.FirstOrDefault() };
                 }
             }
-          
+
             return value;
         }
 
@@ -1640,8 +1640,7 @@ namespace IELTSWord
                 {
                     HttpClient client = new HttpClient();
                     var post = await client.GetStringAsync($"https://searchscorpio.azurewebsites.net/api/google/worddetail?word={Uri.EscapeDataString(this.CurrentWord.Name)}");
-                    var item = JsonConvert.DeserializeObject<WordDetails>(post);
-                    new CompressedStorage(CompressedStorage.Storage.Detail).TrySet(word.Name, item);
+                    WordDetails item = SaveWordDetail(word.Name, post);
                     if (!String.IsNullOrEmpty(item.LoopUpStr))
                     {
                         word.Elaborate = item.LoopUpStr;
@@ -1665,6 +1664,14 @@ namespace IELTSWord
             }
             return null;
         }
+
+        private static WordDetails SaveWordDetail(string word, string post)
+        {
+            var item = JsonConvert.DeserializeObject<WordDetails>(post);
+            new CompressedStorage(CompressedStorage.Storage.Detail).TrySet(word, item);
+            return item;
+        }
+
         public string CustomTextUri { get; set; }
         public string CustomText { get; set; }
         //
@@ -1864,7 +1871,68 @@ namespace IELTSWord
                 this.IsDownloading = false;
             }
         }
-
+        static string DeCompress(string text)
+        {
+            var bytess = Convert.FromBase64String(text);
+            var nmsout = new MemoryStream();
+            ICSharpCode.SharpZipLib.BZip2.BZip2.Decompress(bytess.ToMemoryStream(), nmsout, true);
+            var outt = nmsout.ToArray();
+            var outttt = Encoding.UTF8.GetString(outt);
+            return outttt;
+        }
+        class wd
+        {
+            public string d { get; set; }
+            public string w { get; set; }
+        }
+        async void PRELOAD_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                this.IsDownloading = true;
+                if (!this.Words.IsNullOrCountEqualsZero())
+                {
+                    var target = this.Words.Where(c => new CompressedStorage(CompressedStorage.Storage.Detail).TryGet<WordDetails>(c.Name) == null).Select(c => c.Name).ToArray();
+                    HttpClient client = new HttpClient();
+                    var post = await client.PostAsync("https://searchscorpio.azurewebsites.net/api/google/allp",
+                      new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(new
+                      {
+                          Id = _id,
+                          Value = Newtonsoft.Json.JsonConvert.SerializeObject(target)
+                      }), Encoding.UTF8, "application/json"));
+                    if (post.IsSuccessStatusCode)
+                    {
+                        var body = await post.Content.ReadAsStringAsync();
+                        var item = JsonConvert.DeserializeAnonymousType(body, new { count = 0, words = string.Empty });
+                        var words = DeCompress(item.words);
+                        var wordss = JsonConvert.DeserializeObject<wd[]>(words);
+                        foreach (var w in wordss)
+                        {
+                            SaveWordDetail(w.w, w.d);
+                        }
+                        MessageDialog messageDialog1 = new MessageDialog($"{"DOWNLOAD_SUCCESS_DETAIL".Translate()}: {wordss.Length}", "DOWNLOAD_SUCCESS".Translate());
+                        await messageDialog1.ShowAsync();
+                    }
+                }
+                else
+                {
+                    MessageDialog messageDialog = new MessageDialog("REQUERED_MORE_INFO_DETAIL".Translate(), "REQUERED_MORE_INFO".Translate());
+                    await messageDialog.ShowAsync();
+                }
+            }
+            catch (Exception ex)
+            {
+                if (sender != null)
+                {
+                    MessageDialog messageDialog = new MessageDialog(ex.Message, "Error");
+                    await messageDialog.ShowAsync();
+                }
+            }
+            finally
+            {
+                this.IsDownloading = false;
+            }
+        }
         async void UPLOADS_Click(object sender, RoutedEventArgs e)
         {
             try
@@ -2300,7 +2368,7 @@ namespace IELTSWord
                 }
 
 
-                ).Where(c => c.Level == 0).OrderBy(c=>c.Order == -1).ToList();
+                ).Where(c => c.Level == 0).OrderBy(c => c.Order == -1).ToList();
             }
             catch (Exception)
             {
@@ -2407,23 +2475,23 @@ namespace IELTSWord
                                 perc = $" {percent.ToString("0.00")} %";
                             }
 
-                            var new_today = all.Where(c => c.HitDates != null)
+                            var new_today = all.Where(c => c.HitDates != null).Where(c=>c.Level < 20)
                             .Where(c => c.HitDates.All(d => DateTimeOffset.UtcNow - d < TimeSpan.FromHours(24))).Count();
 
-                            var new_week = all.Where(c => c.HitDates != null)
+                            var new_week = all.Where(c => c.HitDates != null).Where(c => c.Level < 20)
                             .Where(c => c.HitDates.All(d => DateTimeOffset.UtcNow - d < TimeSpan.FromDays(7))).Count();
 
-                            var new_month = all.Where(c => c.HitDates != null)
+                            var new_month = all.Where(c => c.HitDates != null).Where(c => c.Level < 20)
                             .Where(c => c.HitDates.All(d => DateTimeOffset.UtcNow - d < TimeSpan.FromDays(30))).Count();
 
-                            var re_today = all.Where(c => c.HitDates != null)
-                         .Where(c => c.HitDates.Any(d => DateTimeOffset.UtcNow - d < TimeSpan.FromHours(24)) && !c.HitDates.All(d => DateTimeOffset.UtcNow - d < TimeSpan.FromHours(24))).Count();
+                            var re_today = all.Where(c => c.HitDates != null).Where(c => c.Level < 20)
+                         .Where(c => c.HitDates.Any(d => DateTimeOffset.UtcNow - d < TimeSpan.FromHours(24)) && !c.HitDates.Any(d => DateTimeOffset.UtcNow - d < TimeSpan.FromHours(24))).Count();
 
-                            var re_week = all.Where(c => c.HitDates != null)
-                            .Where(c => c.HitDates.Any(d => DateTimeOffset.UtcNow - d < TimeSpan.FromDays(7)) && !c.HitDates.All(d => DateTimeOffset.UtcNow - d < TimeSpan.FromDays(7))).Count();
+                            var re_week = all.Where(c => c.HitDates != null).Where(c => c.Level < 20)
+                            .Where(c => c.HitDates.Any(d => DateTimeOffset.UtcNow - d < TimeSpan.FromDays(7)) && !c.HitDates.Any(d => DateTimeOffset.UtcNow - d < TimeSpan.FromDays(7))).Count();
 
-                            var re_month = all.Where(c => c.HitDates != null)
-                            .Where(c => c.HitDates.Any(d => DateTimeOffset.UtcNow - d < TimeSpan.FromDays(30)) && !c.HitDates.All(d => DateTimeOffset.UtcNow - d < TimeSpan.FromDays(30))).Count();
+                            var re_month = all.Where(c => c.HitDates != null).Where(c => c.Level < 20)
+                            .Where(c => c.HitDates.Any(d => DateTimeOffset.UtcNow - d < TimeSpan.FromDays(30)) && !c.HitDates.Any(d => DateTimeOffset.UtcNow - d < TimeSpan.FromDays(30))).Count();
 
                             GenericDispatherActionAsync(() =>
                             {
@@ -2491,7 +2559,7 @@ namespace IELTSWord
         {
             if (AppGlobalSettings.ReviewAll)
             {
-                var rs = Word.GetAll();
+                var rs = Word.GetAll().OrderBy(c => c.Level);
                 foreach (var word in rs)
                 {
                     if (word.IsValid(this.CurrentWord))

@@ -417,4 +417,7 @@
   <data name="ShowOneExamples_Text.Text" xml:space="preserve">
     <value>示例一句</value>
   </data>
+  <data name="GG_PRELOAD.Content" xml:space="preserve">
+    <value>預載入单词詳細資訊</value>
+  </data>
 </root>

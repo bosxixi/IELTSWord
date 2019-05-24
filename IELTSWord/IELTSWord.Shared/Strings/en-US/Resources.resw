@@ -339,4 +339,7 @@
   <data name="ShowOneExamples_Text.Text" xml:space="preserve">
     <value>Example One Sentence</value>
   </data>
+  <data name="GG_PRELOAD.Content" xml:space="preserve">
+    <value>Preload Word Detail</value>
+  </data>
 </root>

@@ -1205,6 +1205,17 @@ FontWeight="Bold"
                                             Content="UPLOAD" 
                                             x:Name="UPLOADS" 
                                             Click="UPLOADS_Click"></Button>
+
+                                    <Button HorizontalAlignment="Stretch"
+                                            Opacity=".95" Height="36"
+FontWeight="Bold"
+                                            Foreground="White" Margin="10"
+                                            IsEnabled="{x:Bind IsDownloading, Mode=OneWay, Converter={StaticResource BoolReverveConverter}}"
+                                            Width="{x:Bind actionGrid.Width, Mode=OneWay}"
+                                            x:Uid="GG_PRELOAD" 
+                                            Content="PRELOAD" 
+                                            x:Name="PRELOAD" 
+                                            Click="PRELOAD_Click"></Button>
                                     <!--<Button HorizontalAlignment="Stretch" Opacity=".7" Foreground="White" Margin="10" Width="{x:Bind actionGrid.Width, Mode=OneWay}" x:Uid="GG_DOWNLOAD" Content="DOWNLOAD" x:Name="DOWNLOAD" Click="DOWNLOAD_Click"></Button>-->
 
                                     <!--<Button HorizontalAlignment="Stretch" Opacity=".7" Foreground="White" Margin="10" Width="{x:Bind actionGrid.Width, Mode=OneWay}" 
@@ -1231,7 +1242,7 @@ FontWeight="Bold"
                                     <Border BorderThickness="0,3,0,0"  Width="{x:Bind actionGrid.Width, Mode=OneWay}" Margin="0" BorderBrush="Purple">
                                     </Border>
 
-                                    <TextBlock FontWeight="Bold" FontSize="30" Width="{x:Bind actionGrid.Width, Mode=OneWay}" Margin="0 10" Foreground="White">乖乖背单词 v3.0</TextBlock>
+                                    <TextBlock FontWeight="Bold" FontSize="30" Width="{x:Bind actionGrid.Width, Mode=OneWay}" Margin="0 10" Foreground="White">乖乖背单词 v3.2</TextBlock>
                                 </StackPanel>
                             </Grid>
                         </ScrollViewer>
