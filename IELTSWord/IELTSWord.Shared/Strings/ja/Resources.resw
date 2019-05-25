@@ -258,9 +258,6 @@
   <data name="ReviewAll_Text.Text" xml:space="preserve">
     <value>すべての単語を確認します。</value>
   </data>
-  <data name="ShowExamples_Text.Text" xml:space="preserve">
-    <value>例文を表示します。</value>
-  </data>
   <data name="ShowWordRoot_Text.Text" xml:space="preserve">
     <value>単語のルートを表示します。</value>
   </data>
@@ -414,10 +411,16 @@
   <data name="GG_UpComing_Fetch.Content" xml:space="preserve">
     <value>更新</value>
   </data>
-  <data name="ShowOneExamples_Text.Text" xml:space="preserve">
-    <value>例文 1</value>
-  </data>
   <data name="GG_PRELOAD.Content" xml:space="preserve">
     <value>単語詳細をプリロードします。</value>
+  </data>
+  <data name="GG_BACKUPTOEMAIL.Content" xml:space="preserve">
+    <value>私の電子メールへのバックアップ</value>
+  </data>
+  <data name="ShowExamples_Text.Text" xml:space="preserve">
+    <value>例文を表示します。</value>
+  </data>
+  <data name="ShowOneExamples_Text.Text" xml:space="preserve">
+    <value>以下の例文を表示します。</value>
   </data>
 </root>

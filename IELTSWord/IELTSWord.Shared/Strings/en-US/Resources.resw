@@ -337,9 +337,12 @@
     <value>Refresh</value>
   </data>
   <data name="ShowOneExamples_Text.Text" xml:space="preserve">
-    <value>Example One Sentence</value>
+    <value>Show Less Example Sentences</value>
   </data>
   <data name="GG_PRELOAD.Content" xml:space="preserve">
     <value>Preload Word Detail</value>
+  </data>
+  <data name="GG_BACKUPTOEMAIL.Content" xml:space="preserve">
+    <value>Backup To My Email</value>
   </data>
 </root>

@@ -180,9 +180,6 @@
   <data name="ReviewAll_Text.Text" xml:space="preserve">
     <value>Scrivi una recensione su tutte le parole</value>
   </data>
-  <data name="ShowExamples_Text.Text" xml:space="preserve">
-    <value>Frasi di esempio Visualizza</value>
-  </data>
   <data name="ShowWordRoot_Text.Text" xml:space="preserve">
     <value>Visualizza la radice di parola</value>
   </data>
@@ -336,10 +333,16 @@
   <data name="GG_UpComing_Fetch.Content" xml:space="preserve">
     <value>aggiornare</value>
   </data>
-  <data name="ShowOneExamples_Text.Text" xml:space="preserve">
-    <value>Frase di esempio in uno</value>
-  </data>
   <data name="GG_PRELOAD.Content" xml:space="preserve">
     <value>Dettaglio di precarico parola</value>
+  </data>
+  <data name="GG_BACKUPTOEMAIL.Content" xml:space="preserve">
+    <value>Backup al mio indirizzo Email</value>
+  </data>
+  <data name="ShowExamples_Text.Text" xml:space="preserve">
+    <value>Frasi di esempio Visualizza</value>
+  </data>
+  <data name="ShowOneExamples_Text.Text" xml:space="preserve">
+    <value>Visualizza meno frasi di esempio</value>
   </data>
 </root>

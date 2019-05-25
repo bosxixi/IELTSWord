@@ -180,9 +180,6 @@
   <data name="ReviewAll_Text.Text" xml:space="preserve">
     <value>Überprüfen Sie alle Wörter</value>
   </data>
-  <data name="ShowExamples_Text.Text" xml:space="preserve">
-    <value>Beispielsätze zu zeigen</value>
-  </data>
   <data name="ShowWordRoot_Text.Text" xml:space="preserve">
     <value>Wortstamm zeigen</value>
   </data>
@@ -336,10 +333,16 @@
   <data name="GG_UpComing_Fetch.Content" xml:space="preserve">
     <value>Aktualisieren</value>
   </data>
-  <data name="ShowOneExamples_Text.Text" xml:space="preserve">
-    <value>Ein Beispielsatz</value>
-  </data>
   <data name="GG_PRELOAD.Content" xml:space="preserve">
     <value>Vorspannung Wort Detail</value>
+  </data>
+  <data name="GG_BACKUPTOEMAIL.Content" xml:space="preserve">
+    <value>Backup auf meine E-Mail</value>
+  </data>
+  <data name="ShowExamples_Text.Text" xml:space="preserve">
+    <value>Beispielsätze zu zeigen</value>
+  </data>
+  <data name="ShowOneExamples_Text.Text" xml:space="preserve">
+    <value>Zeigen Sie weniger Beispielsätze</value>
   </data>
 </root>

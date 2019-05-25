@@ -35,6 +35,7 @@ using bosxixi.ScorpioPlayer.Core;
 using Xamarin.Essentials;
 using System.Windows.Input;
 using MonkeyCache.LiteDB;
+using Newtonsoft.Json.Linq;
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
 namespace IELTSWord
@@ -903,9 +904,13 @@ namespace IELTSWord
         {
             if (AppGlobalSettings.ShowOneExamples)
             {
-                if (value is EXAMExample[] exam)
+                if (value is EXAMExample[] exam && exam.Length > 1)
                 {
-                    return new EXAMExample[] { exam.FirstOrDefault() };
+                    return new EXAMExample[] { exam.FirstOrDefault(), exam.LastOrDefault() };
+                }
+                else if (value is EXAMExample[] exam1 && exam1.Length > 0)
+                {
+                    return new EXAMExample[] { exam1.FirstOrDefault() };
                 }
             }
 
@@ -1885,6 +1890,51 @@ namespace IELTSWord
             public string d { get; set; }
             public string w { get; set; }
         }
+        //
+        async void BACKUPTOEMAIL_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                this.IsDownloading = true;
+                if (!String.IsNullOrEmpty(AppGlobalSettings.Email))
+                {
+                    var ws = Word.GetAll();
+
+                    var json = Newtonsoft.Json.JsonConvert.SerializeObject(new
+                           WordItems
+                    { Id = AppGlobalSettings.ID, Items = ws.ToList(), Books = await WorkBookService.GetAllBooksAsync() });
+
+                    var josnobj = JObject.Parse(json);
+                    var target = Newtonsoft.Json.JsonConvert.SerializeObject(new { To = AppGlobalSettings.Email, Obj = josnobj });
+                    var post = await new HttpClient().PostAsync("http://spimdb.scorpioplayer.com/api/mail/word", new StringContent(target, Encoding.UTF8, "application/json"));
+                    if (post.IsSuccessStatusCode)
+                    {
+                        MessageDialog messageDialog = new MessageDialog($"{"UPLOAD_SUCCESS_DETAIL".Translate()}: {ws.Count()}", "UPLOAD_SUCCESS".Translate());
+                        await messageDialog.ShowAsync();
+                    }
+                }
+                else
+                {
+                    if (sender != null)
+                    {
+                        MessageDialog messageDialog = new MessageDialog("REQUERED_MORE_INFO_DETAIL".Translate(), "REQUERED_MORE_INFO".Translate());
+                        await messageDialog.ShowAsync();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                if (sender != null)
+                {
+                    MessageDialog messageDialog = new MessageDialog(ex.Message, "Error");
+                    await messageDialog.ShowAsync();
+                }
+            }
+            finally
+            {
+                this.IsDownloading = false;
+            }
+        }
         async void PRELOAD_Click(object sender, RoutedEventArgs e)
         {
             try
@@ -2475,7 +2525,7 @@ namespace IELTSWord
                                 perc = $" {percent.ToString("0.00")} %";
                             }
 
-                            var new_today = all.Where(c => c.HitDates != null).Where(c=>c.Level < 20)
+                            var new_today = all.Where(c => c.HitDates != null).Where(c => c.Level < 20)
                             .Where(c => c.HitDates.All(d => DateTimeOffset.UtcNow - d < TimeSpan.FromHours(24))).Count();
 
                             var new_week = all.Where(c => c.HitDates != null).Where(c => c.Level < 20)

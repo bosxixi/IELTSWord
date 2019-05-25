@@ -180,9 +180,6 @@
   <data name="ReviewAll_Text.Text" xml:space="preserve">
     <value>Revise Todas as palavras</value>
   </data>
-  <data name="ShowExamples_Text.Text" xml:space="preserve">
-    <value>Mostrar exemplos de sentenças</value>
-  </data>
   <data name="ShowWordRoot_Text.Text" xml:space="preserve">
     <value>Mostrar a raiz da palavra</value>
   </data>
@@ -336,10 +333,16 @@
   <data name="GG_UpComing_Fetch.Content" xml:space="preserve">
     <value>Atualização</value>
   </data>
-  <data name="ShowOneExamples_Text.Text" xml:space="preserve">
-    <value>Exemplo de uma sentença</value>
-  </data>
   <data name="GG_PRELOAD.Content" xml:space="preserve">
     <value>Detalhe da palavra pré-carga</value>
+  </data>
+  <data name="GG_BACKUPTOEMAIL.Content" xml:space="preserve">
+    <value>Backup em meu Email</value>
+  </data>
+  <data name="ShowExamples_Text.Text" xml:space="preserve">
+    <value>Mostrar exemplos de sentenças</value>
+  </data>
+  <data name="ShowOneExamples_Text.Text" xml:space="preserve">
+    <value>Mostrar menos frases de exemplo</value>
   </data>
 </root>

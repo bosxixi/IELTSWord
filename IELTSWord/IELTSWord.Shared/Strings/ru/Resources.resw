@@ -180,9 +180,6 @@
   <data name="ReviewAll_Text.Text" xml:space="preserve">
     <value>Просмотрите все слова</value>
   </data>
-  <data name="ShowExamples_Text.Text" xml:space="preserve">
-    <value>Показать пример предложения</value>
-  </data>
   <data name="ShowWordRoot_Text.Text" xml:space="preserve">
     <value>Корень слова шоу</value>
   </data>
@@ -336,10 +333,16 @@
   <data name="GG_UpComing_Fetch.Content" xml:space="preserve">
     <value>Обновить</value>
   </data>
-  <data name="ShowOneExamples_Text.Text" xml:space="preserve">
-    <value>Пример одного предложения</value>
-  </data>
   <data name="GG_PRELOAD.Content" xml:space="preserve">
     <value>Преднагрузки слово подробно</value>
+  </data>
+  <data name="GG_BACKUPTOEMAIL.Content" xml:space="preserve">
+    <value>Резервное копирование на мой Email</value>
+  </data>
+  <data name="ShowExamples_Text.Text" xml:space="preserve">
+    <value>Показать пример предложения</value>
+  </data>
+  <data name="ShowOneExamples_Text.Text" xml:space="preserve">
+    <value>Показать меньше примеров предложений</value>
   </data>
 </root>

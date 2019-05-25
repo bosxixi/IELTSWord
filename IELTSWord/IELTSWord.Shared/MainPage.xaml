@@ -1069,7 +1069,7 @@
                                       IsOn="{x:Bind ShowWordRoot, Mode=TwoWay}"
                             />
                                     </Grid>
-                                    <Grid Margin="10">
+                                    <Grid Margin="10" Visibility="Collapsed">
                                         <TextBlock x:Uid="ShowSynonyms_Text"
                                        Margin="0 10 0 0"
                                        FontWeight="Bold"
@@ -1081,7 +1081,7 @@
                                       IsOn="{x:Bind ShowSynonyms, Mode=TwoWay}"
                             />
                                     </Grid>
-                                    <Grid Margin="10">
+                                    <Grid Margin="10" Visibility="Collapsed">
                                         <Grid.ColumnDefinitions>
                                             <ColumnDefinition Width="*"></ColumnDefinition>
                                             <ColumnDefinition Width="auto"></ColumnDefinition>
@@ -1216,6 +1216,17 @@ FontWeight="Bold"
                                             Content="PRELOAD" 
                                             x:Name="PRELOAD" 
                                             Click="PRELOAD_Click"></Button>
+
+                                    <Button HorizontalAlignment="Stretch"
+                                            Opacity=".95" Height="36"
+FontWeight="Bold"
+                                            Foreground="White" Margin="10"
+                                            IsEnabled="{x:Bind IsDownloading, Mode=OneWay, Converter={StaticResource BoolReverveConverter}}"
+                                            Width="{x:Bind actionGrid.Width, Mode=OneWay}"
+                                            x:Uid="GG_BACKUPTOEMAIL" 
+                                            Content="BACKUPTOEMAIL" 
+                                            x:Name="BACKUPTOEMAIL" 
+                                            Click="BACKUPTOEMAIL_Click"></Button>
                                     <!--<Button HorizontalAlignment="Stretch" Opacity=".7" Foreground="White" Margin="10" Width="{x:Bind actionGrid.Width, Mode=OneWay}" x:Uid="GG_DOWNLOAD" Content="DOWNLOAD" x:Name="DOWNLOAD" Click="DOWNLOAD_Click"></Button>-->
 
                                     <!--<Button HorizontalAlignment="Stretch" Opacity=".7" Foreground="White" Margin="10" Width="{x:Bind actionGrid.Width, Mode=OneWay}" 
@@ -1242,7 +1253,7 @@ FontWeight="Bold"
                                     <Border BorderThickness="0,3,0,0"  Width="{x:Bind actionGrid.Width, Mode=OneWay}" Margin="0" BorderBrush="Purple">
                                     </Border>
 
-                                    <TextBlock FontWeight="Bold" FontSize="30" Width="{x:Bind actionGrid.Width, Mode=OneWay}" Margin="0 10" Foreground="White">乖乖背单词 v3.13</TextBlock>
+                                    <TextBlock FontWeight="Bold" FontSize="30" Width="{x:Bind actionGrid.Width, Mode=OneWay}" Margin="0 10" Foreground="White">乖乖背单词 v3.15</TextBlock>
                                 </StackPanel>
                             </Grid>
                         </ScrollViewer>

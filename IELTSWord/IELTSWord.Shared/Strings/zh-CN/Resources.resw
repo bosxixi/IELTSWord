@@ -180,9 +180,6 @@
   <data name="ReviewAll_Text.Text" xml:space="preserve">
     <value>复习所有单词</value>
   </data>
-  <data name="ShowExamples_Text.Text" xml:space="preserve">
-    <value>显示示例句子</value>
-  </data>
   <data name="ShowWordRoot_Text.Text" xml:space="preserve">
     <value>显示词根</value>
   </data>
@@ -336,10 +333,16 @@
   <data name="GG_UpComing_Fetch.Content" xml:space="preserve">
     <value>刷新</value>
   </data>
-  <data name="ShowOneExamples_Text.Text" xml:space="preserve">
-    <value>示例一句</value>
-  </data>
   <data name="GG_PRELOAD.Content" xml:space="preserve">
     <value>预加载单词详细信息</value>
+  </data>
+  <data name="GG_BACKUPTOEMAIL.Content" xml:space="preserve">
+    <value>备份到我的电子邮件</value>
+  </data>
+  <data name="ShowExamples_Text.Text" xml:space="preserve">
+    <value>显示示例句子</value>
+  </data>
+  <data name="ShowOneExamples_Text.Text" xml:space="preserve">
+    <value>显示较少的示例句子</value>
   </data>
 </root>

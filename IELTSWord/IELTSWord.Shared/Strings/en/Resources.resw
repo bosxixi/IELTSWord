@@ -258,9 +258,6 @@
   <data name="ReviewAll_Text.Text" xml:space="preserve">
     <value>Review All Words</value>
   </data>
-  <data name="ShowExamples_Text.Text" xml:space="preserve">
-    <value>Show Example Sentences</value>
-  </data>
   <data name="ShowWordRoot_Text.Text" xml:space="preserve">
     <value>Show Word Root</value>
   </data>
@@ -413,8 +410,5 @@
   </data>
   <data name="GG_UpComing_Fetch.Content" xml:space="preserve">
     <value>Refresh</value>
-  </data>
-  <data name="ShowOneExamples_Text.Text" xml:space="preserve">
-    <value>Example One Sentence</value>
   </data>
 </root>

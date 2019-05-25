@@ -180,9 +180,6 @@
   <data name="ReviewAll_Text.Text" xml:space="preserve">
     <value>استعراض كافة الكلمات</value>
   </data>
-  <data name="ShowExamples_Text.Text" xml:space="preserve">
-    <value>إظهار مثال الجمل</value>
-  </data>
   <data name="ShowWordRoot_Text.Text" xml:space="preserve">
     <value>إظهار جذر الكلمة</value>
   </data>
@@ -336,10 +333,16 @@
   <data name="GG_UpComing_Fetch.Content" xml:space="preserve">
     <value>قم بتحديث</value>
   </data>
-  <data name="ShowOneExamples_Text.Text" xml:space="preserve">
-    <value>الجملة مثال واحد</value>
-  </data>
   <data name="GG_PRELOAD.Content" xml:space="preserve">
     <value>التحميل المسبق لتفصيل كلمة</value>
+  </data>
+  <data name="GG_BACKUPTOEMAIL.Content" xml:space="preserve">
+    <value>نسخ احتياطي للبريد الإلكتروني الخاص بي</value>
+  </data>
+  <data name="ShowExamples_Text.Text" xml:space="preserve">
+    <value>إظهار مثال الجمل</value>
+  </data>
+  <data name="ShowOneExamples_Text.Text" xml:space="preserve">
+    <value>إظهار أقل الجمل مثال</value>
   </data>
 </root>

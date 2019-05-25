@@ -258,9 +258,6 @@
   <data name="ReviewAll_Text.Text" xml:space="preserve">
     <value>复习所有單詞</value>
   </data>
-  <data name="ShowExamples_Text.Text" xml:space="preserve">
-    <value>顯示示例句子</value>
-  </data>
   <data name="ShowWordRoot_Text.Text" xml:space="preserve">
     <value>顯示词根</value>
   </data>
@@ -414,10 +411,16 @@
   <data name="GG_UpComing_Fetch.Content" xml:space="preserve">
     <value>刷新</value>
   </data>
-  <data name="ShowOneExamples_Text.Text" xml:space="preserve">
-    <value>示例一句</value>
-  </data>
   <data name="GG_PRELOAD.Content" xml:space="preserve">
     <value>預載入单词詳細資訊</value>
+  </data>
+  <data name="GG_BACKUPTOEMAIL.Content" xml:space="preserve">
+    <value>備份到我的電子郵件</value>
+  </data>
+  <data name="ShowExamples_Text.Text" xml:space="preserve">
+    <value>顯示示例句子</value>
+  </data>
+  <data name="ShowOneExamples_Text.Text" xml:space="preserve">
+    <value>顯示較少的示例句子</value>
   </data>
 </root>
