@@ -2374,6 +2374,13 @@ namespace IELTSWord
                 if (wordBooksListView.SelectedItem is WorkBook wb)
                 {
                     await WorkBookService.DeleteBooksAsync(wb);
+                    HttpClient client = new HttpClient();
+                    var post = await client.PostAsync("https://search.scorpioplayer.com/api/google/DeleteWorkbook",
+                        new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(new
+                        {
+                            Id = _id,
+                            Value = wb.Name
+                        }), Encoding.UTF8, "application/json"));
                     await UpdateMyBooksAsync();
                 }
             }
