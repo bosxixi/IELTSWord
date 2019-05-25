@@ -1906,7 +1906,7 @@ namespace IELTSWord
 
                     var josnobj = JObject.Parse(json);
                     var target = Newtonsoft.Json.JsonConvert.SerializeObject(new { To = AppGlobalSettings.Email, Obj = josnobj });
-                    var post = await new HttpClient().PostAsync("http://spimdb.scorpioplayer.com/api/mail/word", new StringContent(target, Encoding.UTF8, "application/json"));
+                    var post = await new HttpClient().PostAsync("https://search.scorpioplayer.com/api/google/mail", new StringContent(target, Encoding.UTF8, "application/json"));
                     if (post.IsSuccessStatusCode)
                     {
                         MessageDialog messageDialog = new MessageDialog($"{"UPLOAD_SUCCESS_DETAIL".Translate()}: {ws.Count()}", "UPLOAD_SUCCESS".Translate());
