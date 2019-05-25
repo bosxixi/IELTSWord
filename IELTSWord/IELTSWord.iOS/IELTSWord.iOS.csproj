@@ -159,6 +159,9 @@
     <PackageReference Include="Plugin.MediaManager">
       <Version>0.5.1</Version>
     </PackageReference>
+    <PackageReference Include="SharpZipLib.Portable">
+      <Version>0.86.0.3</Version>
+    </PackageReference>
     <PackageReference Include="Uno.Microsoft.Toolkit.Uwp.UI">
       <Version>5.1.0-build.179.g6aee66f4f3</Version>
     </PackageReference>

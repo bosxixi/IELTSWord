@@ -616,13 +616,13 @@ namespace IELTSWord
             {
                 using (HttpClient client = new HttpClient())
                 {
-                    //var res = await client.GetAsync($"https://searchscorpio.azurewebsites.net/api/google/hub?u=IELTSWord&m={message}").ConfigureAwait(false);
+                    //var res = await client.GetAsync($"https://search.scorpioplayer.com/api/google/hub?u=IELTSWord&m={message}").ConfigureAwait(false);
                     //if (res.IsSuccessStatusCode)
                     //{
                     //    return true;
                     //}
 
-                    var res = await client.PostAsync($"https://searchscorpio.azurewebsites.net/api/google/hub?u=IELTSWord", new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(new { Value = message }), Encoding.UTF8, "application/json")).ConfigureAwait(false);
+                    var res = await client.PostAsync($"https://search.scorpioplayer.com/api/google/hub?u=IELTSWord", new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(new { Value = message }), Encoding.UTF8, "application/json")).ConfigureAwait(false);
                     if (res.IsSuccessStatusCode)
                     {
                         return true;
@@ -1508,7 +1508,7 @@ namespace IELTSWord
             logger.Event(nameof(SpeechNow));
             Task.Run(() =>
             {
-                var uri = $"https://searchscorpio.azurewebsites.net/api/google/ToSpeech?word={Uri.EscapeDataString(str)}&lang={lang}";
+                var uri = $"https://search.scorpioplayer.com/api/google/ToSpeech?word={Uri.EscapeDataString(str)}&lang={lang}";
                 if (AppGlobalSettings.SpeakNatural)
                 {
 #if WINDOWS_UWP
@@ -1639,7 +1639,7 @@ namespace IELTSWord
                 if (ds == null)
                 {
                     HttpClient client = new HttpClient();
-                    var post = await client.GetStringAsync($"https://searchscorpio.azurewebsites.net/api/google/worddetail?word={Uri.EscapeDataString(this.CurrentWord.Name)}");
+                    var post = await client.GetStringAsync($"https://search.scorpioplayer.com/api/google/worddetail?word={Uri.EscapeDataString(this.CurrentWord.Name)}");
                     WordDetails item = SaveWordDetail(word.Name, post);
                     if (!String.IsNullOrEmpty(item.LoopUpStr))
                     {
@@ -1684,7 +1684,7 @@ namespace IELTSWord
                 if (subhubResultListView.SelectedItem is SubtitleSelection ss)
                 {
                     HttpClient client = new HttpClient();
-                    var post = await client.PostAsync("https://searchscorpio.azurewebsites.net/api/Subtitle/DownloadLines",
+                    var post = await client.PostAsync("https://search.scorpioplayer.com/api/Subtitle/DownloadLines",
                         new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(ss), Encoding.UTF8, "application/json"));
                     if (post.IsSuccessStatusCode && await post.Content.ReadAsStringAsync() is string res)
                     {
@@ -1719,7 +1719,7 @@ namespace IELTSWord
                 if (!String.IsNullOrEmpty(SubtitleQuery))
                 {
                     HttpClient client = new HttpClient();
-                    var post = await client.GetStringAsync($"https://searchscorpio.azurewebsites.net/api/subtitle/Search?q={Uri.EscapeDataString(SubtitleQuery)}");
+                    var post = await client.GetStringAsync($"https://search.scorpioplayer.com/api/subtitle/Search?q={Uri.EscapeDataString(SubtitleQuery)}");
                     var selections = Newtonsoft.Json.JsonConvert.DeserializeObject<SubtitleSelection[]>(post);
                     subhubResultListView.ItemsSource = selections;
                 }
@@ -1748,7 +1748,7 @@ namespace IELTSWord
                 if (!String.IsNullOrEmpty(CustomTextUri) && Uri.TryCreate(CustomTextUri, UriKind.Absolute, out Uri _))
                 {
                     HttpClient client = new HttpClient();
-                    var post = await client.GetStringAsync($"https://searchscorpio.azurewebsites.net/api/google/DownloadText?uri={Uri.EscapeDataString(CustomTextUri)}");
+                    var post = await client.GetStringAsync($"https://search.scorpioplayer.com/api/google/DownloadText?uri={Uri.EscapeDataString(CustomTextUri)}");
                     CustomText = post;
                     this.GenericRaisePropertyChanged(nameof(CustomText));
                 }
@@ -1844,7 +1844,7 @@ namespace IELTSWord
                 if (!String.IsNullOrEmpty(CustomText))
                 {
                     HttpClient client = new HttpClient();
-                    var post = await client.PostAsync("https://searchscorpio.azurewebsites.net/api/google/ExtractText",
+                    var post = await client.PostAsync("https://search.scorpioplayer.com/api/google/ExtractText",
                         new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(new
                         {
                             Value = CustomText
@@ -1894,7 +1894,7 @@ namespace IELTSWord
                 {
                     var target = this.Words.Where(c => new CompressedStorage(CompressedStorage.Storage.Detail).TryGet<WordDetails>(c.Name) == null).Select(c => c.Name).ToArray();
                     HttpClient client = new HttpClient();
-                    var post = await client.PostAsync("https://searchscorpio.azurewebsites.net/api/google/allp",
+                    var post = await client.PostAsync("https://search.scorpioplayer.com/api/google/allp",
                       new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(new
                       {
                           Id = _id,
@@ -1942,7 +1942,7 @@ namespace IELTSWord
                 {
                     var ws = Word.GetAll();
                     HttpClient client = new HttpClient();
-                    var post = await client.PostAsync("https://searchscorpio.azurewebsites.net/api/google/AddUpdateKeyValue",
+                    var post = await client.PostAsync("https://search.scorpioplayer.com/api/google/AddUpdateKeyValue",
                         new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(new
                         {
                             Id = _id,
@@ -2106,7 +2106,7 @@ namespace IELTSWord
         //            try
         //            {
         //                HttpClient client = new HttpClient();
-        //                var post = await client.GetStringAsync($"https://searchscorpio.azurewebsites.net/api/google/GetKeyValue?key={Uri.EscapeDataString(_id)}");
+        //                var post = await client.GetStringAsync($"https://search.scorpioplayer.com/api/google/GetKeyValue?key={Uri.EscapeDataString(_id)}");
         //                var item = JsonConvert.DeserializeObject<KeyValue>(post);
         //                if (item.Id == _id)
         //                {
