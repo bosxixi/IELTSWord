@@ -2278,7 +2278,11 @@ namespace IELTSWord
             {
                 logger.Event(nameof(Load_Click));
 
-                if (DicsCombo.SelectedItem is KeyValuePair<string, string> item)
+                if (wordBooksListView.SelectedItem != null)
+                {
+                    LOAD_SUBTITLE_BOOK_CLICK(sender, e);
+                }
+                else if (DicsCombo.SelectedItem is KeyValuePair<string, string> item)
                 {
                     logger.Event(nameof(Load_Click), $"{item.Key}");
 

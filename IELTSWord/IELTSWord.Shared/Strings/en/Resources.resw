@@ -292,7 +292,7 @@
     <value>Please enter correct email and password to restore</value>
   </data>
   <data name="GG_WordBook.Text" xml:space="preserve">
-    <value>Word Book</value>
+    <value>Word</value>
   </data>
   <data name="GG_CUSTOM.Text" xml:space="preserve">
     <value>Custom</value>

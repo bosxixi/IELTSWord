@@ -610,13 +610,15 @@
                                 </ComboBox>
                                 <Button Width="{x:Bind actionGrid.Width, Mode=OneWay}" x:Uid="GG_LOAD" Content="LOAD"
                                     Margin="0 10 0 0"
+                                        Height="38"
+                                        FontWeight="Bold"
                                     Click="Load_Click" Foreground="White">
                                 </Button>
 
                                 <Border BorderThickness="0,3,0,0" Margin="0 20 0 0" BorderBrush="Purple">
                                 </Border>
 
-                                <Button HorizontalAlignment="Stretch" Opacity=".7"
+                                <!--<Button HorizontalAlignment="Stretch" Opacity=".7"
                                             Foreground="White" 
                                      Margin="0 20 0 0"
                                          Width="{x:Bind actionGrid.Width, Mode=OneWay}"
@@ -624,7 +626,7 @@
                                      Visibility="{x:Bind wordBooksListView.SelectedItem, Mode=OneWay, Converter={StaticResource NullToVisiblityConverter}}"
                                     Content="LOAD_SUBTITLE_BOOK_CLICK"
                                         Click="LOAD_SUBTITLE_BOOK_CLICK"
-                                        ></Button>
+                                        ></Button>-->
                                 <Button HorizontalAlignment="Stretch" Opacity=".7"
                                             Foreground="White" 
                                      Margin="0 10 0 0"
@@ -783,11 +785,13 @@
                                          Width="{x:Bind actionGrid.Width, Mode=OneWay}"
                                          x:Uid="SEARCH_SUBTITLE_CLICK"
                                         Content="SEARCH_SUBTITLE_CLICK"
+                                        IsEnabled="{x:Bind IsDownloading, Mode=OneWay, Converter={StaticResource BoolReverveConverter}}"
                                         Click="SEARCH_SUBTITLE_CLICK"
                                         ></Button>
                                 <Button HorizontalAlignment="Stretch" Opacity=".7"
                                             Foreground="White" 
                                             Margin="10" 
+                                        IsEnabled="{x:Bind IsDownloading, Mode=OneWay, Converter={StaticResource BoolReverveConverter}}"
                                          Width="{x:Bind actionGrid.Width, Mode=OneWay}"
                                          x:Uid="DOWNLOAD_SUBTITLE_CLICK"
                                      Visibility="{x:Bind subhubResultListView.SelectedItem, Mode=OneWay, Converter={StaticResource NullToVisiblityConverter}}"
@@ -1253,7 +1257,7 @@ FontWeight="Bold"
                                     <Border BorderThickness="0,3,0,0"  Width="{x:Bind actionGrid.Width, Mode=OneWay}" Margin="0" BorderBrush="Purple">
                                     </Border>
 
-                                    <TextBlock FontWeight="Bold" FontSize="30" Width="{x:Bind actionGrid.Width, Mode=OneWay}" Margin="0 10" Foreground="White">乖乖背单词 v3.18</TextBlock>
+                                    <TextBlock FontWeight="Bold" FontSize="30" Width="{x:Bind actionGrid.Width, Mode=OneWay}" Margin="0 10" Foreground="White">乖乖背单词 v3.19</TextBlock>
                                 </StackPanel>
                             </Grid>
                         </ScrollViewer>
