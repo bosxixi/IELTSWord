@@ -121,7 +121,7 @@
             </LinearGradientBrush>
         </Grid.Background>
         <Pivot x:Name="pivot" PivotItemLoaded="PanePivot_PivotItemLoaded" 
-               SelectionChanged="Pivot_Changed" Margin="0 3 0 0">
+               SelectionChanged="Pivot_Changed" Margin="0 30 0 0">
             <PivotItem>
                 <PivotItem.Header>
                     <TextBlock Foreground="White" x:Name="pivotHeaderText" Opacity=".8" FontWeight="Bold" x:Uid="GG_LEARN" Text="Learning"></TextBlock>
