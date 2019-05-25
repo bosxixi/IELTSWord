@@ -121,7 +121,7 @@
             </LinearGradientBrush>
         </Grid.Background>
         <Pivot x:Name="pivot" PivotItemLoaded="PanePivot_PivotItemLoaded" 
-               SelectionChanged="Pivot_Changed" Margin="0 30 0 0">
+               SelectionChanged="Pivot_Changed" Margin="0 3 0 0">
             <PivotItem>
                 <PivotItem.Header>
                     <TextBlock Foreground="White" x:Name="pivotHeaderText" Opacity=".8" FontWeight="Bold" x:Uid="GG_LEARN" Text="Learning"></TextBlock>
@@ -1260,7 +1260,7 @@ FontWeight="Bold"
                                     <Border BorderThickness="0,3,0,0"  Width="{x:Bind actionGrid.Width, Mode=OneWay}" Margin="0" BorderBrush="Purple">
                                     </Border>
 
-                                    <TextBlock FontWeight="Bold" FontSize="30" Width="{x:Bind actionGrid.Width, Mode=OneWay}" Margin="0 10" Foreground="White">乖乖背单词 v3.2</TextBlock>
+                                    <TextBlock FontWeight="Bold" FontSize="30" Width="{x:Bind actionGrid.Width, Mode=OneWay}" Margin="0 10" Foreground="White">乖乖背单词 v3.5</TextBlock>
 
                                     <HyperlinkButton x:Name="scorpioplayer" Click="scorpioplayer_Click">SCORPIO PLAYER</HyperlinkButton>
                                     <HyperlinkButton x:Name="scorpioplayercom" Click="scorpioplayercom_Click">http://scorpioplayer.com</HyperlinkButton>

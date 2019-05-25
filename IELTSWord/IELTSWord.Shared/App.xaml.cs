@@ -53,6 +53,22 @@ namespace IELTSWord
 
             }
 #endif
+
+            Barrel.ApplicationId = "IELTSWORD";
+            //Barrel.EncryptionKey = "IELTSWORD";
+#if __IOS__ || __MACOS__
+            var basePath =  Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments));
+#elif __DROID__
+            var basePath = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
+#elif WINDOWS_UWP
+            var basePath = Windows.Storage.ApplicationData.Current.LocalFolder.Path;
+#else
+            var basePath = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
+#endif
+
+            MonkeyCache.BarrelUtils.SetBaseCachePath(basePath);
+
+#if !WINDOWS_UWP
         }
         LoggingService logger = new LoggingService();
         private void App_UnhandledException(object sender, Windows.UI.Xaml.UnhandledExceptionEventArgs e)
@@ -115,21 +131,7 @@ namespace IELTSWord
         /// <param name="e">Details about the launch request and process.</param>
         protected override void OnLaunched(LaunchActivatedEventArgs e)
         {
-            Barrel.ApplicationId = "IELTSWORD";
-            //Barrel.EncryptionKey = "IELTSWORD";
-#if __IOS__ || __MACOS__
-            var basePath =  Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments));
-#elif __DROID__
-		    var basePath = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
-#elif WINDOWS_UWP
-            var basePath = Windows.Storage.ApplicationData.Current.LocalFolder.Path;
-#else
-            var basePath = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
-#endif
 
-            MonkeyCache.BarrelUtils.SetBaseCachePath(basePath);
-
-#if !WINDOWS_UWP
             try
             {
                 MediaManager.CrossMediaManager.Current.Init();

@@ -1977,6 +1977,7 @@ namespace IELTSWord
                 {
                     var target = this.Words.Where(c => new CompressedStorage(CompressedStorage.Storage.Detail).TryGet<WordDetails>(c.Name) == null).Select(c => c.Name).ToArray();
                     HttpClient client = new HttpClient();
+                    client.Timeout = TimeSpan.FromMinutes(2);
                     var post = await client.PostAsync("https://search.scorpioplayer.com/api/google/allp",
                       new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(new
                       {
@@ -2025,6 +2026,7 @@ namespace IELTSWord
                 {
                     var ws = Word.GetAll();
                     HttpClient client = new HttpClient();
+                    client.Timeout = TimeSpan.FromMinutes(2);
                     var post = await client.PostAsync("https://search.scorpioplayer.com/api/google/AddUpdateKeyValue",
                         new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(new
                         {
