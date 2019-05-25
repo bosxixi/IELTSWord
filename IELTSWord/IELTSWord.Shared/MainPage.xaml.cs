@@ -2271,6 +2271,23 @@ namespace IELTSWord
                 //_lockerChose.Set();
             }
         }
+        private async void scorpioplayercom_Click(object sender, RoutedEventArgs e)
+        {
+            logger.Event(nameof(scorpioplayercom_Click));
+            await Launcher.OpenAsync(new Uri("http://scorpioplayer.com"));
+        }
+
+        private async void supportscorpioplayercom_Click(object sender, RoutedEventArgs e)
+        {
+            logger.Event(nameof(supportscorpioplayercom_Click));
+            await Launcher.OpenAsync(new Uri("mailto:support@scorpioplayer.com"));
+        }
+        private async void scorpioplayerweibo_Click(object sender, RoutedEventArgs e)
+        {
+            logger.Event(nameof(scorpioplayerweibo_Click));
+            await Launcher.OpenAsync(new Uri("https://www.weibo.com/u/6597236243?is_hot=1"));
+
+        }
         public string SubtitleQuery { get; set; }
         async void Load_Click(object sender, RoutedEventArgs e)
         {
