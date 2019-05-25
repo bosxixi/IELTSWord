@@ -115,8 +115,8 @@ namespace IELTSWord
             if (this.HitDates == null)
             {
                 this.HitDates = new List<DateTimeOffset>();
-                this.HitDates.Add(this.HitDate);
             }
+            this.HitDates.Add(this.HitDate);
         }
         public void Blur()
         {
@@ -2485,13 +2485,13 @@ namespace IELTSWord
                             .Where(c => c.HitDates.All(d => DateTimeOffset.UtcNow - d < TimeSpan.FromDays(30))).Count();
 
                             var re_today = all.Where(c => c.HitDates != null).Where(c => c.Level < 20)
-                         .Where(c => c.HitDates.Any(d => DateTimeOffset.UtcNow - d < TimeSpan.FromHours(24)) && !c.HitDates.Any(d => DateTimeOffset.UtcNow - d < TimeSpan.FromHours(24))).Count();
+                         .Where(c => c.HitDates.Any(d => DateTimeOffset.UtcNow - d < TimeSpan.FromHours(24)) && c.HitDates.Any(d => DateTimeOffset.UtcNow - d > TimeSpan.FromHours(24))).Count();
 
                             var re_week = all.Where(c => c.HitDates != null).Where(c => c.Level < 20)
-                            .Where(c => c.HitDates.Any(d => DateTimeOffset.UtcNow - d < TimeSpan.FromDays(7)) && !c.HitDates.Any(d => DateTimeOffset.UtcNow - d < TimeSpan.FromDays(7))).Count();
+                            .Where(c => c.HitDates.Any(d => DateTimeOffset.UtcNow - d < TimeSpan.FromDays(7)) && c.HitDates.Any(d => DateTimeOffset.UtcNow - d > TimeSpan.FromDays(7))).Count();
 
                             var re_month = all.Where(c => c.HitDates != null).Where(c => c.Level < 20)
-                            .Where(c => c.HitDates.Any(d => DateTimeOffset.UtcNow - d < TimeSpan.FromDays(30)) && !c.HitDates.Any(d => DateTimeOffset.UtcNow - d < TimeSpan.FromDays(30))).Count();
+                            .Where(c => c.HitDates.Any(d => DateTimeOffset.UtcNow - d < TimeSpan.FromDays(30)) && c.HitDates.Any(d => DateTimeOffset.UtcNow - d > TimeSpan.FromDays(30))).Count();
 
                             GenericDispatherActionAsync(() =>
                             {
