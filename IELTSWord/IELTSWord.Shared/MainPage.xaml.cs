@@ -1541,16 +1541,16 @@ namespace IELTSWord
                     }
                     catch (Exception)
                     {
-                    try 
-	{	        
+                        try
+                        {
 #if __DROID__
                     IELTSWord.Droid.MainActivity.Instance.PlayAudio(uri);
 #endif
-	}
-	catch (global::System.Exception ex)
-	{
-                    var message = ex.Message;
-	}
+                        }
+                        catch (global::System.Exception ex)
+                        {
+                            var message = ex.Message;
+                        }
                     }
 
 #endif
@@ -2638,14 +2638,20 @@ namespace IELTSWord
             if (AppGlobalSettings.ReviewAll)
             {
                 var rs = Word.GetAll().OrderBy(c => c.Level);
+                Word w = null;
                 foreach (var word in rs)
                 {
-                    if (word.IsValid(this.CurrentWord))
+                    w = word;
+                    if (w.IsValid(this.CurrentWord))
                     {
-                        word.Order = t20000.IndexOf(this.CurrentWord?.Name ?? string.Empty);
-                        this.CurrentWord = word;
+                        w.Order = t20000.IndexOf(this.CurrentWord?.Name ?? string.Empty);
+                        if (this.Words != null && this.Words.FirstOrDefault(c => c.Name == w.Name) is Word wordd && wordd != null)
+                        {
+                            w = wordd;
+                        }
+                        this.CurrentWord = w;
                         this.CurrentWordDetails = null;
-                        GetDetailsAsync(word);
+                        GetDetailsAsync(w);
                         PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(CurrentWord)));
                         if (AppGlobalSettings.AudoPlayAudio)
                         {
@@ -2879,7 +2885,7 @@ namespace IELTSWord
 #elif __DROID__
                 return IELTSWord.Droid.MainActivity.Instance.OpenAsset(folder, name);
 #elif __IOS__
-                return  IELTSWord.iOS.Application.OpenAsset(folder, name);
+                return IELTSWord.iOS.Application.OpenAsset(folder, name);
 #else
                 var file = await StorageFile.GetFileFromPathAsync($"Assets/{folder}/{name}");
                 return await file.OpenStreamForReadAsync();

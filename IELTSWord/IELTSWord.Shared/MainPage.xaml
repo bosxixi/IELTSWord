@@ -1257,7 +1257,7 @@ FontWeight="Bold"
                                     <Border BorderThickness="0,3,0,0"  Width="{x:Bind actionGrid.Width, Mode=OneWay}" Margin="0" BorderBrush="Purple">
                                     </Border>
 
-                                    <TextBlock FontWeight="Bold" FontSize="30" Width="{x:Bind actionGrid.Width, Mode=OneWay}" Margin="0 10" Foreground="White">乖乖背单词 v3.19</TextBlock>
+                                    <TextBlock FontWeight="Bold" FontSize="30" Width="{x:Bind actionGrid.Width, Mode=OneWay}" Margin="0 10" Foreground="White">乖乖背单词 v3.2</TextBlock>
                                     
                                     <HyperlinkButton x:Name="scorpioplayercom" Click="scorpioplayercom_Click">http://scorpioplayer.com</HyperlinkButton>
                                     <HyperlinkButton x:Name="supportscorpioplayercom" Click="supportscorpioplayercom_Click">support@scorpioplayer.com</HyperlinkButton>
