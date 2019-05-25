@@ -36,6 +36,7 @@ using Xamarin.Essentials;
 using System.Windows.Input;
 using MonkeyCache.LiteDB;
 using Newtonsoft.Json.Linq;
+using Windows.UI;
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
 namespace IELTSWord
@@ -826,6 +827,23 @@ namespace IELTSWord
                 return string.Empty;
             }
             return value.ToString();
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, string language)
+        {
+            throw new NotImplementedException();
+        }
+    }
+    public class ColorConverter : IValueConverter
+    {
+        public object Convert(object value, Type targetType, object parameter, string language)
+        {
+            var bo = (bool)value;
+            if (bo)
+            {
+                return new SolidColorBrush(Colors.White);
+            }
+            return new SolidColorBrush(Colors.Red);
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, string language)
@@ -1656,6 +1674,12 @@ namespace IELTSWord
                 }
                 else
                 {
+                    if (word.Elaborate is null && !String.IsNullOrEmpty(ds.LoopUpStr))
+                    {
+                        word.Elaborate = ds.LoopUpStr;
+                        word.Save();
+                        word.Raise();
+                    }
                     //ds.Phonetic += ".Cache";
                     return ds;
                 }
@@ -1669,7 +1693,16 @@ namespace IELTSWord
             }
             return null;
         }
+        private async void scorpioplayer_Click(object sender, RoutedEventArgs e)
+        {
+            logger.Event(nameof(scorpioplayer_Click));
 
+#if WINDOWS_UWP
+            await Launcher.OpenAsync(new Uri("ms-windows-store://pdp/?ProductId=9npkq7srlv1l&cid=IELTSWord"));
+#else
+            await Launcher.OpenAsync(new Uri("https://www.microsoft.com/store/apps/9NPKQ7SRLV1L"));
+#endif
+        }
         private static WordDetails SaveWordDetail(string word, string post)
         {
             var item = JsonConvert.DeserializeObject<WordDetails>(post);
@@ -2632,7 +2665,20 @@ namespace IELTSWord
 
 
         }
-
+        void CheckCurrentWordInCurrentBook()
+        {
+            if (!this.Words.IsNullOrCountEqualsZero() && this.CurrentWord != null)
+            {
+                if (this.Words.FirstOrDefault(c => c.Name == this.CurrentWord.Name) is null)
+                {
+                    this.IsCurrentWordInCurrentBook = false;
+                }
+                else
+                {
+                    this.IsCurrentWordInCurrentBook = true;
+                }
+            }
+        }
         async Task GetNextAsync()
         {
             if (AppGlobalSettings.ReviewAll)
@@ -2986,7 +3032,15 @@ namespace IELTSWord
         public Word CurrentWord
         {
             get { return _word; }
-            set { _word = value; }
+            set { _word = value; CheckCurrentWordInCurrentBook(); }
+        }
+
+        private bool _IsCurrentWordInCurrentBook;
+
+        public bool IsCurrentWordInCurrentBook
+        {
+            get { return _IsCurrentWordInCurrentBook; }
+            set { _IsCurrentWordInCurrentBook = value; GenericRaisePropertyChanged(nameof(IsCurrentWordInCurrentBook)); }
         }
 
         Dictionary<string, string> Dics = new Dictionary<string, string>()

@@ -21,6 +21,7 @@
         <local:BoolReverveConverter x:Key="BoolReverveConverter" />
         <local:PositiveConverter x:Key="PositiveConverter" />
         <local:ExampleConverter x:Key="ExampleConverter" />
+        <local:ColorConverter x:Key="ColorConverter" />
         
         <local:NullToVisiblityConverter x:Key="NullToVisiblityConverter" />
         <!--<local:TimeAgoConverter x:Key="TimeAgoConverter" />
@@ -146,7 +147,9 @@
                                     Margin="10 6 0 0" Content="...">
 
                             </Button>
-                            <TextBlock HorizontalAlignment="Left" Foreground="White" TextWrapping="Wrap" Opacity=".7" Margin="10 6 0 0" Text="{x:Bind CurrentWord.Order, Converter={StaticResource PositiveConverter},Mode=OneWay}"></TextBlock>
+                            <TextBlock HorizontalAlignment="Left"
+                                       
+                                       Foreground="{x:Bind IsCurrentWordInCurrentBook, Converter={StaticResource ColorConverter},Mode=OneWay}" TextWrapping="Wrap" Opacity=".7" Margin="10 6 0 0" Text="{x:Bind CurrentWord.Order, Converter={StaticResource PositiveConverter},Mode=OneWay}"></TextBlock>
                         </Grid>
                     </StackPanel>
 
@@ -1258,7 +1261,8 @@ FontWeight="Bold"
                                     </Border>
 
                                     <TextBlock FontWeight="Bold" FontSize="30" Width="{x:Bind actionGrid.Width, Mode=OneWay}" Margin="0 10" Foreground="White">乖乖背单词 v3.2</TextBlock>
-                                    
+
+                                    <HyperlinkButton x:Name="scorpioplayer" Click="scorpioplayer_Click">SCORPIO PLAYER</HyperlinkButton>
                                     <HyperlinkButton x:Name="scorpioplayercom" Click="scorpioplayercom_Click">http://scorpioplayer.com</HyperlinkButton>
                                     <HyperlinkButton x:Name="supportscorpioplayercom" Click="supportscorpioplayercom_Click">support@scorpioplayer.com</HyperlinkButton>
                                     <HyperlinkButton x:Name="scorpioplayerweibo" Click="scorpioplayerweibo_Click">@新浪微博</HyperlinkButton>
