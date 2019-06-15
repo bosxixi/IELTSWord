@@ -20,10 +20,14 @@
         <local:BoolToBrushConverter x:Key="BoolToBrushConverter" />
         <local:BoolReverveConverter x:Key="BoolReverveConverter" />
         <local:PositiveConverter x:Key="PositiveConverter" />
+        <local:CountListConverter x:Key="CountListConverter" />
+        
         <local:ExampleConverter x:Key="ExampleConverter" />
         <local:ColorConverter x:Key="ColorConverter" />
-        
+
         <local:NullToVisiblityConverter x:Key="NullToVisiblityConverter" />
+        <local:OneStringToVisiblityConverter x:Key="OneStringToVisiblityConverter" />
+        
         <!--<local:TimeAgoConverter x:Key="TimeAgoConverter" />
 
         <local:IsAudioOnlyConverter x:Key="IsAudioOnlyConverter" />
@@ -414,6 +418,11 @@
                                             Content="REFLESH" 
                                             Click="statistics_Update_Click"
                                             Foreground="White"></Button>
+                                    <ToggleButton Margin="10 0 0 0" x:Uid="REFLESH_MostHit"
+                                            Content="REFLESH_MostHit" 
+                                                  x:Name="REFLESH_MostHit"
+                                            Click="statistics_Update_Click_Order_low"
+                                            Foreground="White"></ToggleButton>
                                     <Button Margin="10 0 0 0" x:Uid="GG_REMOVE" Visibility="{x:Bind WordsListView.SelectedItem, Mode=OneWay, Converter={StaticResource NullToVisiblityConverter}}" Content="REMOVE" Click="REMOVE_Click" Foreground="White"></Button>
                                     <Button Margin="10 0 0 0" x:Uid="GG_DELETE" Visibility="{x:Bind WordsListView.SelectedItem, Mode=OneWay, Converter={StaticResource NullToVisiblityConverter}}" Content="DELETE" Click="DELETE_Click" Foreground="White"></Button>
                                 </StackPanel>
@@ -446,6 +455,7 @@
                                             <TextBlock Foreground="White" FontWeight="Bold" Text="{x:Bind Name}" HorizontalAlignment="Stretch"/>
                                             <TextBlock Foreground="White" Text="{x:Bind Elaborate}" Opacity=".7" HorizontalAlignment="Left"/>
                                             <TextBlock Foreground="White" Text="{x:Bind Order, Converter={StaticResource PositiveConverter}}" Opacity=".7" HorizontalAlignment="Left"/>
+                                            <TextBlock Foreground="White" Text="{x:Bind HitDates, Converter={StaticResource CountListConverter}}" Opacity=".5" HorizontalAlignment="Left"/>
                                             <ProgressBar Margin="0 10 0 0" HorizontalAlignment="Stretch" Maximum="12" Minimum="0" Value="{x:Bind Level,Mode=OneWay}"></ProgressBar>
                                         </StackPanel>
                                     </DataTemplate>
@@ -721,7 +731,28 @@
                                         Visibility="{x:Bind CustomTextBox.Text, Mode=OneWay, Converter={StaticResource NullToVisiblityConverter}, ConverterParameter=x}"
                                          Width="{x:Bind actionGrid.Width, Mode=OneWay}"
                                         ></Button>
+                                <Button HorizontalAlignment="Stretch" 
+                                        Foreground="White" 
+                                        Margin="10 10 10 0" 
+                                        FontWeight="Bold"
+                                         x:Uid="SPEECH_CUSTOM_TEXT"
+                                        Content="SPEECH_CUSTOM_TEXT"
+                                        Click="SPEECH_CUSTOM_TEXT"
 
+                                        Visibility="{x:Bind CustomTextBox.Text, Mode=OneWay, Converter={StaticResource NullToVisiblityConverter}, ConverterParameter=x}"
+                                         Width="{x:Bind actionGrid.Width, Mode=OneWay}"
+                                        ></Button>
+                                <Button HorizontalAlignment="Stretch" 
+                                        Foreground="White" 
+                                        Margin="10 10 10 0" 
+                                        FontWeight="Bold"
+                                         x:Uid="ENTER_CUSTOM_TEXT"
+                                        Content="ENTER_CUSTOM_TEXT"
+                                        Click="ENTER_CUSTOM_TEXT"
+
+                                        Visibility="{x:Bind CustomTextBox.Text, Mode=OneWay, Converter={StaticResource OneStringToVisiblityConverter}, ConverterParameter=x}"
+                                         Width="{x:Bind actionGrid.Width, Mode=OneWay}"
+                                        ></Button>
                             </StackPanel>
 
                             <TextBox VerticalAlignment="Stretch" 
@@ -1260,7 +1291,7 @@ FontWeight="Bold"
                                     <Border BorderThickness="0,3,0,0"  Width="{x:Bind actionGrid.Width, Mode=OneWay}" Margin="0" BorderBrush="Purple">
                                     </Border>
 
-                                    <TextBlock FontWeight="Bold" FontSize="30" Width="{x:Bind actionGrid.Width, Mode=OneWay}" Margin="0 10" Foreground="White">乖乖背单词 v3.5</TextBlock>
+                                    <TextBlock FontWeight="Bold" FontSize="30" Width="{x:Bind actionGrid.Width, Mode=OneWay}" Margin="0 10" Foreground="White">乖乖背单词 v3.6</TextBlock>
 
                                     <HyperlinkButton x:Name="scorpioplayer" Click="scorpioplayer_Click">SCORPIO PLAYER</HyperlinkButton>
                                     <HyperlinkButton x:Name="scorpioplayercom" Click="scorpioplayercom_Click">http://scorpioplayer.com</HyperlinkButton>

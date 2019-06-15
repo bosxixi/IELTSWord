@@ -88,6 +88,19 @@ namespace IELTSWord
 
             return null;
         }
+        public static Word Create(string str)
+        {
+            Word word = new Word()
+            {
+                //Elaborate = tab.Last(),
+                Id = str,
+                Level = 0,
+                Order = 20000,
+                Name = str,
+                HitDate = DateTimeOffset.UtcNow
+            };
+            return word;
+        }
         [JsonIgnore]
         TimeSpan Elasped => DateTimeOffset.UtcNow - this.HitDate;
         public void Save()
@@ -834,6 +847,22 @@ namespace IELTSWord
             throw new NotImplementedException();
         }
     }
+    public class CountListConverter : IValueConverter
+    {
+        public object Convert(object value, Type targetType, object parameter, string language)
+        {
+            if (value is List<DateTimeOffset> inte)
+            {
+                return inte.Count.ToString();
+            }
+            return string.Empty;
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, string language)
+        {
+            throw new NotImplementedException();
+        }
+    }
     public class ColorConverter : IValueConverter
     {
         public object Convert(object value, Type targetType, object parameter, string language)
@@ -891,6 +920,57 @@ namespace IELTSWord
             throw new NotImplementedException();
         }
     }
+
+    public class OneStringToVisiblityConverter : IValueConverter
+    {
+
+        public object Convert(object value, Type targetType, object parameter, string language)
+        {
+            if (parameter?.ToString() == "x")
+            {
+                var tar = value?.ToString() ?? string.Empty;
+                tar = tar.Trim();
+
+                var words = tar.Split(new char[] { '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries);
+                if (!words.IsNullOrCountEqualsZero() && words.Length == 1)
+                {
+                    return Visibility.Visible;
+                }
+                else
+                {
+                    return Visibility.Collapsed;
+                }
+                if (tar == string.Empty)
+                {
+                    return Visibility.Collapsed;
+                }
+                else
+                {
+                    return Visibility.Visible;
+                }
+            }
+            if (parameter?.ToString() == "r")
+            {
+                if (value is string vs)
+                {
+                    return !String.IsNullOrEmpty(vs) ? Visibility.Collapsed : Visibility.Visible;
+                }
+                return value != null ? Visibility.Collapsed : Visibility.Visible;
+            }
+
+            if (value is string vs2)
+            {
+                return !String.IsNullOrEmpty(vs2) ? Visibility.Visible : Visibility.Visible;
+            }
+            return value != null ? Visibility.Visible : Visibility.Collapsed;
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, string language)
+        {
+            throw new NotImplementedException();
+        }
+    }
+
 
     public class BoolToBrushConverter : IValueConverter
     {
@@ -1852,6 +1932,87 @@ namespace IELTSWord
                 this.IsDownloading = false;
             }
         }
+        async void SPEECH_CUSTOM_TEXT(object sender, RoutedEventArgs e)
+        {
+
+            try
+            {
+                this.IsDownloading = true;
+                if (!String.IsNullOrEmpty(CustomText))
+                {
+                    MenuFlyout mf = new MenuFlyout();
+                    mf.Items.Add(new MenuFlyoutItem()
+                    {
+                        Text = "中文".Translate(),
+                        Command = new CCommand((c) =>
+                        {
+                            SpeechNow(CustomText, "zh");
+                            //Launcher.OpenAsync($"https://cn.bing.com/dict/search?q={Uri.EscapeDataString(this.CurrentWord?.Name ?? string.Empty)}&qs=n&form=Z9LH5&sp=-1&pq=hello&sc=7-5&sk=&cvid=DA527C397FB74913A4837D4E3C5DCA3E");
+                        })
+                    });
+                    mf.Items.Add(new MenuFlyoutItem()
+                    {
+                        Text = "English".Translate(),
+                        Command = new CCommand((c) =>
+                        {
+                            SpeechNow(CustomText);
+                            //Launcher.OpenAsync($"https://dictionary.cambridge.org/dictionary/english-chinese-simplified/{Uri.EscapeDataString(this.CurrentWord?.Name ?? string.Empty)}");
+                        })
+                    });
+
+                    mf.ShowAt(More_Button);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageDialog messageDialog = new MessageDialog(ex.Message, "Error_Title".Translate());
+                await messageDialog.ShowAsync();
+            }
+            finally
+            {
+                this.IsDownloading = false;
+            }
+        }
+        async void ENTER_CUSTOM_TEXT(object sender, RoutedEventArgs e)
+        {
+
+            try
+            {
+                this.IsDownloading = true;
+                if (!String.IsNullOrEmpty(CustomText))
+                {
+                    await ExtractCustomTextAsync();
+                    var words = CustomText.Split(new char[] { '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries);
+                    if (!words.IsNullOrCountEqualsZero() && words.Length == 1)
+                    {
+                        var w = Word.Load(words.First());
+                        if (w == null)
+                        {
+                            w = Word.Create(words.First());
+                        }
+                        w.Order = t20000.IndexOf(this.CurrentWord?.Name ?? string.Empty);
+                        this.CurrentWord = w;
+                        this.CurrentWordDetails = null;
+                        GetDetailsAsync(w);
+                        pivot.SelectedIndex = 0;
+                        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(CurrentWord)));
+                        if (AppGlobalSettings.AudoPlayAudio)
+                        {
+                            Speaker_Click(null, null);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageDialog messageDialog = new MessageDialog(ex.Message, "Error_Title".Translate());
+                await messageDialog.ShowAsync();
+            }
+            finally
+            {
+                this.IsDownloading = false;
+            }
+        }
         CancellationTokenSource cts;
         public async Task SpeakNowDefaultSettings(string word)
         {
@@ -2490,6 +2651,14 @@ namespace IELTSWord
 
         void statistics_Update_Click(object sender, RoutedEventArgs e)
         {
+            REFLESH_MostHit.IsChecked = false;
+            _sortByHitCount = false;
+            UpdateStatistics(hardmode: true);
+        }
+        bool _sortByHitCount;
+        void statistics_Update_Click_Order_low(object sender, RoutedEventArgs e)
+        {
+            _sortByHitCount = REFLESH_MostHit.IsChecked ?? false;
             UpdateStatistics(hardmode: true);
         }
         void Upcoming_Update_Click(object sender, RoutedEventArgs e)
@@ -2535,7 +2704,23 @@ namespace IELTSWord
                     Launcher.OpenAsync($"https://dictionary.cambridge.org/dictionary/english-chinese-simplified/{Uri.EscapeDataString(this.CurrentWord?.Name ?? string.Empty)}");
                 })
             });
-
+            mf.Items.Add(new MenuFlyoutItem()
+            {
+                Text = "Urban Dictionary".Translate(),
+                Command = new CCommand((c) =>
+                {
+                    Launcher.OpenAsync($"https://www.urbandictionary.com/define.php?term={Uri.EscapeDataString(this.CurrentWord?.Name ?? string.Empty)}");
+                })
+            });
+            mf.Items.Add(new MenuFlyoutItem()
+            {
+                Text = "Oxford Dictionary".Translate(),
+                Command = new CCommand((c) =>
+                {
+                    Launcher.OpenAsync($"https://en.oxforddictionaries.com/definition/{Uri.EscapeDataString(this.CurrentWord?.Name ?? string.Empty)}");
+                })
+            });
+            //https://en.oxforddictionaries.com/definition/quack
             mf.ShowAt(More_Button);
         }
 
@@ -2574,7 +2759,15 @@ namespace IELTSWord
                         var all = Word.GetAll();
                         if (all != null)
                         {
-                            all = all.OrderByDescending(c => c.HitDate).ToList();
+                            if (_sortByHitCount)
+                            {
+                                all = all.OrderByDescending(c => c.HitDates?.Count ?? -1).ThenBy(c => c.Level).ToList();
+                            }
+                            else
+                            {
+                                all = all.OrderByDescending(c => c.HitDate).ToList();
+
+                            }
                             if (func != null)
                             {
                                 all = all.Where(c => func(c)).ToList();
@@ -2713,9 +2906,9 @@ namespace IELTSWord
             {
                 int index = 0;
                 PICK:
-                if (index + 1 < this.Words.Count)
+                if (index < this.Words.Count)
                 {
-                    var word = this.Words[index + 1];
+                    var word = this.Words[index];
                     if (word.IsValid(this.CurrentWord))
                     {
                         word.Order = t20000.IndexOf(this.CurrentWord?.Name ?? string.Empty);
@@ -2969,15 +3162,7 @@ namespace IELTSWord
                         }
                         else
                         {
-                            Word word = new Word()
-                            {
-                                //Elaborate = tab.Last(),
-                                Id = str,
-                                Level = 0,
-                                Order = 20000,
-                                Name = str,
-                                HitDate = DateTimeOffset.UtcNow
-                            };
+                            Word word = Word.Create(str);
                             words.Add(word);
                         }
 
@@ -2986,6 +3171,9 @@ namespace IELTSWord
             }
             return words.DistinctBy(c => c.Name).ToList();
         }
+
+
+
         List<Word> GetWords(WorkBook source, int order = 0)
         {
             List<Word> words = new List<Word>();

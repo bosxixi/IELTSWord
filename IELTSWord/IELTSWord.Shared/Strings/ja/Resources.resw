@@ -423,4 +423,13 @@
   <data name="ShowOneExamples_Text.Text" xml:space="preserve">
     <value>以下の例文を表示します。</value>
   </data>
+  <data name="REFLESH_MostHit.Content" xml:space="preserve">
+    <value>ほとんどのヒット</value>
+  </data>
+  <data name="ENTER_CUSTOM_TEXT.Content" xml:space="preserve">
+    <value>この言葉を学ぶ</value>
+  </data>
+  <data name="SPEECH_CUSTOM_TEXT.Content" xml:space="preserve">
+    <value>今音声</value>
+  </data>
 </root>

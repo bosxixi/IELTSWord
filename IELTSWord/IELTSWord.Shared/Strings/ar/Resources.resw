@@ -345,4 +345,13 @@
   <data name="ShowOneExamples_Text.Text" xml:space="preserve">
     <value>إظهار أقل الجمل مثال</value>
   </data>
+  <data name="REFLESH_MostHit.Content" xml:space="preserve">
+    <value>يضرب معظم</value>
+  </data>
+  <data name="ENTER_CUSTOM_TEXT.Content" xml:space="preserve">
+    <value>تعلم هذه الكلمة</value>
+  </data>
+  <data name="SPEECH_CUSTOM_TEXT.Content" xml:space="preserve">
+    <value>الكلام الآن</value>
+  </data>
 </root>

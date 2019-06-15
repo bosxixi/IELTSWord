@@ -345,4 +345,13 @@
   <data name="ShowOneExamples_Text.Text" xml:space="preserve">
     <value>显示较少的示例句子</value>
   </data>
+  <data name="REFLESH_MostHit.Content" xml:space="preserve">
+    <value>点击次数最多</value>
+  </data>
+  <data name="ENTER_CUSTOM_TEXT.Content" xml:space="preserve">
+    <value>学习这个单词</value>
+  </data>
+  <data name="SPEECH_CUSTOM_TEXT.Content" xml:space="preserve">
+    <value>朗读文本</value>
+  </data>
 </root>

@@ -345,4 +345,13 @@
   <data name="ShowOneExamples_Text.Text" xml:space="preserve">
     <value>적은 예제 문장을 표시합니다</value>
   </data>
+  <data name="REFLESH_MostHit.Content" xml:space="preserve">
+    <value>가장 안타</value>
+  </data>
+  <data name="ENTER_CUSTOM_TEXT.Content" xml:space="preserve">
+    <value>이 단어를 배울</value>
+  </data>
+  <data name="SPEECH_CUSTOM_TEXT.Content" xml:space="preserve">
+    <value>지금 음성</value>
+  </data>
 </root>

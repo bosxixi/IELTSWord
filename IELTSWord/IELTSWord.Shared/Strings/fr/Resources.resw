@@ -345,4 +345,13 @@
   <data name="ShowOneExamples_Text.Text" xml:space="preserve">
     <value>Montrer moins exemples de phrases</value>
   </data>
+  <data name="REFLESH_MostHit.Content" xml:space="preserve">
+    <value>La plupart des Hits</value>
+  </data>
+  <data name="ENTER_CUSTOM_TEXT.Content" xml:space="preserve">
+    <value>Apprendre ce mot</value>
+  </data>
+  <data name="SPEECH_CUSTOM_TEXT.Content" xml:space="preserve">
+    <value>Discours maintenant</value>
+  </data>
 </root>

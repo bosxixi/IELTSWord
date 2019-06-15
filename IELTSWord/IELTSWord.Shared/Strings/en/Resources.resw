@@ -411,4 +411,25 @@
   <data name="GG_UpComing_Fetch.Content" xml:space="preserve">
     <value>Refresh</value>
   </data>
+  <data name="ShowExamples_Text.Text" xml:space="preserve">
+    <value>Show Example Sentences</value>
+  </data>
+  <data name="ShowOneExamples_Text.Text" xml:space="preserve">
+    <value>Show Less Example Sentences</value>
+  </data>
+  <data name="GG_PRELOAD.Content" xml:space="preserve">
+    <value>Preload Word Detail</value>
+  </data>
+  <data name="GG_BACKUPTOEMAIL.Content" xml:space="preserve">
+    <value>Backup To My Email</value>
+  </data>
+  <data name="REFLESH_MostHit.Content" xml:space="preserve">
+    <value>Most Hits</value>
+  </data>
+  <data name="ENTER_CUSTOM_TEXT.Content" xml:space="preserve">
+    <value>Learn this word</value>
+  </data>
+  <data name="SPEECH_CUSTOM_TEXT.Content" xml:space="preserve">
+    <value>Speech now</value>
+  </data>
 </root>

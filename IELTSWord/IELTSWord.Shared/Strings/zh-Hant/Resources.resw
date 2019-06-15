@@ -423,4 +423,13 @@
   <data name="ShowOneExamples_Text.Text" xml:space="preserve">
     <value>顯示較少的示例句子</value>
   </data>
+  <data name="REFLESH_MostHit.Content" xml:space="preserve">
+    <value>點擊次數最多</value>
+  </data>
+  <data name="ENTER_CUSTOM_TEXT.Content" xml:space="preserve">
+    <value>學習這個單詞</value>
+  </data>
+  <data name="SPEECH_CUSTOM_TEXT.Content" xml:space="preserve">
+    <value>朗读文本</value>
+  </data>
 </root>

@@ -68,7 +68,7 @@ namespace IELTSWord
 
             MonkeyCache.BarrelUtils.SetBaseCachePath(basePath);
 
-#if !WINDOWS_UWP
+
         }
         LoggingService logger = new LoggingService();
         private void App_UnhandledException(object sender, Windows.UI.Xaml.UnhandledExceptionEventArgs e)
@@ -101,7 +101,7 @@ namespace IELTSWord
           
 #endif
 
-#if WINDOWS_UWP
+#if !WINDOWS_UWP
             ApplicationViewTitleBar formattableTitleBar = ApplicationView.GetForCurrentView().TitleBar;
             formattableTitleBar.ButtonBackgroundColor = Colors.Transparent;
             CoreApplicationViewTitleBar coreTitleBar = CoreApplication.GetCurrentView().TitleBar;
@@ -140,8 +140,7 @@ namespace IELTSWord
             {
 
             }
-          
-#endif
+  
 #if DEBUG
             if (System.Diagnostics.Debugger.IsAttached)
             {
