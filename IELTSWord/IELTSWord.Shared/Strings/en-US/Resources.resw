@@ -354,4 +354,13 @@
   <data name="SPEECH_CUSTOM_TEXT.Content" xml:space="preserve">
     <value>Speech now</value>
   </data>
+  <data name="AutoSkip_Text.Text" xml:space="preserve">
+    <value>Auto Switch To Next</value>
+  </data>
+  <data name="LoadBookTitle" xml:space="preserve">
+    <value>Words book not loaded</value>
+  </data>
+  <data name="LoadBookContent" xml:space="preserve">
+    <value>Please select a words book and load it first</value>
+  </data>
 </root>

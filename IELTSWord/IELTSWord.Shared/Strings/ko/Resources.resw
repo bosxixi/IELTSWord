@@ -354,4 +354,13 @@
   <data name="SPEECH_CUSTOM_TEXT.Content" xml:space="preserve">
     <value>지금 음성</value>
   </data>
+  <data name="AutoSkip_Text.Text" xml:space="preserve">
+    <value>다음에 자동 스위치</value>
+  </data>
+  <data name="LoadBookTitle" xml:space="preserve">
+    <value>단어 책 하지 로드</value>
+  </data>
+  <data name="LoadBookContent" xml:space="preserve">
+    <value>단어 책을 선택 하 고 그것을 로드 하는 것은 처음</value>
+  </data>
 </root>

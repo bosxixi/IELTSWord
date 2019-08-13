@@ -354,4 +354,13 @@
   <data name="SPEECH_CUSTOM_TEXT.Content" xml:space="preserve">
     <value>الكلام الآن</value>
   </data>
+  <data name="AutoSkip_Text.Text" xml:space="preserve">
+    <value>التبديل التلقائي للتالي</value>
+  </data>
+  <data name="LoadBookTitle" xml:space="preserve">
+    <value>كلمات الكتاب لم يتم تحميله</value>
+  </data>
+  <data name="LoadBookContent" xml:space="preserve">
+    <value>الرجاء حدد كتاب كلمات وتحميله أولاً</value>
+  </data>
 </root>

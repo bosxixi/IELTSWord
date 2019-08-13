@@ -354,4 +354,13 @@
   <data name="SPEECH_CUSTOM_TEXT.Content" xml:space="preserve">
     <value>Сейчас речь</value>
   </data>
+  <data name="AutoSkip_Text.Text" xml:space="preserve">
+    <value>Автоматическое переключение на следующий</value>
+  </data>
+  <data name="LoadBookTitle" xml:space="preserve">
+    <value>Слова книги не загружен</value>
+  </data>
+  <data name="LoadBookContent" xml:space="preserve">
+    <value>Пожалуйста выберите слова книги и сначала загрузить</value>
+  </data>
 </root>

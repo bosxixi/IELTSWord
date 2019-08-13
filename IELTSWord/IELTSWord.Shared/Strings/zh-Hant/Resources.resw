@@ -432,4 +432,13 @@
   <data name="SPEECH_CUSTOM_TEXT.Content" xml:space="preserve">
     <value>朗读文本</value>
   </data>
+  <data name="AutoSkip_Text.Text" xml:space="preserve">
+    <value>自動切換到下一个词</value>
+  </data>
+  <data name="LoadBookTitle" xml:space="preserve">
+    <value>單詞簿未載入</value>
+  </data>
+  <data name="LoadBookContent" xml:space="preserve">
+    <value>請選擇單詞簿並首先載入它</value>
+  </data>
 </root>

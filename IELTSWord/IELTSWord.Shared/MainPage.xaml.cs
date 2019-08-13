@@ -274,6 +274,16 @@ namespace IELTSWord
             //            set { Plugin.Settings.CrossSettings.Current.AddOrUpdateValue(nameof(ReviewAll), value); }
             //#endif
         }
+        public static bool AutoSkip
+        {
+            //#if WINDOWS_UWP || __WASM__
+            get => SettingService.Get(nameof(AppGlobalSettings) + nameof(AutoSkip), true);
+            set => SettingService.Set(nameof(AppGlobalSettings) + nameof(AutoSkip), value);
+            //#else
+            //            get => Plugin.Settings.CrossSettings.Current.GetValueOrDefault(nameof(ReviewAll), true);
+            //            set { Plugin.Settings.CrossSettings.Current.AddOrUpdateValue(nameof(ReviewAll), value); }
+            //#endif
+        }
         public static bool SpeakNatural
         {
             //#if WINDOWS_UWP || __WASM__
@@ -1444,6 +1454,15 @@ namespace IELTSWord
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(ReviewAll)));
             }
         }
+        public bool AutoSkip
+        {
+            get => AppGlobalSettings.AutoSkip;
+            set
+            {
+                AppGlobalSettings.AutoSkip = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(AutoSkip)));
+            }
+        }
         public bool SpeakNatural
         {
             get => AppGlobalSettings.SpeakNatural;
@@ -1678,18 +1697,20 @@ namespace IELTSWord
                             SpeechNow(this.CurrentWord?.Name ?? string.Empty);
                         }
                         await UpdateDetailAsync(this.CurrentWord);
-                        ThreadPoolTimer.CreateTimer(_ =>
+                        if (AppGlobalSettings.AutoSkip)
                         {
+                            ThreadPoolTimer.CreateTimer(_ =>
+                            {
 #pragma warning disable CS4014 // Because this call is not awaited, execution of the current method continues before the call is completed
                             this.GenericDispatherActionAsync(async () =>
-                            {
-                                await GetNextAsync();
+                                {
+                                    await GetNextAsync();
 
-                                UpdateStatistics();
-                            });
+                                    UpdateStatistics();
+                                });
 #pragma warning restore CS4014 // Because this call is not awaited, execution of the current method continues before the call is completed
                         }, TimeSpan.FromSeconds(5));
-
+                        }
                     }
                     else
                     {
@@ -1698,6 +1719,10 @@ namespace IELTSWord
                         UpdateStatistics();
                     }
                 }
+                else
+                {
+                    await FirstTimeLoadBookAsync();
+                }
             }
             finally
             {
@@ -1705,6 +1730,14 @@ namespace IELTSWord
             }
 
         }
+
+        private async Task FirstTimeLoadBookAsync()
+        {
+            MessageDialog messageDialog = new MessageDialog("LoadBookContent".Translate(), "LoadBookTitle".Translate());
+            await messageDialog.ShowAsync();
+            this.pivot.SelectedIndex = 2;
+        }
+
         async void Blur_Click(object sender, RoutedEventArgs e)
         {
             logger.Event(nameof(Blur_Click));
@@ -1717,7 +1750,10 @@ namespace IELTSWord
                     await UpdateDetailAsync(this.CurrentWord);
                     UpdateStatistics();
                 }
-
+                else
+                {
+                    await FirstTimeLoadBookAsync();
+                }
             }
             finally
             {
@@ -2293,6 +2329,10 @@ namespace IELTSWord
                 ReviewAllToggleSwitch.IsOn = !ReviewAllToggleSwitch.IsOn;
                 ReviewAllToggleSwitch.IsOn = !ReviewAllToggleSwitch.IsOn;
 
+                AutoSkipToggleSwitch.IsOn = !AutoSkipToggleSwitch.IsOn;
+                AutoSkipToggleSwitch.IsOn = !AutoSkipToggleSwitch.IsOn;
+
+
                 SpeakNaturalToggleSwitch.IsOn = !SpeakNaturalToggleSwitch.IsOn;
                 SpeakNaturalToggleSwitch.IsOn = !SpeakNaturalToggleSwitch.IsOn;
 
@@ -2423,6 +2463,10 @@ namespace IELTSWord
 
                     UpdateStatistics();
                 }
+                else
+                {
+                    await FirstTimeLoadBookAsync();
+                }
             }
             finally
             {
@@ -2460,6 +2504,10 @@ namespace IELTSWord
                     logger.Event(nameof(Complete_Click), 2);
                     await GetNextAsync();
                     UpdateStatistics();
+                }
+                else
+                {
+                    await FirstTimeLoadBookAsync();
                 }
             }
             finally
@@ -2724,6 +2772,45 @@ namespace IELTSWord
             mf.ShowAt(More_Button);
         }
 
+        async void WordsListView_Click(object sender, RoutedEventArgs e)
+        {
+            MenuFlyout mf = new MenuFlyout();
+            mf.Items.Add(new MenuFlyoutItem()
+            {
+                Text = "Bing".Translate(),
+                Command = new CCommand((c) =>
+                {
+                    Launcher.OpenAsync($"https://cn.bing.com/dict/search?q={Uri.EscapeDataString(this.CurrentWord?.Name ?? string.Empty)}&qs=n&form=Z9LH5&sp=-1&pq=hello&sc=7-5&sk=&cvid=DA527C397FB74913A4837D4E3C5DCA3E");
+                })
+            });
+            mf.Items.Add(new MenuFlyoutItem()
+            {
+                Text = "Cambridge".Translate(),
+                Command = new CCommand((c) =>
+                {
+                    Launcher.OpenAsync($"https://dictionary.cambridge.org/dictionary/english-chinese-simplified/{Uri.EscapeDataString(this.CurrentWord?.Name ?? string.Empty)}");
+                })
+            });
+            mf.Items.Add(new MenuFlyoutItem()
+            {
+                Text = "Urban Dictionary".Translate(),
+                Command = new CCommand((c) =>
+                {
+                    Launcher.OpenAsync($"https://www.urbandictionary.com/define.php?term={Uri.EscapeDataString(this.CurrentWord?.Name ?? string.Empty)}");
+                })
+            });
+            mf.Items.Add(new MenuFlyoutItem()
+            {
+                Text = "Oxford Dictionary".Translate(),
+                Command = new CCommand((c) =>
+                {
+                    Launcher.OpenAsync($"https://en.oxforddictionaries.com/definition/{Uri.EscapeDataString(this.CurrentWord?.Name ?? string.Empty)}");
+                })
+            });
+            //https://en.oxforddictionaries.com/definition/quack
+            mf.ShowAt(More_Button);
+        }
+
         async void DELETE_Click(object sender, RoutedEventArgs e)
         {
             try
@@ -2905,7 +2992,7 @@ namespace IELTSWord
             if (this.Words != null)
             {
                 int index = 0;
-                PICK:
+            PICK:
                 if (index < this.Words.Count)
                 {
                     var word = this.Words[index];

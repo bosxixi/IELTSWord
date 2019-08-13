@@ -432,4 +432,13 @@
   <data name="SPEECH_CUSTOM_TEXT.Content" xml:space="preserve">
     <value>今音声</value>
   </data>
+  <data name="AutoSkip_Text.Text" xml:space="preserve">
+    <value>次にオート スイッチ</value>
+  </data>
+  <data name="LoadBookTitle" xml:space="preserve">
+    <value>読み込まれていない単語帳</value>
+  </data>
+  <data name="LoadBookContent" xml:space="preserve">
+    <value>単語帳を選択して、最初に読み込む</value>
+  </data>
 </root>
